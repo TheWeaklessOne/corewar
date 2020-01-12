@@ -13,8 +13,9 @@
 #ifndef VM_H
 #define VM_H
 
-#include <stdio.h>
-#include <unistd.h>
+# include <stdio.h>
+# include <unistd.h>
+# include "op.h"
 
 typedef struct s_champion
 {

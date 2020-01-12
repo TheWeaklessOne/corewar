@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "vm.h"
+#include "../includes/vm.h"
 
 int		parser(t_vm *vm, int ac, char **av)
 {
@@ -19,7 +19,13 @@ int		parser(t_vm *vm, int ac, char **av)
 	i = 1;
 	while (i++ < c)
 	{
-		if (i + 2 < c)
+		if (flag(ac, av, vm))
+			continue;
+		if (i + 2 < c && flag_n(ac, av, vm))
+		{
+			vm->num = ft_atoi(av[++i]);
+
+		}
 	}
 }
 
