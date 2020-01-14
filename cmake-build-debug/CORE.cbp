@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="CORE"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/sdoughnu/Desktop/CORE/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/CORE/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/CORE/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/CORE/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/CORE/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/sdoughnu/Desktop/CORE/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/CORE/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/CORE/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/CORE/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/CORE/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/sdoughnu/Desktop/CORE/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/CORE/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/CORE/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/CORE/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/CORE/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="CORE">
+				<Option output="/Users/sdoughnu/Desktop/CORE/cmake-build-debug/CORE" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/sdoughnu/Desktop/CORE/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/sdoughnu/Desktop/CORE/includes"/>
+					<Add directory="/Users/sdoughnu/Desktop/CORE/libft"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/CORE/cmake-build-debug/Makefile&quot;  VERBOSE=1 CORE"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/CORE/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/CORE/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/CORE/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="CORE/fast">
+				<Option output="/Users/sdoughnu/Desktop/CORE/cmake-build-debug/CORE" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/sdoughnu/Desktop/CORE/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/sdoughnu/Desktop/CORE/includes"/>
+					<Add directory="/Users/sdoughnu/Desktop/CORE/libft"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/CORE/cmake-build-debug/Makefile&quot;  VERBOSE=1 CORE/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/CORE/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/CORE/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/CORE/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/sdoughnu/Desktop/CORE/includes/op.h">
+			<Option target="CORE"/>
+		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/CORE/includes/vm.h">
+			<Option target="CORE"/>
+		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/CORE/libft/ft_atoi.c">
+			<Option target="CORE"/>
+		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/CORE/libft/ft_bzero.c">
+			<Option target="CORE"/>
+		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/CORE/libft/ft_isalnum.c">
+			<Option target="CORE"/>
+		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/CORE/libft/ft_isalpha.c">
+			<Option target="CORE"/>
+		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/CORE/libft/ft_isascii.c">
+			<Option target="CORE"/>
+		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/CORE/libft/ft_isdigit.c">
+			<Option target="CORE"/>
+		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/CORE/libft/ft_isprint.c">
+			<Option target="CORE"/>
+		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/CORE/libft/ft_itoa.c">
+			<Option target="CORE"/>
+		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/CORE/libft/ft_lstadd.c">
+			<Option target="CORE"/>
+		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/CORE/libft/ft_lstdel.c">
+			<Option target="CORE"/>
+		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/CORE/libft/ft_lstdelone.c">
+			<Option target="CORE"/>
+		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/CORE/libft/ft_lstiter.c">
+			<Option target="CORE"/>
+		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/CORE/libft/ft_lstmap.c">
+			<Option target="CORE"/>
+		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/CORE/libft/ft_lstnew.c">
+			<Option target="CORE"/>
+		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/CORE/libft/ft_memalloc.c">
+			<Option target="CORE"/>
+		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/CORE/libft/ft_memccpy.c">
+			<Option target="CORE"/>
+		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/CORE/libft/ft_memchr.c">
+			<Option target="CORE"/>
+		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/CORE/libft/ft_memcmp.c">
+			<Option target="CORE"/>
+		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/CORE/libft/ft_memcpy.c">
+			<Option target="CORE"/>
+		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/CORE/libft/ft_memdel.c">
+			<Option target="CORE"/>
+		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/CORE/libft/ft_memmove.c">
+			<Option target="CORE"/>
+		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/CORE/libft/ft_memset.c">
+			<Option target="CORE"/>
+		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/CORE/libft/ft_putchar.c">
+			<Option target="CORE"/>
+		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/CORE/libft/ft_putchar_fd.c">
+			<Option target="CORE"/>
+		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/CORE/libft/ft_putendl.c">
+			<Option target="CORE"/>
+		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/CORE/libft/ft_putendl_fd.c">
+			<Option target="CORE"/>
+		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/CORE/libft/ft_putnbr.c">
+			<Option target="CORE"/>
+		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/CORE/libft/ft_putnbr_fd.c">
+			<Option target="CORE"/>
+		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/CORE/libft/ft_putstr.c">
+			<Option target="CORE"/>
+		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/CORE/libft/ft_putstr_fd.c">
+			<Option target="CORE"/>
+		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/CORE/libft/ft_str_is_alpha.c">
+			<Option target="CORE"/>
+		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/CORE/libft/ft_str_is_numeric.c">
+			<Option target="CORE"/>
+		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/CORE/libft/ft_strcapitalize.c">
+			<Option target="CORE"/>
+		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/CORE/libft/ft_strcat.c">
+			<Option target="CORE"/>
+		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/CORE/libft/ft_strchr.c">
+			<Option target="CORE"/>
+		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/CORE/libft/ft_strclr.c">
+			<Option target="CORE"/>
+		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/CORE/libft/ft_strcmp.c">
+			<Option target="CORE"/>
+		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/CORE/libft/ft_strcpy.c">
+			<Option target="CORE"/>
+		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/CORE/libft/ft_strdel.c">
+			<Option target="CORE"/>
+		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/CORE/libft/ft_strdup.c">
+			<Option target="CORE"/>
+		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/CORE/libft/ft_strequ.c">
+			<Option target="CORE"/>
+		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/CORE/libft/ft_striter.c">
+			<Option target="CORE"/>
+		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/CORE/libft/ft_striteri.c">
+			<Option target="CORE"/>
+		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/CORE/libft/ft_strjoin.c">
+			<Option target="CORE"/>
+		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/CORE/libft/ft_strlcat.c">
+			<Option target="CORE"/>
+		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/CORE/libft/ft_strlen.c">
+			<Option target="CORE"/>
+		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/CORE/libft/ft_strlowcase.c">
+			<Option target="CORE"/>
+		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/CORE/libft/ft_strmap.c">
+			<Option target="CORE"/>
+		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/CORE/libft/ft_strmapi.c">
+			<Option target="CORE"/>
+		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/CORE/libft/ft_strncat.c">
+			<Option target="CORE"/>
+		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/CORE/libft/ft_strncmp.c">
+			<Option target="CORE"/>
+		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/CORE/libft/ft_strncpy.c">
+			<Option target="CORE"/>
+		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/CORE/libft/ft_strnequ.c">
+			<Option target="CORE"/>
+		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/CORE/libft/ft_strnew.c">
+			<Option target="CORE"/>
+		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/CORE/libft/ft_strnstr.c">
+			<Option target="CORE"/>
+		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/CORE/libft/ft_strrchr.c">
+			<Option target="CORE"/>
+		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/CORE/libft/ft_strsplit.c">
+			<Option target="CORE"/>
+		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/CORE/libft/ft_strstr.c">
+			<Option target="CORE"/>
+		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/CORE/libft/ft_strsub.c">
+			<Option target="CORE"/>
+		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/CORE/libft/ft_strtrim.c">
+			<Option target="CORE"/>
+		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/CORE/libft/ft_strupcase.c">
+			<Option target="CORE"/>
+		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/CORE/libft/ft_tolower.c">
+			<Option target="CORE"/>
+		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/CORE/libft/ft_toupper.c">
+			<Option target="CORE"/>
+		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/CORE/libft/libft.h">
+			<Option target="CORE"/>
+		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/CORE/vm/error.c">
+			<Option target="CORE"/>
+		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/CORE/vm/main.c">
+			<Option target="CORE"/>
+		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/CORE/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

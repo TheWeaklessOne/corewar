@@ -1,18 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   error.c                                            :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sdoughnu <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: djoye <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/11 10:24:37 by sdoughnu          #+#    #+#             */
-/*   Updated: 2020/01/11 10:24:39 by sdoughnu         ###   ########.fr       */
+/*   Created: 2019/09/08 19:18:18 by djoye             #+#    #+#             */
+/*   Updated: 2019/09/09 16:34:17 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/vm.h"
+#include "libft.h"
 
-int 	error_free(t_vm *vm)
+void	ft_putendl_fd(char const *s, int fd)
 {
-	return (0);
+	while (s && *s)
+	{
+		write(fd, s, 1);
+		s++;
+	}
+	write(fd, "\n", 1);
 }

@@ -11,23 +11,27 @@
 /* ************************************************************************** */
 
 #ifndef VM_H
-#define VM_H
+# define VM_H
 
 # include <stdio.h>
 # include <unistd.h>
 # include "op.h"
+# include "../libft/libft.h"
+# include <fcntl.h>
 
-typedef struct s_champion
+typedef struct			s_champion
 {
-	int			num;
-	char 		*name;
-}				t_champion;
+	unsigned int		n;
+	char				name[PROG_NAME_LENGTH + 1];
+	char				com[COMMENT_LENGTH + 1];
+	unsigned int		size;
+}						t_champion;
 
 typedef struct	s_vm
 {
-	int			mach;
-	int			flag;
-	t_champion	*champ[];
+	int			dump;
+	int			color;
+	t_champion	*champ[MAX_PLAYERS];
 }				t_vm;
 
 #endif

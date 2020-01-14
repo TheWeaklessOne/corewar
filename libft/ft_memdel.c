@@ -1,18 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   error.c                                            :+:      :+:    :+:   */
+/*   ft_memdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sdoughnu <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: djoye <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/11 10:24:37 by sdoughnu          #+#    #+#             */
-/*   Updated: 2020/01/11 10:24:39 by sdoughnu         ###   ########.fr       */
+/*   Created: 2019/09/07 13:34:22 by djoye             #+#    #+#             */
+/*   Updated: 2019/09/07 13:45:39 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/vm.h"
+#include "libft.h"
 
-int 	error_free(t_vm *vm)
+void	ft_memdel(void **ap)
 {
-	return (0);
+	if (ap != NULL && *ap != NULL)
+	{
+		free(*ap);
+		*ap = NULL;
+	}
 }

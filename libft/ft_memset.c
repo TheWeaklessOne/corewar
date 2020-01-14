@@ -1,18 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   error.c                                            :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sdoughnu <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: djoye <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/11 10:24:37 by sdoughnu          #+#    #+#             */
-/*   Updated: 2020/01/11 10:24:39 by sdoughnu         ###   ########.fr       */
+/*   Created: 2019/09/04 13:17:46 by djoye             #+#    #+#             */
+/*   Updated: 2019/09/08 19:41:30 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/vm.h"
+#include "libft.h"
 
-int 	error_free(t_vm *vm)
+void	*ft_memset(void *b, int c, size_t len)
 {
-	return (0);
+	size_t	i;
+	char	*arr;
+
+	i = 0;
+	arr = b;
+	c = (unsigned char)c;
+	while (i < len)
+	{
+		arr[i] = c;
+		i++;
+	}
+	return (b);
 }

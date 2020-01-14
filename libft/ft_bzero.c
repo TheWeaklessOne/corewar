@@ -1,18 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   error.c                                            :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sdoughnu <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: djoye <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/11 10:24:37 by sdoughnu          #+#    #+#             */
-/*   Updated: 2020/01/11 10:24:39 by sdoughnu         ###   ########.fr       */
+/*   Created: 2019/09/04 15:10:00 by djoye             #+#    #+#             */
+/*   Updated: 2019/09/04 16:17:27 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/vm.h"
+#include "libft.h"
 
-int 	error_free(t_vm *vm)
+void	*ft_bzero(void *s, size_t n)
 {
-	return (0);
+	char	*arr;
+	size_t	i;
+
+	i = 0;
+	arr = s;
+	while (i < n)
+	{
+		arr[i] = '\0';
+		i++;
+	}
+	return (s);
 }

@@ -1,18 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   error.c                                            :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sdoughnu <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: djoye <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/11 10:24:37 by sdoughnu          #+#    #+#             */
-/*   Updated: 2020/01/11 10:24:39 by sdoughnu         ###   ########.fr       */
+/*   Created: 2019/09/05 16:47:15 by djoye             #+#    #+#             */
+/*   Updated: 2019/09/09 14:33:11 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/vm.h"
+#include "libft.h"
 
-int 	error_free(t_vm *vm)
+char	*ft_strcat(char *s1, const char *s2)
 {
-	return (0);
+	char	*arr;
+
+	arr = s1;
+	while (*s1)
+		s1++;
+	while (*s2)
+	{
+		*s1 = *s2;
+		s1++;
+		s2++;
+	}
+	*s1 = '\0';
+	return (arr);
 }

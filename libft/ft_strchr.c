@@ -1,18 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   error.c                                            :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sdoughnu <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: djoye <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/11 10:24:37 by sdoughnu          #+#    #+#             */
-/*   Updated: 2020/01/11 10:24:39 by sdoughnu         ###   ########.fr       */
+/*   Created: 2019/09/05 16:12:11 by djoye             #+#    #+#             */
+/*   Updated: 2019/09/12 11:12:15 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/vm.h"
+#include "libft.h"
 
-int 	error_free(t_vm *vm)
+char	*ft_strchr(const char *s, int c)
 {
-	return (0);
+	char	*arr;
+
+	if (!*s && !s)
+		return (NULL);
+	arr = (char*)s;
+	while (*arr != c)
+	{
+		if (*arr == '\0')
+		{
+			return (NULL);
+		}
+		arr++;
+	}
+	return (arr);
 }

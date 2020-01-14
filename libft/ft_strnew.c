@@ -1,18 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   error.c                                            :+:      :+:    :+:   */
+/*   ft_strnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sdoughnu <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: djoye <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/11 10:24:37 by sdoughnu          #+#    #+#             */
-/*   Updated: 2020/01/11 10:24:39 by sdoughnu         ###   ########.fr       */
+/*   Created: 2019/09/07 13:44:35 by djoye             #+#    #+#             */
+/*   Updated: 2019/09/07 16:01:34 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/vm.h"
+#include "libft.h"
 
-int 	error_free(t_vm *vm)
+char	*ft_strnew(size_t size)
 {
-	return (0);
+	size_t	i;
+	char	*s;
+
+	i = 0;
+	s = (char*)malloc(sizeof(char) * (size + 1));
+	if (s == NULL)
+		return (NULL);
+	while (i <= size)
+	{
+		s[i] = '\0';
+		i++;
+	}
+	return (s);
 }

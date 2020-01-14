@@ -1,18 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   error.c                                            :+:      :+:    :+:   */
+/*   ft_lstdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sdoughnu <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: djoye <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/11 10:24:37 by sdoughnu          #+#    #+#             */
-/*   Updated: 2020/01/11 10:24:39 by sdoughnu         ###   ########.fr       */
+/*   Created: 2019/09/10 21:42:20 by djoye             #+#    #+#             */
+/*   Updated: 2019/09/10 21:59:24 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/vm.h"
+#include "libft.h"
 
-int 	error_free(t_vm *vm)
+void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
 {
-	return (0);
+	t_list *lst;
+	t_list *nlist;
+
+	lst = *alst;
+	while (lst)
+	{
+		nlist = lst->next;
+		del(lst->content, lst->content_size);
+		free(lst);
+		lst = nlist;
+	}
+	*alst = NULL;
 }

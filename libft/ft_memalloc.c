@@ -1,18 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   error.c                                            :+:      :+:    :+:   */
+/*   ft_memalloc.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sdoughnu <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: djoye <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/11 10:24:37 by sdoughnu          #+#    #+#             */
-/*   Updated: 2020/01/11 10:24:39 by sdoughnu         ###   ########.fr       */
+/*   Created: 2019/09/07 13:05:26 by djoye             #+#    #+#             */
+/*   Updated: 2019/09/07 13:31:33 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/vm.h"
+#include "libft.h"
 
-int 	error_free(t_vm *vm)
+void	*ft_memalloc(size_t size)
 {
-	return (0);
+	size_t	i;
+	void	*s;
+
+	i = 0;
+	s = (char*)malloc(sizeof(char) * size);
+	if (s == NULL)
+		return (NULL);
+	while (i < size)
+	{
+		((char*)s)[i] = 0;
+		i++;
+	}
+	return (s);
 }
