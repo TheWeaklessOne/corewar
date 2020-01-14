@@ -25,6 +25,7 @@ typedef struct			s_champion
 	char				name[PROG_NAME_LENGTH + 1];
 	char				com[COMMENT_LENGTH + 1];
 	unsigned int		size;
+	char 				*code;
 }						t_champion;
 
 typedef struct	s_vm

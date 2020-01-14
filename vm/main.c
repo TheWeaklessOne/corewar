@@ -14,7 +14,7 @@
 
 int		flag(int *i, int ac, char **av, t_vm *vm)
 {
-	if (!ft_strncmp(av[*i], "-dump", 5) && *i + 1 < ac)
+	if (*i + 1 < ac && !ft_strncmp(av[*i], "-dump", 5))
 	{
 		vm->dump = ft_atoi(av[++(*i)]);
 		if (vm->dump < 0)
@@ -78,6 +78,5 @@ int		main(int ac, char **av)
 	init(&vm);
 	if (!(parser(&vm, ac, av)))
 		exit(1);
-//	printf("ok\n");
 	exit(0);
 }
