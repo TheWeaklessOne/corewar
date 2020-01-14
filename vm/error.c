@@ -12,7 +12,4 @@
 
 #include "../includes/vm.h"
 
-int 	error_free(t_vm *vm)
-{
-	return (0);
-}
+

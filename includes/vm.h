@@ -34,4 +34,6 @@ typedef struct	s_vm
 	t_champion	*champ[MAX_PLAYERS];
 }				t_vm;
 
+int 	init_champ(int *i, char **av, int n, t_vm *vm);
+
 #endif

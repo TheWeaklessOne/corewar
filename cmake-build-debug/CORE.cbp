@@ -285,6 +285,9 @@
 		<Unit filename="/Users/sdoughnu/Desktop/corewar/vm/error.c">
 			<Option target="CORE"/>
 		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/corewar/vm/init_champion.c">
+			<Option target="CORE"/>
+		</Unit>
 		<Unit filename="/Users/sdoughnu/Desktop/corewar/vm/main.c">
 			<Option target="CORE"/>
 		</Unit>

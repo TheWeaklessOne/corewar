@@ -31,17 +31,6 @@ int		flag(int *i, int ac, char **av, t_vm *vm)
 	return (1);
 }
 
-int 	init_champ(int *i, char **av, int n, t_vm *vm)
-{
-	t_champion	*ch;
-	int 		fd;
-	static int 	x = -1;
-
-	fd = open(av[*i], O_RDONLY);
-	if (!exec_magic(fd))
-		return (error_free(vm));
-}
-
 int		parser(t_vm *vm, int ac, char **av)
 {
 	int i;
@@ -56,39 +45,38 @@ int		parser(t_vm *vm, int ac, char **av)
 		if (i + 1 < ac && !ft_strcmp(av[i], "-n"))
 		{
 			n = ft_atoi(av[++i]);
-			//printf("ok\n");
 			if (n > MAX_PLAYERS	|| n < 1)
 				return (printf("Invalid option in flag [-n]\n") - 28);
 			i++;
 		}
 		if (i < ac && !init_champ(&i, av, n, vm))
 			return(0);
-		i++;
 	}
 	return (1);
 }
 
-int		init(t_vm **vm)
+void		init(t_vm *vm)
 {
-	if (!(*vm = (t_vm*)malloc(sizeof(t_vm) * 1)))
-		return (0);
-	(*vm)->dump = -1;
-	(*vm)->color = -1;
-	return (1);
+	int i;
+
+	i = -1;
+	vm->dump = -1;
+	vm->color = -1;
+	while (++i < MAX_PLAYERS)
+		vm->champ[i] = NULL;
 }
 
 int		main(int ac, char **av)
 {
-	t_vm		*vm;
+	t_vm		vm;
 
 	if (ac < 2)
 	{
 		printf("usage: ./vm [champ1, champ2 ...]\n");
 		exit(0);
 	}
-	if (!init(&vm))
-		exit(1);
-	if (!(parser(vm, ac, av)))
+	init(&vm);
+	if (!(parser(&vm, ac, av)))
 		exit(1);
 //	printf("ok\n");
 	exit(0);

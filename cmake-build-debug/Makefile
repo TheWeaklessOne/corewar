@@ -1851,6 +1851,33 @@ vm/error.c.s:
 	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/vm/error.c.s
 .PHONY : vm/error.c.s
 
+vm/init_champion.o: vm/init_champion.c.o
+
+.PHONY : vm/init_champion.o
+
+# target to build an object file
+vm/init_champion.c.o:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/vm/init_champion.c.o
+.PHONY : vm/init_champion.c.o
+
+vm/init_champion.i: vm/init_champion.c.i
+
+.PHONY : vm/init_champion.i
+
+# target to preprocess a source file
+vm/init_champion.c.i:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/vm/init_champion.c.i
+.PHONY : vm/init_champion.c.i
+
+vm/init_champion.s: vm/init_champion.c.s
+
+.PHONY : vm/init_champion.s
+
+# target to generate assembly for a file
+vm/init_champion.c.s:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/vm/init_champion.c.s
+.PHONY : vm/init_champion.c.s
+
 vm/main.o: vm/main.c.o
 
 .PHONY : vm/main.o
@@ -2079,6 +2106,9 @@ help:
 	@echo "... vm/error.o"
 	@echo "... vm/error.i"
 	@echo "... vm/error.s"
+	@echo "... vm/init_champion.o"
+	@echo "... vm/init_champion.i"
+	@echo "... vm/init_champion.s"
 	@echo "... vm/main.o"
 	@echo "... vm/main.i"
 	@echo "... vm/main.s"

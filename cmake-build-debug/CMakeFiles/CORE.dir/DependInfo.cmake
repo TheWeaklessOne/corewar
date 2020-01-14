@@ -68,6 +68,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/sdoughnu/Desktop/corewar/libft/ft_tolower.c" "/Users/sdoughnu/Desktop/corewar/cmake-build-debug/CMakeFiles/CORE.dir/libft/ft_tolower.c.o"
   "/Users/sdoughnu/Desktop/corewar/libft/ft_toupper.c" "/Users/sdoughnu/Desktop/corewar/cmake-build-debug/CMakeFiles/CORE.dir/libft/ft_toupper.c.o"
   "/Users/sdoughnu/Desktop/corewar/vm/error.c" "/Users/sdoughnu/Desktop/corewar/cmake-build-debug/CMakeFiles/CORE.dir/vm/error.c.o"
+  "/Users/sdoughnu/Desktop/corewar/vm/init_champion.c" "/Users/sdoughnu/Desktop/corewar/cmake-build-debug/CMakeFiles/CORE.dir/vm/init_champion.c.o"
   "/Users/sdoughnu/Desktop/corewar/vm/main.c" "/Users/sdoughnu/Desktop/corewar/cmake-build-debug/CMakeFiles/CORE.dir/vm/main.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")
