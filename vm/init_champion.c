@@ -6,38 +6,47 @@
 /*   By: sdoughnu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/13 14:43:36 by sdoughnu          #+#    #+#             */
-/*   Updated: 2020/01/13 14:43:46 by sdoughnu         ###   ########.fr       */
+/*   Updated: 2020/01/14 19:19:38 by stross           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/vm.h"
 
+typedef struct	s_bit_field
+{
+	int			octet1 : 8;
+	int			octet2 : 8;
+	int			octet3 : 8;
+	int			octet4 : 8;
+	int			o_temp : 8;
+}				t_bit_field;
+
+typedef	union	u_4bytes
+{
+	t_bit_field field;
+	int			hex;
+}				t_4bytes;
+
 int 	exec_magic(int fd)
 {
-	int i;
-	unsigned char	e;
+	t_4bytes		num;
 	unsigned int	c;
-	unsigned int	tmp;
-	int				x = 0x1 << 31;
 
-
-	i = -1;
 	read(fd, &c, 4);
-	printf("orig%x\n", c);
-	tmp = c;
-	//c = (tmp << 24 | tmp << 16 | tmp >> 16 | tmp >> 24);
-	if (x & c)
-	{
-
-	}
 	printf("%x\n", c);
-	/*while (++i < 4)
+	num.hex = c;
+	num.field.o_temp = num.field.octet1;
+	num.field.octet1 = num.field.octet4;
+	num.field.octet4 = num.field.o_temp;
+	num.field.o_temp = num.field.octet2;
+	num.field.octet2 = num.field.octet3;
+	num.field.octet3 = num.field.o_temp;
+	printf("\n----------%0.8x\n", num.hex);
+	if (num.hex == COREWAR_EXEC_MAGIC)
 	{
-		read(fd, &c, 1);
-		printf("%x", c);
-	}*/
-//	if (c != COREWAR_EXEC_MAGIC)
-//		return (0);
+		puts("ok");
+		return (0);
+	}
 	return (1);
 }
 
