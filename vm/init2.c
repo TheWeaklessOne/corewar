@@ -62,7 +62,7 @@ int 	check_n(t_vm *vm, int n)
 	int i;
 
 	i = 0;
-	while (i < vm->players)
+	while (i < MAX_PLAYERS)
 	{
 		if (vm->champ[i])
 			if (vm->champ[i]->n && vm->champ[i]->n == n)
