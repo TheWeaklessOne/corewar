@@ -189,6 +189,11 @@ CMakeFiles/CORE.dir/libft/ft_tolower.c.o: ../libft/libft.h
 CMakeFiles/CORE.dir/libft/ft_toupper.c.o: ../libft/ft_toupper.c
 CMakeFiles/CORE.dir/libft/ft_toupper.c.o: ../libft/libft.h
 
+CMakeFiles/CORE.dir/vm/arena.c.o: ../includes/op.h
+CMakeFiles/CORE.dir/vm/arena.c.o: ../includes/vm.h
+CMakeFiles/CORE.dir/vm/arena.c.o: ../libft/libft.h
+CMakeFiles/CORE.dir/vm/arena.c.o: ../vm/arena.c
+
 CMakeFiles/CORE.dir/vm/init2.c.o: ../includes/op.h
 CMakeFiles/CORE.dir/vm/init2.c.o: ../includes/vm.h
 CMakeFiles/CORE.dir/vm/init2.c.o: ../libft/libft.h

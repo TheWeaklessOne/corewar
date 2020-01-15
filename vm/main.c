@@ -52,6 +52,8 @@ int		parser(t_vm *vm, int ac, char **av)
 		if (i < ac && !init_champ(&i, av, n, vm))
 			return(0);
 	}
+	if (vm->players > MAX_PLAYERS)
+		return (printf("Too much champions\n") - 19);
 	return (1);
 }
 
@@ -62,6 +64,7 @@ void		init(t_vm *vm)
 	i = -1;
 	vm->dump = -1;
 	vm->color = -1;
+	vm->players = 0;
 	while (++i < MAX_PLAYERS)
 		vm->champ[i] = NULL;
 }
@@ -78,5 +81,6 @@ int		main(int ac, char **av)
 	init(&vm);
 	if (!(parser(&vm, ac, av)))
 		exit(1);
+	build_arena(&vm);
 	exit(0);
 }

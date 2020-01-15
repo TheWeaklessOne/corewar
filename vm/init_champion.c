@@ -12,26 +12,6 @@
 
 #include "../includes/vm.h"
 
-int 	exec_magic(int fd)
-{
-	t_4bytes		num;
-	unsigned int	c;
-
-	read(fd, &c, 4);
-//	printf("%x\n", c);
-	num.hex = c;
-	num.field.o_temp = num.field.octet1;
-	num.field.octet1 = num.field.octet4;
-	num.field.octet4 = num.field.o_temp;
-	num.field.o_temp = num.field.octet2;
-	num.field.octet2 = num.field.octet3;
-	num.field.octet3 = num.field.o_temp;
-//	printf("\n----------%0.8x\n", num.hex);
-	if (num.hex == COREWAR_EXEC_MAGIC)
-		return (1);
-	return (0);
-}
-
 void	read_name(t_champion *ch, int fd)
 {
 	int		i;
@@ -43,7 +23,7 @@ void	read_name(t_champion *ch, int fd)
 	i = 0;
 	while (++i < 5)
 		read(fd, &c, 1);
-	printf("%s\n", ch->name);
+//	printf("%s\n", ch->name);
 }
 
 int		read_size(fd)
@@ -75,7 +55,7 @@ void	read_com(t_champion *ch, int fd)
 	i = -1;
 	while (++i < 4)
 		read(fd, &c, 1);
-	printf("%s\n", ch->com);
+//	printf("%s\n", ch->com);
 }
 
 int		read_code(int fd, t_champion *ch)
@@ -87,9 +67,9 @@ int		read_code(int fd, t_champion *ch)
 		return (printf("%s", "Memory not allocated\n") - 21);
 	while (++i < ch->size)
 		read(fd, &(ch->code[i]), 1);
-	i = -1;
-	while (++i < ch->size)
-		printf("%c ", ch->code[i]);
+//	i = -1;
+//	while (++i < ch->size)
+//		printf("%c ", ch->code[i]);
 	return (1);
 }
 
@@ -99,20 +79,21 @@ int 	init_champ(int *i, char **av, int n, t_vm *vm)
 	int				fd;
 
 	if ((fd = open(av[*i], O_RDONLY)) < 0)
-		return (printf("%s", "Can't open file...\n") - 19);
-	printf("%d\n", fd);
+		return (printf("Can't open file...\n") - 19);
+//	printf("%d\n", fd);
 	if (!exec_magic(fd))
-		return (printf("%s", "Corewar_exec_magic doesn't match\n") - 33);
+		return (printf("Corewar_exec_magic doesn't match\n") - 33);
 	if (!(ch = (t_champion*)malloc(sizeof(t_champion))))
-		return (printf("%s", "Memory not allocated\n") - 21);
+		return (printf("Memory not allocated\n") - 21);
 	read_name(ch, fd);
 	if ((ch->size = read_size(fd)) > CHAMP_MAX_SIZE)
-		return (printf("%s", "Big champion exec code size\n") - 28);
+		return (printf("Big champion exec code size\n") - 28);
 	read_com(ch, fd);
 	if (!read_code(fd, ch))
 		return (0);
 	close(fd);
 	champ_in_vm(ch, vm, n);
 	(*i)++;
+	vm->players += 1;
 	return (1);
 }

@@ -19,6 +19,10 @@
 # include "../libft/libft.h"
 # include <fcntl.h>
 
+# define OCTET 32
+# define WR_AR write(1, "00", 2)
+# define SL_N write(1, "\n", 1)
+
 typedef struct			s_champion
 {
 	unsigned int		n;
@@ -32,7 +36,9 @@ typedef struct	s_vm
 {
 	int			dump;
 	int			color;
+	int 		players;
 	t_champion	*champ[MAX_PLAYERS];
+	unsigned char 	arena[MEM_SIZE];
 }				t_vm;
 
 typedef struct	s_bit_field
@@ -52,5 +58,7 @@ typedef	union	u_4bytes
 
 int 	init_champ(int *i, char **av, int n, t_vm *vm);
 void	champ_in_vm(t_champion *ch, t_vm *vm, int n);
+int 	exec_magic(int fd);
+int 	build_arena(t_vm *vm);
 
 #endif

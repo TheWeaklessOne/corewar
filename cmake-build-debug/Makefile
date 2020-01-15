@@ -1824,6 +1824,33 @@ libft/ft_toupper.c.s:
 	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/libft/ft_toupper.c.s
 .PHONY : libft/ft_toupper.c.s
 
+vm/arena.o: vm/arena.c.o
+
+.PHONY : vm/arena.o
+
+# target to build an object file
+vm/arena.c.o:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/vm/arena.c.o
+.PHONY : vm/arena.c.o
+
+vm/arena.i: vm/arena.c.i
+
+.PHONY : vm/arena.i
+
+# target to preprocess a source file
+vm/arena.c.i:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/vm/arena.c.i
+.PHONY : vm/arena.c.i
+
+vm/arena.s: vm/arena.c.s
+
+.PHONY : vm/arena.s
+
+# target to generate assembly for a file
+vm/arena.c.s:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/vm/arena.c.s
+.PHONY : vm/arena.c.s
+
 vm/init2.o: vm/init2.c.o
 
 .PHONY : vm/init2.o
@@ -2103,6 +2130,9 @@ help:
 	@echo "... libft/ft_toupper.o"
 	@echo "... libft/ft_toupper.i"
 	@echo "... libft/ft_toupper.s"
+	@echo "... vm/arena.o"
+	@echo "... vm/arena.i"
+	@echo "... vm/arena.s"
 	@echo "... vm/init2.o"
 	@echo "... vm/init2.i"
 	@echo "... vm/init2.s"

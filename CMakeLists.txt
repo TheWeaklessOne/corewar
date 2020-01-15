@@ -75,4 +75,5 @@ add_executable(CORE
         libft/libft.h
         vm/main.c
         vm/init_champion.c
+        vm/arena.c
         vm/init2.c)
