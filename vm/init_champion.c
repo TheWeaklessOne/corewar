@@ -85,6 +85,7 @@ int 	init_champ(int *i, char **av, int n, t_vm *vm)
 		return (printf("Corewar_exec_magic doesn't match\n") - 33);
 	if (!(ch = (t_champion*)malloc(sizeof(t_champion))))
 		return (printf("Memory not allocated\n") - 21);
+	ch->n = 0;
 	read_name(ch, fd);
 	if ((ch->size = read_size(fd)) > CHAMP_MAX_SIZE)
 		return (printf("Big champion exec code size\n") - 28);

@@ -30,11 +30,11 @@ typedef struct			s_champion
 
 typedef struct	s_vm
 {
-	int			dump;
-	int			color;
-	int 		players;
-	t_champion	*champ[MAX_PLAYERS];
-	unsigned char 	arena[MEM_SIZE];
+	int				dump;
+	int				color;
+	int				players;
+	t_champion		*champ[MAX_PLAYERS];
+	unsigned char	arena[MEM_SIZE];
 }				t_vm;
 
 typedef struct	s_bit_field
@@ -56,5 +56,6 @@ int 	init_champ(int *i, char **av, int n, t_vm *vm);
 void	champ_in_vm(t_champion *ch, t_vm *vm, int n);
 int 	exec_magic(int fd);
 int 	build_arena(t_vm *vm);
+int 	check_n(t_vm *vm, int n);
 
 #endif

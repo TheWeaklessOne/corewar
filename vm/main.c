@@ -45,7 +45,7 @@ int		parser(t_vm *vm, int ac, char **av)
 		if (i + 1 < ac && !ft_strcmp(av[i], "-n"))
 		{   
 			n = ft_atoi(av[++i]);
-			if (n > MAX_PLAYERS	|| n < 1)
+			if (n > MAX_PLAYERS	|| n < 1 || !check_n(vm, n))
 				return (printf("Invalid option in flag [-n]\n") - 28);
 			i++;
 		}

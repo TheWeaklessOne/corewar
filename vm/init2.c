@@ -50,8 +50,24 @@ void		champ_in_vm(t_champion *ch, t_vm *vm, int n)
 		if (vm->champ[n - 1])
 			buf = vm->champ[n - 1];
 		vm->champ[n - 1] = ch;
+		vm->champ[n - 1]->n = n;
 		while (i < MAX_PLAYERS && vm->champ[i])
 			i++;
 		vm->champ[i] = buf;
 	}
+}
+
+int 	check_n(t_vm *vm, int n)
+{
+	int i;
+
+	i = 0;
+	while (i < vm->players)
+	{
+		if (vm->champ[i])
+			if (vm->champ[i]->n && vm->champ[i]->n == n)
+				return (0);
+		i++;
+	}
+	return (1);
 }
