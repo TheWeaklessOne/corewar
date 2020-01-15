@@ -35,6 +35,22 @@ typedef struct	s_vm
 	t_champion	*champ[MAX_PLAYERS];
 }				t_vm;
 
+typedef struct	s_bit_field
+{
+	int			octet1 : 8;
+	int			octet2 : 8;
+	int			octet3 : 8;
+	int			octet4 : 8;
+	int			o_temp : 8;
+}				t_bit_field;
+
+typedef	union	u_4bytes
+{
+	t_bit_field field;
+	int			hex;
+}				t_4bytes;
+
 int 	init_champ(int *i, char **av, int n, t_vm *vm);
+void	champ_in_vm(t_champion *ch, t_vm *vm, int n);
 
 #endif

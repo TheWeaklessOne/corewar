@@ -282,7 +282,7 @@
 		<Unit filename="/Users/sdoughnu/Desktop/corewar/libft/libft.h">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/corewar/vm/error.c">
+		<Unit filename="/Users/sdoughnu/Desktop/corewar/vm/init2.c">
 			<Option target="CORE"/>
 		</Unit>
 		<Unit filename="/Users/sdoughnu/Desktop/corewar/vm/init_champion.c">

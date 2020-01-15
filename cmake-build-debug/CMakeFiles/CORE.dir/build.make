@@ -876,22 +876,9 @@ CMakeFiles/CORE.dir/libft/ft_toupper.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/CORE.dir/libft/ft_toupper.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/sdoughnu/Desktop/corewar/libft/ft_toupper.c -o CMakeFiles/CORE.dir/libft/ft_toupper.c.s
 
-CMakeFiles/CORE.dir/vm/error.c.o: CMakeFiles/CORE.dir/flags.make
-CMakeFiles/CORE.dir/vm/error.c.o: ../vm/error.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sdoughnu/Desktop/corewar/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Building C object CMakeFiles/CORE.dir/vm/error.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/CORE.dir/vm/error.c.o   -c /Users/sdoughnu/Desktop/corewar/vm/error.c
-
-CMakeFiles/CORE.dir/vm/error.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/CORE.dir/vm/error.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/sdoughnu/Desktop/corewar/vm/error.c > CMakeFiles/CORE.dir/vm/error.c.i
-
-CMakeFiles/CORE.dir/vm/error.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/CORE.dir/vm/error.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/sdoughnu/Desktop/corewar/vm/error.c -o CMakeFiles/CORE.dir/vm/error.c.s
-
 CMakeFiles/CORE.dir/vm/main.c.o: CMakeFiles/CORE.dir/flags.make
 CMakeFiles/CORE.dir/vm/main.c.o: ../vm/main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sdoughnu/Desktop/corewar/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building C object CMakeFiles/CORE.dir/vm/main.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sdoughnu/Desktop/corewar/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Building C object CMakeFiles/CORE.dir/vm/main.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/CORE.dir/vm/main.c.o   -c /Users/sdoughnu/Desktop/corewar/vm/main.c
 
 CMakeFiles/CORE.dir/vm/main.c.i: cmake_force
@@ -904,7 +891,7 @@ CMakeFiles/CORE.dir/vm/main.c.s: cmake_force
 
 CMakeFiles/CORE.dir/vm/init_champion.c.o: CMakeFiles/CORE.dir/flags.make
 CMakeFiles/CORE.dir/vm/init_champion.c.o: ../vm/init_champion.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sdoughnu/Desktop/corewar/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building C object CMakeFiles/CORE.dir/vm/init_champion.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sdoughnu/Desktop/corewar/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building C object CMakeFiles/CORE.dir/vm/init_champion.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/CORE.dir/vm/init_champion.c.o   -c /Users/sdoughnu/Desktop/corewar/vm/init_champion.c
 
 CMakeFiles/CORE.dir/vm/init_champion.c.i: cmake_force
@@ -914,6 +901,19 @@ CMakeFiles/CORE.dir/vm/init_champion.c.i: cmake_force
 CMakeFiles/CORE.dir/vm/init_champion.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/CORE.dir/vm/init_champion.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/sdoughnu/Desktop/corewar/vm/init_champion.c -o CMakeFiles/CORE.dir/vm/init_champion.c.s
+
+CMakeFiles/CORE.dir/vm/init2.c.o: CMakeFiles/CORE.dir/flags.make
+CMakeFiles/CORE.dir/vm/init2.c.o: ../vm/init2.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sdoughnu/Desktop/corewar/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building C object CMakeFiles/CORE.dir/vm/init2.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/CORE.dir/vm/init2.c.o   -c /Users/sdoughnu/Desktop/corewar/vm/init2.c
+
+CMakeFiles/CORE.dir/vm/init2.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/CORE.dir/vm/init2.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/sdoughnu/Desktop/corewar/vm/init2.c > CMakeFiles/CORE.dir/vm/init2.c.i
+
+CMakeFiles/CORE.dir/vm/init2.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/CORE.dir/vm/init2.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/sdoughnu/Desktop/corewar/vm/init2.c -o CMakeFiles/CORE.dir/vm/init2.c.s
 
 # Object files for target CORE
 CORE_OBJECTS = \
@@ -980,9 +980,9 @@ CORE_OBJECTS = \
 "CMakeFiles/CORE.dir/libft/ft_strupcase.c.o" \
 "CMakeFiles/CORE.dir/libft/ft_tolower.c.o" \
 "CMakeFiles/CORE.dir/libft/ft_toupper.c.o" \
-"CMakeFiles/CORE.dir/vm/error.c.o" \
 "CMakeFiles/CORE.dir/vm/main.c.o" \
-"CMakeFiles/CORE.dir/vm/init_champion.c.o"
+"CMakeFiles/CORE.dir/vm/init_champion.c.o" \
+"CMakeFiles/CORE.dir/vm/init2.c.o"
 
 # External object files for target CORE
 CORE_EXTERNAL_OBJECTS =
@@ -1050,9 +1050,9 @@ CORE: CMakeFiles/CORE.dir/libft/ft_strtrim.c.o
 CORE: CMakeFiles/CORE.dir/libft/ft_strupcase.c.o
 CORE: CMakeFiles/CORE.dir/libft/ft_tolower.c.o
 CORE: CMakeFiles/CORE.dir/libft/ft_toupper.c.o
-CORE: CMakeFiles/CORE.dir/vm/error.c.o
 CORE: CMakeFiles/CORE.dir/vm/main.c.o
 CORE: CMakeFiles/CORE.dir/vm/init_champion.c.o
+CORE: CMakeFiles/CORE.dir/vm/init2.c.o
 CORE: CMakeFiles/CORE.dir/build.make
 CORE: CMakeFiles/CORE.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/sdoughnu/Desktop/corewar/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Linking C executable CORE"

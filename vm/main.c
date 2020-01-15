@@ -22,7 +22,7 @@ int		flag(int *i, int ac, char **av, t_vm *vm)
 		(*i)++;
 		return (1);
 	}
-	else if (!ft_strncmp(av[*i], "-v", 2))
+	else if (*i < ac && !ft_strncmp(av[*i], "-v", 2))
 	{
 		vm->color = 1;
 		(*i)++;
@@ -43,7 +43,7 @@ int		parser(t_vm *vm, int ac, char **av)
 		if (!flag(&i, ac, av, vm))
 			return (0);
 		if (i + 1 < ac && !ft_strcmp(av[i], "-n"))
-		{
+		{   
 			n = ft_atoi(av[++i]);
 			if (n > MAX_PLAYERS	|| n < 1)
 				return (printf("Invalid option in flag [-n]\n") - 28);

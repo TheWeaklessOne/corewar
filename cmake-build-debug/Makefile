@@ -1824,32 +1824,32 @@ libft/ft_toupper.c.s:
 	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/libft/ft_toupper.c.s
 .PHONY : libft/ft_toupper.c.s
 
-vm/error.o: vm/error.c.o
+vm/init2.o: vm/init2.c.o
 
-.PHONY : vm/error.o
+.PHONY : vm/init2.o
 
 # target to build an object file
-vm/error.c.o:
-	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/vm/error.c.o
-.PHONY : vm/error.c.o
+vm/init2.c.o:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/vm/init2.c.o
+.PHONY : vm/init2.c.o
 
-vm/error.i: vm/error.c.i
+vm/init2.i: vm/init2.c.i
 
-.PHONY : vm/error.i
+.PHONY : vm/init2.i
 
 # target to preprocess a source file
-vm/error.c.i:
-	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/vm/error.c.i
-.PHONY : vm/error.c.i
+vm/init2.c.i:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/vm/init2.c.i
+.PHONY : vm/init2.c.i
 
-vm/error.s: vm/error.c.s
+vm/init2.s: vm/init2.c.s
 
-.PHONY : vm/error.s
+.PHONY : vm/init2.s
 
 # target to generate assembly for a file
-vm/error.c.s:
-	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/vm/error.c.s
-.PHONY : vm/error.c.s
+vm/init2.c.s:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/vm/init2.c.s
+.PHONY : vm/init2.c.s
 
 vm/init_champion.o: vm/init_champion.c.o
 
@@ -2103,9 +2103,9 @@ help:
 	@echo "... libft/ft_toupper.o"
 	@echo "... libft/ft_toupper.i"
 	@echo "... libft/ft_toupper.s"
-	@echo "... vm/error.o"
-	@echo "... vm/error.i"
-	@echo "... vm/error.s"
+	@echo "... vm/init2.o"
+	@echo "... vm/init2.i"
+	@echo "... vm/init2.s"
 	@echo "... vm/init_champion.o"
 	@echo "... vm/init_champion.i"
 	@echo "... vm/init_champion.s"

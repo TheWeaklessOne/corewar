@@ -73,6 +73,6 @@ add_executable(CORE
         libft/ft_tolower.c
         libft/ft_toupper.c
         libft/libft.h
-        vm/error.c
         vm/main.c
-        vm/init_champion.c)
+        vm/init_champion.c
+        vm/init2.c)

@@ -189,11 +189,11 @@ CMakeFiles/CORE.dir/libft/ft_tolower.c.o
 CMakeFiles/CORE.dir/libft/ft_toupper.c.o
  /Users/sdoughnu/Desktop/corewar/libft/ft_toupper.c
  /Users/sdoughnu/Desktop/corewar/libft/libft.h
-CMakeFiles/CORE.dir/vm/error.c.o
+CMakeFiles/CORE.dir/vm/init2.c.o
  /Users/sdoughnu/Desktop/corewar/includes/op.h
  /Users/sdoughnu/Desktop/corewar/includes/vm.h
  /Users/sdoughnu/Desktop/corewar/libft/libft.h
- /Users/sdoughnu/Desktop/corewar/vm/error.c
+ /Users/sdoughnu/Desktop/corewar/vm/init2.c
 CMakeFiles/CORE.dir/vm/init_champion.c.o
  /Users/sdoughnu/Desktop/corewar/includes/op.h
  /Users/sdoughnu/Desktop/corewar/includes/vm.h

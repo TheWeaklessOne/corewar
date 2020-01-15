@@ -189,10 +189,10 @@ CMakeFiles/CORE.dir/libft/ft_tolower.c.o: ../libft/libft.h
 CMakeFiles/CORE.dir/libft/ft_toupper.c.o: ../libft/ft_toupper.c
 CMakeFiles/CORE.dir/libft/ft_toupper.c.o: ../libft/libft.h
 
-CMakeFiles/CORE.dir/vm/error.c.o: ../includes/op.h
-CMakeFiles/CORE.dir/vm/error.c.o: ../includes/vm.h
-CMakeFiles/CORE.dir/vm/error.c.o: ../libft/libft.h
-CMakeFiles/CORE.dir/vm/error.c.o: ../vm/error.c
+CMakeFiles/CORE.dir/vm/init2.c.o: ../includes/op.h
+CMakeFiles/CORE.dir/vm/init2.c.o: ../includes/vm.h
+CMakeFiles/CORE.dir/vm/init2.c.o: ../libft/libft.h
+CMakeFiles/CORE.dir/vm/init2.c.o: ../vm/init2.c
 
 CMakeFiles/CORE.dir/vm/init_champion.c.o: ../includes/op.h
 CMakeFiles/CORE.dir/vm/init_champion.c.o: ../includes/vm.h
