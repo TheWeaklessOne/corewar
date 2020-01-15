@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   arena.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sdoughnu <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: djoye <djoye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/15 13:12:22 by sdoughnu          #+#    #+#             */
-/*   Updated: 2020/01/15 13:12:24 by sdoughnu         ###   ########.fr       */
+/*   Updated: 2020/01/15 18:55:48 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ int		position(t_vm *vm, int player, int i)
 	while (++c < vm->champ[player]->size)
 	{
 		vm->arena[i] = vm->champ[player]->code[c];
+		vm->map_color[i] = player + 1;
 		i++;
 	}
 	return (1);
@@ -36,10 +37,19 @@ void	print_arena(t_vm *vm, int step)
 	{
 		if (i == 0 || (i % 32) == 0)
 			printf("0x%0.4x : ", i);
-		printf("%0.2x", vm->arena[i]);
+		if (vm->color == 1 && vm->map_color[i] == 1)
+			printf("\e[31m%0.2x", vm->arena[i]);
+		else if (vm->color == 1 && vm->map_color[i] == 2)
+			printf("\e[32m%0.2x", vm->arena[i]);
+		else if (vm->color == 1 && vm->map_color[i] == 3)
+			printf("\e[33m%0.2x", vm->arena[i]);
+		else if (vm->color == 1 && vm->map_color[i] == 4)
+			printf("\e[34m%0.2x", vm->arena[i]);
+		else
+			printf("\e[0m%0.2x", vm->arena[i]);
 		if ((i + 1) % 32 == 0 && i != 0)
-			printf("\n");
-		else printf(" ");
+			printf("\e[0m\n");
+		else printf("\e[0m ");
 		i++;
 	}
 }
@@ -52,7 +62,10 @@ int 	build_arena(t_vm *vm)
 
 	i = -1;
 	while (++i < MEM_SIZE)
-		vm->arena[i] = '\0';
+	{
+		vm->arena[i] = 0;
+		vm->map_color[i] = 0;
+	}	
 	step = MEM_SIZE / vm->players;
 	player = 0;
 	i = 0;

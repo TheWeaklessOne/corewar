@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   vm.h                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sdoughnu <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: djoye <djoye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/11 10:21:55 by sdoughnu          #+#    #+#             */
-/*   Updated: 2020/01/11 10:21:57 by sdoughnu         ###   ########.fr       */
+/*   Updated: 2020/01/15 18:26:43 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ typedef struct	s_vm
 	int				players;
 	t_champion		*champ[MAX_PLAYERS];
 	unsigned char	arena[MEM_SIZE];
+	char			map_color[MEM_SIZE];
 }				t_vm;
 
 typedef struct	s_bit_field
