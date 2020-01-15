@@ -33,6 +33,8 @@ void	print_arena(t_vm *vm, int step)
 	i = 0;
 	while (i < MEM_SIZE)
 	{
+		if (i == 0 || (i % 32) == 0)
+			printf("0x%0.4x : ", i);
 		printf("%0.2x", vm->arena[i]);
 		if ((i + 1) % 32 == 0 && i != 0)
 			printf("\n");
