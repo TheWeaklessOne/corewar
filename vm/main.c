@@ -81,6 +81,7 @@ int		main(int ac, char **av)
 	init(&vm);
 	if (!(parser(&vm, ac, av)))
 		exit(1);
-	build_arena(&vm);
+	if (!build_arena(&vm))
+		exit(0);
 	exit(0);
 }

@@ -19,10 +19,6 @@
 # include "../libft/libft.h"
 # include <fcntl.h>
 
-# define OCTET 32
-# define WR_AR write(1, "00", 2)
-# define SL_N write(1, "\n", 1)
-
 typedef struct			s_champion
 {
 	unsigned int		n;
