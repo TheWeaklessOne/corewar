@@ -18,7 +18,6 @@ int 	exec_magic(int fd)
 	unsigned int	c;
 
 	read(fd, &c, 4);
-//	printf("%x\n", c);
 	num.hex = c;
 	num.field.o_temp = num.field.octet1;
 	num.field.octet1 = num.field.octet4;
@@ -26,7 +25,6 @@ int 	exec_magic(int fd)
 	num.field.o_temp = num.field.octet2;
 	num.field.octet2 = num.field.octet3;
 	num.field.octet3 = num.field.o_temp;
-//	printf("\n----------%0.8x\n", num.hex);
 	if (num.hex == COREWAR_EXEC_MAGIC)
 		return (1);
 	return (0);
