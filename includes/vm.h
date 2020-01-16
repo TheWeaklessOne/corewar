@@ -58,5 +58,6 @@ void	champ_in_vm(t_champion *ch, t_vm *vm, int n);
 int 	exec_magic(int fd);
 int 	build_arena(t_vm *vm);
 int 	check_n(t_vm *vm, int n);
+int 	check_ch_name(char **av, int i);
 
 #endif
