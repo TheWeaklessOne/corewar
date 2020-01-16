@@ -23,7 +23,6 @@ void	read_name(t_champion *ch, int fd)
 	i = 0;
 	while (++i < 5)
 		read(fd, &c, 1);
-//	printf("%s\n", ch->name);
 }
 
 int		read_size(fd)
@@ -39,8 +38,6 @@ int		read_size(fd)
 	num.field.o_temp = num.field.octet2;
 	num.field.octet2 = num.field.octet3;
 	num.field.octet3 = num.field.o_temp;
-//	printf("\n----------%0.8x\n", num.hex);
-//	printf("\n----------%d\n", num.hex);
 	return (num.hex);
 }
 
@@ -55,7 +52,6 @@ void	read_com(t_champion *ch, int fd)
 	i = -1;
 	while (++i < 4)
 		read(fd, &c, 1);
-//	printf("%s\n", ch->com);
 }
 
 int		read_code(int fd, t_champion *ch)
@@ -67,9 +63,6 @@ int		read_code(int fd, t_champion *ch)
 		return (printf("%s", "Memory not allocated\n") - 21);
 	while (++i < ch->size)
 		read(fd, &(ch->code[i]), 1);
-//	i = -1;
-//	while (++i < ch->size)
-//		printf("%c ", ch->code[i]);
 	return (1);
 }
 
@@ -78,9 +71,13 @@ int 	init_champ(int *i, char **av, int n, t_vm *vm)
 	t_champion		*ch;
 	int				fd;
 
+	vm->players += 1;
+	if (vm->players > MAX_PLAYERS)
+		return (printf("Too much champions\n") - 19);
+	if (!check_ch_name(av, *i))
+		return (printf("You gave not a *.cor file!\n") - 27);
 	if ((fd = open(av[*i], O_RDONLY)) < 0)
 		return (printf("Can't open file...\n") - 19);
-//	printf("%d\n", fd);
 	if (!exec_magic(fd))
 		return (printf("Corewar_exec_magic doesn't match\n") - 33);
 	if (!(ch = (t_champion*)malloc(sizeof(t_champion))))
@@ -95,6 +92,5 @@ int 	init_champ(int *i, char **av, int n, t_vm *vm)
 	close(fd);
 	champ_in_vm(ch, vm, n);
 	(*i)++;
-	vm->players += 1;
 	return (1);
 }

@@ -52,8 +52,6 @@ int		parser(t_vm *vm, int ac, char **av)
 		if (i < ac && !init_champ(&i, av, n, vm))
 			return(0);
 	}
-	if (vm->players > MAX_PLAYERS)
-		return (printf("Too much champions\n") - 19);
 	return (1);
 }
 
