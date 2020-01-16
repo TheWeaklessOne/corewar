@@ -53,6 +53,18 @@ typedef	union	u_4bytes
 	int			hex;
 }				t_4bytes;
 
+typedef struct	s_op
+{
+	char 			*name;
+	//
+	unsigned char	arg_type[3];
+	int 			code;
+	int 			need_cycles;
+	char 			*opisanie;
+	int 			arg_code_type;
+
+}				t_op;
+
 int 	init_champ(int *i, char **av, int n, t_vm *vm);
 void	champ_in_vm(t_champion *ch, t_vm *vm, int n);
 int 	exec_magic(int fd);
