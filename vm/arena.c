@@ -6,11 +6,12 @@
 /*   By: djoye <djoye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/15 13:12:22 by sdoughnu          #+#    #+#             */
-/*   Updated: 2020/01/15 18:55:48 by djoye            ###   ########.fr       */
+/*   Updated: 2020/01/16 20:14:50 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/vm.h"
+void	print_arena_test(t_vm *vm, int step);
 
 int		position(t_vm *vm, int player, int i)
 {
@@ -35,7 +36,7 @@ void	print_arena(t_vm *vm, int step)
 	i = 0;
 	while (i < MEM_SIZE)
 	{
-		if (i == 0 || (i % 32) == 0)
+		if (i == 0 || (i % 64) == 0)
 			printf("0x%0.4x : ", i);
 		if (vm->color == 1 && vm->map_color[i] == 1)
 			printf("\e[31m%0.2x", vm->arena[i]);
@@ -47,11 +48,14 @@ void	print_arena(t_vm *vm, int step)
 			printf("\e[34m%0.2x", vm->arena[i]);
 		else
 			printf("\e[0m%0.2x", vm->arena[i]);
-		if ((i + 1) % 32 == 0 && i != 0)
+		if ((i + 1) % 64 == 0 && i != 0)
 			printf("\e[0m\n");
 		else printf("\e[0m ");
 		i++;
 	}
+	char check = -1;
+	printf("%hhu\n", check);
+	printf("\033c");
 }
 
 int 	build_arena(t_vm *vm)
@@ -76,6 +80,6 @@ int 	build_arena(t_vm *vm)
 		i = i + step;
 		player++;
 	}
-	print_arena(vm, step);
+	print_arena_test(vm, step);
 	return (1);
 }
