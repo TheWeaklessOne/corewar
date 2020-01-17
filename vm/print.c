@@ -6,23 +6,60 @@
 /*   By: djoye <djoye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/16 18:24:30 by djoye             #+#    #+#             */
-/*   Updated: 2020/01/16 20:14:27 by djoye            ###   ########.fr       */
+/*   Updated: 2020/01/17 15:32:48 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/vm.h"
 #include <ncurses.h>
 #include <panel.h>
-#define NLINES 100
-#define NCOLS 100
-#define X 1
-#define Y 1
-#define X_SUB 1
+#define NLINES 120
+#define NCOLS 120
+#define X 0
+#define Y 0
 #define Y_SUB 80
-#define SPEED 500000*4
 
 void	arena_test(t_vm *vm, int step)
 {
+<<<<<<< HEAD
+    WINDOW      *orig;
+    WINDOW      *sub;
+    int         i;
+    static int  speed;
+    int         ch;
+
+    speed = 1000;
+    initscr(); // перемещение курсора в стандартном экране y=10 x=30
+	orig = newwin(NLINES, NCOLS, Y, X);
+    sub =  subwin(orig, NLINES, NCOLS,  Y, X);
+    
+    keypad(stdscr, TRUE);
+
+    i = 0;
+    while (i++ < 300)
+    {
+        noecho();
+        cbreak();
+        halfdelay(1);
+        if (getch() == KEY_UP)
+    	    speed > 10 ? speed /= 2 : 0;
+        if (getch() == KEY_DOWN)
+    	    speed < 200000 ? speed *= 2 : 0;
+        start_color();
+        init_pair(1, COLOR_RED, COLOR_BLACK);
+        init_pair(2, COLOR_YELLOW, COLOR_BLACK);
+        wbkgdset(orig, COLOR_PAIR(1));
+        wbkgdset(sub, COLOR_PAIR(2));
+
+        mvwprintw(orig, X, Y, "first_window, %d = %d", speed, i);
+        mvwprintw(sub, X, Y_SUB, "second_window, %d = %d", speed, i);
+        wrefresh(orig);
+        wrefresh(sub);
+        usleep(speed);
+        wclear(orig);
+        wclear(sub);
+    }
+=======
 //    WINDOW  *orig;
 //    WINDOW  *sub;
 //    int     i;
@@ -58,6 +95,7 @@ void	arena_test(t_vm *vm, int step)
 //    mvwprintw(orig, 0, 0, "33333333333334");
 //    wrefresh(orig);
 
+>>>>>>> f02f280dbff10fb1f914fbd052ab5d053d5b3492
 /*
 	while (i < MEM_SIZE)
 	{
@@ -79,10 +117,7 @@ void	arena_test(t_vm *vm, int step)
 		i++;
 	}
     */
-	//char check = -1;
-	//printf("%hhu\n", check);
-	//printf("\033c");
-  //  refresh(); // обновить
- //   getch(); // ждём нажатия символа
- //   endwin(); // завершение работы с ncurses
+
+    //getch(KEY_UP); // ждём нажатия символа
+    endwin(); // завершение работы с ncurses
 }
