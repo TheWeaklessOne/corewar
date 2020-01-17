@@ -6,7 +6,7 @@
 /*   By: djoye <djoye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/11 10:21:55 by sdoughnu          #+#    #+#             */
-/*   Updated: 2020/01/15 18:26:43 by djoye            ###   ########.fr       */
+/*   Updated: 2020/01/17 16:52:47 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,8 +57,8 @@ typedef	union	u_4bytes
 typedef struct	s_op
 {
 	char 			*name;
-	int				kolvo_op;
-	unsigned char	arg_type[3];
+	int				arg_count;
+	int				arg_type;
 	int 			code;
 	int 			need_cycles;
 	char 			*opisanie;
