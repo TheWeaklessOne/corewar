@@ -21,42 +21,42 @@
 #define Y_SUB 80
 #define SPEED 500000*4
 
-void	print_arena_test(t_vm *vm, int step)
+void	arena_test(t_vm *vm, int step)
 {
-    WINDOW  *orig;
-    WINDOW  *sub;
-    int     i;
-
-    start_color();
-    init_pair(1, COLOR_RED, COLOR_BLUE);
-    init_pair(2, COLOR_GREEN, COLOR_RED);
-    init_pair(3, COLOR_YELLOW, COLOR_GREEN);
-    init_pair(3, COLOR_BLUE, COLOR_GREEN);
-    initscr(); // перемещение курсора в стандартном экране y=10 x=30
-	orig = newwin(NLINES, NCOLS, Y, X);
-    sub =  subwin(orig, NLINES, NCOLS,  Y, X);
-
-
-    start_color();
-    init_pair(1, COLOR_RED, COLOR_BLACK);
-	wbkgdset(orig, COLOR_PAIR(1));
-    wbkgdset(sub, COLOR_PAIR(1));
-    mvwprintw(orig, 0, 0, "111111111");
-    mvwprintw(sub, 10, 10, "222222222");
-	wrefresh(orig);
-    wrefresh(sub);
-    usleep(SPEED);
-    wclear(orig);
-    wclear(sub);
-    mvwprintw(sub, 0, 0, "222222222");
-    wrefresh(sub);
-    usleep(SPEED);
-    wclear(sub);
-    start_color();
-    print_arena(vm, step);
-    init_pair(1, COLOR_RED, COLOR_BLACK);
-    mvwprintw(orig, 0, 0, "33333333333334");
-    wrefresh(orig);
+//    WINDOW  *orig;
+//    WINDOW  *sub;
+//    int     i;
+//
+//    start_color();
+//    init_pair(1, COLOR_RED, COLOR_BLUE);
+//    init_pair(2, COLOR_GREEN, COLOR_RED);
+//    init_pair(3, COLOR_YELLOW, COLOR_GREEN);
+//    init_pair(3, COLOR_BLUE, COLOR_GREEN);
+//    initscr(); // перемещение курсора в стандартном экране y=10 x=30
+//	orig = newwin(NLINES, NCOLS, Y, X);
+//    sub =  subwin(orig, NLINES, NCOLS,  Y, X);
+//
+//
+//    start_color();
+//    init_pair(1, COLOR_RED, COLOR_BLACK);
+//	wbkgdset(orig, COLOR_PAIR(1));
+//    wbkgdset(sub, COLOR_PAIR(1));
+//    mvwprintw(orig, 0, 0, "111111111");
+//    mvwprintw(sub, 10, 10, "222222222");
+//	wrefresh(orig);
+//    wrefresh(sub);
+//    usleep(SPEED);
+//    wclear(orig);
+//    wclear(sub);
+//    mvwprintw(sub, 0, 0, "222222222");
+//    wrefresh(sub);
+//    usleep(SPEED);
+//    wclear(sub);
+//    start_color();
+//    print_arena(vm, step);
+//    init_pair(1, COLOR_RED, COLOR_BLACK);
+//    mvwprintw(orig, 0, 0, "33333333333334");
+//    wrefresh(orig);
 
 /*
 	while (i < MEM_SIZE)

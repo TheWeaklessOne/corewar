@@ -294,6 +294,9 @@
 		<Unit filename="/Users/sdoughnu/Desktop/1/vm/main.c">
 			<Option target="CORE"/>
 		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/1/vm/print.c">
+			<Option target="CORE"/>
+		</Unit>
 		<Unit filename="/Users/sdoughnu/Desktop/1/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

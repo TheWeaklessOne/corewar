@@ -28,15 +28,16 @@ typedef struct			s_champion
 	char 				*code;
 }						t_champion;
 
-typedef struct	s_vm
+typedef struct		s_cur
 {
-	int				dump;
-	int				color;
-	int				players;
-	t_champion		*champ[MAX_PLAYERS];
-	unsigned char	arena[MEM_SIZE];
-	char			map_color[MEM_SIZE];
-}				t_vm;
+	int				id;
+	int 			carry;
+	int 			code;
+	int 			cyc_op;
+	int 			cyc_live;
+	int 			i;
+	struct s_cur	*next;
+}					t_cur;
 
 typedef struct	s_bit_field
 {
@@ -56,14 +57,25 @@ typedef	union	u_4bytes
 typedef struct	s_op
 {
 	char 			*name;
-	//
+	int				kolvo_op;
 	unsigned char	arg_type[3];
 	int 			code;
 	int 			need_cycles;
 	char 			*opisanie;
-	int 			arg_code_type;
-
+	int 			code_type_arg;
+	int 			tdir_size; // 0 это 4, 1 это 2
 }				t_op;
+
+typedef struct	s_vm
+{
+	int				dump;
+	int				color;
+	int				players;
+	t_champion		*champ[MAX_PLAYERS];
+	unsigned char	arena[MEM_SIZE];
+	char			map_color[MEM_SIZE];
+	t_cur			*curs;
+}				t_vm;
 
 int 	init_champ(int *i, char **av, int n, t_vm *vm);
 void	champ_in_vm(t_champion *ch, t_vm *vm, int n);
@@ -71,5 +83,10 @@ int 	exec_magic(int fd);
 int 	build_arena(t_vm *vm);
 int 	check_n(t_vm *vm, int n);
 int 	check_ch_name(char **av, int i);
+
+int 	cur_init(t_vm *vm);
+
+void	arena_test(t_vm *vm, int step);
+void	print_arena(t_vm *vm, int step);
 
 #endif

@@ -209,3 +209,8 @@ CMakeFiles/CORE.dir/vm/main.c.o
  /Users/sdoughnu/Desktop/1/includes/vm.h
  /Users/sdoughnu/Desktop/1/libft/libft.h
  /Users/sdoughnu/Desktop/1/vm/main.c
+CMakeFiles/CORE.dir/vm/print.c.o
+ /Users/sdoughnu/Desktop/1/includes/op.h
+ /Users/sdoughnu/Desktop/1/includes/vm.h
+ /Users/sdoughnu/Desktop/1/libft/libft.h
+ /Users/sdoughnu/Desktop/1/vm/print.c

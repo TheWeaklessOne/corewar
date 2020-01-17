@@ -71,6 +71,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/sdoughnu/Desktop/1/vm/init2.c" "/Users/sdoughnu/Desktop/1/cmake-build-debug/CMakeFiles/CORE.dir/vm/init2.c.o"
   "/Users/sdoughnu/Desktop/1/vm/init_champion.c" "/Users/sdoughnu/Desktop/1/cmake-build-debug/CMakeFiles/CORE.dir/vm/init_champion.c.o"
   "/Users/sdoughnu/Desktop/1/vm/main.c" "/Users/sdoughnu/Desktop/1/cmake-build-debug/CMakeFiles/CORE.dir/vm/main.c.o"
+  "/Users/sdoughnu/Desktop/1/vm/print.c" "/Users/sdoughnu/Desktop/1/cmake-build-debug/CMakeFiles/CORE.dir/vm/print.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")
 

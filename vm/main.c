@@ -81,5 +81,7 @@ int		main(int ac, char **av)
 		exit(1);
 	if (!build_arena(&vm))
 		exit(0);
+	if (!cur_init(&vm))
+		exit(1);
 	exit(0);
 }

@@ -66,6 +66,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/CORE.dir/vm/init2.c.o"
   "CMakeFiles/CORE.dir/vm/init_champion.c.o"
   "CMakeFiles/CORE.dir/vm/main.c.o"
+  "CMakeFiles/CORE.dir/vm/print.c.o"
   "CORE"
   "CORE.pdb"
 )
