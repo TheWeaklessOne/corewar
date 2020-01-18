@@ -6,7 +6,7 @@
 /*   By: djoye <djoye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/16 18:24:30 by djoye             #+#    #+#             */
-/*   Updated: 2020/01/18 20:16:23 by djoye            ###   ########.fr       */
+/*   Updated: 2020/01/18 20:32:27 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,9 +51,9 @@ void	print_arena_test(t_vm *vm, int step)
         if (key == KEY_DOWN)
     	    speed < 200000 ? speed *= 2 : 0;
         if (key == KEY_UP)
-    	   speed > 10 ? speed /= 2 : 0;
+    	   speed > 100 ? speed /= 2 : 0;
 		column = 0;
-		row = 0;
+		row = 1;
 		while(++i < MEM_SIZE)
         {
 			//use_default_colors();
@@ -74,7 +74,9 @@ void	print_arena_test(t_vm *vm, int step)
 		mvwprintw(vm_window, 3, 200, "cycles = %d", cycle);
 		mvwprintw(vm_window, 4, 200, "speed = %d", speed);
 		mvwprintw(vm_window, 5, 200, "players = %d", vm->players);
-		mvwprintw(vm_window, 6, 200, "champs = %d", vm->champ);
+		mvwprintw(vm_window, 6, 200, "champs = %d", vm->champ[0]);
+		mvwprintw(vm_window, 8, 200, "cycle_to_die = %d", vm->champ);
+		mvwprintw(vm_window, 7, 200, "champs = %d", vm->champ[1]);
 		wrefresh(vm_window);
 		usleep(speed);
 	}
