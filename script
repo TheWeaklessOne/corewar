@@ -1,0 +1,9 @@
+#!/bin/bash
+for (( i=0 ; i<=$1; i++ ))
+	do
+		echo "Cycle $i :"
+		./corewar_vm -dump $i $2 $3 $4 $5 > res1
+		./resources/corewar -a -d $i $2 $3 $4 $5 > res2
+		diff res1 res2
+		done
+#rm res1 res2

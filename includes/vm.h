@@ -6,7 +6,7 @@
 /*   By: djoye <djoye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/11 10:21:55 by sdoughnu          #+#    #+#             */
-/*   Updated: 2020/01/17 16:52:47 by djoye            ###   ########.fr       */
+/*   Updated: 2020/01/18 14:02:33 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@
 # include "op.h"
 # include "../libft/libft.h"
 # include <fcntl.h>
+# include <time.h>
+# include <stdbool.h>
 
 typedef struct			s_champion
 {
@@ -76,7 +78,24 @@ typedef struct	s_vm
 	char			map_color[MEM_SIZE];
 	t_cur			*curs;
 }				t_vm;
-
+/*
+typedef struct		s_vs
+{
+	t_bool			is_running;
+	int				speed;
+	WINDOW			*win_arena;
+	WINDOW			*win_info;
+	WINDOW			*win_help;
+	int				cursor_pos;
+	char			map[MEM_SIZE];
+	int				button;
+	clock_t			time;
+	char			aff_symbol;
+	int				player;
+	t_bool			sounds;
+	t_bool			display_help;
+}					t_vs;
+*/
 int 	init_champ(int *i, char **av, int n, t_vm *vm);
 void	champ_in_vm(t_champion *ch, t_vm *vm, int n);
 int 	exec_magic(int fd);
@@ -86,7 +105,7 @@ int 	check_ch_name(char **av, int i);
 
 int 	cur_init(t_vm *vm);
 
-void	arena_test(t_vm *vm, int step);
+void	print_arena_test(t_vm *vm, int step);
 void	print_arena(t_vm *vm, int step);
 
 #endif

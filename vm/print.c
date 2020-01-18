@@ -6,118 +6,78 @@
 /*   By: djoye <djoye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/16 18:24:30 by djoye             #+#    #+#             */
-/*   Updated: 2020/01/17 15:32:48 by djoye            ###   ########.fr       */
+/*   Updated: 2020/01/18 20:16:23 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/vm.h"
 #include <ncurses.h>
-#include <panel.h>
-#define NLINES 120
-#define NCOLS 120
-#define X 0
-#define Y 0
-#define Y_SUB 80
+//# define HEIGHT 0 //					(MEM_SIZE / 64 + 4)
+//# define WIDTH	0 //				(64 * 3 + 5)
+#define HEIGHT 300
+#define WIDTH 300
+//#define X 0
+//#define Y 0
+//#define Y_SUB 80
 
-void	arena_test(t_vm *vm, int step)
+void	print_arena_test(t_vm *vm, int step)
 {
-<<<<<<< HEAD
-    WINDOW      *orig;
-    WINDOW      *sub;
+    WINDOW      *vm_window;
     int         i;
-    static int  speed;
-    int         ch;
-
-    speed = 1000;
+    static int  speed = 10000;
+    int         key;
+	int			row;
+	int			column;
+	int			color;
+	int			cycle;
+	
     initscr(); // перемещение курсора в стандартном экране y=10 x=30
-	orig = newwin(NLINES, NCOLS, Y, X);
-    sub =  subwin(orig, NLINES, NCOLS,  Y, X);
-    
-    keypad(stdscr, TRUE);
-
-    i = 0;
-    while (i++ < 300)
+	keypad(stdscr, true);
+	nodelay(stdscr, true);
+	curs_set(false);
+	cbreak();
+	noecho();
+	//init_map(vm);
+	//sub = newwin(HEIGHT, WIDTH / 4 + 10, 1, WIDTH + 6);
+	//win_help = newwin(HEIGHT / 5, WIDTH, HEIGHT + 2, 2);
+	//init_cursors(vm);
+	//vm_window = newwin(NLINES, NCOLS, Y, X);
+    vm_window = newwin(HEIGHT, WIDTH, 0, 0);
+	cycle = 0;
+    while (cycle++ < 2000)
     {
-        noecho();
-        cbreak();
-        halfdelay(1);
-        if (getch() == KEY_UP)
-    	    speed > 10 ? speed /= 2 : 0;
-        if (getch() == KEY_DOWN)
+		i = -1;
+        key = getch(); // ждём нажатия символа
+        if (key == KEY_DOWN)
     	    speed < 200000 ? speed *= 2 : 0;
-        start_color();
-        init_pair(1, COLOR_RED, COLOR_BLACK);
-        init_pair(2, COLOR_YELLOW, COLOR_BLACK);
-        wbkgdset(orig, COLOR_PAIR(1));
-        wbkgdset(sub, COLOR_PAIR(2));
-
-        mvwprintw(orig, X, Y, "first_window, %d = %d", speed, i);
-        mvwprintw(sub, X, Y_SUB, "second_window, %d = %d", speed, i);
-        wrefresh(orig);
-        wrefresh(sub);
-        usleep(speed);
-        wclear(orig);
-        wclear(sub);
-    }
-=======
-//    WINDOW  *orig;
-//    WINDOW  *sub;
-//    int     i;
-//
-//    start_color();
-//    init_pair(1, COLOR_RED, COLOR_BLUE);
-//    init_pair(2, COLOR_GREEN, COLOR_RED);
-//    init_pair(3, COLOR_YELLOW, COLOR_GREEN);
-//    init_pair(3, COLOR_BLUE, COLOR_GREEN);
-//    initscr(); // перемещение курсора в стандартном экране y=10 x=30
-//	orig = newwin(NLINES, NCOLS, Y, X);
-//    sub =  subwin(orig, NLINES, NCOLS,  Y, X);
-//
-//
-//    start_color();
-//    init_pair(1, COLOR_RED, COLOR_BLACK);
-//	wbkgdset(orig, COLOR_PAIR(1));
-//    wbkgdset(sub, COLOR_PAIR(1));
-//    mvwprintw(orig, 0, 0, "111111111");
-//    mvwprintw(sub, 10, 10, "222222222");
-//	wrefresh(orig);
-//    wrefresh(sub);
-//    usleep(SPEED);
-//    wclear(orig);
-//    wclear(sub);
-//    mvwprintw(sub, 0, 0, "222222222");
-//    wrefresh(sub);
-//    usleep(SPEED);
-//    wclear(sub);
-//    start_color();
-//    print_arena(vm, step);
-//    init_pair(1, COLOR_RED, COLOR_BLACK);
-//    mvwprintw(orig, 0, 0, "33333333333334");
-//    wrefresh(orig);
-
->>>>>>> f02f280dbff10fb1f914fbd052ab5d053d5b3492
-/*
-	while (i < MEM_SIZE)
-	{
-		if (i == 0 || (i % 64) == 0)
-			printf("0x%0.4x : ", i);
-		if (vm->color == 1 && vm->map_color[i] == 1)
-			printf("%0.2x", vm->arena[i]);
-		else if (vm->color == 1 && vm->map_color[i] == 2)
-			printf("\e[32m%0.2x", vm->arena[i]);
-		else if (vm->color == 1 && vm->map_color[i] == 3)
-			printw("\e[33m%0.2x", vm->arena[i]);
-		else if (vm->color == 1 && vm->map_color[i] == 4)
-			printw("\e[34m%0.2x", vm->arena[i]);
-		else
-			printw(orig, "\e[0m%0.2x", vm->arena[i]);
-		if ((i + 1) % 64 == 0 && i != 0)
-			printw("\e[0m\n");
-		else printw("\e[0m ");
-		i++;
+        if (key == KEY_UP)
+    	   speed > 10 ? speed /= 2 : 0;
+		column = 0;
+		row = 0;
+		while(++i < MEM_SIZE)
+        {
+			//use_default_colors();
+			//start_color();
+			color = vm->map_color[i] == 0 ? 7 : vm->map_color[i];
+			wattron(vm_window, color);
+			//init_pair(1, color, COLOR_BLACK);
+			//wbkgdset(vm_window, COLOR_PAIR(1));
+			mvwprintw(vm_window, row, column += 3 , "%02x", vm->arena[i]);
+			vm->arena[i] +=  vm->arena[i] != 0 ? 1 : 0; // test
+			if (i != 0 && (i + 1) % 64 == 0)
+			{
+				row++;
+				column = 0;
+			}
+			//wrefresh(vm_window);
+		}
+		mvwprintw(vm_window, 3, 200, "cycles = %d", cycle);
+		mvwprintw(vm_window, 4, 200, "speed = %d", speed);
+		mvwprintw(vm_window, 5, 200, "players = %d", vm->players);
+		mvwprintw(vm_window, 6, 200, "champs = %d", vm->champ);
+		wrefresh(vm_window);
+		usleep(speed);
 	}
-    */
-
-    //getch(KEY_UP); // ждём нажатия символа
+	wclear(vm_window);
     endwin(); // завершение работы с ncurses
 }
