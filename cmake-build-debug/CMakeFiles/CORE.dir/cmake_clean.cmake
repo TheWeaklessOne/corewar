@@ -63,6 +63,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/CORE.dir/libft/ft_tolower.c.o"
   "CMakeFiles/CORE.dir/libft/ft_toupper.c.o"
   "CMakeFiles/CORE.dir/vm/arena.c.o"
+  "CMakeFiles/CORE.dir/vm/cur.c.o"
   "CMakeFiles/CORE.dir/vm/init2.c.o"
   "CMakeFiles/CORE.dir/vm/init_champion.c.o"
   "CMakeFiles/CORE.dir/vm/main.c.o"

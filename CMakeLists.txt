@@ -77,4 +77,5 @@ add_executable(CORE
         vm/init_champion.c
         vm/arena.c
         vm/init2.c
-        vm/print.c)
+        vm/print.c
+		vm/cur.c)

@@ -27,7 +27,7 @@ int		position(t_vm *vm, int player, int i)
 	}
 	return (1);
 }
-/*
+
 void	print_arena(t_vm *vm, int step)
 {
 	int i;
@@ -53,7 +53,7 @@ void	print_arena(t_vm *vm, int step)
 		i++;
 	}
 }
-*/
+
 int 	build_arena(t_vm *vm)
 {
 	int	i;
@@ -76,7 +76,7 @@ int 	build_arena(t_vm *vm)
 		i = i + step;
 		player++;
 	}
-	print_arena_test(vm, step);
-	//print_arena(vm, step);
+	//print_arena_test(vm, step);
+	print_arena(vm, step);
 	return (1);
 }

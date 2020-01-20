@@ -63,6 +63,7 @@ void		init(t_vm *vm)
 	vm->dump = -1;
 	vm->color = -1;
 	vm->players = 0;
+	vm->global = 0;
 	while (++i < MAX_PLAYERS)
 		vm->champ[i] = NULL;
 }
@@ -73,7 +74,10 @@ int		main(int ac, char **av)
 
 	if (ac < 2)
 	{
-		printf("usage: ./vm [champ1, champ2 ...]\n");
+		printf("usage: ./corewar [champ1, champ2 ...]\n");
+		printf("    [-dump <num>]   dumps memory after N cycles\n");
+		printf("    [-v]            visualization\n");
+		printf("    [-n <num>]      set number of the next player\n");
 		exit(0);
 	}
 	init(&vm);
@@ -83,5 +87,7 @@ int		main(int ac, char **av)
 		exit(0);
 	if (!cur_init(&vm))
 		exit(1);
+//	if (!war_coming(&vm))
+//		exit(1);
 	exit(0);
 }

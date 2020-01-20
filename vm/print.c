@@ -9,7 +9,7 @@
 /*   Updated: 2020/01/18 20:32:27 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
+/*
 #include "../includes/vm.h"
 #include <ncurses.h>
 //# define HEIGHT 0 //					(MEM_SIZE / 64 + 4)
@@ -83,3 +83,4 @@ void	print_arena_test(t_vm *vm, int step)
 	wclear(vm_window);
     endwin(); // завершение работы с ncurses
 }
+*/
