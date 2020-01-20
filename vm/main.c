@@ -28,7 +28,7 @@ int		flag(int *i, int ac, char **av, t_vm *vm)
 		(*i)++;
 		return (1);
 	}
-	else if (*i < ac && !ft_strncmp(av[*i], "-d", 2))
+	else if (*i + 1 < ac && !ft_strncmp(av[*i], "-d", 2))
 	{
 		vm->d = ft_atoi(av[++(*i)]);
 		if (vm->d < 0)
