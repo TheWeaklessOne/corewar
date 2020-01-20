@@ -33,11 +33,12 @@ typedef struct			s_champion
 typedef struct		s_cur
 {
 	int				id;
+	int 			id_player;
+	int 			pos;
 	int 			carry;
-	int 			code;
-	int 			cyc_op;
-	int 			cyc_live;
-	int 			i;
+	int 			reg[REG_NUMBER];
+	int 			cyc_before_op;
+	int 			last_cyc_live;
 	struct s_cur	*next;
 }					t_cur;
 
@@ -73,6 +74,7 @@ typedef struct	s_vm
 	int				dump;
 	int				color;
 	int				players;
+	int 			global;
 	t_champion		*champ[MAX_PLAYERS];
 	unsigned char	arena[MEM_SIZE];
 	char			map_color[MEM_SIZE];

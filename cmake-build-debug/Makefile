@@ -48,10 +48,10 @@ RM = /Users/sdoughnu/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/sdoughnu/Desktop/1
+CMAKE_SOURCE_DIR = /Users/sdoughnu/Desktop/corewar
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/sdoughnu/Desktop/1/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/sdoughnu/Desktop/corewar/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/sdoughnu/Desktop/1/cmake-build-debug/CMakeFiles /Users/sdoughnu/Desktop/1/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/sdoughnu/Desktop/corewar/cmake-build-debug/CMakeFiles /Users/sdoughnu/Desktop/corewar/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/sdoughnu/Desktop/1/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/sdoughnu/Desktop/corewar/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -1851,6 +1851,33 @@ vm/arena.c.s:
 	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/vm/arena.c.s
 .PHONY : vm/arena.c.s
 
+vm/cur.o: vm/cur.c.o
+
+.PHONY : vm/cur.o
+
+# target to build an object file
+vm/cur.c.o:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/vm/cur.c.o
+.PHONY : vm/cur.c.o
+
+vm/cur.i: vm/cur.c.i
+
+.PHONY : vm/cur.i
+
+# target to preprocess a source file
+vm/cur.c.i:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/vm/cur.c.i
+.PHONY : vm/cur.c.i
+
+vm/cur.s: vm/cur.c.s
+
+.PHONY : vm/cur.s
+
+# target to generate assembly for a file
+vm/cur.c.s:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/vm/cur.c.s
+.PHONY : vm/cur.c.s
+
 vm/init2.o: vm/init2.c.o
 
 .PHONY : vm/init2.o
@@ -2160,6 +2187,9 @@ help:
 	@echo "... vm/arena.o"
 	@echo "... vm/arena.i"
 	@echo "... vm/arena.s"
+	@echo "... vm/cur.o"
+	@echo "... vm/cur.i"
+	@echo "... vm/cur.s"
 	@echo "... vm/init2.o"
 	@echo "... vm/init2.i"
 	@echo "... vm/init2.s"
