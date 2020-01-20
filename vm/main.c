@@ -28,6 +28,14 @@ int		flag(int *i, int ac, char **av, t_vm *vm)
 		(*i)++;
 		return (1);
 	}
+	else if (*i < ac && !ft_strncmp(av[*i], "-d", 2))
+	{
+		vm->d = ft_atoi(av[++(*i)]);
+		if (vm->d < 0)
+			return (printf("Invalid option in flag [-d]\n") - 28);
+		(*i)++;
+		return (1);
+	}
 	return (1);
 }
 
@@ -62,6 +70,7 @@ void		init(t_vm *vm)
 	i = -1;
 	vm->dump = -1;
 	vm->color = -1;
+	vm->d = -1;
 	vm->players = 0;
 	vm->global = 0;
 	while (++i < MAX_PLAYERS)

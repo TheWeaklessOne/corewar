@@ -6,6 +6,8 @@ set(CMAKE_C_STANDARD 11)
 include_directories(includes)
 include_directories(libft)
 
+set(CMAKE_CXX_FLAGS "-lncurses")
+
 add_executable(CORE
         includes/op.h
         includes/vm.h
@@ -79,3 +81,5 @@ add_executable(CORE
         vm/init2.c
         vm/print.c
 		vm/cur.c)
+
+target_link_libraries(CORE ncurses)
