@@ -6,7 +6,7 @@
 /*   By: djoye <djoye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/11 10:21:55 by sdoughnu          #+#    #+#             */
-/*   Updated: 2020/01/18 14:02:33 by djoye            ###   ########.fr       */
+/*   Updated: 2020/01/20 16:31:22 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,6 +72,7 @@ typedef struct	s_op
 typedef struct	s_vm
 {
 	int				dump;
+	int				d;
 	int				color;
 	int				players;
 	int 			global;
@@ -108,6 +109,6 @@ int 	check_ch_name(char **av, int i);
 int 	cur_init(t_vm *vm);
 
 void	print_arena_test(t_vm *vm, int step);
-void	print_arena(t_vm *vm, int step);
+void	print_arena(t_vm *vm, int step, int size);
 
 #endif

@@ -6,19 +6,18 @@
 /*   By: djoye <djoye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/16 18:24:30 by djoye             #+#    #+#             */
-/*   Updated: 2020/01/20 15:50:32 by djoye            ###   ########.fr       */
+/*   Updated: 2020/01/20 16:31:23 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/vm.h"
 #include <ncurses.h>
-//# define HEIGHT 0 //					(MEM_SIZE / 64 + 4)
-//# define WIDTH	0 //				(64 * 3 + 5)
-#define HEIGHT 300
-#define WIDTH 300
-//#define X 0
-//#define Y 0
-//#define Y_SUB 80
+#define SIZE_32				32
+#define SIZE_64				64
+# define HEIGHT (MEM_SIZE / SIZE_64 + 4)
+# define WIDTH	(SIZE_64 * 3 + 50)
+//#define HEIGHT 300
+//#define WIDTH 300
 
 void	print_arena_test(t_vm *vm, int step)
 {
@@ -62,7 +61,7 @@ void	print_arena_test(t_vm *vm, int step)
 		init_pair(4, COLOR_BLUE, COLOR_BLACK);
 		while(++i < MEM_SIZE)
         {
-			if (i % 64 == 0)
+			if (i % SIZE_64 == 0)
 				wmove(vm_window, row++, 2);
 			color = vm->map_color[i] == 0 ? 0 : vm->map_color[i];
 			wattron(vm_window, COLOR_PAIR(color));
@@ -87,17 +86,17 @@ Last live :                   0
 Lives in current period :     0
 
 */
-		mvwprintw(vm_window, 3, 200, "Cycles/second : %d", 1000 / speed);
-		mvwprintw(vm_window, 4, 200, "Cycle : %d", cycle);
-		mvwprintw(vm_window, 5, 200, "Cursors : %d", vm->curs);
+		mvwprintw(vm_window, 3, SIZE_64 * 3 + 5, "Cycles/second : %d", 1000 / speed);
+		mvwprintw(vm_window, 4, SIZE_64 * 3 + 5, "Cycle : %d", cycle);
+		mvwprintw(vm_window, 5, SIZE_64 * 3 + 5, "Cursors : %d", vm->curs);
 
-		mvwprintw(vm_window, 6, 200, "players = %d", vm->players);
-		mvwprintw(vm_window, 7, 200, "champs = %d", vm->champ[0]);
-		mvwprintw(vm_window, 8, 200, "Cycle to die : %d", CYCLE_TO_DIE);
-		mvwprintw(vm_window, 9, 200, "Cycle delta : %d", CYCLE_DELTA);
-		mvwprintw(vm_window, 10, 200, "Lives : %d/%d", vm->champ, NBR_LIVE);
-		mvwprintw(vm_window, 11, 200, "Cycles to check : %d", vm->champ);
-		mvwprintw(vm_window, 12, 200, "Checks : %d/%d", vm->champ[1], MAX_CHECKS);
+		mvwprintw(vm_window, 6, SIZE_64 * 3 + 5, "players = %d", vm->players);
+		mvwprintw(vm_window, 7, SIZE_64 * 3 + 5, "champs = %d", vm->champ[0]);
+		mvwprintw(vm_window, 8, SIZE_64 * 3 + 5, "Cycle to die : %d", CYCLE_TO_DIE);
+		mvwprintw(vm_window, 9, SIZE_64 * 3 + 5, "Cycle delta : %d", CYCLE_DELTA);
+		mvwprintw(vm_window, 10, SIZE_64 * 3 + 5, "Lives : %d/%d", vm->champ, NBR_LIVE);
+		mvwprintw(vm_window, 11, SIZE_64 * 3 + 5, "Cycles to check : %d", vm->champ);
+		mvwprintw(vm_window, 12, SIZE_64 * 3 + 5, "Checks : %d/%d", vm->champ[1], MAX_CHECKS);
 		//wattroff(vm_window, COLOR_RED);
 		wrefresh(vm_window);
 		usleep(speed);
