@@ -36,6 +36,9 @@ int		flag(int *i, int ac, char **av, t_vm *vm)
 		(*i)++;
 		return (1);
 	}
+	if ((!ft_strncmp(av[*i], "-dump", 5) || !ft_strncmp(av[*i], "-d", 2))
+		&& *i + 1 >= ac)
+		return (printf("The flag is missing a number\n") - 29);
 	return (1);
 }
 
