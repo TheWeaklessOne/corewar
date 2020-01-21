@@ -95,6 +95,8 @@ int		main(int ac, char **av)
 	init(&vm);
 	if (!(parser(&vm, ac, av)))
 		exit(1);
+	if (vm.players == 0)
+		exit(printf("You have not entered champions\n") - 31);
 	if (!build_arena(&vm))
 		exit(0);
 	if (!cur_init(&vm))

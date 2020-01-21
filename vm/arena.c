@@ -37,10 +37,9 @@ void	print_arena(t_vm *vm, int step, int size)
 	{
 		if (i == 0 || (i % size) == 0)
 			printf("0x%0.4x : ", i);
-		printf("%0.2x", vm->arena[i]);
-		if ((i + 1) % size == 0 && i != 0)
+		printf("%0.2x ", vm->arena[i]);
+		if (((i + 1) % size == 0) && i != 0)
 			printf("\n");
-		else printf(" ");
 		i++;
 	}
 }
