@@ -80,6 +80,7 @@ add_executable(CORE
         vm/arena.c
         vm/init2.c
         vm/print.c
-		vm/cur.c)
+		vm/cur.c
+		vm/war.c)
 
 target_link_libraries(CORE ncurses)

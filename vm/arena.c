@@ -67,11 +67,5 @@ int 	build_arena(t_vm *vm)
 		i = i + step;
 		player++;
 	}
-	if (vm->dump != -1)
-		print_arena(vm, step, 32);
-	else if (vm->d != -1)
-		print_arena(vm, step, 64);
-	else if (vm->color == 1)
-		print_arena_test(vm, step);
 	return (1);
 }

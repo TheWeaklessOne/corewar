@@ -14,5 +14,18 @@
 
 int 	war_coming(t_vm *vm)
 {
+	int step;
+
+	step = MEM_SIZE / vm->players;
+//	while (vm->global)
+//	{
+//		if (vm->d != -1 && )
+//	}
+	if (vm->dump != -1)
+		print_arena(vm, step, 32);
+	else if (vm->d != -1)
+		print_arena(vm, step, 64);
+	else if (vm->color == 1)
+		print_arena_test(vm, step);
 	return (1);
 }

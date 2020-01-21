@@ -1986,6 +1986,33 @@ vm/print.c.s:
 	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/vm/print.c.s
 .PHONY : vm/print.c.s
 
+vm/war.o: vm/war.c.o
+
+.PHONY : vm/war.o
+
+# target to build an object file
+vm/war.c.o:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/vm/war.c.o
+.PHONY : vm/war.c.o
+
+vm/war.i: vm/war.c.i
+
+.PHONY : vm/war.i
+
+# target to preprocess a source file
+vm/war.c.i:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/vm/war.c.i
+.PHONY : vm/war.c.i
+
+vm/war.s: vm/war.c.s
+
+.PHONY : vm/war.s
+
+# target to generate assembly for a file
+vm/war.c.s:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/vm/war.c.s
+.PHONY : vm/war.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -2202,6 +2229,9 @@ help:
 	@echo "... vm/print.o"
 	@echo "... vm/print.i"
 	@echo "... vm/print.s"
+	@echo "... vm/war.o"
+	@echo "... vm/war.i"
+	@echo "... vm/war.s"
 .PHONY : help
 
 

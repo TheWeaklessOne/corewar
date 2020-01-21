@@ -300,6 +300,9 @@
 		<Unit filename="/Users/sdoughnu/Desktop/corewar/vm/print.c">
 			<Option target="CORE"/>
 		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/corewar/vm/war.c">
+			<Option target="CORE"/>
+		</Unit>
 		<Unit filename="/Users/sdoughnu/Desktop/corewar/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

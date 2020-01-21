@@ -73,6 +73,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/sdoughnu/Desktop/corewar/vm/init_champion.c" "/Users/sdoughnu/Desktop/corewar/cmake-build-debug/CMakeFiles/CORE.dir/vm/init_champion.c.o"
   "/Users/sdoughnu/Desktop/corewar/vm/main.c" "/Users/sdoughnu/Desktop/corewar/cmake-build-debug/CMakeFiles/CORE.dir/vm/main.c.o"
   "/Users/sdoughnu/Desktop/corewar/vm/print.c" "/Users/sdoughnu/Desktop/corewar/cmake-build-debug/CMakeFiles/CORE.dir/vm/print.c.o"
+  "/Users/sdoughnu/Desktop/corewar/vm/war.c" "/Users/sdoughnu/Desktop/corewar/cmake-build-debug/CMakeFiles/CORE.dir/vm/war.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")
 

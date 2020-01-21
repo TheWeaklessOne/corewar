@@ -219,3 +219,8 @@ CMakeFiles/CORE.dir/vm/print.c.o
  /Users/sdoughnu/Desktop/corewar/includes/vm.h
  /Users/sdoughnu/Desktop/corewar/libft/libft.h
  /Users/sdoughnu/Desktop/corewar/vm/print.c
+CMakeFiles/CORE.dir/vm/war.c.o
+ /Users/sdoughnu/Desktop/corewar/includes/op.h
+ /Users/sdoughnu/Desktop/corewar/includes/vm.h
+ /Users/sdoughnu/Desktop/corewar/libft/libft.h
+ /Users/sdoughnu/Desktop/corewar/vm/war.c

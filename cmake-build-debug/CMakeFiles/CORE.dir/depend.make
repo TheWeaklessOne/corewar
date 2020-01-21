@@ -219,3 +219,8 @@ CMakeFiles/CORE.dir/vm/print.c.o: ../includes/vm.h
 CMakeFiles/CORE.dir/vm/print.c.o: ../libft/libft.h
 CMakeFiles/CORE.dir/vm/print.c.o: ../vm/print.c
 
+CMakeFiles/CORE.dir/vm/war.c.o: ../includes/op.h
+CMakeFiles/CORE.dir/vm/war.c.o: ../includes/vm.h
+CMakeFiles/CORE.dir/vm/war.c.o: ../libft/libft.h
+CMakeFiles/CORE.dir/vm/war.c.o: ../vm/war.c
+

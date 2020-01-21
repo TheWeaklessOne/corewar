@@ -99,7 +99,7 @@ int		main(int ac, char **av)
 		exit(0);
 	if (!cur_init(&vm))
 		exit(1);
-//	if (!war_coming(&vm))
-//		exit(1);
+	if (!war_coming(&vm))
+		exit(1);
 	exit(0);
 }

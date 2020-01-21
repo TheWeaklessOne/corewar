@@ -61,7 +61,7 @@ int 	cur_init(t_vm *vm)
 	printf("Introducing contestants...\n");
 	while (++i < vm->players)
 	{
-		printf("* Player %d, weighing %d bytes, \"%s\" (\"%s\") !\n", i,
+		printf("* Player %d, weighing %d bytes, \"%s\" (\"%s\") !\n", i + 1,
 				vm->champ[i]->size, vm->champ[i]->name, vm->champ[i]->com);
 	}
 	return (1);
