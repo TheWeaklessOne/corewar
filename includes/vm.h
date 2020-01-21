@@ -6,7 +6,7 @@
 /*   By: djoye <djoye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/11 10:21:55 by sdoughnu          #+#    #+#             */
-/*   Updated: 2020/01/20 16:31:22 by djoye            ###   ########.fr       */
+/*   Updated: 2020/01/21 17:58:54 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,9 @@ typedef struct		s_cur
 	int				id;
 	int 			id_player;
 	int 			pos;
+	int				step;
 	int 			carry;
+	unsigned char	operation;
 	int 			reg[REG_NUMBER];
 	int 			cyc_before_op;
 	int 			last_cyc_live;
@@ -66,7 +68,7 @@ typedef struct	s_op
 	int 			need_cycles;
 	char 			*opisanie;
 	int 			code_type_arg;
-	int 			tdir_size; // 0 это 4, 1 это 2
+	int 			dir_size; // 0 это 4, 1 это 2
 }				t_op;
 
 typedef struct	s_vm

@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   op.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sdoughnu <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: djoye <djoye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/12 11:55:39 by sdoughnu          #+#    #+#             */
-/*   Updated: 2020/01/15 12:18:22 by sdoughnu         ###   ########.fr       */
+/*   Updated: 2020/01/21 17:35:07 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/op.h"
+#include "includes/vm.h"
 
 t_op    op_tab[17] =
 		{

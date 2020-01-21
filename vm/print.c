@@ -6,7 +6,7 @@
 /*   By: djoye <djoye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/16 18:24:30 by djoye             #+#    #+#             */
-/*   Updated: 2020/01/20 16:31:23 by djoye            ###   ########.fr       */
+/*   Updated: 2020/01/21 17:35:06 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@
 #define SIZE_64				64
 # define HEIGHT (MEM_SIZE / SIZE_64 + 4)
 # define WIDTH	(SIZE_64 * 3 + 50)
-//#define HEIGHT 300
-//#define WIDTH 300
 
 void	print_arena_test(t_vm *vm, int step)
 {
@@ -49,7 +47,7 @@ void	print_arena_test(t_vm *vm, int step)
         key = getch(); // ждём нажатия символа
         if (key == KEY_DOWN)
     	    speed < 200000 ? speed *= 2 : 0;
-        if (key == KEY_UP)
+        else if (key == KEY_UP)
     	   speed > 100 ? speed /= 2 : 0;
 		column = 0;
 		row = 1;
@@ -68,7 +66,7 @@ void	print_arena_test(t_vm *vm, int step)
 			wprintw(vm_window, "%02x", vm->arena[i]);
 			wattroff(vm_window, COLOR_PAIR(color));
 			waddch(vm_window, ' ');
-			vm->arena[i] +=  vm->arena[i] != 0 ? color : 0; // test
+			//vm->arena[i] +=  vm->arena[i] != 0 ? color : 0; // test
 		}
 		
 	//	wattron(vm_window, COLOR_RED);
