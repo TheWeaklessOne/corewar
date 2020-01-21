@@ -36,7 +36,7 @@ unistd.h
 stdlib.h
 -
 
-/Users/sdoughnu/Desktop/corewar/vm/main.c
+/Users/sdoughnu/Desktop/corewar/vm/arena.c
 ../includes/vm.h
 /Users/sdoughnu/Desktop/corewar/includes/vm.h
 
