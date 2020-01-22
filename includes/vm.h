@@ -6,7 +6,7 @@
 /*   By: djoye <djoye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/11 10:21:55 by sdoughnu          #+#    #+#             */
-/*   Updated: 2020/01/22 12:25:03 by djoye            ###   ########.fr       */
+/*   Updated: 2020/01/22 18:09:39 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include <stdio.h>
 # include <unistd.h>
-# include "op.h"
+# include "./op.h"
 # include "../libft/libft.h"
 # include <fcntl.h>
 # include <time.h>
@@ -59,25 +59,25 @@ typedef	union	u_4bytes
 	int			hex;
 }				t_4bytes;
 
-typedef struct	s_arg
+typedef struct		s_arg
 {
-	char		arg_1 : 2;
-	char		arg_2 : 2;
-	char		arg_3 : 2;
-	char		arg_4 : 2;
-}				t_arg;
+	unsigned char	arg_1 : 2;
+	unsigned char	arg_2 : 2;
+	unsigned char	arg_3 : 2;
+	unsigned char	arg_4 : 2;
+}					t_arg;
 
-typedef	union	u_4bits
+typedef	union		u_4bits
 {
-	t_arg 		field;
-	int			arg;
-}				t_4bits;
+	t_arg			field;
+	unsigned char	arg;
+}					t_4bits;
 
 typedef struct	s_op
 {
 	char 			*name;
 	int				arg_count;
-	int				arg_type;
+	int				arg_type[3];
 	int 			code;
 	int 			need_cycles;
 	char 			*opisanie;
@@ -128,7 +128,7 @@ void	print_arena_test(t_vm *vm, int step);
 void	print_arena(t_vm *vm, int step, int size);
 int 	war_coming(t_vm *vm);
 
-
-int     bit(unsigned char byte, char arg_num);
+int     check_arg(unsigned char nbr, char arg, char arg_num);
+int     check_arg_new(t_op *op_tab, unsigned char id_op, char arg);
 
 #endif

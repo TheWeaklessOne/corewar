@@ -6,7 +6,7 @@
 /*   By: djoye <djoye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/16 18:24:30 by djoye             #+#    #+#             */
-/*   Updated: 2020/01/21 17:35:06 by djoye            ###   ########.fr       */
+/*   Updated: 2020/01/22 18:09:42 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ void	print_arena_test(t_vm *vm, int step)
 			wprintw(vm_window, "%02x", vm->arena[i]);
 			wattroff(vm_window, COLOR_PAIR(color));
 			waddch(vm_window, ' ');
-			//vm->arena[i] +=  vm->arena[i] != 0 ? color : 0; // test
+			vm->arena[i] +=  vm->arena[i] != 0 ? color : 0; // test
 		}
 		
 	//	wattron(vm_window, COLOR_RED);

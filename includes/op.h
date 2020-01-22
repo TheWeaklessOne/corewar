@@ -6,7 +6,7 @@
 /*   By: djoye <djoye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/12 11:50:51 by sdoughnu          #+#    #+#             */
-/*   Updated: 2020/01/22 12:43:32 by djoye            ###   ########.fr       */
+/*   Updated: 2020/01/22 18:09:41 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ typedef char	t_arg_type;
 
 #define T_REG					1
 #define T_DIR					2
-#define T_IND					3
+#define T_IND					4
 #define T_LAB					8
 
 /*
