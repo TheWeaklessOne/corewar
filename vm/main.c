@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sdoughnu <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: djoye <djoye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/11 10:05:40 by sdoughnu          #+#    #+#             */
-/*   Updated: 2020/01/11 10:05:42 by sdoughnu         ###   ########.fr       */
+/*   Updated: 2020/01/22 12:41:13 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,6 +99,8 @@ int		main(int ac, char **av)
 		exit(printf("You have not entered champions\n") - 31);
 	if (!build_arena(&vm))
 		exit(0);
+	printf("ds");
+	bit(2, 1);
 	if (!cur_init(&vm))
 		exit(1);
 	if (!war_coming(&vm))

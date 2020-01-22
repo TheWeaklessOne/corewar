@@ -6,7 +6,7 @@
 /*   By: djoye <djoye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/11 10:21:55 by sdoughnu          #+#    #+#             */
-/*   Updated: 2020/01/21 17:58:54 by djoye            ###   ########.fr       */
+/*   Updated: 2020/01/22 12:25:03 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,20 @@ typedef	union	u_4bytes
 	t_bit_field field;
 	int			hex;
 }				t_4bytes;
+
+typedef struct	s_arg
+{
+	char		arg_1 : 2;
+	char		arg_2 : 2;
+	char		arg_3 : 2;
+	char		arg_4 : 2;
+}				t_arg;
+
+typedef	union	u_4bits
+{
+	t_arg 		field;
+	int			arg;
+}				t_4bits;
 
 typedef struct	s_op
 {
@@ -113,5 +127,8 @@ int 	cur_init(t_vm *vm);
 void	print_arena_test(t_vm *vm, int step);
 void	print_arena(t_vm *vm, int step, int size);
 int 	war_coming(t_vm *vm);
+
+
+int     bit(unsigned char byte, char arg_num);
 
 #endif

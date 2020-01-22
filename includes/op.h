@@ -6,7 +6,7 @@
 /*   By: djoye <djoye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/12 11:50:51 by sdoughnu          #+#    #+#             */
-/*   Updated: 2020/01/21 17:35:07 by djoye            ###   ########.fr       */
+/*   Updated: 2020/01/22 12:43:32 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ typedef char	t_arg_type;
 
 #define T_REG					1
 #define T_DIR					2
-#define T_IND					4
+#define T_IND					3
 #define T_LAB					8
 
 /*
@@ -76,7 +76,7 @@ typedef struct		header_s
 	unsigned int		prog_size;
 	char				comment[COMMENT_LENGTH + 1];
 }					header_t;
-
+/*
 t_op    op_tab[17] =
 		{
 		{"live",	1, {T_DIR},												  1, 10, "alive",                               0, 0},
@@ -97,5 +97,5 @@ t_op    op_tab[17] =
 		{"aff",		1, {T_REG},												  16, 2, "aff",                                 1, 0},
 		{0, 0, {0}, 0, 0, 0, 0, 0}
 		};
-
+*/
 #endif
