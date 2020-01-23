@@ -6,7 +6,7 @@
 /*   By: djoye <djoye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/21 15:29:10 by djoye             #+#    #+#             */
-/*   Updated: 2020/01/22 18:09:32 by djoye            ###   ########.fr       */
+/*   Updated: 2020/01/23 16:26:39 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ int     check_arg_l(char arg)
         */
     return (arg & 3);
 }
-
+/*
 int     check_arg(unsigned char nbr, char arg, char arg_num)
 {
     t_4bits num;
@@ -65,12 +65,24 @@ int     check_arg(unsigned char nbr, char arg, char arg_num)
 }
     return (check); // & arg);
 }
+*/
 
-int     check_arg_new(t_op *op_tab, unsigned char id_op, char arg) //, char arg_num)
+unsigned char swap(unsigned char c)
 {
-    t_4bits num;
-    char    check;
-    int     i;
+    if (c == 1)
+        return (1);
+    else if (c == 2) 
+        return (2);
+    else if (c == 3)
+        return (4);
+    else
+        return (0);
+}
+
+int     check_arg(t_op *op_tab, unsigned char id_op, unsigned char arg) //, char arg_num)
+{
+    t_4bits         num;
+    int             i;
 
     i = 0;
     num.arg = arg;
@@ -78,17 +90,20 @@ int     check_arg_new(t_op *op_tab, unsigned char id_op, char arg) //, char arg_
     {
         if (i == 0)
         {
-            if (!(num.field.arg_1 == op_tab[id_op].arg_type[i]))
+            arg = swap(num.field.arg_1);
+            if (!arg || !(arg & op_tab[id_op - 1].arg_type[i]))
                 return (0);
         }
         else if (i == 1)
         {
-            if (!(num.field.arg_2 == op_tab[id_op].arg_type[i]))
+            arg = swap(num.field.arg_2);
+            if (!arg || !(arg & op_tab[id_op - 1].arg_type[i]))
                 return (0);
         }
         else if (i == 2)
         {
-           if (!(num.field.arg_3 == op_tab[id_op].arg_type[i]))
+            arg = swap(num.field.arg_3);
+            if (!arg || !(arg & op_tab[id_op - 1].arg_type[i]))
                 return (0);
         }
         i++;

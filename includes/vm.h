@@ -6,7 +6,7 @@
 /*   By: djoye <djoye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/11 10:21:55 by sdoughnu          #+#    #+#             */
-/*   Updated: 2020/01/22 18:09:39 by djoye            ###   ########.fr       */
+/*   Updated: 2020/01/23 16:26:21 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,10 +61,10 @@ typedef	union	u_4bytes
 
 typedef struct		s_arg
 {
-	unsigned char	arg_1 : 2;
-	unsigned char	arg_2 : 2;
+	unsigned char	arg_0 : 2;
 	unsigned char	arg_3 : 2;
-	unsigned char	arg_4 : 2;
+	unsigned char	arg_2 : 2;
+	unsigned char	arg_1 : 2;
 }					t_arg;
 
 typedef	union		u_4bits
@@ -128,7 +128,7 @@ void	print_arena_test(t_vm *vm, int step);
 void	print_arena(t_vm *vm, int step, int size);
 int 	war_coming(t_vm *vm);
 
-int     check_arg(unsigned char nbr, char arg, char arg_num);
-int     check_arg_new(t_op *op_tab, unsigned char id_op, char arg);
+
+int     check_arg(t_op *op_tab, unsigned char id_op, unsigned char arg);
 
 #endif

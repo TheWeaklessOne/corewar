@@ -6,7 +6,7 @@
 /*   By: djoye <djoye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/11 10:05:40 by sdoughnu          #+#    #+#             */
-/*   Updated: 2020/01/22 18:09:38 by djoye            ###   ########.fr       */
+/*   Updated: 2020/01/23 16:26:55 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -120,8 +120,7 @@ int		main(int ac, char **av)
 		exit(printf("You have not entered champions\n") - 31);
 	if (!build_arena(&vm))
 		exit(0);
-	//printf ("%d\n", check_arg(255, T_REG, 1));
-	printf ("%d\n", check_arg_new(op_tab, 1, 1));
+	printf ("%d\n", check_arg(op_tab, 11, 104));
 	if (!cur_init(&vm))
 		exit(1);
 	if (!war_coming(&vm))
@@ -129,4 +128,4 @@ int		main(int ac, char **av)
 	exit(0);
 }
 
-int     check_arg_new(t_op *op_tab, unsigned char id_op, char arg);
+//int     check_arg(t_op *op_tab, unsigned char id_op, unsigned char arg);
