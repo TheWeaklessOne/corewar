@@ -288,6 +288,9 @@
 		<Unit filename="/Users/sdoughnu/Desktop/corewar/vm/cur.c">
 			<Option target="CORE"/>
 		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/corewar/vm/get_arg.c">
+			<Option target="CORE"/>
+		</Unit>
 		<Unit filename="/Users/sdoughnu/Desktop/corewar/vm/init2.c">
 			<Option target="CORE"/>
 		</Unit>

@@ -199,6 +199,11 @@ CMakeFiles/CORE.dir/vm/cur.c.o
  /Users/sdoughnu/Desktop/corewar/includes/vm.h
  /Users/sdoughnu/Desktop/corewar/libft/libft.h
  /Users/sdoughnu/Desktop/corewar/vm/cur.c
+CMakeFiles/CORE.dir/vm/get_arg.c.o
+ /Users/sdoughnu/Desktop/corewar/includes/op.h
+ /Users/sdoughnu/Desktop/corewar/includes/vm.h
+ /Users/sdoughnu/Desktop/corewar/libft/libft.h
+ /Users/sdoughnu/Desktop/corewar/vm/get_arg.c
 CMakeFiles/CORE.dir/vm/init2.c.o
  /Users/sdoughnu/Desktop/corewar/includes/op.h
  /Users/sdoughnu/Desktop/corewar/includes/vm.h

@@ -199,6 +199,11 @@ CMakeFiles/CORE.dir/vm/cur.c.o: ../includes/vm.h
 CMakeFiles/CORE.dir/vm/cur.c.o: ../libft/libft.h
 CMakeFiles/CORE.dir/vm/cur.c.o: ../vm/cur.c
 
+CMakeFiles/CORE.dir/vm/get_arg.c.o: ../includes/op.h
+CMakeFiles/CORE.dir/vm/get_arg.c.o: ../includes/vm.h
+CMakeFiles/CORE.dir/vm/get_arg.c.o: ../libft/libft.h
+CMakeFiles/CORE.dir/vm/get_arg.c.o: ../vm/get_arg.c
+
 CMakeFiles/CORE.dir/vm/init2.c.o: ../includes/op.h
 CMakeFiles/CORE.dir/vm/init2.c.o: ../includes/vm.h
 CMakeFiles/CORE.dir/vm/init2.c.o: ../libft/libft.h

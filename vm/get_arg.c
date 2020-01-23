@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "../includes/vm.h"
-#include "../includes/op.h"
 
 /*
 int     get_arg(t_vm *vm, t_cur *cur, unsigned char arg, int mod)
@@ -79,7 +78,7 @@ unsigned char swap(unsigned char c)
         return (0);
 }
 
-int     check_arg(t_op *op_tab, unsigned char id_op, unsigned char arg) //, char arg_num)
+int     check_arg(t_op *op_tab, unsigned char id_op, unsigned char arg)
 {
     t_4bits         num;
     int             i;
@@ -108,5 +107,5 @@ int     check_arg(t_op *op_tab, unsigned char id_op, unsigned char arg) //, char
         }
         i++;
     }
-    return (1); // & arg);
+    return (1);
 }

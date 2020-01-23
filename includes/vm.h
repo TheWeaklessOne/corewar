@@ -92,6 +92,7 @@ typedef struct	s_vm
 	int				color;
 	int				players;
 	int 			global;
+	int 			check;
 	t_champion		*champ[MAX_PLAYERS];
 	unsigned char	arena[MEM_SIZE];
 	char			map_color[MEM_SIZE];

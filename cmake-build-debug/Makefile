@@ -1878,6 +1878,33 @@ vm/cur.c.s:
 	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/vm/cur.c.s
 .PHONY : vm/cur.c.s
 
+vm/get_arg.o: vm/get_arg.c.o
+
+.PHONY : vm/get_arg.o
+
+# target to build an object file
+vm/get_arg.c.o:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/vm/get_arg.c.o
+.PHONY : vm/get_arg.c.o
+
+vm/get_arg.i: vm/get_arg.c.i
+
+.PHONY : vm/get_arg.i
+
+# target to preprocess a source file
+vm/get_arg.c.i:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/vm/get_arg.c.i
+.PHONY : vm/get_arg.c.i
+
+vm/get_arg.s: vm/get_arg.c.s
+
+.PHONY : vm/get_arg.s
+
+# target to generate assembly for a file
+vm/get_arg.c.s:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/vm/get_arg.c.s
+.PHONY : vm/get_arg.c.s
+
 vm/init2.o: vm/init2.c.o
 
 .PHONY : vm/init2.o
@@ -2217,6 +2244,9 @@ help:
 	@echo "... vm/cur.o"
 	@echo "... vm/cur.i"
 	@echo "... vm/cur.s"
+	@echo "... vm/get_arg.o"
+	@echo "... vm/get_arg.i"
+	@echo "... vm/get_arg.s"
 	@echo "... vm/init2.o"
 	@echo "... vm/init2.i"
 	@echo "... vm/init2.s"
