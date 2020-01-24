@@ -6,7 +6,7 @@
 /*   By: djoye <djoye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/11 10:21:55 by sdoughnu          #+#    #+#             */
-/*   Updated: 2020/01/23 16:26:21 by djoye            ###   ########.fr       */
+/*   Updated: 2020/01/24 15:33:48 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,7 @@ typedef	union		u_4bits
 	unsigned char	arg;
 }					t_4bits;
 
-typedef struct	s_op
+typedef struct		s_op
 {
 	char 			*name;
 	int				arg_count;
@@ -83,9 +83,9 @@ typedef struct	s_op
 	char 			*opisanie;
 	int 			code_type_arg;
 	int 			dir_size; // 0 это 4, 1 это 2
-}				t_op;
+}					t_op;
 
-typedef struct	s_vm
+typedef struct		s_vm
 {
 	int				dump;
 	int				d;
@@ -97,7 +97,7 @@ typedef struct	s_vm
 	unsigned char	arena[MEM_SIZE];
 	char			map_color[MEM_SIZE];
 	t_cur			*curs;
-}				t_vm;
+}					t_vm;
 /*
 typedef struct		s_vs
 {
