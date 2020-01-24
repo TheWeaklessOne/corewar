@@ -1,4 +1,8 @@
 /Users/sdoughnu/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/sdoughnu/Desktop/corewar
 -- Configuring done
+CMake Error: Cannot open file for write: /Users/sdoughnu/Desktop/corewar/cmake-build-debug/CMakeFiles/CORE.dir/link.txt.tmp
+CMake Error: : System Error: No space left on device
+CMake Error: Cannot open file for write: /Users/sdoughnu/Desktop/corewar/cmake-build-debug/CMakeFiles/CORE.dir/DependInfo.cmake.tmp
+CMake Error: : System Error: No space left on device
 -- Generating done
--- Build files have been written to: /Users/sdoughnu/Desktop/corewar/cmake-build-debug
+CMake Generate step failed.  Build files cannot be regenerated correctly.

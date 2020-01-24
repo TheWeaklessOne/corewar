@@ -103,6 +103,6 @@ int		main(int ac, char **av)
 	if (!cur_init(&vm))
 		exit(1);
 	if (!war_coming(&vm))
-		exit(1);
+		exit(0);
 	exit(0);
 }

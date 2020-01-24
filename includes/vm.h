@@ -126,7 +126,7 @@ int 	check_ch_name(char **av, int i);
 int 	cur_init(t_vm *vm);
 
 void	print_arena_test(t_vm *vm, int step);
-void	print_arena(t_vm *vm, int step, int size);
+int		print_arena(t_vm *vm, int step, int size);
 int 	war_coming(t_vm *vm);
 
 

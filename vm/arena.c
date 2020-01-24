@@ -28,7 +28,7 @@ int		position(t_vm *vm, int player, int i)
 	return (1);
 }
 
-void	print_arena(t_vm *vm, int step, int size)
+int		print_arena(t_vm *vm, int step, int size)
 {
 	int i;
 
@@ -42,6 +42,7 @@ void	print_arena(t_vm *vm, int step, int size)
 			printf("\n");
 		i++;
 	}
+	return (0);
 }
 
 int 	build_arena(t_vm *vm)
