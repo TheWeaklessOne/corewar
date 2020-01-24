@@ -6,7 +6,7 @@
 /*   By: djoye <djoye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/13 14:43:36 by sdoughnu          #+#    #+#             */
-/*   Updated: 2020/01/22 18:09:39 by djoye            ###   ########.fr       */
+/*   Updated: 2020/01/24 17:58:20 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,15 +29,16 @@ int		read_size(fd)
 {
 	t_4bytes		num;
 	unsigned int	c;
+	unsigned char	tmp;
 
 	read(fd, &c, 4);
 	num.hex = c;
-	num.field.o_temp = num.field.octet1;
+	tmp = num.field.octet1;
 	num.field.octet1 = num.field.octet4;
-	num.field.octet4 = num.field.o_temp;
-	num.field.o_temp = num.field.octet2;
+	num.field.octet4 = tmp;
+	tmp = num.field.octet2;
 	num.field.octet2 = num.field.octet3;
-	num.field.octet3 = num.field.o_temp;
+	num.field.octet3 = tmp;
 	return (num.hex);
 }
 

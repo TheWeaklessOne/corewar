@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init2.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sdoughnu <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: djoye <djoye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/15 11:39:19 by sdoughnu          #+#    #+#             */
-/*   Updated: 2020/01/15 11:39:32 by sdoughnu         ###   ########.fr       */
+/*   Updated: 2020/01/24 17:58:21 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,16 @@ int 		exec_magic(int fd)
 {
 	t_4bytes		num;
 	unsigned int	c;
+	unsigned char	tmp;
 
 	read(fd, &c, 4);
 	num.hex = c;
-	num.field.o_temp = num.field.octet1;
+	tmp = num.field.octet1;
 	num.field.octet1 = num.field.octet4;
-	num.field.octet4 = num.field.o_temp;
-	num.field.o_temp = num.field.octet2;
+	num.field.octet4 = tmp;
+	tmp = num.field.octet2;
 	num.field.octet2 = num.field.octet3;
-	num.field.octet3 = num.field.o_temp;
+	num.field.octet3 = tmp;
 	if (num.hex == COREWAR_EXEC_MAGIC)
 		return (1);
 	return (0);

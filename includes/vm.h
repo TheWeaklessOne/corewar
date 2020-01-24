@@ -6,7 +6,7 @@
 /*   By: djoye <djoye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/11 10:21:55 by sdoughnu          #+#    #+#             */
-/*   Updated: 2020/01/24 15:33:48 by djoye            ###   ########.fr       */
+/*   Updated: 2020/01/24 17:58:22 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,6 @@ typedef struct	s_bit_field
 	int			octet2 : 8;
 	int			octet3 : 8;
 	int			octet4 : 8;
-	int			o_temp : 8;
 }				t_bit_field;
 
 typedef	union	u_4bytes

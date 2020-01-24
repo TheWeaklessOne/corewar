@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cur.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sdoughnu <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: djoye <djoye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/17 14:05:44 by sdoughnu          #+#    #+#             */
-/*   Updated: 2020/01/17 14:05:45 by sdoughnu         ###   ########.fr       */
+/*   Updated: 2020/01/24 17:58:19 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ t_cur	*new_cur(int i)
 	c->cyc_before_op = 0;
 	c->carry = 0;
 	c->id_player = i;
-	ft_bzero(c->reg, sizeof(int) * 16);
+	ft_bzero(c->reg, sizeof(int) * REG_NUMBER);
 	c->next = NULL;
 	return (c);
 }

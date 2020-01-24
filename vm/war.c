@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   war.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sdoughnu <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: djoye <djoye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 10:48:04 by sdoughnu          #+#    #+#             */
-/*   Updated: 2020/01/20 10:48:05 by sdoughnu         ###   ########.fr       */
+/*   Updated: 2020/01/24 17:58:18 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,7 @@ int 	war_coming(t_vm *vm)
 			return(print_arena(vm, step, 64));
 		if (vm->dump == vm->global)
 			return(print_arena(vm, step, 32));
-		cycle(vm, &op_tab);
+		cycle(vm, op_tab);
 		vm->check--;
 	}
 //	if (vm->color == 1)
