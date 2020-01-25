@@ -36,6 +36,10 @@ unistd.h
 stdlib.h
 -
 
+/Users/sdoughnu/Desktop/corewar/vm/cur.c
+../includes/vm.h
+/Users/sdoughnu/Desktop/corewar/includes/vm.h
+
 /Users/sdoughnu/Desktop/corewar/vm/war.c
 ../includes/vm.h
 /Users/sdoughnu/Desktop/corewar/includes/vm.h

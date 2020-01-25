@@ -54,6 +54,7 @@ int 	cur_init(t_vm *vm)
 		if (!(c = new_cur(i + 1)))
 			return (printf("Memory not allocated\n") - 21);
 		c->pos = start;
+		c->reg[0] = -(i + 1);				//в r1 записан id игрока, на котором стоит каретка
 		push_cur(c, vm);
 		start += step;
 	}

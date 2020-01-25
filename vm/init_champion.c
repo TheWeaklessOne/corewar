@@ -20,6 +20,7 @@ void	read_name(t_champion *ch, int fd)
 	i = -1;
 	while (++i < PROG_NAME_LENGTH)
 		read(fd, &(ch->name[i]), 1);
+	ch->name[PROG_NAME_LENGTH] = '\0';
 	i = 0;
 	while (++i < 5)
 		read(fd, &c, 1);
@@ -50,6 +51,7 @@ void	read_com(t_champion *ch, int fd)
 	i = -1;
 	while (++i < COMMENT_LENGTH)
 		read(fd, &(ch->com[i]), 1);
+	ch->com[COMMENT_LENGTH] = '\0';
 	i = -1;
 	while (++i < 4)
 		read(fd, &c, 1);
