@@ -6,7 +6,7 @@
 /*   By: djoye <djoye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/21 15:29:10 by djoye             #+#    #+#             */
-/*   Updated: 2020/01/24 17:58:17 by djoye            ###   ########.fr       */
+/*   Updated: 2020/01/29 13:32:57 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -110,7 +110,7 @@ int     check_arg(t_op *op_tab, unsigned char id_op, unsigned char arg)
     return (1);
 }
 
-int     get_arg(t_vm *vm, unsigned char id_op, t_cur *cur, unsigned char arg, t_op *op_tab)
+int     get_value(t_vm *vm, unsigned char id_op, t_cur *cur, unsigned char arg, t_op *op_tab)
 {
     int value;
     int address;
@@ -133,7 +133,8 @@ int     get_arg(t_vm *vm, unsigned char id_op, t_cur *cur, unsigned char arg, t_
     }
     else if (arg + 1 == T_IND)
     {
-        value = 1;
+        address = (cur->pos + cur->step) % MEM_SIZE;
+        value = swap_int((int*)(vm->arena + cur->pos));
         cur->step += 2;
     }
     return(value);

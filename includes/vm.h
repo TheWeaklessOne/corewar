@@ -6,7 +6,7 @@
 /*   By: djoye <djoye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/11 10:21:55 by sdoughnu          #+#    #+#             */
-/*   Updated: 2020/01/24 17:58:22 by djoye            ###   ########.fr       */
+/*   Updated: 2020/01/30 17:02:09 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,6 +96,7 @@ typedef struct		s_vm
 	unsigned char	arena[MEM_SIZE];
 	char			map_color[MEM_SIZE];
 	t_cur			*curs;
+	int				pause;
 }					t_vm;
 /*
 typedef struct		s_vs
@@ -129,6 +130,6 @@ int		print_arena(t_vm *vm, int step, int size);
 int 	war_coming(t_vm *vm);
 
 
-int     check_arg(t_op *op_tab, unsigned char id_op, unsigned char arg);
+int     check_value(t_op *op_tab, unsigned char id_op, unsigned char arg);
 
 #endif

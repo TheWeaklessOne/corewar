@@ -6,7 +6,7 @@
 /*   By: djoye <djoye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 10:48:04 by sdoughnu          #+#    #+#             */
-/*   Updated: 2020/01/24 17:58:18 by djoye            ###   ########.fr       */
+/*   Updated: 2020/01/30 16:59:37 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,7 @@ int 	war_coming(t_vm *vm)
 		cycle(vm, op_tab);
 		vm->check--;
 	}
-//	if (vm->color == 1)
-//		print_arena_test(vm, step);
+	if (vm->color == 1)
+		print_arena_test(vm, step);
 	return (1);
 }
