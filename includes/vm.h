@@ -6,7 +6,7 @@
 /*   By: djoye <djoye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/11 10:21:55 by sdoughnu          #+#    #+#             */
-/*   Updated: 2020/01/31 12:49:15 by djoye            ###   ########.fr       */
+/*   Updated: 2020/01/31 16:15:42 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,13 @@
 # include <fcntl.h>
 # include <time.h>
 # include <stdbool.h>
+#include <ncurses.h>
+
+#define SIZE_64				64
+#define HEIGHT (MEM_SIZE / SIZE_64 + 4)
+#define WIDTH	(SIZE_64 * 3 + 100)
+#define COMMENT SIZE_64 * 3 + 5
+#define KEY_SPACE 32
 
 typedef struct			s_champion
 {
@@ -124,11 +131,13 @@ int 	check_ch_name(char **av, int i);
 
 int 	cur_init(t_vm *vm);
 
-void	print_arena_test(t_vm *vm, int step);
 int		print_arena(t_vm *vm, int step, int size);
 int 	war_coming(t_vm *vm);
-
-
 int     check_value(t_op *op_tab, unsigned char id_op, unsigned char arg);
+
+WINDOW	*init_visu(WINDOW *vm_window);
+void	print_visu(WINDOW *vm_window, t_vm *vm, int step);
+void	print_matrix(WINDOW *vm_window, t_vm *vm);
+void	print_sub_win(t_vm *vm, WINDOW *vm_window);
 
 #endif

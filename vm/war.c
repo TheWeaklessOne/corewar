@@ -6,7 +6,7 @@
 /*   By: djoye <djoye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 10:48:04 by sdoughnu          #+#    #+#             */
-/*   Updated: 2020/01/30 16:59:37 by djoye            ###   ########.fr       */
+/*   Updated: 2020/01/31 16:15:35 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@ void 	cycle(t_vm *vm, t_op *op_tab)
 int 	war_coming(t_vm *vm)
 {
 	int step;
+	WINDOW	*vm_window;
 	t_op    op_tab[17] =
 			{
 					{"live",		1, {T_DIR},												  1, 10, "alive", 0, 0},
@@ -78,6 +79,12 @@ int 	war_coming(t_vm *vm)
 		vm->check--;
 	}
 	if (vm->color == 1)
-		print_arena_test(vm, step);
+	{
+		vm_window = init_visu(vm_window); // создание окна ncurses
+		while (vm->global++ < CYCLE_TO_DIE)
+			print_visu(vm_window, vm, step);
+		wclear(vm_window); // очистка окна ncurses
+    	endwin(); // завершение работы с ncurses
+	}
 	return (1);
 }
