@@ -12,59 +12,32 @@
 
 #include "../includes/vm.h"
 
-/*
-int     get_arg(t_vm *vm, t_cur *cur, unsigned char arg, int mod)
+int		swap_int(int *nb)
 {
-    int value;
-    int address;
-    t_op *op;
+    t_4bytes		num;
+    unsigned char	tmp;
 
-    value = 0;
-    //op = &op_tab[cur->operation];
-    if (arg == T_DIR)
-    {
-      //  value = get_map_dir(vm->arena, cur->pos + cur->step, op->dir_size);
-        cur->step += op->dir_size;
-    }
-    else if (arg == T_REG)
-        return (value); 
+    num.hex = *nb;
+    tmp = num.field.octet1;
+    num.field.octet1 = num.field.octet4;
+    num.field.octet4 = tmp;
+    tmp = num.field.octet2;
+    num.field.octet2 = num.field.octet3;
+    num.field.octet3 = tmp;
+    return (num.hex);
 }
-*/
-int     check_arg_l(char arg)
-{
-   /* if (arg & T_IND)
-        return (T_IND);
-    else if (arg & T_DIR)
-        return (T_DIR);
-    else if (arg & T_REG)
-        return (T_REG);
-        */
-    return (arg & 3);
-}
-/*
-int     check_arg(unsigned char nbr, char arg, char arg_num)
-{
-    t_4bits num;
-    char    check;
 
-    nbr = 11;
-    arg_num = 0;
-    while (++arg_num <= 4)
+int		swap_short(short *nb)
 {
-    num.arg = nbr;
-    if (arg_num == 1)
-        check = (num.field.arg_1);
-    else if (arg_num == 2)
-        check = (num.field.arg_2);
-    else if (arg_num == 3)
-        check = (num.field.arg_3);
-    else if (arg_num == 4)
-        check = (num.field.arg_4);
-        printf ("%d\n", check);
+    t_4bytes		num;
+    unsigned char	tmp;
+
+    num.hex = *nb;
+    tmp = num.field.octet1;
+    num.field.octet1 = num.field.octet2;
+    num.field.octet2 = tmp;
+    return (num.hex);
 }
-    return (check); // & arg);
-}
-*/
 
 unsigned char swap(unsigned char c)
 {
@@ -138,31 +111,4 @@ int     get_value(t_vm *vm, unsigned char id_op, t_cur *cur, unsigned char arg, 
         cur->step += 2;
     }
     return(value);
-}
-
-int		swap_int(int *nb)
-{
-	t_4bytes		num;
-	unsigned char	tmp;
-
-	num.hex = *nb;
-	tmp = num.field.octet1;
-	num.field.octet1 = num.field.octet4;
-	num.field.octet4 = tmp;
-	tmp = num.field.octet2;
-	num.field.octet2 = num.field.octet3;
-	num.field.octet3 = tmp;
-	return (num.hex);
-}
-
-int		swap_short(short *nb)
-{
-	t_4bytes		num;
-	unsigned char	tmp;
-
-	num.hex = *nb;
-	tmp = num.field.octet1;
-    num.field.octet1 = num.field.octet2;
-    num.field.octet2 = tmp;
-	return (num.hex);
 }

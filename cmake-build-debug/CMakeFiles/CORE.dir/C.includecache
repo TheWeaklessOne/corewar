@@ -23,6 +23,8 @@ time.h
 -
 stdbool.h
 -
+ncurses.h
+-
 
 /Users/sdoughnu/Desktop/corewar/libft/libft.h
 string.h
@@ -37,10 +39,6 @@ stdlib.h
 -
 
 /Users/sdoughnu/Desktop/corewar/vm/cur.c
-../includes/vm.h
-/Users/sdoughnu/Desktop/corewar/includes/vm.h
-
-/Users/sdoughnu/Desktop/corewar/vm/war.c
 ../includes/vm.h
 /Users/sdoughnu/Desktop/corewar/includes/vm.h
 

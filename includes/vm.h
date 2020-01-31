@@ -104,24 +104,7 @@ typedef struct		s_vm
 	char			map_color[MEM_SIZE];
 	t_cur			*curs;
 }					t_vm;
-/*
-typedef struct		s_vs
-{
-	t_bool			is_running;
-	int				speed;
-	WINDOW			*win_arena;
-	WINDOW			*win_info;
-	WINDOW			*win_help;
-	int				cursor_pos;
-	char			map[MEM_SIZE];
-	int				button;
-	clock_t			time;
-	char			aff_symbol;
-	int				player;
-	t_bool			sounds;
-	t_bool			display_help;
-}					t_vs;
-*/
+
 int 	init_champ(int *i, char **av, int n, t_vm *vm);
 void	champ_in_vm(t_champion *ch, t_vm *vm, int n);
 int 	exec_magic(int fd);

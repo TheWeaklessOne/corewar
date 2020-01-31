@@ -12,6 +12,7 @@
 
 #include "../includes/vm.h"
 
+/*
 void 	cycle(t_vm *vm, t_op *op_tab)
 {
 	t_cur	*buf;
@@ -41,7 +42,7 @@ void 	cycle(t_vm *vm, t_op *op_tab)
 			buf->pos += 1;
 	}
 }
-
+*/
 int 	war_coming(t_vm *vm)
 {
 	int step;
@@ -75,7 +76,7 @@ int 	war_coming(t_vm *vm)
 			return(print_arena(vm, step, 64));
 		if (vm->dump == vm->global)
 			return(print_arena(vm, step, 32));
-		cycle(vm, op_tab);
+		//cycle(vm, op_tab);
 		vm->check--;
 	}
 	if (vm->color == 1)
