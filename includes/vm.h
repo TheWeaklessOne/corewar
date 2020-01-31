@@ -6,7 +6,7 @@
 /*   By: djoye <djoye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/11 10:21:55 by sdoughnu          #+#    #+#             */
-/*   Updated: 2020/01/30 17:02:09 by djoye            ###   ########.fr       */
+/*   Updated: 2020/01/31 12:49:15 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,7 +96,6 @@ typedef struct		s_vm
 	unsigned char	arena[MEM_SIZE];
 	char			map_color[MEM_SIZE];
 	t_cur			*curs;
-	int				pause;
 }					t_vm;
 /*
 typedef struct		s_vs
