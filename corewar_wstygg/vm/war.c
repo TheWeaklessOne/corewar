@@ -6,7 +6,7 @@
 /*   By: djoye <djoye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 10:48:04 by sdoughnu          #+#    #+#             */
-/*   Updated: 2020/01/24 17:58:18 by djoye            ###   ########.fr       */
+/*   Updated: 2020/02/04 22:09:16 by wstygg           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,11 +60,13 @@ int					war_coming(t_vm *v)
 	{
 		if ((v->cycles_to_die > 0) ? !(v->global % v->cycles_to_die) : 1)
 		{
-			v->checks++;
 			delete_deads(v);
 			if (v->live_count >= NBR_LIVE)
+			{
 				v->cycles_to_die -= CYCLE_DELTA;
-			if (v->checks == MAX_CHECKS)
+				v->checks = 0;
+			}
+			else if (v->checks == MAX_CHECKS)
 			{
 				v->cycles_to_die -= CYCLE_DELTA;
 				v->checks = 0;

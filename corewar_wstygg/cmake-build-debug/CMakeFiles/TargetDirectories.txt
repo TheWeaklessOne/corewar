@@ -1,3 +1,3 @@
-/Users/wstygg/Desktop/corewar/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/wstygg/Desktop/corewar/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/wstygg/Desktop/corewar/cmake-build-debug/CMakeFiles/CORE.dir
+/Users/wstygg/Desktop/sdohnu/corewar_wstygg/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/wstygg/Desktop/sdohnu/corewar_wstygg/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/wstygg/Desktop/sdohnu/corewar_wstygg/cmake-build-debug/CMakeFiles/CORE.dir
