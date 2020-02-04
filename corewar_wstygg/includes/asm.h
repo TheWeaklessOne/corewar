@@ -31,7 +31,7 @@
 
 char	*get_string(char **argv);
 char	*validator(int argc, char **argv);
-void	create_file(char *str , char *filename);
+void	create_file(char *str, char *filename);
 void	error_usage(void);
 void	error_allocation(void);
 void	free_split(char **arr);

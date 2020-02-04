@@ -12,9 +12,9 @@
 
 #include "../includes/vm.h"
 
-t_cur	*new_cur(int i)
+t_cur			*new_cur(int i)
 {
-	t_cur	*c;
+	t_cur		*c;
 
 	if (!(c = (t_cur*)malloc(sizeof(t_cur))))
 		return (NULL);
@@ -22,13 +22,13 @@ t_cur	*new_cur(int i)
 	c->last_cyc_live = 0;
 	c->cyc_before_op = 0;
 	c->carry = 0;
-	c->id_player = i;
 	ft_bzero(c->reg, sizeof(int) * REG_NUMBER);
+	c->reg[0] = -i;
 	c->next = NULL;
 	return (c);
 }
 
-void	push_cur(t_cur *c, t_vm *vm)
+void			push_cur(t_cur *c, t_vm *vm)
 {
 	if (!vm->curs)
 		vm->curs = c;
@@ -39,7 +39,7 @@ void	push_cur(t_cur *c, t_vm *vm)
 	}
 }
 
-int 	cur_init(t_vm *vm)
+int				cur_init(t_vm *vm)
 {
 	int			i;
 	t_cur		*c;

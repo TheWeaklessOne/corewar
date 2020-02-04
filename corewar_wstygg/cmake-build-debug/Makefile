@@ -1851,6 +1851,60 @@ vm/arena.c.s:
 	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/vm/arena.c.s
 .PHONY : vm/arena.c.s
 
+vm/args.o: vm/args.c.o
+
+.PHONY : vm/args.o
+
+# target to build an object file
+vm/args.c.o:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/vm/args.c.o
+.PHONY : vm/args.c.o
+
+vm/args.i: vm/args.c.i
+
+.PHONY : vm/args.i
+
+# target to preprocess a source file
+vm/args.c.i:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/vm/args.c.i
+.PHONY : vm/args.c.i
+
+vm/args.s: vm/args.c.s
+
+.PHONY : vm/args.s
+
+# target to generate assembly for a file
+vm/args.c.s:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/vm/args.c.s
+.PHONY : vm/args.c.s
+
+vm/commands.o: vm/commands.c.o
+
+.PHONY : vm/commands.o
+
+# target to build an object file
+vm/commands.c.o:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/vm/commands.c.o
+.PHONY : vm/commands.c.o
+
+vm/commands.i: vm/commands.c.i
+
+.PHONY : vm/commands.i
+
+# target to preprocess a source file
+vm/commands.c.i:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/vm/commands.c.i
+.PHONY : vm/commands.c.i
+
+vm/commands.s: vm/commands.c.s
+
+.PHONY : vm/commands.s
+
+# target to generate assembly for a file
+vm/commands.c.s:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/vm/commands.c.s
+.PHONY : vm/commands.c.s
+
 vm/cur.o: vm/cur.c.o
 
 .PHONY : vm/cur.o
@@ -1878,32 +1932,32 @@ vm/cur.c.s:
 	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/vm/cur.c.s
 .PHONY : vm/cur.c.s
 
-vm/get_arg.o: vm/get_arg.c.o
+vm/cursor.o: vm/cursor.c.o
 
-.PHONY : vm/get_arg.o
+.PHONY : vm/cursor.o
 
 # target to build an object file
-vm/get_arg.c.o:
-	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/vm/get_arg.c.o
-.PHONY : vm/get_arg.c.o
+vm/cursor.c.o:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/vm/cursor.c.o
+.PHONY : vm/cursor.c.o
 
-vm/get_arg.i: vm/get_arg.c.i
+vm/cursor.i: vm/cursor.c.i
 
-.PHONY : vm/get_arg.i
+.PHONY : vm/cursor.i
 
 # target to preprocess a source file
-vm/get_arg.c.i:
-	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/vm/get_arg.c.i
-.PHONY : vm/get_arg.c.i
+vm/cursor.c.i:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/vm/cursor.c.i
+.PHONY : vm/cursor.c.i
 
-vm/get_arg.s: vm/get_arg.c.s
+vm/cursor.s: vm/cursor.c.s
 
-.PHONY : vm/get_arg.s
+.PHONY : vm/cursor.s
 
 # target to generate assembly for a file
-vm/get_arg.c.s:
-	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/vm/get_arg.c.s
-.PHONY : vm/get_arg.c.s
+vm/cursor.c.s:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/vm/cursor.c.s
+.PHONY : vm/cursor.c.s
 
 vm/init2.o: vm/init2.c.o
 
@@ -1985,6 +2039,60 @@ vm/main.s: vm/main.c.s
 vm/main.c.s:
 	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/vm/main.c.s
 .PHONY : vm/main.c.s
+
+vm/op_action.o: vm/op_action.c.o
+
+.PHONY : vm/op_action.o
+
+# target to build an object file
+vm/op_action.c.o:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/vm/op_action.c.o
+.PHONY : vm/op_action.c.o
+
+vm/op_action.i: vm/op_action.c.i
+
+.PHONY : vm/op_action.i
+
+# target to preprocess a source file
+vm/op_action.c.i:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/vm/op_action.c.i
+.PHONY : vm/op_action.c.i
+
+vm/op_action.s: vm/op_action.c.s
+
+.PHONY : vm/op_action.s
+
+# target to generate assembly for a file
+vm/op_action.c.s:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/vm/op_action.c.s
+.PHONY : vm/op_action.c.s
+
+vm/op_tab.o: vm/op_tab.c.o
+
+.PHONY : vm/op_tab.o
+
+# target to build an object file
+vm/op_tab.c.o:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/vm/op_tab.c.o
+.PHONY : vm/op_tab.c.o
+
+vm/op_tab.i: vm/op_tab.c.i
+
+.PHONY : vm/op_tab.i
+
+# target to preprocess a source file
+vm/op_tab.c.i:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/vm/op_tab.c.i
+.PHONY : vm/op_tab.c.i
+
+vm/op_tab.s: vm/op_tab.c.s
+
+.PHONY : vm/op_tab.s
+
+# target to generate assembly for a file
+vm/op_tab.c.s:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/vm/op_tab.c.s
+.PHONY : vm/op_tab.c.s
 
 vm/print.o: vm/print.c.o
 
@@ -2241,12 +2349,18 @@ help:
 	@echo "... vm/arena.o"
 	@echo "... vm/arena.i"
 	@echo "... vm/arena.s"
+	@echo "... vm/args.o"
+	@echo "... vm/args.i"
+	@echo "... vm/args.s"
+	@echo "... vm/commands.o"
+	@echo "... vm/commands.i"
+	@echo "... vm/commands.s"
 	@echo "... vm/cur.o"
 	@echo "... vm/cur.i"
 	@echo "... vm/cur.s"
-	@echo "... vm/get_arg.o"
-	@echo "... vm/get_arg.i"
-	@echo "... vm/get_arg.s"
+	@echo "... vm/cursor.o"
+	@echo "... vm/cursor.i"
+	@echo "... vm/cursor.s"
 	@echo "... vm/init2.o"
 	@echo "... vm/init2.i"
 	@echo "... vm/init2.s"
@@ -2256,6 +2370,12 @@ help:
 	@echo "... vm/main.o"
 	@echo "... vm/main.i"
 	@echo "... vm/main.s"
+	@echo "... vm/op_action.o"
+	@echo "... vm/op_action.i"
+	@echo "... vm/op_action.s"
+	@echo "... vm/op_tab.o"
+	@echo "... vm/op_tab.i"
+	@echo "... vm/op_tab.s"
 	@echo "... vm/print.o"
 	@echo "... vm/print.i"
 	@echo "... vm/print.s"

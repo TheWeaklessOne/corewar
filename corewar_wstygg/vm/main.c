@@ -78,6 +78,7 @@ void			init(t_vm *vm)
 	vm->cycles_to_die = CYCLE_TO_DIE;
 	vm->live_count = 0;
 	vm->checks = 0;
+	vm->last_champ = NULL;
 	while (++i < MAX_PLAYERS)
 		vm->champ[i] = NULL;
 }

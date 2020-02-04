@@ -12,10 +12,10 @@
 
 #include "../includes/vm.h"
 
-void	read_name(t_champion *ch, int fd)
+void				read_name(t_champion *ch, int fd)
 {
-	int		i;
-	char 	c;
+	int				i;
+	char			c;
 
 	if (!(read(fd, ch->name, PROG_NAME_LENGTH)))
 		exit(!printf("Read error"));
@@ -33,19 +33,19 @@ unsigned int		read_size(fd)
 
 	read(fd, &c, 4);
 	num.hex = c;
-	tmp = num.field.octet1;
-	num.field.octet1 = num.field.octet4;
-	num.field.octet4 = tmp;
-	tmp = num.field.octet2;
-	num.field.octet2 = num.field.octet3;
-	num.field.octet3 = tmp;
+	tmp = num.f.o1;
+	num.f.o1 = num.f.o4;
+	num.f.o4 = tmp;
+	tmp = num.f.o2;
+	num.f.o2 = num.f.o3;
+	num.f.o3 = tmp;
 	return (num.hex);
 }
 
-void	read_com(t_champion *ch, int fd)
+void				read_com(t_champion *ch, int fd)
 {
-	int		i;
-	char 	c;
+	int				i;
+	char			c;
 
 	if (!(read(fd, ch->com, COMMENT_LENGTH)))
 		exit(!printf("Read error\n"));
@@ -55,17 +55,17 @@ void	read_com(t_champion *ch, int fd)
 		read(fd, &c, 1);
 }
 
-int		read_code(int fd, t_champion *ch)
+int					read_code(int fd, t_champion *ch)
 {
 	if (!(ch->code = (char*)malloc(sizeof(char) * (ch->size + 1))))
-		return (printf("%s", "Memory not allocated\n") - 21);
+		return (!printf("%s", "Memory not allocated\n"));
 	if (!(read(fd, ch->code, ch->size)))
 		return (!printf("Read error\n"));
 	ch->code[ch->size] = '\0';
 	return (1);
 }
 
-int 	init_champ(int *i, char **av, int n, t_vm *vm)
+int					init_champ(int *i, char **av, int n, t_vm *vm)
 {
 	t_champion		*ch;
 	int				fd;
@@ -74,23 +74,22 @@ int 	init_champ(int *i, char **av, int n, t_vm *vm)
 	if (vm->players > MAX_PLAYERS)
 		return (!printf("Too much champions\n"));
 	if (!check_ch_name(av, *i))
-		return (printf("You gave not a *.cor file!\n") - 27);
+		return (!printf("You gave not a *.cor file!\n"));
 	if ((fd = open(av[*i], O_RDONLY)) < 0)
-		return (printf("Can't open file...\n") - 19);
+		return (!printf("Can't open file...\n"));
 	if (!exec_magic(fd))
-		return (printf("Corewar_exec_magic doesn't match\n") - 33);
+		return (!printf("Corewar_exec_magic doesn't match\n"));
 	if (!(ch = (t_champion*)malloc(sizeof(t_champion))))
-		return (printf("Memory not allocated\n") - 21);
+		return (!printf("Memory not allocated\n"));
 	ch->n = 0;
 	read_name(ch, fd);
 	if ((ch->size = read_size(fd)) > CHAMP_MAX_SIZE)
-		return (printf("Big champion exec code size\n") - 28);
+		return (!printf("Big champion exec code size\n"));
 	read_com(ch, fd);
 	if (!read_code(fd, ch))
 		return (0);
 	close(fd);
 	champ_in_vm(ch, vm, n);
 	(*i)++;
-	ch->last_alive = 0;
 	return (1);
 }

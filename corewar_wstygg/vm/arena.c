@@ -12,11 +12,11 @@
 
 #include "../includes/vm.h"
 
-int		position(t_vm *vm, int player, int i)
+int				position(t_vm *vm, int player, int i)
 {
-	int c;
+	int			c;
 
-	c  = -1;
+	c = -1;
 	if (vm->champ[player] == NULL)
 		return (printf("You enter the flag [-n] incorrectly .-.\n") - 40);
 	while (++c < vm->champ[player]->size)
@@ -28,9 +28,9 @@ int		position(t_vm *vm, int player, int i)
 	return (1);
 }
 
-int		print_arena(t_vm *vm, int step, int size)
+int				print_arena(t_vm *vm, int step, int size)
 {
-	int i;
+	int			i;
 
 	i = 0;
 	while (i < MEM_SIZE)
@@ -45,11 +45,11 @@ int		print_arena(t_vm *vm, int step, int size)
 	return (0);
 }
 
-int 	build_arena(t_vm *vm)
+int				build_arena(t_vm *vm)
 {
-	int	i;
-	int player;
-	const int step = MEM_SIZE / vm->players;
+	int			i;
+	int			player;
+	const int	step = MEM_SIZE / vm->players;
 
 	i = -1;
 	while (++i < MEM_SIZE)

@@ -81,7 +81,6 @@ add_executable(CORE
         vm/init2.c
         vm/print.c
 		vm/cur.c
-		vm/get_arg.c
-		vm/war.c)
+		vm/war.c vm/args.c vm/commands.c vm/cursor.c vm/op_action.c vm/op_tab.c)
 
 target_link_libraries(CORE ncurses)

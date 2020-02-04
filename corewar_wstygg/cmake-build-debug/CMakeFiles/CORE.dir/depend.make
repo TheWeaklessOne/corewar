@@ -194,15 +194,25 @@ CMakeFiles/CORE.dir/vm/arena.c.o: ../includes/vm.h
 CMakeFiles/CORE.dir/vm/arena.c.o: ../libft/libft.h
 CMakeFiles/CORE.dir/vm/arena.c.o: ../vm/arena.c
 
+CMakeFiles/CORE.dir/vm/args.c.o: ../includes/op.h
+CMakeFiles/CORE.dir/vm/args.c.o: ../includes/vm.h
+CMakeFiles/CORE.dir/vm/args.c.o: ../libft/libft.h
+CMakeFiles/CORE.dir/vm/args.c.o: ../vm/args.c
+
+CMakeFiles/CORE.dir/vm/commands.c.o: ../includes/op.h
+CMakeFiles/CORE.dir/vm/commands.c.o: ../includes/vm.h
+CMakeFiles/CORE.dir/vm/commands.c.o: ../libft/libft.h
+CMakeFiles/CORE.dir/vm/commands.c.o: ../vm/commands.c
+
 CMakeFiles/CORE.dir/vm/cur.c.o: ../includes/op.h
 CMakeFiles/CORE.dir/vm/cur.c.o: ../includes/vm.h
 CMakeFiles/CORE.dir/vm/cur.c.o: ../libft/libft.h
 CMakeFiles/CORE.dir/vm/cur.c.o: ../vm/cur.c
 
-CMakeFiles/CORE.dir/vm/get_arg.c.o: ../includes/op.h
-CMakeFiles/CORE.dir/vm/get_arg.c.o: ../includes/vm.h
-CMakeFiles/CORE.dir/vm/get_arg.c.o: ../libft/libft.h
-CMakeFiles/CORE.dir/vm/get_arg.c.o: ../vm/get_arg.c
+CMakeFiles/CORE.dir/vm/cursor.c.o: ../includes/op.h
+CMakeFiles/CORE.dir/vm/cursor.c.o: ../includes/vm.h
+CMakeFiles/CORE.dir/vm/cursor.c.o: ../libft/libft.h
+CMakeFiles/CORE.dir/vm/cursor.c.o: ../vm/cursor.c
 
 CMakeFiles/CORE.dir/vm/init2.c.o: ../includes/op.h
 CMakeFiles/CORE.dir/vm/init2.c.o: ../includes/vm.h
@@ -218,6 +228,16 @@ CMakeFiles/CORE.dir/vm/main.c.o: ../includes/op.h
 CMakeFiles/CORE.dir/vm/main.c.o: ../includes/vm.h
 CMakeFiles/CORE.dir/vm/main.c.o: ../libft/libft.h
 CMakeFiles/CORE.dir/vm/main.c.o: ../vm/main.c
+
+CMakeFiles/CORE.dir/vm/op_action.c.o: ../includes/op.h
+CMakeFiles/CORE.dir/vm/op_action.c.o: ../includes/vm.h
+CMakeFiles/CORE.dir/vm/op_action.c.o: ../libft/libft.h
+CMakeFiles/CORE.dir/vm/op_action.c.o: ../vm/op_action.c
+
+CMakeFiles/CORE.dir/vm/op_tab.c.o: ../includes/op.h
+CMakeFiles/CORE.dir/vm/op_tab.c.o: ../includes/vm.h
+CMakeFiles/CORE.dir/vm/op_tab.c.o: ../libft/libft.h
+CMakeFiles/CORE.dir/vm/op_tab.c.o: ../vm/op_tab.c
 
 CMakeFiles/CORE.dir/vm/print.c.o: ../includes/op.h
 CMakeFiles/CORE.dir/vm/print.c.o: ../includes/vm.h

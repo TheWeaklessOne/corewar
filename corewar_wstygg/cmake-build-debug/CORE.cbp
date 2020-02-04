@@ -285,10 +285,16 @@
 		<Unit filename="/Users/wstygg/Desktop/corewar/vm/arena.c">
 			<Option target="CORE"/>
 		</Unit>
+		<Unit filename="/Users/wstygg/Desktop/corewar/vm/args.c">
+			<Option target="CORE"/>
+		</Unit>
+		<Unit filename="/Users/wstygg/Desktop/corewar/vm/commands.c">
+			<Option target="CORE"/>
+		</Unit>
 		<Unit filename="/Users/wstygg/Desktop/corewar/vm/cur.c">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/wstygg/Desktop/corewar/vm/get_arg.c">
+		<Unit filename="/Users/wstygg/Desktop/corewar/vm/cursor.c">
 			<Option target="CORE"/>
 		</Unit>
 		<Unit filename="/Users/wstygg/Desktop/corewar/vm/init2.c">
@@ -298,6 +304,12 @@
 			<Option target="CORE"/>
 		</Unit>
 		<Unit filename="/Users/wstygg/Desktop/corewar/vm/main.c">
+			<Option target="CORE"/>
+		</Unit>
+		<Unit filename="/Users/wstygg/Desktop/corewar/vm/op_action.c">
+			<Option target="CORE"/>
+		</Unit>
+		<Unit filename="/Users/wstygg/Desktop/corewar/vm/op_tab.c">
 			<Option target="CORE"/>
 		</Unit>
 		<Unit filename="/Users/wstygg/Desktop/corewar/vm/print.c">

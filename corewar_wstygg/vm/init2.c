@@ -12,7 +12,7 @@
 
 #include "../includes/vm.h"
 
-int 		exec_magic(int fd)
+int					exec_magic(int fd)
 {
 	t_4bytes		num;
 	unsigned int	c;
@@ -20,22 +20,22 @@ int 		exec_magic(int fd)
 
 	read(fd, &c, 4);
 	num.hex = c;
-	tmp = num.field.octet1;
-	num.field.octet1 = num.field.octet4;
-	num.field.octet4 = tmp;
-	tmp = num.field.octet2;
-	num.field.octet2 = num.field.octet3;
-	num.field.octet3 = tmp;
+	tmp = num.f.o1;
+	num.f.o1 = num.f.o4;
+	num.f.o4 = tmp;
+	tmp = num.f.o2;
+	num.f.o2 = num.f.o3;
+	num.f.o3 = tmp;
 	if (num.hex == COREWAR_EXEC_MAGIC)
 		return (1);
 	return (0);
 }
 
-void		replace_ch(t_vm *vm, int n, t_champion *ch)
+void				replace_ch(t_vm *vm, int n, t_champion *ch)
 {
-	t_champion	*buf;
-	t_champion	*tmp;
-	int			i;
+	t_champion		*buf;
+	t_champion		*tmp;
+	int				i;
 
 	i = n;
 	buf = vm->champ[n - 1];
@@ -59,9 +59,9 @@ void		replace_ch(t_vm *vm, int n, t_champion *ch)
 	}
 }
 
-void		champ_in_vm(t_champion *ch, t_vm *vm, int n)
+void				champ_in_vm(t_champion *ch, t_vm *vm, int n)
 {
-	int			i;
+	int				i;
 
 	i = 0;
 	if (n < 0)
@@ -69,7 +69,6 @@ void		champ_in_vm(t_champion *ch, t_vm *vm, int n)
 		while (i < MAX_PLAYERS && vm->champ[i])
 			i++;
 		vm->champ[i] = ch;
-
 	}
 	else
 	{
@@ -83,9 +82,9 @@ void		champ_in_vm(t_champion *ch, t_vm *vm, int n)
 	}
 }
 
-int			check_n(t_vm *vm, int n)
+int					check_n(t_vm *vm, int n)
 {
-	int i;
+	int				i;
 
 	i = -1;
 	while (++i < MAX_PLAYERS)
@@ -95,9 +94,9 @@ int			check_n(t_vm *vm, int n)
 	return (1);
 }
 
-int 		check_ch_name(char **av, int i)
+int					check_ch_name(char **av, int i)
 {
-	int l;
+	int				l;
 
 	l = ft_strlen(av[i]);
 	if (av[i][l - 1] != 'r' || av[i][l - 2] != 'o' || av[i][l - 3] != 'c'

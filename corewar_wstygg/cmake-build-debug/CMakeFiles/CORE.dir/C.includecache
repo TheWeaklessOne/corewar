@@ -40,11 +40,19 @@ stdlib.h
 ../includes/vm.h
 /Users/wstygg/Desktop/corewar/includes/vm.h
 
+/Users/wstygg/Desktop/corewar/vm/args.c
+../includes/vm.h
+/Users/wstygg/Desktop/corewar/includes/vm.h
+
+/Users/wstygg/Desktop/corewar/vm/commands.c
+../includes/vm.h
+/Users/wstygg/Desktop/corewar/includes/vm.h
+
 /Users/wstygg/Desktop/corewar/vm/cur.c
 ../includes/vm.h
 /Users/wstygg/Desktop/corewar/includes/vm.h
 
-/Users/wstygg/Desktop/corewar/vm/get_arg.c
+/Users/wstygg/Desktop/corewar/vm/cursor.c
 ../includes/vm.h
 /Users/wstygg/Desktop/corewar/includes/vm.h
 
@@ -57,6 +65,14 @@ stdlib.h
 /Users/wstygg/Desktop/corewar/includes/vm.h
 
 /Users/wstygg/Desktop/corewar/vm/main.c
+../includes/vm.h
+/Users/wstygg/Desktop/corewar/includes/vm.h
+
+/Users/wstygg/Desktop/corewar/vm/op_action.c
+../includes/vm.h
+/Users/wstygg/Desktop/corewar/includes/vm.h
+
+/Users/wstygg/Desktop/corewar/vm/op_tab.c
 ../includes/vm.h
 /Users/wstygg/Desktop/corewar/includes/vm.h
 

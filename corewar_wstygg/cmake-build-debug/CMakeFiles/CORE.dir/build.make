@@ -954,22 +954,9 @@ CMakeFiles/CORE.dir/vm/cur.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/CORE.dir/vm/cur.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/wstygg/Desktop/corewar/vm/cur.c -o CMakeFiles/CORE.dir/vm/cur.c.s
 
-CMakeFiles/CORE.dir/vm/get_arg.c.o: CMakeFiles/CORE.dir/flags.make
-CMakeFiles/CORE.dir/vm/get_arg.c.o: ../vm/get_arg.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/wstygg/Desktop/corewar/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Building C object CMakeFiles/CORE.dir/vm/get_arg.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/CORE.dir/vm/get_arg.c.o   -c /Users/wstygg/Desktop/corewar/vm/get_arg.c
-
-CMakeFiles/CORE.dir/vm/get_arg.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/CORE.dir/vm/get_arg.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/wstygg/Desktop/corewar/vm/get_arg.c > CMakeFiles/CORE.dir/vm/get_arg.c.i
-
-CMakeFiles/CORE.dir/vm/get_arg.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/CORE.dir/vm/get_arg.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/wstygg/Desktop/corewar/vm/get_arg.c -o CMakeFiles/CORE.dir/vm/get_arg.c.s
-
 CMakeFiles/CORE.dir/vm/war.c.o: CMakeFiles/CORE.dir/flags.make
 CMakeFiles/CORE.dir/vm/war.c.o: ../vm/war.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/wstygg/Desktop/corewar/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Building C object CMakeFiles/CORE.dir/vm/war.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/wstygg/Desktop/corewar/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Building C object CMakeFiles/CORE.dir/vm/war.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/CORE.dir/vm/war.c.o   -c /Users/wstygg/Desktop/corewar/vm/war.c
 
 CMakeFiles/CORE.dir/vm/war.c.i: cmake_force
@@ -979,6 +966,71 @@ CMakeFiles/CORE.dir/vm/war.c.i: cmake_force
 CMakeFiles/CORE.dir/vm/war.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/CORE.dir/vm/war.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/wstygg/Desktop/corewar/vm/war.c -o CMakeFiles/CORE.dir/vm/war.c.s
+
+CMakeFiles/CORE.dir/vm/args.c.o: CMakeFiles/CORE.dir/flags.make
+CMakeFiles/CORE.dir/vm/args.c.o: ../vm/args.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/wstygg/Desktop/corewar/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Building C object CMakeFiles/CORE.dir/vm/args.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/CORE.dir/vm/args.c.o   -c /Users/wstygg/Desktop/corewar/vm/args.c
+
+CMakeFiles/CORE.dir/vm/args.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/CORE.dir/vm/args.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/wstygg/Desktop/corewar/vm/args.c > CMakeFiles/CORE.dir/vm/args.c.i
+
+CMakeFiles/CORE.dir/vm/args.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/CORE.dir/vm/args.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/wstygg/Desktop/corewar/vm/args.c -o CMakeFiles/CORE.dir/vm/args.c.s
+
+CMakeFiles/CORE.dir/vm/commands.c.o: CMakeFiles/CORE.dir/flags.make
+CMakeFiles/CORE.dir/vm/commands.c.o: ../vm/commands.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/wstygg/Desktop/corewar/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_72) "Building C object CMakeFiles/CORE.dir/vm/commands.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/CORE.dir/vm/commands.c.o   -c /Users/wstygg/Desktop/corewar/vm/commands.c
+
+CMakeFiles/CORE.dir/vm/commands.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/CORE.dir/vm/commands.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/wstygg/Desktop/corewar/vm/commands.c > CMakeFiles/CORE.dir/vm/commands.c.i
+
+CMakeFiles/CORE.dir/vm/commands.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/CORE.dir/vm/commands.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/wstygg/Desktop/corewar/vm/commands.c -o CMakeFiles/CORE.dir/vm/commands.c.s
+
+CMakeFiles/CORE.dir/vm/cursor.c.o: CMakeFiles/CORE.dir/flags.make
+CMakeFiles/CORE.dir/vm/cursor.c.o: ../vm/cursor.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/wstygg/Desktop/corewar/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_73) "Building C object CMakeFiles/CORE.dir/vm/cursor.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/CORE.dir/vm/cursor.c.o   -c /Users/wstygg/Desktop/corewar/vm/cursor.c
+
+CMakeFiles/CORE.dir/vm/cursor.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/CORE.dir/vm/cursor.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/wstygg/Desktop/corewar/vm/cursor.c > CMakeFiles/CORE.dir/vm/cursor.c.i
+
+CMakeFiles/CORE.dir/vm/cursor.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/CORE.dir/vm/cursor.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/wstygg/Desktop/corewar/vm/cursor.c -o CMakeFiles/CORE.dir/vm/cursor.c.s
+
+CMakeFiles/CORE.dir/vm/op_action.c.o: CMakeFiles/CORE.dir/flags.make
+CMakeFiles/CORE.dir/vm/op_action.c.o: ../vm/op_action.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/wstygg/Desktop/corewar/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_74) "Building C object CMakeFiles/CORE.dir/vm/op_action.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/CORE.dir/vm/op_action.c.o   -c /Users/wstygg/Desktop/corewar/vm/op_action.c
+
+CMakeFiles/CORE.dir/vm/op_action.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/CORE.dir/vm/op_action.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/wstygg/Desktop/corewar/vm/op_action.c > CMakeFiles/CORE.dir/vm/op_action.c.i
+
+CMakeFiles/CORE.dir/vm/op_action.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/CORE.dir/vm/op_action.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/wstygg/Desktop/corewar/vm/op_action.c -o CMakeFiles/CORE.dir/vm/op_action.c.s
+
+CMakeFiles/CORE.dir/vm/op_tab.c.o: CMakeFiles/CORE.dir/flags.make
+CMakeFiles/CORE.dir/vm/op_tab.c.o: ../vm/op_tab.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/wstygg/Desktop/corewar/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_75) "Building C object CMakeFiles/CORE.dir/vm/op_tab.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/CORE.dir/vm/op_tab.c.o   -c /Users/wstygg/Desktop/corewar/vm/op_tab.c
+
+CMakeFiles/CORE.dir/vm/op_tab.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/CORE.dir/vm/op_tab.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/wstygg/Desktop/corewar/vm/op_tab.c > CMakeFiles/CORE.dir/vm/op_tab.c.i
+
+CMakeFiles/CORE.dir/vm/op_tab.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/CORE.dir/vm/op_tab.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/wstygg/Desktop/corewar/vm/op_tab.c -o CMakeFiles/CORE.dir/vm/op_tab.c.s
 
 # Object files for target CORE
 CORE_OBJECTS = \
@@ -1051,8 +1103,12 @@ CORE_OBJECTS = \
 "CMakeFiles/CORE.dir/vm/init2.c.o" \
 "CMakeFiles/CORE.dir/vm/print.c.o" \
 "CMakeFiles/CORE.dir/vm/cur.c.o" \
-"CMakeFiles/CORE.dir/vm/get_arg.c.o" \
-"CMakeFiles/CORE.dir/vm/war.c.o"
+"CMakeFiles/CORE.dir/vm/war.c.o" \
+"CMakeFiles/CORE.dir/vm/args.c.o" \
+"CMakeFiles/CORE.dir/vm/commands.c.o" \
+"CMakeFiles/CORE.dir/vm/cursor.c.o" \
+"CMakeFiles/CORE.dir/vm/op_action.c.o" \
+"CMakeFiles/CORE.dir/vm/op_tab.c.o"
 
 # External object files for target CORE
 CORE_EXTERNAL_OBJECTS =
@@ -1126,11 +1182,15 @@ CORE: CMakeFiles/CORE.dir/vm/arena.c.o
 CORE: CMakeFiles/CORE.dir/vm/init2.c.o
 CORE: CMakeFiles/CORE.dir/vm/print.c.o
 CORE: CMakeFiles/CORE.dir/vm/cur.c.o
-CORE: CMakeFiles/CORE.dir/vm/get_arg.c.o
 CORE: CMakeFiles/CORE.dir/vm/war.c.o
+CORE: CMakeFiles/CORE.dir/vm/args.c.o
+CORE: CMakeFiles/CORE.dir/vm/commands.c.o
+CORE: CMakeFiles/CORE.dir/vm/cursor.c.o
+CORE: CMakeFiles/CORE.dir/vm/op_action.c.o
+CORE: CMakeFiles/CORE.dir/vm/op_tab.c.o
 CORE: CMakeFiles/CORE.dir/build.make
 CORE: CMakeFiles/CORE.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/wstygg/Desktop/corewar/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_72) "Linking C executable CORE"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/wstygg/Desktop/corewar/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_76) "Linking C executable CORE"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/CORE.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
