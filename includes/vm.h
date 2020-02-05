@@ -123,4 +123,6 @@ void	print_visu(WINDOW *vm_window, t_vm *vm, int step);
 void	print_matrix(WINDOW *vm_window, t_vm *vm);
 void	print_sub_win(t_vm *vm, WINDOW *vm_window);
 
+int     check_arg(t_op *op_tab, unsigned char id_op, unsigned char arg);
+
 #endif

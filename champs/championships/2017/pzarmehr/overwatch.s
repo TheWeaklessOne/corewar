@@ -61,12 +61,33 @@ mercy:
 	ld		%-17, r15
 	ld		%0, r16
 	zjmp	%:payload
-
-# ------------------------------------------------------------------------------
-# ------------------------------------------------------------------------------
-# ------------------------------------------------------------------------------
-
-	lfork	%0	#               .   B@M@B@MMM@B@B@B@MMM@@@M@B
+	lfork	%0
+	lfork	%0
+	lfork	%0
+	lfork	%0
+	lfork	%0
+	lfork	%0
+	lfork	%0
+	lfork	%0
+	lfork	%0
+	lfork	%0
+	lfork	%0
+	lfork	%0
+	lfork	%0
+	lfork	%0
+	lfork	%0
+	lfork	%0
+	lfork	%0	#        @@@B@B         7@@@MMOMOMOMM@B@:         @@B@B@
+	lfork	%0
+	lfork	%0	#        @@  @           M  OBOMOMM@q  M          .@  @@
+	lfork	%0
+	lfork	%0	#        @B@B@J         0@B@MMOMOMOMB@B@u         q@@@B@
+	lfork	%0	#        B@MBB@v       G@@BMMMMMMMMMMMBB@5       F@BMM@B
+	lfork	%0	#        @BBM@BPNi   LMEB@OMMMM@B@MMOMM@BZM7   rEqB@MBB@
+	lfork	%0	#        B@@@BM  B@B@B  qBMOMB@B@B@BMOMBL  B@B@B  @B@B@M
+	lfork	%0	#         J@@@@PB@B@B@B7G@OMBB.   ,@MMM@qLB@B@@@BqB@BBv
+	lfork	%0	#            iGB@,i0@M@B@MMO@E  :  M@OMM@@@B@Pii@@N:
+	lfork	%0	#                   B@M@B@MMM@B@B@B@MMM@@@M@B
 	lfork	%0	#                   @B@B.i@MBB@B@B@@BM@::B@B@
 	lfork	%0	#                   B@@@ .B@B.:@B@ :B@B  @B@O
 	lfork	%0	#                     :0 r@B@  B@@ .@B@: P:
@@ -89,52 +110,22 @@ mercy:
 	lfork	%0	#        @B@B@J         0@B@MMOMOMOMB@B@u         q@@@B@
 	lfork	%0	#        B@MBB@v       G@@BMMMMMMMMMMMBB@5       F@BMM@B
 	lfork	%0	#        @BBM@BPNi   LMEB@OMMMM@B@MMOMM@BZM7   rEqB@MBB@
-	lfork	%0	#        B@@@BM  B@B@B  qBMOMB@B@B@BMOMBL  B@B@B  @B@B@M
-	lfork	%0	#         J@@@@PB@B@B@B7G@OMBB.   ,@MMM@qLB@B@@@BqB@BBv
-	lfork	%0	#            iGB@,i0@M@B@MMO@E  :  M@OMM@@@B@Pii@@N:
-	lfork	%0	#               .   B@M@B@MMM@B@B@B@MMM@@@M@B
-	lfork	%0	#                   @B@B.i@MBB@B@B@@BM@::B@B@
-	lfork	%0	#                   B@@@ .B@B.:@B@ :B@B  @B@O
-	lfork	%0	#                     :0 r@B@  B@@ .@B@: P:
-	lfork	%0	#                         vMB :@B@ :BO7
-	lfork	%0	#                             ,B@B
-	lfork	%0	#
-	lfork	%0	#                            :PB@Bk:
-	lfork	%0	#                        ,jB@@B@B@B@BBL.
-	lfork	%0	#                     7G@B@B@BMMMMMB@B@B@Nr
-	lfork	%0	#                 :kB@B@@@MMOMOMOMOMMMM@B@B@B1,
-	lfork	%0	#             :5@B@B@B@BBMMOMOMOMOMOMOMM@@@B@B@BBu.
-	lfork	%0	#          70@@@B@B@B@BXBBOMOMOMOMOMOMMBMPB@B@B@B@B@Nr
-	lfork	%0	#        G@@@BJ iB@B@@  OBMOMOMOMOMOMOM@2  B@B@B. EB@B@S
-	lfork	%0	#        @@BM@GJBU.  iSuB@OMOMOMOMOMOMM@OU1:  .kBLM@M@B@
-	lfork	%0	#        B@MMB@B       7@BBMMOMOMOMOMOBB@:       B@BMM@B
-	lfork	%0	#        @@@B@B         7@@@MMOMOMOMM@B@:         @@B@B@
-	lfork	%0	#        @@OLB.          BNB@MMOMOMM@BEB          rBjM@B
-	lfork	%0	#        @@  @           M  OBOMOMM@q  M          .@  @@
-	lfork	%0	#        @@OvB           B:u@MMOMOMMBJiB          .BvM@B
-	lfork	%0	#        @B@B@J         0@B@MMOMOMOMB@B@u         q@@@B@
-	lfork	%0	#        B@MBB@v       G@@BMMMMMMMMMMMBB@5       F@BMM@B
-	lfork	%0	#        @BBM@BPNi   LMEB@OMMMM@B@MMOMM@BZM7   rEqB@MBB@
-	lfork	%0	#        B@@@BM  B@B@B  qBMOMB@B@B@BMOMBL  B@B@B  @B@B@M
-	lfork	%0	#         J@@@@PB@B@B@B7G@OMBB.   ,@MMM@qLB@B@@@BqB@BBv
-	lfork	%0	#            iGB@,i0@M@B@MMO@E  :  M@OMM@@@B@Pii@@N:
-	lfork	%0	#               .   B@M@B@MMM@B@B@B@MMM@@@M@B
-	lfork	%0	#                   @B@B.i@MBB@B@B@@BM@::B@B@
-	lfork	%0	#                   B@@@ .B@B.:@B@ :B@B  @B@O
-	lfork	%0	#                     :0 r@B@  B@@ .@B@: P:
-	lfork	%0	#                         vMB :@B@ :BO7
-	lfork	%0	#                             ,B@B
-	lfork	%0	#
-	lfork	%0	#                            :PB@Bk:
-	lfork	%0	#                        ,jB@@B@B@B@BBL.
-	lfork	%0	#                     7G@B@B@BMMMMMB@B@B@Nr
-	lfork	%0	#                 :kB@B@@@MMOMOMOMOMMMM@B@B@B1,
-	lfork	%0	#             :5@B@B@B@BBMMOMOMOMOMOMOMM@@@B@B@BBu.
-	lfork	%0	#          70@@@B@B@B@BXBBOMOMOMOMOMOMMBMPB@B@B@B@B@Nr
-
-# ------------------------------------------------------------------------------
-# Capture objective B ----------------------------------------------------------
-# ------------------------------------------------------------------------------
+	lfork	%0
+	lfork	%0
+	lfork	%0
+	lfork	%0
+	lfork	%0
+	lfork	%0
+	lfork	%0
+	lfork	%0
+	lfork	%0
+	lfork	%0
+	lfork	%0
+	lfork	%0
+	lfork	%0
+	lfork	%0
+	lfork	%0
+	lfork	%0
 
 symmetra:
 	ldi		%:mei, %0, r1				# r1 = 0x01?????? (live ?? ?? ?? ..)

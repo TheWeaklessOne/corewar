@@ -12,7 +12,7 @@
 
 #include "../includes/vm.h"
 
-/*
+
 void 	cycle(t_vm *vm, t_op *op_tab)
 {
 	t_cur	*buf;
@@ -29,7 +29,6 @@ void 	cycle(t_vm *vm, t_op *op_tab)
 			if (check_arg(op_tab, vm->arena[buf->pos], vm->arena[buf->pos + 1]))
 			{
 				printf("Valid operation\n");
-				//skip_bytes(vm->arena[buf->pos + 1]);
 				buf->pos += 2;
 			}
 			else
@@ -42,12 +41,12 @@ void 	cycle(t_vm *vm, t_op *op_tab)
 			buf->pos += 1;
 	}
 }
-*/
+
 int 	war_coming(t_vm *vm)
 {
 	int step;
 	WINDOW	*vm_window;
-	t_op    op_tab[17] =
+	t_op		op_tab[17] =
 			{
 					{"live",		1, {T_DIR},												  1, 10, "alive", 0, 0},
 					{"ld",		2, {T_DIR | T_IND, T_REG}, 								  2, 5, "load", 1, 0},
@@ -76,7 +75,7 @@ int 	war_coming(t_vm *vm)
 			return(print_arena(vm, step, 64));
 		if (vm->dump == vm->global)
 			return(print_arena(vm, step, 32));
-		//cycle(vm, op_tab);
+		cycle(vm, op_tab);
 		vm->check--;
 	}
 	if (vm->color == 1)

@@ -49,7 +49,7 @@ int 	cur_init(t_vm *vm)
 	i = -1;
 	start = 0;
 	step = MEM_SIZE / vm->players;
-	printf("%d\n", vm->players);
+//	printf("%d\n", vm->players);
 	while (++i < vm->players)
 	{
 		if (!(c = new_cur(i + 1)))

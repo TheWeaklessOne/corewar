@@ -61,6 +61,7 @@ int					war_coming(t_vm *v)
 		if ((v->cycles_to_die > 0) ? !(v->global % v->cycles_to_die) : 1)
 		{
 			delete_deads(v);
+			v->checks++;
 			if (v->live_count >= NBR_LIVE)
 			{
 				v->cycles_to_die -= CYCLE_DELTA;
@@ -76,11 +77,13 @@ int					war_coming(t_vm *v)
 		do_cycle(v);
 		if (v->curs_alive == 0)
 			break ;
+		if (!(v->global % 10000))
+			printf("Global - [%lu]      ---      Cycles to die - [%d]\n", v->global, v->cycles_to_die);
 	}
 	if (v->last_champ)
 		printf("Global - [%lu]\nPlayer %d - \"%s\" (\"%s\") - won!\n",
 		v->global, v->last_champ->n, v->last_champ->name, v->last_champ->com);
 	else
-		printf("No one won...\n");
+		printf("Global - [%lu]\nNo one won...\n", v->global);
 	return (1);
 }

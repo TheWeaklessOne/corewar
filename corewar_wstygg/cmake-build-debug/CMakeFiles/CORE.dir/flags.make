@@ -6,5 +6,5 @@ C_FLAGS = -g   -std=gnu11
 
 C_DEFINES = 
 
-C_INCLUDES = -I/Users/wstygg/Desktop/sdohnu/corewar_wstygg/includes -I/Users/wstygg/Desktop/sdohnu/corewar_wstygg/libft 
+C_INCLUDES = -I/Users/sdoughnu/Desktop/corewar/corewar_wstygg/includes -I/Users/sdoughnu/Desktop/corewar/corewar_wstygg/libft 
 

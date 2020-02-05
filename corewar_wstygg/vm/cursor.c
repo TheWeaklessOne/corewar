@@ -74,7 +74,8 @@ void			delete_deads(t_vm *vm)
 			vm->curs = cur_remove_at(vm->curs, at);
 			vm->curs_alive--;
 		}
-		at++;
+		else
+			at++;
 		cur = cur->next;
 	}
 }

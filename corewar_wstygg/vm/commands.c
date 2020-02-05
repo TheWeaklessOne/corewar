@@ -12,6 +12,32 @@
 
 #include "../includes/vm.h"
 
+void				do_st(t_vm *vm, t_cur *cur)
+{
+	t_4bytes		byte;
+	int				skip;
+
+	cur->args[0] = vm->arena[(cur->pos + 2) % MEM_SIZE];
+	if (cur->args_type[1] == T_REG)
+		cur->reg[cur->args[1]] = cur->reg[cur->args[0]];
+	else
+	{
+		skip = read_t_dir(vm, cur->pos + 2 + cur->arg_size[1], 4) % IDX_MOD;
+		byte.hex = cur->reg[cur->args[0]];
+		vm->arena[(cur->pos + skip) % MEM_SIZE] = byte.hex;
+	}
+}
+
+void				do_add(t_vm *vm, t_cur *cur)
+{
+	read_args(vm, cur);
+	cur->reg[cur->args[2]] = cur->reg[cur->args[0]] + cur->reg[cur->args[1]];
+	if (cur->reg[cur->args[2]] == 0)
+		cur->carry = 1;
+	else
+		cur->carry = 0;
+}
+
 void				do_sti(t_vm *vm, t_cur *cur)
 {
 	read_args(vm, cur);
@@ -25,7 +51,7 @@ void				do_live(t_vm *vm, t_cur *cur)
 
 	cur->last_cyc_live = vm->global;
 	vm->live_count++;
-	arg = read_t_dir(vm, cur->pos + 1, 4);
+	arg = read_t_dir(vm, cur->pos + 1, cur->arg_size[0]);
 	if (cur->reg[0] == arg && -arg >= 0 && -arg <= vm->players)
 		vm->last_champ = vm->champ[-arg - 1];
 }

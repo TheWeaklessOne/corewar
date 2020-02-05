@@ -48,7 +48,7 @@ int					read_t_dir(t_vm *vm, unsigned char pos, int size)
 	return (ret.hex);
 }
 
-unsigned			read_t_ind(t_vm *vm, unsigned char pos, unsigned char cpos)
+int					read_t_ind(t_vm *vm, unsigned char pos, unsigned char cpos)
 {
 	t_4bytes		ret;
 	t_4bytes		arg;
@@ -62,7 +62,7 @@ unsigned			read_t_ind(t_vm *vm, unsigned char pos, unsigned char cpos)
 	ret.f.o4 = vm->arena[(cpos + skip % IDX_MOD) % MEM_SIZE];
 	ret.f.o3 = vm->arena[(cpos + (skip + 1) % IDX_MOD) % MEM_SIZE];
 	ret.f.o2 = vm->arena[(cpos + (skip + 2) % IDX_MOD) % MEM_SIZE];
-	ret.f.o1 = vm->arena[(cpos + (skip + 2) % IDX_MOD) % MEM_SIZE];
+	ret.f.o1 = vm->arena[(cpos + (skip + 3) % IDX_MOD) % MEM_SIZE];
 	return (ret.hex);
 }
 
@@ -89,7 +89,7 @@ void				read_args(t_vm *v, t_cur *c)
 		c->args[2] = read_t_dir(v, (c->pos + 2 + c->arg_size[0] +
 			c->arg_size[1]) % MEM_SIZE, c->arg_size[2]);
 	else if (c->args_type[2] == T_IND)
-		c->args[1] = read_t_ind(v, (c->pos + 2 + c->arg_size[0] +
+		c->args[2] = read_t_ind(v, (c->pos + 2 + c->arg_size[0] +
 			c->arg_size[1]) % MEM_SIZE, c->pos);
 }
 
