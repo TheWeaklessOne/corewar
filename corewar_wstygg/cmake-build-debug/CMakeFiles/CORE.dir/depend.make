@@ -204,6 +204,16 @@ CMakeFiles/CORE.dir/vm/commands.c.o: ../includes/vm.h
 CMakeFiles/CORE.dir/vm/commands.c.o: ../libft/libft.h
 CMakeFiles/CORE.dir/vm/commands.c.o: ../vm/commands.c
 
+CMakeFiles/CORE.dir/vm/commands2.c.o: ../includes/op.h
+CMakeFiles/CORE.dir/vm/commands2.c.o: ../includes/vm.h
+CMakeFiles/CORE.dir/vm/commands2.c.o: ../libft/libft.h
+CMakeFiles/CORE.dir/vm/commands2.c.o: ../vm/commands2.c
+
+CMakeFiles/CORE.dir/vm/commands3.c.o: ../includes/op.h
+CMakeFiles/CORE.dir/vm/commands3.c.o: ../includes/vm.h
+CMakeFiles/CORE.dir/vm/commands3.c.o: ../libft/libft.h
+CMakeFiles/CORE.dir/vm/commands3.c.o: ../vm/commands3.c
+
 CMakeFiles/CORE.dir/vm/cur.c.o: ../includes/op.h
 CMakeFiles/CORE.dir/vm/cur.c.o: ../includes/vm.h
 CMakeFiles/CORE.dir/vm/cur.c.o: ../libft/libft.h

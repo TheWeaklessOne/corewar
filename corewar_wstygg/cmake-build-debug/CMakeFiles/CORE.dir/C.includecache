@@ -36,7 +36,9 @@ unistd.h
 stdlib.h
 -
 
-/Users/sdoughnu/Desktop/corewar/corewar_wstygg/vm/op_action.c
+/Users/sdoughnu/Desktop/corewar/corewar_wstygg/vm/commands3.c
+zconf.h
+-
 ../includes/vm.h
 /Users/sdoughnu/Desktop/corewar/corewar_wstygg/includes/vm.h
 

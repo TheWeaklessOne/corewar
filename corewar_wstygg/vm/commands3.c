@@ -59,7 +59,7 @@ void			do_lldi(t_vm *vm, t_cur *cur) // то же, что и ldi без усеч
 	cur->reg[cur->args[2]] = read_t_dir(vm, addr, 4);
 }
 
-voidp 			do_aff(t_vm *vm, t_cur *cur) // отображение в оригинальном corewar только с флагом -a
+void 			do_aff(t_vm *vm, t_cur *cur) // отображение в оригинальном corewar только с флагом -a
 {
 	char 		c;
 
