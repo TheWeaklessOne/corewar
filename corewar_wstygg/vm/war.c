@@ -58,6 +58,8 @@ int					war_coming(t_vm *v)
 {
 	while (++v->global)
 	{
+		if (v->d == v->global)
+			return (print_arena(v, MEM_SIZE / v->players, 64));
 		if ((v->cycles_to_die > 0) ? !(v->global % v->cycles_to_die) : 1)
 		{
 			delete_deads(v);

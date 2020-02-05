@@ -143,10 +143,9 @@ void				do_op(t_vm *vm, t_cur *cur);
 int					check_op(t_vm *vm, t_cur *cur);
 
 t_4bits				swap_bits(unsigned char nb);
-int					read_t_dir(t_vm *vm, unsigned char pos, int size);
-int					read_t_ind(t_vm *vm, unsigned char pos,
-						unsigned char cpos);
-int					get_t_ind(t_vm *vm, unsigned char pos);
+int					read_t_dir(t_vm *vm, int pos, int size);
+int					read_t_ind(t_vm *vm, int pos, int cpos);
+int					get_t_ind(t_vm *vm, int pos);
 void				read_args(t_vm *v, t_cur *c);
 void				get_arg_types(unsigned char c, unsigned *args);
 

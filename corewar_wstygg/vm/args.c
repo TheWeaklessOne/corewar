@@ -27,7 +27,7 @@ t_4bits				swap_bits(unsigned char nb)
 	return (ret);
 }
 
-int					read_t_dir(t_vm *vm, unsigned char pos, int size)
+int					read_t_dir(t_vm *vm, int pos, int size)
 {
 	t_4bytes		ret;
 
@@ -48,7 +48,7 @@ int					read_t_dir(t_vm *vm, unsigned char pos, int size)
 	return (ret.hex);
 }
 
-int					read_t_ind(t_vm *vm, unsigned char pos, unsigned char cpos)
+int					read_t_ind(t_vm *vm, int pos, int cpos)
 {
 	t_4bytes		ret;
 	t_4bytes		arg;
@@ -66,7 +66,7 @@ int					read_t_ind(t_vm *vm, unsigned char pos, unsigned char cpos)
 	return (ret.hex);
 }
 
-int					get_t_ind(t_vm *vm, unsigned char pos)
+int					get_t_ind(t_vm *vm, int pos)
 {
 	t_4bytes		arg;
 
