@@ -70,6 +70,8 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/sdoughnu/Desktop/corewar/corewar_wstygg/vm/arena.c" "/Users/sdoughnu/Desktop/corewar/corewar_wstygg/cmake-build-debug/CMakeFiles/CORE.dir/vm/arena.c.o"
   "/Users/sdoughnu/Desktop/corewar/corewar_wstygg/vm/args.c" "/Users/sdoughnu/Desktop/corewar/corewar_wstygg/cmake-build-debug/CMakeFiles/CORE.dir/vm/args.c.o"
   "/Users/sdoughnu/Desktop/corewar/corewar_wstygg/vm/commands.c" "/Users/sdoughnu/Desktop/corewar/corewar_wstygg/cmake-build-debug/CMakeFiles/CORE.dir/vm/commands.c.o"
+  "/Users/sdoughnu/Desktop/corewar/corewar_wstygg/vm/commands2.c" "/Users/sdoughnu/Desktop/corewar/corewar_wstygg/cmake-build-debug/CMakeFiles/CORE.dir/vm/commands2.c.o"
+  "/Users/sdoughnu/Desktop/corewar/corewar_wstygg/vm/commands3.c" "/Users/sdoughnu/Desktop/corewar/corewar_wstygg/cmake-build-debug/CMakeFiles/CORE.dir/vm/commands3.c.o"
   "/Users/sdoughnu/Desktop/corewar/corewar_wstygg/vm/cur.c" "/Users/sdoughnu/Desktop/corewar/corewar_wstygg/cmake-build-debug/CMakeFiles/CORE.dir/vm/cur.c.o"
   "/Users/sdoughnu/Desktop/corewar/corewar_wstygg/vm/cursor.c" "/Users/sdoughnu/Desktop/corewar/corewar_wstygg/cmake-build-debug/CMakeFiles/CORE.dir/vm/cursor.c.o"
   "/Users/sdoughnu/Desktop/corewar/corewar_wstygg/vm/init2.c" "/Users/sdoughnu/Desktop/corewar/corewar_wstygg/cmake-build-debug/CMakeFiles/CORE.dir/vm/init2.c.o"

@@ -291,6 +291,12 @@
 		<Unit filename="/Users/sdoughnu/Desktop/corewar/corewar_wstygg/vm/commands.c">
 			<Option target="CORE"/>
 		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/corewar/corewar_wstygg/vm/commands2.c">
+			<Option target="CORE"/>
+		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/corewar/corewar_wstygg/vm/commands3.c">
+			<Option target="CORE"/>
+		</Unit>
 		<Unit filename="/Users/sdoughnu/Desktop/corewar/corewar_wstygg/vm/cur.c">
 			<Option target="CORE"/>
 		</Unit>

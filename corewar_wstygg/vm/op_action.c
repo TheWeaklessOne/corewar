@@ -95,14 +95,14 @@ void				do_op(t_vm *vm, t_cur *cur)
 	(cur->operation == 4) ? do_add(vm, cur) : 0;
 	(cur->operation == 5) ? do_sub(vm, cur) : 0;
 	(cur->operation == 6) ? do_and(vm, cur) : 0;
-//	(cur->operation == 7) ? do_or(vm, cur) : 0;
-//	(cur->operation == 8) ? do_xor(vm, cur) : 0;
+	(cur->operation == 7) ? do_or(vm, cur) : 0;
+	(cur->operation == 8) ? do_xor(vm, cur) : 0;
 	(cur->operation == 9) ? do_zjmp(vm, cur) : 0;
-//	(cur->operation == 10) ? do_ldi(vm, cur) : 0;
+	(cur->operation == 10) ? do_ldi(vm, cur) : 0;
 	(cur->operation == 11) ? do_sti(vm, cur) : 0;
 //	(cur->operation == 12) ? do_fork(vm, cur) : 0;
-//	(cur->operation == 13) ? do_lld(vm, cur) : 0;
-//	(cur->operation == 14) ? do_lldi(vm, cur) : 0;
+	(cur->operation == 13) ? do_lld(vm, cur) : 0;
+	(cur->operation == 14) ? do_lldi(vm, cur) : 0;
 //	(cur->operation == 15) ? do_lfork(vm, cur) : 0;
-//	(cur->operation == 16) ? do_aff(vm, cur) : 0;
+	(cur->operation == 16) ? do_aff(vm, cur) : 0;
 }

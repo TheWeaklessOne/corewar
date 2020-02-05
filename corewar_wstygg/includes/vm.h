@@ -73,7 +73,7 @@ typedef struct		s_op
 typedef struct		s_cur
 {
 	int				id;
-	unsigned		pos;
+	int				pos;
 	int				step;
 	int				carry;
 	unsigned char	operation;
