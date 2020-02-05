@@ -93,8 +93,8 @@ void				do_op(t_vm *vm, t_cur *cur)
 	(cur->operation == 2) ? do_ld(vm, cur) : 0;
 	(cur->operation == 3) ? do_st(vm, cur) : 0;
 	(cur->operation == 4) ? do_add(vm, cur) : 0;
-//	(cur->operation == 5) ? do_sub(vm, cur) : 0;
-//	(cur->operation == 6) ? do_and(vm, cur) : 0;
+	(cur->operation == 5) ? do_sub(vm, cur) : 0;
+	(cur->operation == 6) ? do_and(vm, cur) : 0;
 //	(cur->operation == 7) ? do_or(vm, cur) : 0;
 //	(cur->operation == 8) ? do_xor(vm, cur) : 0;
 	(cur->operation == 9) ? do_zjmp(vm, cur) : 0;

@@ -38,6 +38,23 @@ void				do_add(t_vm *vm, t_cur *cur)
 		cur->carry = 0;
 }
 
+void				do_sub(t_vm *vm, t_cur *cur)
+{
+	read_args(vm, cur);
+	cur->reg[cur->args[2]] = cur->reg[cur->args[0]] - cur->reg[cur->args[1]];
+	if (cur->reg[cur->args[2]] == 0)
+		cur->carry = 1;
+	else
+		cur->carry = 0;
+}
+
+void				do_and(t_vm *vm, t_cur *cur)
+{
+	read_args(vm, cur);
+	cur->reg[cur->args[2]] = cur->args[0] & cur->args[1];
+	cur->carry = cur->reg[cur->args[2]] == 0;
+}
+
 void				do_sti(t_vm *vm, t_cur *cur)
 {
 	read_args(vm, cur);

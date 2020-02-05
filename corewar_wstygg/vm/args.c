@@ -66,6 +66,17 @@ int					read_t_ind(t_vm *vm, unsigned char pos, unsigned char cpos)
 	return (ret.hex);
 }
 
+int					get_t_ind(t_vm *vm, unsigned char pos)
+{
+	t_4bytes		arg;
+
+	arg.f.o4 = vm->arena[pos];
+	arg.f.o3 = vm->arena[(pos + 1) % MEM_SIZE];
+	arg.f.o2 = vm->arena[(pos + 2) % MEM_SIZE];
+	arg.f.o1 = vm->arena[(pos + 3) % MEM_SIZE];
+	return (arg.hex % IDX_MOD);
+}
+
 void				read_args(t_vm *v, t_cur *c)
 {
 	if (c->args_type[0] == T_REG)
