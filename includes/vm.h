@@ -157,4 +157,9 @@ int					get_t_ind(t_vm *vm, int pos);
 void				read_args(t_vm *v, t_cur *c);
 void				get_arg_types(unsigned char c, unsigned *args);
 
+/*--------------------------visualization--------------------------*/
+
+WINDOW			*init_visu(WINDOW *vm_window);
+
+
 #endif
