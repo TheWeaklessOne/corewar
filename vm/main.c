@@ -18,7 +18,7 @@ int				flag(int *i, int c, char **v, t_vm *vm)
 	{
 		vm->dump = 1;
 		vm->dump_count = ft_atoi(v[++(*i)]);
-		if ((long)vm->dump_count <= 0)
+		if (vm->dump_count < 0)
 			return (!printf("Invalid option in flag [-dump]\n"));
 		(*i)++;
 		return (1);
@@ -33,12 +33,12 @@ int				flag(int *i, int c, char **v, t_vm *vm)
 	{
 		vm->d = 1;
 		vm->d_count = ft_atoi(v[++(*i)]);
-		if ((long)vm->d_count < 0)
+		if (vm->d_count < 0)
 			return (!printf("Invalid option in flag [-d]\n"));
 		(*i)++;
 		return (1);
 	}
-	if ((!ft_strcmp(v[*i], "-dump") || !ft_strcmp(v[*i], "-d")) && i + 1 >= c)
+	if ((!ft_strcmp(v[*i], "-dump") || !ft_strcmp(v[*i], "-d")) && *i + 1 >= c)
 		return (!printf("The flag is missing a number\n"));
 	return (1);
 }

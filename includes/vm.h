@@ -96,8 +96,8 @@ typedef struct		s_vm
 {
 	int				dump;
 	int				d;
-	unsigned long	dump_count;
-	unsigned long	d_count;
+	long			dump_count;
+	long			d_count;
 	int				color;
 	int				players;
 	unsigned long	global;

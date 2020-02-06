@@ -60,11 +60,15 @@ int					war_coming(t_vm *v)
 
 	if (v->color == 1)
 		vm_window = init_visu(vm_window);
+	if (v->d == 1 && v->d_count == 0)
+		return (print_arena(v, 64));
+	if (v->dump == 1 && v->dump_count == 0)
+		return (print_arena(v, 32));
 	while (++v->global)
 	{
-		if (v->d == 1 &&  v->global == v->d_count)
+		if (v->d == 1 && v->global == (unsigned long)v->d_count)
 			return (print_arena(v, 64));
-		if (v->dump == 1 && v->global == v->dump_count)
+		if (v->dump == 1 && v->global == (unsigned long)v->dump_count)
 			return (print_arena(v, 32));
 		if ((v->cycles_to_die > 0) ? !(v->global % v->cycles_to_die) : 1)
 		{
