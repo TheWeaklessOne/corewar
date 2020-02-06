@@ -86,4 +86,4 @@ add_executable(CORE
 		vm/ld_other.c
 		vm/war.c vm/args.c vm/commands.c vm/cursor.c vm/op_action.c vm/op_tab.c)
 
-target_link_libraries(CORE lncurses)
+target_link_libraries(CORE ncurses)
