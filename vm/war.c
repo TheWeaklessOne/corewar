@@ -96,5 +96,4 @@ int					war_coming(t_vm *v)
 	else
 		printf("Global - [%lu]\nNo one won...\n", v->global);
 	return (1);
-	vm_window = NULL;
 }

@@ -38,6 +38,8 @@ int				flag(int *i, int c, char **v, t_vm *vm)
 		(*i)++;
 		return (1);
 	}
+	if ((!ft_strcmp(v[*i], "-dump") || !ft_strcmp(v[*i], "-d")) && i + 1 >= c)
+		return (!printf("The flag is missing a number\n"));
 	return (1);
 }
 
@@ -52,8 +54,6 @@ int				parser(t_vm *vm, int ac, char **av)
 		n = -1;
 		if (!flag(&i, ac, av, vm))
 			return (0);
-		if ((!ft_strcmp(av[i], "-dump") || !ft_strcmp(av[i], "-d")) && i + 1 >= ac)
-			return (!printf("The flag is missing a number\n"));
 		if (i + 1 < ac && !ft_strcmp(av[i], "-n"))
 		{
 			n = ft_atoi(av[++i]);
