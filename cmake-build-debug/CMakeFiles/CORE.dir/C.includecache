@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/sdoughnu/Desktop/corewar/corewar_wstygg/includes/op.h
+
+/Users/sdoughnu/Desktop/corewar/corewar_wstygg/includes/vm.h
+stdio.h
+-
+unistd.h
+-
+fcntl.h
+-
+time.h
+-
+stdbool.h
+-
+./op.h
+/Users/sdoughnu/Desktop/corewar/corewar_wstygg/includes/op.h
+../libft/libft.h
+/Users/sdoughnu/Desktop/corewar/corewar_wstygg/libft/libft.h
+
+/Users/sdoughnu/Desktop/corewar/corewar_wstygg/libft/libft.h
+string.h
+-
+ctype.h
+-
+stdio.h
+-
+unistd.h
+-
+stdlib.h
+-
+
+/Users/sdoughnu/Desktop/corewar/corewar_wstygg/vm/war.c
+../includes/vm.h
+/Users/sdoughnu/Desktop/corewar/corewar_wstygg/includes/vm.h
+

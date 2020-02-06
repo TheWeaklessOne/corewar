@@ -12,11 +12,11 @@
 
 #include "../includes/vm.h"
 
-int		position(t_vm *vm, int player, int i)
+int				position(t_vm *vm, int player, int i)
 {
-	int c;
+	unsigned int			c;
 
-	c  = -1;
+	c = -1;
 	if (vm->champ[player] == NULL)
 		return (printf("You enter the flag [-n] incorrectly .-.\n") - 40);
 	while (++c < vm->champ[player]->size)
@@ -28,16 +28,16 @@ int		position(t_vm *vm, int player, int i)
 	return (1);
 }
 
-int		print_arena(t_vm *vm, int step, int size)
+int				print_arena(t_vm *vm, int size)
 {
-	int i;
+	int			i;
 
 	i = 0;
 	while (i < MEM_SIZE)
 	{
 		if (i == 0 || (i % size) == 0)
 			printf("0x%0.4x : ", i);
-		printf("%0.2x ", vm->arena[i]);
+		printf("%0.2x ", (unsigned char)vm->arena[i]);
 		if (((i + 1) % size == 0) && i != 0)
 			printf("\n");
 		i++;
@@ -45,26 +45,25 @@ int		print_arena(t_vm *vm, int step, int size)
 	return (0);
 }
 
-int 	build_arena(t_vm *vm)
+int				build_arena(t_vm *vm)
 {
-	int	i;
-	int player;
-	int step;
+	int			i;
+	int			player;
+	const int	step = MEM_SIZE / vm->players;
 
 	i = -1;
 	while (++i < MEM_SIZE)
 	{
 		vm->arena[i] = 0;
 		vm->map_color[i] = 0;
-	}	
-	step = MEM_SIZE / vm->players;
+	}
 	player = 0;
 	i = 0;
 	while (player < vm->players)
 	{
 		if (!position(vm, player, i))
 			return (0);
-		i = i + step;
+		i += step;
 		player++;
 	}
 	return (1);
