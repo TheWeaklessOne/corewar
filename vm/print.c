@@ -9,7 +9,7 @@
 /*   Updated: 2020/02/06 15:20:44 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-/*
+
 #include "../includes/vm.h"
 
 void			print_sub_win(t_vm *vm, WINDOW *vm_window)
@@ -107,4 +107,3 @@ void			print_visu(WINDOW *vm_window, t_vm *vm)
 	wrefresh(vm_window);
 	usleep(speed);
 }
-*/

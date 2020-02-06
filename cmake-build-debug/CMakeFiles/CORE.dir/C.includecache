@@ -6,9 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/Users/sdoughnu/Desktop/corewar/corewar_wstygg/includes/op.h
+/Users/sdoughnu/Desktop/CORE/includes/op.h
 
-/Users/sdoughnu/Desktop/corewar/corewar_wstygg/includes/vm.h
+/Users/sdoughnu/Desktop/CORE/includes/vm.h
 stdio.h
 -
 unistd.h
@@ -20,11 +20,13 @@ time.h
 stdbool.h
 -
 ./op.h
-/Users/sdoughnu/Desktop/corewar/corewar_wstygg/includes/op.h
+/Users/sdoughnu/Desktop/CORE/includes/op.h
 ../libft/libft.h
-/Users/sdoughnu/Desktop/corewar/corewar_wstygg/libft/libft.h
+/Users/sdoughnu/Desktop/CORE/libft/libft.h
+ncurses.h
+-
 
-/Users/sdoughnu/Desktop/corewar/corewar_wstygg/libft/libft.h
+/Users/sdoughnu/Desktop/CORE/libft/libft.h
 string.h
 -
 ctype.h
@@ -36,7 +38,65 @@ unistd.h
 stdlib.h
 -
 
-/Users/sdoughnu/Desktop/corewar/corewar_wstygg/vm/war.c
+/Users/sdoughnu/Desktop/CORE/vm/arena.c
 ../includes/vm.h
-/Users/sdoughnu/Desktop/corewar/corewar_wstygg/includes/vm.h
+/Users/sdoughnu/Desktop/CORE/includes/vm.h
+
+/Users/sdoughnu/Desktop/CORE/vm/args.c
+../includes/vm.h
+/Users/sdoughnu/Desktop/CORE/includes/vm.h
+
+/Users/sdoughnu/Desktop/CORE/vm/commands.c
+../includes/vm.h
+/Users/sdoughnu/Desktop/CORE/includes/vm.h
+
+/Users/sdoughnu/Desktop/CORE/vm/commands2.c
+../includes/vm.h
+/Users/sdoughnu/Desktop/CORE/includes/vm.h
+
+/Users/sdoughnu/Desktop/CORE/vm/cur.c
+../includes/vm.h
+/Users/sdoughnu/Desktop/CORE/includes/vm.h
+
+/Users/sdoughnu/Desktop/CORE/vm/cursor.c
+../includes/vm.h
+/Users/sdoughnu/Desktop/CORE/includes/vm.h
+
+/Users/sdoughnu/Desktop/CORE/vm/fork.c
+../includes/vm.h
+/Users/sdoughnu/Desktop/CORE/includes/vm.h
+
+/Users/sdoughnu/Desktop/CORE/vm/init2.c
+../includes/vm.h
+/Users/sdoughnu/Desktop/CORE/includes/vm.h
+
+/Users/sdoughnu/Desktop/CORE/vm/init_champion.c
+../includes/vm.h
+/Users/sdoughnu/Desktop/CORE/includes/vm.h
+
+/Users/sdoughnu/Desktop/CORE/vm/ld_other.c
+zconf.h
+-
+../includes/vm.h
+/Users/sdoughnu/Desktop/CORE/includes/vm.h
+
+/Users/sdoughnu/Desktop/CORE/vm/main.c
+../includes/vm.h
+/Users/sdoughnu/Desktop/CORE/includes/vm.h
+
+/Users/sdoughnu/Desktop/CORE/vm/op_action.c
+../includes/vm.h
+/Users/sdoughnu/Desktop/CORE/includes/vm.h
+
+/Users/sdoughnu/Desktop/CORE/vm/op_tab.c
+../includes/vm.h
+/Users/sdoughnu/Desktop/CORE/includes/vm.h
+
+/Users/sdoughnu/Desktop/CORE/vm/print.c
+../includes/vm.h
+/Users/sdoughnu/Desktop/CORE/includes/vm.h
+
+/Users/sdoughnu/Desktop/CORE/vm/war.c
+../includes/vm.h
+/Users/sdoughnu/Desktop/CORE/includes/vm.h
 
