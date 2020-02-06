@@ -6,7 +6,7 @@
 /*   By: djoye <djoye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/16 18:24:30 by djoye             #+#    #+#             */
-/*   Updated: 2020/02/06 17:53:54 by djoye            ###   ########.fr       */
+/*   Updated: 2020/02/06 19:32:03 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void			print_sub_win(t_vm *vm, WINDOW *vm_window)
 		vm->champ[i]->name);
 		wattroff(vm_window, COLOR_PAIR(i + 1));
 	}
-	mvwprintw(vm_window, ++i + 1, COMMENT, "Cycles/second : %12d", 10);
+	//mvwprintw(vm_window, ++i + 1, COMMENT, "Cycles/second : %12d", (int)(500.0/(vm->speed/1000.0)));
 	mvwprintw(vm_window, ++i + 1, COMMENT, "Cycle : %20d", vm->global);
 	mvwprintw(vm_window, ++i + 1, COMMENT, "Cursors : %18u", vm->curs_alive);
 	mvwprintw(vm_window, ++i + 1, COMMENT, "players : %18d", vm->players);
@@ -57,7 +57,6 @@ WINDOW			*init_visu(WINDOW *vm_window)
 	init_pair(13, COLOR_BLACK, COLOR_YELLOW);
 	init_pair(14, COLOR_BLACK, COLOR_BLUE);
 	vm_window = newwin(HEIGHT, WIDTH, 0, 0);
-	mvwprintw(vm_window, 1, COMMENT, "Cycles/second : %12d", 10);
 	return (vm_window);
 }
 
@@ -90,14 +89,13 @@ void			print_matrix(WINDOW *vm_window, t_vm *vm)
 
 void			print_visu(WINDOW *vm_window, t_vm *vm)
 {
-	static int	speed = 10000;
 	int			key;
 
 	key = getch();
 	if (key == KEY_DOWN)
-		speed < 300000 ? speed *= 2 : 0;
+		vm->speed < 600000.0 ? vm->speed *= 2 : 0;
 	else if (key == KEY_UP)
-		speed > 50 ? speed /= 2 : 0;
+		vm->speed > 60.0 ? vm->speed /= 2 : 0;
 	else if (key == 27)
 		exit (endwin());
 	else if (key == KEY_SPACE)
@@ -108,5 +106,5 @@ void			print_visu(WINDOW *vm_window, t_vm *vm)
 	print_sub_win(vm, vm_window);
 	mvwprintw(vm_window, 50, COMMENT, "key %d\n", key);
 	wrefresh(vm_window);
-	usleep(speed);
+	usleep(vm->speed);
 }

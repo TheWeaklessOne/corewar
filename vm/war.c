@@ -6,7 +6,7 @@
 /*   By: djoye <djoye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 10:48:04 by sdoughnu          #+#    #+#             */
-/*   Updated: 2020/02/06 17:52:23 by djoye            ###   ########.fr       */
+/*   Updated: 2020/02/06 19:20:31 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,11 +90,12 @@ int					war_coming(t_vm *v)
 		if (v->color == 1)
 			print_visu(vm_window, v);
 	}
+	if (v->color == 1)
+		endwin();
 	if (v->last_champ)
 		printf("Global - [%lu]\nPlayer %d - \"%s\" (\"%s\") - won!\n",
 		v->global, v->last_champ->n, v->last_champ->name, v->last_champ->com);
 	else
 		printf("Global - [%lu]\nNo one won...\n", v->global);
 	return (1);
-	vm_window = NULL;
 }

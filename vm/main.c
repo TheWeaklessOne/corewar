@@ -6,7 +6,7 @@
 /*   By: djoye <djoye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/11 10:05:40 by sdoughnu          #+#    #+#             */
-/*   Updated: 2020/01/23 16:26:55 by djoye            ###   ########.fr       */
+/*   Updated: 2020/02/06 18:04:28 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,6 +81,7 @@ void			init(t_vm *vm)
 	vm->live_count = 0;
 	vm->checks = 0;
 	vm->last_champ = NULL;
+	vm->speed = 10000;
 	while (++i < MAX_PLAYERS)
 		vm->champ[i] = NULL;
 }

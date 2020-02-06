@@ -6,7 +6,7 @@
 /*   By: djoye <djoye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/11 10:21:55 by sdoughnu          #+#    #+#             */
-/*   Updated: 2020/02/06 17:32:31 by djoye            ###   ########.fr       */
+/*   Updated: 2020/02/06 19:05:03 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -110,6 +110,7 @@ typedef struct		s_vm
 	t_cur			*curs;
 	unsigned		curs_alive;// количество живых кареток
 	t_champion		*last_champ;
+	double			speed;
 }					t_vm;
 
 extern const t_op	g_op_tab[17];
