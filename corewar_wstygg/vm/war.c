@@ -6,7 +6,7 @@
 /*   By: djoye <djoye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 10:48:04 by sdoughnu          #+#    #+#             */
-/*   Updated: 2020/02/06 15:15:56 by djoye            ###   ########.fr       */
+/*   Updated: 2020/02/06 15:28:13 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,8 @@ int					war_coming(t_vm *v)
 {
 	WINDOW *vm_window = NULL;
 
-	vm_window = init_visu(vm_window);
+	if (v->color == 1)
+		vm_window = init_visu(vm_window);
 	while (++v->global)
 	{
 		if (v->global == v->d)
@@ -86,7 +87,8 @@ int					war_coming(t_vm *v)
 			break ;
 		if (!(v->global % 10000))
 			printf("Global - [%u]      ---      Cycles to die - [%d]\n", v->global, v->cycles_to_die);
-		print_visu(vm_window, v);
+		if (v->color == 1)
+			print_visu(vm_window, v);
 	}
 	if (v->last_champ)
 		printf("Global - [%u]\nPlayer %d - \"%s\" (\"%s\") - won!\n",
