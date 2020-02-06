@@ -6,7 +6,7 @@
 /*   By: djoye <djoye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/11 10:21:55 by sdoughnu          #+#    #+#             */
-/*   Updated: 2020/01/24 17:58:22 by djoye            ###   ########.fr       */
+/*   Updated: 2020/02/06 17:32:31 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -159,7 +159,10 @@ void				get_arg_types(unsigned char c, unsigned *args);
 
 /*--------------------------visualization--------------------------*/
 
-WINDOW			*init_visu(WINDOW *vm_window);
+WINDOW				*init_visu(WINDOW *vm_window);
+void				print_visu(WINDOW *vm_window, t_vm *vm);
+void				print_matrix(WINDOW *vm_window, t_vm *vm);
+void				print_sub_win(t_vm *vm, WINDOW *vm_window);
 
 
 #endif
