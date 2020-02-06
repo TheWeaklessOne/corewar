@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   commands3.c                                        :+:      :+:    :+:   */
+/*   ld_other.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sdoughnu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/05 17:16:54 by sdoughnu          #+#    #+#             */
-/*   Updated: 2020/02/05 17:16:56 by sdoughnu         ###   ########.fr       */
+/*   Created: 2020/02/06 12:18:35 by sdoughnu          #+#    #+#             */
+/*   Updated: 2020/02/06 12:18:39 by sdoughnu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void			do_lld(t_vm *vm, t_cur *cur) // то же, что и ld, но без ус
 		cur->args[0] = read_t_dir(vm, (cur->pos + 2) % MEM_SIZE, cur->arg_size[1]);
 	else if (cur->args_type[0] == T_IND)
 	{
-		pos = cur->pos + 2 % MEM_SIZE;
+		pos = (cur->pos + 2) % MEM_SIZE;
 		arg.f.o4 = vm->arena[pos];
 		arg.f.o3 = vm->arena[(pos + 1) % MEM_SIZE];
 		arg.f.o2 = vm->arena[(pos + 2) % MEM_SIZE];

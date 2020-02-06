@@ -39,10 +39,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /Users/sdoughnu/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
 
 # The command to remove a file.
-RM = /Users/sdoughnu/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
+RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /Users/sdoughnu/Desktop/corewar/corewar_wstygg/cmake-build-de
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/Users/sdoughnu/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/Users/sdoughnu/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -1932,33 +1932,6 @@ vm/commands2.c.s:
 	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/vm/commands2.c.s
 .PHONY : vm/commands2.c.s
 
-vm/commands3.o: vm/commands3.c.o
-
-.PHONY : vm/commands3.o
-
-# target to build an object file
-vm/commands3.c.o:
-	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/vm/commands3.c.o
-.PHONY : vm/commands3.c.o
-
-vm/commands3.i: vm/commands3.c.i
-
-.PHONY : vm/commands3.i
-
-# target to preprocess a source file
-vm/commands3.c.i:
-	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/vm/commands3.c.i
-.PHONY : vm/commands3.c.i
-
-vm/commands3.s: vm/commands3.c.s
-
-.PHONY : vm/commands3.s
-
-# target to generate assembly for a file
-vm/commands3.c.s:
-	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/vm/commands3.c.s
-.PHONY : vm/commands3.c.s
-
 vm/cur.o: vm/cur.c.o
 
 .PHONY : vm/cur.o
@@ -2013,6 +1986,33 @@ vm/cursor.c.s:
 	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/vm/cursor.c.s
 .PHONY : vm/cursor.c.s
 
+vm/fork.o: vm/fork.c.o
+
+.PHONY : vm/fork.o
+
+# target to build an object file
+vm/fork.c.o:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/vm/fork.c.o
+.PHONY : vm/fork.c.o
+
+vm/fork.i: vm/fork.c.i
+
+.PHONY : vm/fork.i
+
+# target to preprocess a source file
+vm/fork.c.i:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/vm/fork.c.i
+.PHONY : vm/fork.c.i
+
+vm/fork.s: vm/fork.c.s
+
+.PHONY : vm/fork.s
+
+# target to generate assembly for a file
+vm/fork.c.s:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/vm/fork.c.s
+.PHONY : vm/fork.c.s
+
 vm/init2.o: vm/init2.c.o
 
 .PHONY : vm/init2.o
@@ -2066,6 +2066,33 @@ vm/init_champion.s: vm/init_champion.c.s
 vm/init_champion.c.s:
 	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/vm/init_champion.c.s
 .PHONY : vm/init_champion.c.s
+
+vm/ld_other.o: vm/ld_other.c.o
+
+.PHONY : vm/ld_other.o
+
+# target to build an object file
+vm/ld_other.c.o:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/vm/ld_other.c.o
+.PHONY : vm/ld_other.c.o
+
+vm/ld_other.i: vm/ld_other.c.i
+
+.PHONY : vm/ld_other.i
+
+# target to preprocess a source file
+vm/ld_other.c.i:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/vm/ld_other.c.i
+.PHONY : vm/ld_other.c.i
+
+vm/ld_other.s: vm/ld_other.c.s
+
+.PHONY : vm/ld_other.s
+
+# target to generate assembly for a file
+vm/ld_other.c.s:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/vm/ld_other.c.s
+.PHONY : vm/ld_other.c.s
 
 vm/main.o: vm/main.c.o
 
@@ -2412,21 +2439,24 @@ help:
 	@echo "... vm/commands2.o"
 	@echo "... vm/commands2.i"
 	@echo "... vm/commands2.s"
-	@echo "... vm/commands3.o"
-	@echo "... vm/commands3.i"
-	@echo "... vm/commands3.s"
 	@echo "... vm/cur.o"
 	@echo "... vm/cur.i"
 	@echo "... vm/cur.s"
 	@echo "... vm/cursor.o"
 	@echo "... vm/cursor.i"
 	@echo "... vm/cursor.s"
+	@echo "... vm/fork.o"
+	@echo "... vm/fork.i"
+	@echo "... vm/fork.s"
 	@echo "... vm/init2.o"
 	@echo "... vm/init2.i"
 	@echo "... vm/init2.s"
 	@echo "... vm/init_champion.o"
 	@echo "... vm/init_champion.i"
 	@echo "... vm/init_champion.s"
+	@echo "... vm/ld_other.o"
+	@echo "... vm/ld_other.i"
+	@echo "... vm/ld_other.s"
 	@echo "... vm/main.o"
 	@echo "... vm/main.i"
 	@echo "... vm/main.s"

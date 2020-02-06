@@ -82,7 +82,7 @@ void				read_args(t_vm *v, t_cur *c)
 	if (c->args_type[0] == T_REG)
 		c->args[0] = v->arena[(c->pos + 2) % MEM_SIZE];
 	else if (c->args_type[0] == T_DIR)
-		c->args[0] = read_t_dir(v, (c->pos + 2) % MEM_SIZE, c->arg_size[1]);
+		c->args[0] = read_t_dir(v, (c->pos + 2) % MEM_SIZE, c->arg_size[0]);
 	else if (c->args_type[0] == T_IND)
 		c->args[0] = read_t_ind(v, (c->pos + 2) % MEM_SIZE, c->pos);
 	if (c->args_type[1] == T_REG)

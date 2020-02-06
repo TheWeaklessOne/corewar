@@ -74,7 +74,6 @@ typedef struct		s_cur
 {
 	int				id;
 	int				pos;
-	int				step;
 	int				carry;
 	unsigned char	operation;
 	int				reg[REG_NUMBER];

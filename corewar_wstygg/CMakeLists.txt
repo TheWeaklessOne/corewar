@@ -78,11 +78,12 @@ add_executable(CORE
         vm/main.c
         vm/init_champion.c
         vm/arena.c
+		vm/fork.c
         vm/init2.c
         vm/print.c
 		vm/cur.c
 		vm/commands2.c
-		vm/commands3.c
+		vm/ld_other.c
 		vm/war.c vm/args.c vm/commands.c vm/cursor.c vm/op_action.c vm/op_tab.c)
 
 target_link_libraries(CORE ncurses)

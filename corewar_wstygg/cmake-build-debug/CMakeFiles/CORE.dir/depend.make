@@ -209,11 +209,6 @@ CMakeFiles/CORE.dir/vm/commands2.c.o: ../includes/vm.h
 CMakeFiles/CORE.dir/vm/commands2.c.o: ../libft/libft.h
 CMakeFiles/CORE.dir/vm/commands2.c.o: ../vm/commands2.c
 
-CMakeFiles/CORE.dir/vm/commands3.c.o: ../includes/op.h
-CMakeFiles/CORE.dir/vm/commands3.c.o: ../includes/vm.h
-CMakeFiles/CORE.dir/vm/commands3.c.o: ../libft/libft.h
-CMakeFiles/CORE.dir/vm/commands3.c.o: ../vm/commands3.c
-
 CMakeFiles/CORE.dir/vm/cur.c.o: ../includes/op.h
 CMakeFiles/CORE.dir/vm/cur.c.o: ../includes/vm.h
 CMakeFiles/CORE.dir/vm/cur.c.o: ../libft/libft.h
@@ -224,6 +219,11 @@ CMakeFiles/CORE.dir/vm/cursor.c.o: ../includes/vm.h
 CMakeFiles/CORE.dir/vm/cursor.c.o: ../libft/libft.h
 CMakeFiles/CORE.dir/vm/cursor.c.o: ../vm/cursor.c
 
+CMakeFiles/CORE.dir/vm/fork.c.o: ../includes/op.h
+CMakeFiles/CORE.dir/vm/fork.c.o: ../includes/vm.h
+CMakeFiles/CORE.dir/vm/fork.c.o: ../libft/libft.h
+CMakeFiles/CORE.dir/vm/fork.c.o: ../vm/fork.c
+
 CMakeFiles/CORE.dir/vm/init2.c.o: ../includes/op.h
 CMakeFiles/CORE.dir/vm/init2.c.o: ../includes/vm.h
 CMakeFiles/CORE.dir/vm/init2.c.o: ../libft/libft.h
@@ -233,6 +233,11 @@ CMakeFiles/CORE.dir/vm/init_champion.c.o: ../includes/op.h
 CMakeFiles/CORE.dir/vm/init_champion.c.o: ../includes/vm.h
 CMakeFiles/CORE.dir/vm/init_champion.c.o: ../libft/libft.h
 CMakeFiles/CORE.dir/vm/init_champion.c.o: ../vm/init_champion.c
+
+CMakeFiles/CORE.dir/vm/ld_other.c.o: ../includes/op.h
+CMakeFiles/CORE.dir/vm/ld_other.c.o: ../includes/vm.h
+CMakeFiles/CORE.dir/vm/ld_other.c.o: ../libft/libft.h
+CMakeFiles/CORE.dir/vm/ld_other.c.o: ../vm/ld_other.c
 
 CMakeFiles/CORE.dir/vm/main.c.o: ../includes/op.h
 CMakeFiles/CORE.dir/vm/main.c.o: ../includes/vm.h
