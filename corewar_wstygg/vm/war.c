@@ -6,7 +6,7 @@
 /*   By: djoye <djoye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 10:48:04 by sdoughnu          #+#    #+#             */
-/*   Updated: 2020/02/04 22:09:16 by wstygg           ###   ########.fr       */
+/*   Updated: 2020/02/06 15:15:56 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,12 +56,15 @@ void				do_cycle(t_vm *v)
 
 int					war_coming(t_vm *v)
 {
+	WINDOW *vm_window = NULL;
+
+	vm_window = init_visu(vm_window);
 	while (++v->global)
 	{
 		if (v->global == v->d)
-			return (print_arena(v, MEM_SIZE / v->players, 64));
+			return (print_arena(v, 64)); //return (print_arena(v, MEM_SIZE / v->players, 64));
 		if (v->global == v->dump)
-			return (print_arena(v, MEM_SIZE / v->players, 32));
+			return (print_arena(v, 32)); //return (print_arena(v, MEM_SIZE / v->players, 32)); 
 		if ((v->cycles_to_die > 0) ? !(v->global % v->cycles_to_die) : 1)
 		{
 			delete_deads(v);
@@ -82,12 +85,13 @@ int					war_coming(t_vm *v)
 		if (v->curs_alive == 0)
 			break ;
 		if (!(v->global % 10000))
-			printf("Global - [%lu]      ---      Cycles to die - [%d]\n", v->global, v->cycles_to_die);
+			printf("Global - [%u]      ---      Cycles to die - [%d]\n", v->global, v->cycles_to_die);
+		print_visu(vm_window, v);
 	}
 	if (v->last_champ)
-		printf("Global - [%lu]\nPlayer %d - \"%s\" (\"%s\") - won!\n",
+		printf("Global - [%u]\nPlayer %d - \"%s\" (\"%s\") - won!\n",
 		v->global, v->last_champ->n, v->last_champ->name, v->last_champ->com);
 	else
-		printf("Global - [%lu]\nNo one won...\n", v->global);
+		printf("Global - [%u]\nNo one won...\n", v->global);
 	return (1);
 }

@@ -6,7 +6,7 @@
 /*   By: djoye <djoye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/15 11:39:19 by sdoughnu          #+#    #+#             */
-/*   Updated: 2020/01/24 17:58:21 by djoye            ###   ########.fr       */
+/*   Updated: 2020/02/06 14:56:53 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,7 @@ void				champ_in_vm(t_champion *ch, t_vm *vm, int n)
 	}
 }
 
-int					check_n(t_vm *vm, int n)
+int					check_n(t_vm *vm, unsigned int n)
 {
 	int				i;
 

@@ -6,7 +6,7 @@
 /*   By: djoye <djoye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/11 10:21:55 by sdoughnu          #+#    #+#             */
-/*   Updated: 2020/01/24 17:58:22 by djoye            ###   ########.fr       */
+/*   Updated: 2020/02/06 15:04:25 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,15 @@
 
 # include "./op.h"
 # include "../libft/libft.h"
+
+#include <ncurses.h>
+
+#define SIZE_64				64
+#define HEIGHT (MEM_SIZE / SIZE_64 + 4)
+#define WIDTH	(SIZE_64 * 3 + 100)
+#define COMMENT SIZE_64 * 3 + 5
+#define KEY_SPACE 32
+
 
 typedef struct		s_champion
 {
@@ -87,15 +96,15 @@ typedef struct		s_cur
 
 typedef struct		s_vm
 {
-	int				dump;
-	int				d;
+	unsigned int	dump;
+	unsigned int	d;
 	int				color;
 	int				players;
-	unsigned long	global;
+	unsigned int	global;
 	t_champion		*champ[MAX_PLAYERS];
 	char			arena[MEM_SIZE];
 	char			map_color[MEM_SIZE];
-	int				cycles_to_die;
+	unsigned int	cycles_to_die;
 	int				checks;
 	unsigned int	live_count;
 	t_cur			*curs;
@@ -126,7 +135,7 @@ int					init_champ(int *i, char **av, int n, t_vm *vm);
 void				champ_in_vm(t_champion *ch, t_vm *vm, int n);
 int					exec_magic(int fd);
 int					build_arena(t_vm *vm);
-int					check_n(t_vm *vm, int n);
+int					check_n(t_vm *vm, unsigned int n);
 int					check_ch_name(char **av, int i);
 
 int					cur_init(t_vm *vm);
@@ -134,8 +143,8 @@ t_cur				*cur_remove_at(t_cur *cur, int at);
 t_cur				*cur_at(t_cur *cur, int at);
 void				delete_deads(t_vm *vm);
 
-void				print_arena_test(t_vm *vm, int step);
-int					print_arena(t_vm *vm, int step, int size);
+//void				print_arena_test(t_vm *vm, int step);
+int					print_arena(t_vm *vm, int size);
 int					war_coming(t_vm *v);
 
 void				do_op(t_vm *vm, t_cur *cur);
@@ -147,5 +156,10 @@ int					read_t_ind(t_vm *vm, int pos, int cpos);
 int					get_t_ind(t_vm *vm, int pos);
 void				read_args(t_vm *v, t_cur *c);
 void				get_arg_types(unsigned char c, unsigned *args);
+
+WINDOW				*init_visu(WINDOW *vm_window);
+void				print_visu(WINDOW *vm_window, t_vm *vm);
+void				print_matrix(WINDOW *vm_window, t_vm *vm);
+void				print_sub_win(t_vm *vm, WINDOW *vm_window);
 
 #endif

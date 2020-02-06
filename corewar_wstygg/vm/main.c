@@ -6,7 +6,7 @@
 /*   By: djoye <djoye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/11 10:05:40 by sdoughnu          #+#    #+#             */
-/*   Updated: 2020/01/23 16:26:55 by djoye            ###   ########.fr       */
+/*   Updated: 2020/02/06 15:03:57 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int				flag(int *i, int c, char **v, t_vm *vm)
 	else if (*i + 1 < c && !ft_strcmp(v[*i], "-d"))
 	{
 		vm->d = ft_atoi(v[++(*i)]);
-		if (vm->d < 0)
+		if ((int)vm->d < 0)
 			return (!printf("Invalid option in flag [-d]\n"));
 		(*i)++;
 		return (1);

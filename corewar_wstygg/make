@@ -1,1 +1,1 @@
-gcc ./vm/*.c -I ./includes ./libft/libft.a -o corewar -lncurses
+gcc -Wall -Wextra -Werror ./vm/*.c -I ./includes ./libft/libft.a -o corewar -lncurses

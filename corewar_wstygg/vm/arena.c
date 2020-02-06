@@ -6,15 +6,15 @@
 /*   By: djoye <djoye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/15 13:12:22 by sdoughnu          #+#    #+#             */
-/*   Updated: 2020/01/22 18:09:37 by djoye            ###   ########.fr       */
+/*   Updated: 2020/02/06 15:05:02 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/vm.h"
 
-int				position(t_vm *vm, int player, int i)
+int					position(t_vm *vm, int player, int i)
 {
-	int			c;
+	unsigned int	c;
 
 	c = -1;
 	if (vm->champ[player] == NULL)
@@ -28,7 +28,7 @@ int				position(t_vm *vm, int player, int i)
 	return (1);
 }
 
-int				print_arena(t_vm *vm, int step, int size)
+int				print_arena(t_vm *vm, int size)
 {
 	int			i;
 
