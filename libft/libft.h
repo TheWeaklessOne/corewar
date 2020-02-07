@@ -13,18 +13,33 @@
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# include <stdarg.h>
+# include <unistd.h>
+# include <stdlib.h>
+# include <wchar.h>
+# include <string.h>
+# include <stddef.h>
+# include <stdint.h>
+# include <stdio.h>
 # include <string.h>
 # include <ctype.h>
 # include <stdio.h>
-# include <unistd.h>
-# include <stdlib.h>
+
 
 typedef struct		s_list
 {
-	void			*content;
-	size_t			content_size;
-	struct s_list	*next;
-}					t_list;
+	int				plus;
+	int				min;
+	int				space;
+	int				hash;
+	int				zero;
+	long int		width;
+	long int		prcn;
+	char			*type;
+	int				len;
+	char			*s;
+}					t_flags;
+
 
 void				*ft_memset(void *b, int c, size_t len);
 void				*ft_bzero(void *s, size_t n);
@@ -79,16 +94,44 @@ void				ft_putchar_fd(char c, int fd);
 void				ft_putstr_fd(char const *s, int fd);
 void				ft_putendl_fd(char const *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
-t_list				*ft_lstnew(void const *content, size_t content_size);
-void				ft_lstdelone(t_list **alst, void (*del)(void*, size_t));
-void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
-void				ft_lstadd(t_list **alst, t_list *new);
-void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
-t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 char				*ft_strcapitalize(char *str);
 char				*ft_strlowcase(char *str);
 char				*ft_strupcase(char *str);
 int					ft_str_is_alpha(char *str);
 int					ft_str_is_numeric(char *str);
+
+char				*ft_itoa_base_u(unsigned long long dig, int base, char a);
+char				*ft_itoa_base(long long dig, int base, char a);
+
+char				*ft_float(long double nb, long acc);
+size_t				ft_arg_f(t_flags *yep, int flag);
+size_t				ft_f(t_flags *yep, va_list *ap);
+
+void				ft_delete(t_flags *yep);
+
+size_t				ft_s(t_flags *yep, char *s);
+size_t				ft_c(t_flags *yep, char c);
+size_t				ft_perc(t_flags *yep);
+
+size_t				ft_p(t_flags *yep, void *tmp);
+size_t				ft_u(t_flags *yep, va_list *ap);
+
+size_t				ft_arg_o(t_flags *yep);
+size_t				ft_o(t_flags *yep, va_list *ap);
+
+size_t				ft_arg_x(t_flags *yep, int flag);
+size_t				ft_x(t_flags *yep, va_list *ap);
+
+size_t				ft_arg_di(t_flags *yep);
+size_t				ft_di(t_flags *yep, va_list *ap);
+
+size_t				ft_assoc(va_list *ap, t_flags *yep);
+
+int					ft_parse(t_flags *yep, va_list *ap, char *str);
+size_t				ft_treatment(va_list *ap, char **format, t_flags *yep);
+
+void				ft_putstrl(char *str, int len);
+int					ft_parsestr(const char *format, va_list *ap);
+int					ft_printf(const char *format, ...);
 
 #endif

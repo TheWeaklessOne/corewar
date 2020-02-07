@@ -19,12 +19,6 @@ add_executable(CORE
         libft/ft_isdigit.c
         libft/ft_isprint.c
         libft/ft_itoa.c
-        libft/ft_lstadd.c
-        libft/ft_lstdel.c
-        libft/ft_lstdelone.c
-        libft/ft_lstiter.c
-        libft/ft_lstmap.c
-        libft/ft_lstnew.c
         libft/ft_memalloc.c
         libft/ft_memccpy.c
         libft/ft_memchr.c
