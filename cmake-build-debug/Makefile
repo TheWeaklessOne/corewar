@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /Users/wstygg/Desktop/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
 
 # The command to remove a file.
-RM = /Users/wstygg/Desktop/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
+RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/wstygg/Desktop/CORE
+CMAKE_SOURCE_DIR = /Users/sdoughnu/Desktop/CORE
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/wstygg/Desktop/CORE/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/sdoughnu/Desktop/CORE/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /Users/wstygg/Desktop/CORE/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/Users/wstygg/Desktop/CLion.app/Contents/bin/cmake/mac/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/Users/wstygg/Desktop/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/wstygg/Desktop/CORE/cmake-build-debug/CMakeFiles /Users/wstygg/Desktop/CORE/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/sdoughnu/Desktop/CORE/cmake-build-debug/CMakeFiles /Users/sdoughnu/Desktop/CORE/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/wstygg/Desktop/CORE/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/sdoughnu/Desktop/CORE/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -338,168 +338,6 @@ libft/ft_itoa.s: libft/ft_itoa.c.s
 libft/ft_itoa.c.s:
 	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/libft/ft_itoa.c.s
 .PHONY : libft/ft_itoa.c.s
-
-libft/ft_lstadd.o: libft/ft_lstadd.c.o
-
-.PHONY : libft/ft_lstadd.o
-
-# target to build an object file
-libft/ft_lstadd.c.o:
-	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/libft/ft_lstadd.c.o
-.PHONY : libft/ft_lstadd.c.o
-
-libft/ft_lstadd.i: libft/ft_lstadd.c.i
-
-.PHONY : libft/ft_lstadd.i
-
-# target to preprocess a source file
-libft/ft_lstadd.c.i:
-	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/libft/ft_lstadd.c.i
-.PHONY : libft/ft_lstadd.c.i
-
-libft/ft_lstadd.s: libft/ft_lstadd.c.s
-
-.PHONY : libft/ft_lstadd.s
-
-# target to generate assembly for a file
-libft/ft_lstadd.c.s:
-	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/libft/ft_lstadd.c.s
-.PHONY : libft/ft_lstadd.c.s
-
-libft/ft_lstdel.o: libft/ft_lstdel.c.o
-
-.PHONY : libft/ft_lstdel.o
-
-# target to build an object file
-libft/ft_lstdel.c.o:
-	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/libft/ft_lstdel.c.o
-.PHONY : libft/ft_lstdel.c.o
-
-libft/ft_lstdel.i: libft/ft_lstdel.c.i
-
-.PHONY : libft/ft_lstdel.i
-
-# target to preprocess a source file
-libft/ft_lstdel.c.i:
-	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/libft/ft_lstdel.c.i
-.PHONY : libft/ft_lstdel.c.i
-
-libft/ft_lstdel.s: libft/ft_lstdel.c.s
-
-.PHONY : libft/ft_lstdel.s
-
-# target to generate assembly for a file
-libft/ft_lstdel.c.s:
-	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/libft/ft_lstdel.c.s
-.PHONY : libft/ft_lstdel.c.s
-
-libft/ft_lstdelone.o: libft/ft_lstdelone.c.o
-
-.PHONY : libft/ft_lstdelone.o
-
-# target to build an object file
-libft/ft_lstdelone.c.o:
-	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/libft/ft_lstdelone.c.o
-.PHONY : libft/ft_lstdelone.c.o
-
-libft/ft_lstdelone.i: libft/ft_lstdelone.c.i
-
-.PHONY : libft/ft_lstdelone.i
-
-# target to preprocess a source file
-libft/ft_lstdelone.c.i:
-	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/libft/ft_lstdelone.c.i
-.PHONY : libft/ft_lstdelone.c.i
-
-libft/ft_lstdelone.s: libft/ft_lstdelone.c.s
-
-.PHONY : libft/ft_lstdelone.s
-
-# target to generate assembly for a file
-libft/ft_lstdelone.c.s:
-	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/libft/ft_lstdelone.c.s
-.PHONY : libft/ft_lstdelone.c.s
-
-libft/ft_lstiter.o: libft/ft_lstiter.c.o
-
-.PHONY : libft/ft_lstiter.o
-
-# target to build an object file
-libft/ft_lstiter.c.o:
-	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/libft/ft_lstiter.c.o
-.PHONY : libft/ft_lstiter.c.o
-
-libft/ft_lstiter.i: libft/ft_lstiter.c.i
-
-.PHONY : libft/ft_lstiter.i
-
-# target to preprocess a source file
-libft/ft_lstiter.c.i:
-	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/libft/ft_lstiter.c.i
-.PHONY : libft/ft_lstiter.c.i
-
-libft/ft_lstiter.s: libft/ft_lstiter.c.s
-
-.PHONY : libft/ft_lstiter.s
-
-# target to generate assembly for a file
-libft/ft_lstiter.c.s:
-	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/libft/ft_lstiter.c.s
-.PHONY : libft/ft_lstiter.c.s
-
-libft/ft_lstmap.o: libft/ft_lstmap.c.o
-
-.PHONY : libft/ft_lstmap.o
-
-# target to build an object file
-libft/ft_lstmap.c.o:
-	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/libft/ft_lstmap.c.o
-.PHONY : libft/ft_lstmap.c.o
-
-libft/ft_lstmap.i: libft/ft_lstmap.c.i
-
-.PHONY : libft/ft_lstmap.i
-
-# target to preprocess a source file
-libft/ft_lstmap.c.i:
-	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/libft/ft_lstmap.c.i
-.PHONY : libft/ft_lstmap.c.i
-
-libft/ft_lstmap.s: libft/ft_lstmap.c.s
-
-.PHONY : libft/ft_lstmap.s
-
-# target to generate assembly for a file
-libft/ft_lstmap.c.s:
-	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/libft/ft_lstmap.c.s
-.PHONY : libft/ft_lstmap.c.s
-
-libft/ft_lstnew.o: libft/ft_lstnew.c.o
-
-.PHONY : libft/ft_lstnew.o
-
-# target to build an object file
-libft/ft_lstnew.c.o:
-	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/libft/ft_lstnew.c.o
-.PHONY : libft/ft_lstnew.c.o
-
-libft/ft_lstnew.i: libft/ft_lstnew.c.i
-
-.PHONY : libft/ft_lstnew.i
-
-# target to preprocess a source file
-libft/ft_lstnew.c.i:
-	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/libft/ft_lstnew.c.i
-.PHONY : libft/ft_lstnew.c.i
-
-libft/ft_lstnew.s: libft/ft_lstnew.c.s
-
-.PHONY : libft/ft_lstnew.s
-
-# target to generate assembly for a file
-libft/ft_lstnew.c.s:
-	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/libft/ft_lstnew.c.s
-.PHONY : libft/ft_lstnew.c.s
 
 libft/ft_memalloc.o: libft/ft_memalloc.c.o
 
@@ -2262,24 +2100,6 @@ help:
 	@echo "... libft/ft_itoa.o"
 	@echo "... libft/ft_itoa.i"
 	@echo "... libft/ft_itoa.s"
-	@echo "... libft/ft_lstadd.o"
-	@echo "... libft/ft_lstadd.i"
-	@echo "... libft/ft_lstadd.s"
-	@echo "... libft/ft_lstdel.o"
-	@echo "... libft/ft_lstdel.i"
-	@echo "... libft/ft_lstdel.s"
-	@echo "... libft/ft_lstdelone.o"
-	@echo "... libft/ft_lstdelone.i"
-	@echo "... libft/ft_lstdelone.s"
-	@echo "... libft/ft_lstiter.o"
-	@echo "... libft/ft_lstiter.i"
-	@echo "... libft/ft_lstiter.s"
-	@echo "... libft/ft_lstmap.o"
-	@echo "... libft/ft_lstmap.i"
-	@echo "... libft/ft_lstmap.s"
-	@echo "... libft/ft_lstnew.o"
-	@echo "... libft/ft_lstnew.i"
-	@echo "... libft/ft_lstnew.s"
 	@echo "... libft/ft_memalloc.o"
 	@echo "... libft/ft_memalloc.i"
 	@echo "... libft/ft_memalloc.s"

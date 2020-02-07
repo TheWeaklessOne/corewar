@@ -59,13 +59,21 @@ void				do_sub(t_vm *vm, t_cur *cur)
 void				do_and(t_vm *vm, t_cur *cur)
 {
 	read_args(vm, cur);
-	cur->reg[cur->args[2]] = cur->args[0] & cur->args[1];
+	if (cur->args_type[0] == T_REG)
+		cur->args[0] = cur->reg[cur->args[0] - 1];
+	if (cur->args_type[1] == T_REG)
+		cur->args[1] = cur->reg[cur->args[1] - 1];
+	cur->reg[cur->args[2 - 1]] = cur->args[0] & cur->args[1];
 	cur->carry = cur->reg[cur->args[2]] == 0;
 }
 
 void				do_or(t_vm *vm, t_cur *cur)
 {
 	read_args(vm, cur);
+	if (cur->args_type[0] == T_REG)
+		cur->args[0] = cur->reg[cur->args[0] - 1];
+	if (cur->args_type[1] == T_REG)
+		cur->args[1] = cur->reg[cur->args[1] - 1];
 	cur->reg[cur->args[2]] = cur->args[0] | cur->args[1];
 	cur->carry = cur->reg[cur->args[2]] == 0;
 }

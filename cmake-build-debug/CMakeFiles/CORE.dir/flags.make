@@ -6,5 +6,5 @@ C_FLAGS = -g   -std=gnu11
 
 C_DEFINES = 
 
-C_INCLUDES = -I/Users/wstygg/Desktop/CORE/includes -I/Users/wstygg/Desktop/CORE/libft 
+C_INCLUDES = -I/Users/sdoughnu/Desktop/CORE/includes -I/Users/sdoughnu/Desktop/CORE/libft 
 

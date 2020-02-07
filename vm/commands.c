@@ -15,6 +15,10 @@
 void				do_xor(t_vm *vm, t_cur *cur)
 {
 	read_args(vm, cur);
+	if (cur->args_type[0] == T_REG)
+		cur->args[0] = cur->reg[cur->args[0] - 1];
+	if (cur->args_type[1] == T_REG)
+		cur->args[1] = cur->reg[cur->args[1] - 1];
 	cur->reg[cur->args[2]] = cur->args[0] ^ cur->args[1];
 	cur->carry = cur->reg[cur->args[2]] == 0;
 }
