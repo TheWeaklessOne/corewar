@@ -14,20 +14,25 @@
 
 void				do_st(t_vm *vm, t_cur *cur)
 {
-	t_4bytes		byte;
+
+	t_4bytes		arg;
 	int				skip;
 
-	cur->args[0] = vm->arena[(cur->pos + 2) % MEM_SIZE];
+	if (cur->args_type[0] == T_REG)
+		cur->args[0] = vm->arena[(cur->pos + 2) % MEM_SIZE];
 	if (cur->args_type[1] == T_REG)
-		cur->reg[cur->args[1]] = cur->reg[cur->args[0]];
-	else
 	{
-		skip = read_t_dir(vm, cur->pos + 2 + cur->arg_size[1], 4) % IDX_MOD;
-		byte.hex = cur->reg[cur->args[0]];
-		vm->arena[(cur->pos + skip) % MEM_SIZE] = byte.f.o4;
-		vm->arena[(cur->pos + (skip + 1) % IDX_MOD) % MEM_SIZE] = byte.f.o3;
-		vm->arena[(cur->pos + (skip + 2) % IDX_MOD) % MEM_SIZE] = byte.f.o2;
-		vm->arena[(cur->pos + (skip + 3) % IDX_MOD) % MEM_SIZE] = byte.f.o1;
+		cur->args[1] = vm->arena[(cur->pos + 2 + cur->arg_size[0]) % MEM_SIZE];
+		cur->reg[cur->args[1]] = cur->reg[cur->args[0]];
+	}
+	else if (cur->args_type[1] == T_IND)
+	{
+		skip = read_t_dir(vm, (cur->pos + 2 + cur->arg_size[0]) % MEM_SIZE, 4) % IDX_MOD;
+		arg.hex = cur->reg[cur->args[0]];
+		vm->arena[(cur->pos + skip) % MEM_SIZE] = arg.f.o4;
+		vm->arena[(cur->pos + (skip + 1) % IDX_MOD) % MEM_SIZE] = arg.f.o3;
+		vm->arena[(cur->pos + (skip + 2) % IDX_MOD) % MEM_SIZE] = arg.f.o2;
+		vm->arena[(cur->pos + (skip + 3) % IDX_MOD) % MEM_SIZE] = arg.f.o1;
 	}
 }
 

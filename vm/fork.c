@@ -34,7 +34,7 @@ void			do_fork(t_vm *vm, t_cur *cur)
 {
 	t_cur		*new;
 
-	read_args(vm, cur);
+	cur->args[0] = read_t_dir(vm, ((cur->pos + 1) % MEM_SIZE), cur->arg_size[0]);
 	new = create_cursor(cur);
 	new->pos = (cur->args[0] % IDX_MOD) % MEM_SIZE;
 	new->next = vm->curs;
@@ -46,7 +46,7 @@ void			do_lfork(t_vm *vm, t_cur *cur)
 {
 	t_cur		*new;
 
-	read_args(vm, cur);
+	cur->args[0] = read_t_dir(vm, ((cur->pos + 1) % MEM_SIZE), cur->arg_size[0]);
 	new = create_cursor(cur);
 	new->pos = (cur->pos + cur->args[0]) % MEM_SIZE;
 	new->next = vm->curs;
