@@ -39,6 +39,7 @@ void			do_fork(t_vm *vm, t_cur *cur)
 	new->pos = (cur->args[0] % IDX_MOD) % MEM_SIZE;
 	new->next = vm->curs;
 	vm->curs = new;
+	vm->curs_alive++;
 }
 
 void			do_lfork(t_vm *vm, t_cur *cur)
@@ -50,4 +51,5 @@ void			do_lfork(t_vm *vm, t_cur *cur)
 	new->pos = (cur->pos + cur->args[0]) % MEM_SIZE;
 	new->next = vm->curs;
 	vm->curs = new;
+	vm->curs_alive++;
 }

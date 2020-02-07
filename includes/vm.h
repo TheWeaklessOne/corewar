@@ -108,7 +108,7 @@ typedef struct		s_vm
 	int				checks;
 	unsigned int	live_count;
 	t_cur			*curs;
-	unsigned		curs_alive;// количество живых кареток
+	unsigned		curs_alive; // количество живых кареток
 	t_champion		*last_champ;
 	double			speed;
 }					t_vm;

@@ -34,7 +34,8 @@ void			print_sub_win(t_vm *vm, WINDOW *vm_window)
 	NBR_LIVE);
 	mvwprintw(vm_window, ++i + 1, COMMENT, "Checks : %16d/%2d", vm->checks,
 	MAX_CHECKS);
-	//mvwprintw(vm_window, ++i + 1, COMMENT, "Last champion : %s", vm->last_champ->name);
+	if (vm->last_champ)
+		mvwprintw(vm_window, ++i + 1, COMMENT, "Last champion : %s", vm->last_champ->name);
 }
 
 WINDOW			*init_visu(WINDOW *vm_window)
