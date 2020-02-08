@@ -38,6 +38,7 @@ int					read_t_dir(t_vm *vm, int pos, int size)
 		ret.f.o3 = vm->arena[(pos + 1) % MEM_SIZE];
 		ret.f.o2 = vm->arena[(pos + 2) % MEM_SIZE];
 		ret.f.o1 = vm->arena[(pos + 3) % MEM_SIZE];
+//		ret.hex = (int32_t)ret.hex;
 	}
 	else
 	{

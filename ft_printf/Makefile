@@ -1,15 +1,3 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: djoye <marvin@42.fr>                       +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2019/10/27 16:14:57 by djoye             #+#    #+#              #
-#    Updated: 2019/10/28 18:31:13 by djoye            ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
-
 SRC = assoc.c treatment.c ft_arg_o.c ft_strjoin.c print_di.c ft_printf.c \
 	  ft_strnew.c  ft_strdup.c  delete.c float.c func_str.c print_p.c \
 	  print_s.c ft_itoa_u.c ft_arg_xx.c print_c.c ft_arg_di.c  print_u.c \

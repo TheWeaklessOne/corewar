@@ -19,7 +19,7 @@ void			do_ldi(t_vm *vm, t_cur *cur)
 
 	read_args(vm, cur);
 	addr = (cur->pos + (cur->args[0] + cur->args[1]) % IDX_MOD) % MEM_SIZE;
-	cur->reg[cur->args[2]] = read_t_dir(vm, addr, 4);
+	cur->reg[cur->args[2] - 1] = read_t_dir(vm, addr, 4);
 }
 
 void			do_lld(t_vm *vm, t_cur *cur) // то же, что и ld, но без усечения по модулю в T_IND !!
@@ -30,7 +30,7 @@ void			do_lld(t_vm *vm, t_cur *cur) // то же, что и ld, но без ус
 	int				skip;
 
 	if (cur->args_type[0] == T_DIR)
-		cur->args[0] = read_t_dir(vm, (cur->pos + 2) % MEM_SIZE, cur->arg_size[1]);
+		cur->args[0] = read_t_dir(vm, (cur->pos + 2) % MEM_SIZE, cur->arg_size[0]);
 	else if (cur->args_type[0] == T_IND)
 	{
 		pos = (cur->pos + 2) % MEM_SIZE;
@@ -47,7 +47,7 @@ void			do_lld(t_vm *vm, t_cur *cur) // то же, что и ld, но без ус
 	}
 	if (cur->args_type[1] == T_REG)
 		cur->args[1] = vm->arena[(cur->pos + 2 + cur->arg_size[0]) % MEM_SIZE];
-	cur->reg[cur->args[1]] = cur->args[0];
+	cur->reg[cur->args[1] - 1] = cur->args[0];
 }
 
 void			do_lldi(t_vm *vm, t_cur *cur) // то же, что и ldi без усечения по модулю !!
@@ -56,7 +56,7 @@ void			do_lldi(t_vm *vm, t_cur *cur) // то же, что и ldi без усеч
 
 	read_args(vm, cur);
 	addr = (cur->pos + (cur->args[0] + cur->args[1])) % MEM_SIZE;
-	cur->reg[cur->args[2]] = read_t_dir(vm, addr, 4);
+	cur->reg[cur->args[2] - 1] = read_t_dir(vm, addr, 4);
 }
 
 void 			do_aff(t_vm *vm, t_cur *cur) // отображение в оригинальном corewar только с флагом -a

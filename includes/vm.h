@@ -21,13 +21,14 @@
 
 # include "./op.h"
 # include "../libft/libft.h"
-#include <ncurses.h>
+# include <ncurses.h>
 
-#define SIZE_64				64
-#define HEIGHT (MEM_SIZE / SIZE_64 + 4)
-#define WIDTH	(SIZE_64 * 3 + 100)
-#define COMMENT SIZE_64 * 3 + 5
-#define KEY_SPACE 32
+# define SIZE_64				64
+# define HEIGHT (MEM_SIZE / SIZE_64 + 4)
+# define WIDTH	(SIZE_64 * 3 + 100)
+# define COMMENT SIZE_64 * 3 + 5
+# define KEY_SPACE 32
+# define IND(X) ((X) - 1)
 
 typedef struct		s_champion
 {
