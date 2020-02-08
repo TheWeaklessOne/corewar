@@ -39,6 +39,15 @@ void			push_cur(t_cur *c, t_vm *vm)
 	}
 }
 
+void			replace_n(t_vm *vm)
+{
+	int			i;
+
+	i = -1;
+	while (++i < vm->players)
+		vm->champ[i]->n = i + 1;
+}
+
 int				cur_init(t_vm *vm)
 {
 	int			i;
@@ -63,5 +72,6 @@ int				cur_init(t_vm *vm)
 		printf("* Player %d, weighing %d bytes, \"%s\" (\"%s\") !\n", i + 1,
 				vm->champ[i]->size, vm->champ[i]->name, vm->champ[i]->com);
 	}
+	replace_n(vm);
 	return (1);
 }
