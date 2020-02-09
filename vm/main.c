@@ -82,6 +82,7 @@ void			init(t_vm *vm)
 	vm->checks = 0;
 	vm->last_champ = NULL;
 	vm->speed = 10000;
+	vm->curs = NULL;
 	while (++i < MAX_PLAYERS)
 		vm->champ[i] = NULL;
 }

@@ -18,11 +18,8 @@ t_cur			*new_cur(int i)
 
 	if (!(c = (t_cur*)malloc(sizeof(t_cur))))
 		return (NULL);
+	ft_bzero(c, sizeof(t_cur));
 	c->id = i;
-	c->last_cyc_live = 0;
-	c->cyc_before_op = 0;
-	c->carry = 0;
-	ft_bzero(c->reg, sizeof(int) * REG_NUMBER);
 	c->reg[0] = -i;
 	c->next = NULL;
 	return (c);

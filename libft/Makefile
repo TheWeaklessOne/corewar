@@ -5,7 +5,7 @@ AR			=	ar -rc
 MKDIR		=	mkdir -p
 RM			=	/bin/rm -rf
 
-W_FLAGS		=	-Wall -Wextra -Werror
+W_FLAGS		=	-Wall -Wextra -Werror -g
 D_FLAGS		=	-g
 FLAGS		=	$(W_FLAGS) $(D_FLAGS)
 

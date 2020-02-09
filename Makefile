@@ -6,14 +6,14 @@
 #    By: wstygg <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/07 17:17:26 by wstygg            #+#    #+#              #
-#    Updated: 2020/02/07 17:17:27 by wstygg           ###   ########.fr        #
+#    Updated: 2020/02/09 14:02:04 by sdoughnu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		=	corewar
 
 CC			=	gcc
-FLAGS		=	-Wall -Wextra -Werror
+FLAGS		=	-Wall -Wextra -Werror -g
 D_FLAGS		=	-g
 
 DELTA		=	$$(echo "$$(tput cols)-47"|bc)

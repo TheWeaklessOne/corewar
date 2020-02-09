@@ -27,7 +27,7 @@ void				do_st(t_vm *vm, t_cur *cur)
 	}
 	else if (cur->args_type[1] == T_IND)
 	{
-		skip = read_t_dir(vm, (cur->pos + 2 + cur->arg_size[0]) % MEM_SIZE, 4) % IDX_MOD;
+		skip = read_t_dir(vm, (cur->pos + 2 + cur->arg_size[0]) % MEM_SIZE, cur->arg_size[1]) % IDX_MOD;
 		arg.hex = cur->reg[cur->args[0] - 1];
 		vm->arena[(cur->pos + skip) % MEM_SIZE] = arg.f.o4;
 		vm->arena[(cur->pos + (skip + 1) % IDX_MOD) % MEM_SIZE] = arg.f.o3;

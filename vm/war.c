@@ -82,13 +82,15 @@ int					war_coming(t_vm *v)
 			}
 			v->live_count = 0;
 		}
+		if (v->global == 2971)
+			v->color = v->color;
 		do_cycle(v);
+		if (v->curs_alive == 0)
+			break ;
 		if (v->d == 1 && v->global == (unsigned long)v->d_count)
 			return (print_arena(v, 64));
 		if (v->dump == 1 && v->global == (unsigned long)v->dump_count)
 			return (print_arena(v, 32));
-		if (v->curs_alive == 0)
-			break ;
 //		if (!(v->global % 10000))
 //			printf("Global - [%lu]      ---      Cycles to die - [%d]\n", v->global, v->cycles_to_die);
 		if (v->color == 1)

@@ -87,10 +87,10 @@ typedef struct		s_cur
 	int				reg[REG_NUMBER];
 	int				cyc_before_op;
 	unsigned		last_cyc_live;
-	struct s_cur	*next;
 	int				arg_size[3];
 	unsigned		args_type[4];
 	int				args[3];
+	struct s_cur	*next;
 }					t_cur;
 
 typedef struct		s_vm

@@ -47,14 +47,12 @@ t_cur			*cur_remove_at(t_cur *cur, int at)
 		lst_before = cur;
 		cur = cur->next;
 		free(lst_before);
-		lst_before = NULL;
 	}
 	else
 	{
 		lst_before = cur_at(cur, at - 1);
 		lst_before->next = lst_at->next;
 		free(lst_at);
-		lst_at = NULL;
 	}
 	return (cur);
 }
@@ -71,11 +69,14 @@ void			delete_deads(t_vm *vm)
 		if (vm->cycles_to_die <= 0 ||
 			vm->global - cur->last_cyc_live >= (unsigned)vm->cycles_to_die)
 		{
+			cur = cur->next;
 			vm->curs = cur_remove_at(vm->curs, at);
 			vm->curs_alive--;
 		}
 		else
+		{
 			at++;
-		cur = cur->next;
+			cur = cur->next;
+		}
 	}
 }
