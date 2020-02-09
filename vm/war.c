@@ -61,9 +61,9 @@ int					war_coming(t_vm *v)
 	if (v->color == 1)
 		vm_window = init_visu(vm_window);
 	if (v->d == 1 && v->d_count == 0)
-		return (print_arena(v, 64));
+		return (print_arena(v, 64) + 1);
 	if (v->dump == 1 && v->dump_count == 0)
-		return (print_arena(v, 32));
+		return (print_arena(v, 32) + 1);
 	while (++v->global)
 	{
 		if ((v->cycles_to_die > 0) ? !(v->global % v->cycles_to_die) : 1)
@@ -82,7 +82,7 @@ int					war_coming(t_vm *v)
 			}
 			v->live_count = 0;
 		}
-		if (v->global == 2971)
+		if (v->global == 41)
 			v->color = v->color;
 		do_cycle(v);
 		if (v->curs_alive == 0)

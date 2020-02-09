@@ -50,7 +50,11 @@ ctype.h
 stdio.h
 -
 
-/Users/sdoughnu/Desktop/CORE/vm/cursor.c
+/Users/sdoughnu/Desktop/CORE/vm/main.c
+../includes/vm.h
+/Users/sdoughnu/Desktop/CORE/includes/vm.h
+
+/Users/sdoughnu/Desktop/CORE/vm/war.c
 ../includes/vm.h
 /Users/sdoughnu/Desktop/CORE/includes/vm.h
 

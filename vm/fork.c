@@ -18,8 +18,12 @@ t_cur 			*create_cursor(t_cur *old)
 	int 		i;
 
 	if (!(new = (t_cur*)malloc(sizeof(t_cur))))
-		exit(1);
+	{
+		printf("Memory not allocated.\n");
+		exit(-1);
+	}
 	i = -1;
+	ft_bzero(new, sizeof(t_cur));
 	new->last_cyc_live = old->last_cyc_live;
 	new->carry = old->carry;
 	new->operation = 0;

@@ -106,6 +106,6 @@ int				main(int ac, char **av)
 		exit(!printf("You have not entered champions\n"));
 	vm.curs_alive = vm.players;
 	if (!build_arena(&vm) || !cur_init(&vm) || !war_coming(&vm))
-		exit(0);
+		exit(-1);
 	exit(0);
 }
