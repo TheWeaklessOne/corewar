@@ -66,6 +66,8 @@ int					war_coming(t_vm *v)
 		return (print_arena(v, 32) + 1);
 	while (++v->global)
 	{
+		if (v->l == 1)
+			ft_printf("It is now cycle %lu\n", v->global);
 		if ((v->cycles_to_die > 0) ? !(v->global % v->cycles_to_die) : 1)
 		{
 			delete_deads(v);
@@ -91,8 +93,6 @@ int					war_coming(t_vm *v)
 			return (print_arena(v, 64));
 		if (v->dump == 1 && v->global == (unsigned long)v->dump_count)
 			return (print_arena(v, 32));
-//		if (!(v->global % 10000))
-//			printf("Global - [%lu]      ---      Cycles to die - [%d]\n", v->global, v->cycles_to_die);
 		if (v->color == 1)
 			print_visu(vm_window, v);
 	}
@@ -100,7 +100,6 @@ int					war_coming(t_vm *v)
 		endwin();
 	if (v->last_champ)
 		printf("Contestant %u, \"%s\", has won !\n", v->last_champ->n, v->last_champ->name);
-		//printf("%s (player %d) won!", v->last_champ->name, v->last_champ->n);
 	else
 		printf("Global - [%lu]\nNo one won...\n", v->global);
 	printf("[%lu] - global\n", v->global);

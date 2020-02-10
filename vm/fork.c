@@ -29,6 +29,7 @@ t_cur 			*create_cursor(t_cur *old)
 	while (++i < REG_NUMBER)
 		new->reg[i] = old->reg[i];
 	new->id = old->id;
+	id_cur_flag_l(new);
 	return (new);
 }
 

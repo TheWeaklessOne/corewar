@@ -50,7 +50,23 @@ ctype.h
 stdio.h
 -
 
+/Users/sdoughnu/Desktop/CORE/vm/args.c
+../includes/vm.h
+/Users/sdoughnu/Desktop/CORE/includes/vm.h
+
+/Users/sdoughnu/Desktop/CORE/vm/fork.c
+../includes/vm.h
+/Users/sdoughnu/Desktop/CORE/includes/vm.h
+
 /Users/sdoughnu/Desktop/CORE/vm/init_champion.c
+../includes/vm.h
+/Users/sdoughnu/Desktop/CORE/includes/vm.h
+
+/Users/sdoughnu/Desktop/CORE/vm/main.c
+../includes/vm.h
+/Users/sdoughnu/Desktop/CORE/includes/vm.h
+
+/Users/sdoughnu/Desktop/CORE/vm/war.c
 ../includes/vm.h
 /Users/sdoughnu/Desktop/CORE/includes/vm.h
 

@@ -45,6 +45,14 @@ void			replace_n(t_vm *vm)
 		vm->champ[i]->n = i + 1;
 }
 
+void			id_cur_flag_l(t_cur *c)
+{
+	static int	x = 1;
+
+	c->p = x;
+	x++;
+}
+
 int				cur_init(t_vm *vm)
 {
 	int			i;
@@ -59,6 +67,7 @@ int				cur_init(t_vm *vm)
 		if (!(c = new_cur(i + 1)))
 			return (printf("Memory not allocated\n") - 21);
 		c->pos = start;
+		id_cur_flag_l(c);
 		push_cur(c, vm);
 		start += step;
 	}

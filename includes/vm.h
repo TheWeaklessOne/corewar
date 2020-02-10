@@ -81,6 +81,7 @@ typedef struct		s_op
 typedef struct		s_cur
 {
 	int				id;
+	int				p;
 	int				pos;
 	int				carry;
 	unsigned char	operation;
@@ -97,6 +98,7 @@ typedef struct		s_vm
 {
 	int				dump;
 	int				d;
+	int 			l;
 	long			dump_count;
 	long			d_count;
 	int				color;
@@ -141,6 +143,7 @@ int					check_n(t_vm *vm, unsigned n);
 int					check_ch_name(char **av, int i);
 
 int					cur_init(t_vm *vm);
+void				id_cur_flag_l(t_cur *c);
 t_cur				*cur_remove_at(t_cur *cur, int at);
 t_cur				*cur_at(t_cur *cur, int at);
 void				delete_deads(t_vm *vm);

@@ -12,11 +12,19 @@
 
 #include "../includes/vm.h"
 
+void			flag_l(int *i, int c, char **v, t_vm *vm)
+{
+	if (*i < c && !ft_strcmp(v[*i], "-l"))
+	{
+		vm->l = 1;
+		(*i)++;
+	}
+}
+
 int				flag(int *i, int c, char **v, t_vm *vm)
 {
-	if (*i + 1 < c && !ft_strcmp(v[*i], "-dump"))
+	if (*i + 1 < c && !ft_strcmp(v[*i], "-dump") && (vm->dump = 1))
 	{
-		vm->dump = 1;
 		vm->dump_count = ft_atoi(v[++(*i)]);
 		if (vm->dump_count < 0)
 			return (!printf("Invalid option in flag [-dump]\n"));
@@ -29,9 +37,8 @@ int				flag(int *i, int c, char **v, t_vm *vm)
 		(*i)++;
 		return (1);
 	}
-	else if (*i + 1 < c && !ft_strcmp(v[*i], "-d"))
+	else if (*i + 1 < c && !ft_strcmp(v[*i], "-d") && (vm->d = 1))
 	{
-		vm->d = 1;
 		vm->d_count = ft_atoi(v[++(*i)]);
 		if (vm->d_count < 0)
 			return (!printf("Invalid option in flag [-d]\n"));
@@ -54,6 +61,7 @@ int				parser(t_vm *vm, int ac, char **av)
 		n = -1;
 		if (!flag(&i, ac, av, vm))
 			return (0);
+		flag_l(&i, ac, av, vm);
 		if (i + 1 < ac && !ft_strcmp(av[i], "-n"))
 		{
 			n = ft_atoi(av[++i]);
@@ -77,6 +85,7 @@ void			init(t_vm *vm)
 	vm->d = -1;
 	vm->players = 0;
 	vm->global = 0;
+	vm->l = 0;
 	vm->cycles_to_die = CYCLE_TO_DIE;
 	vm->live_count = 0;
 	vm->checks = 0;

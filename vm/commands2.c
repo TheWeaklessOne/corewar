@@ -14,16 +14,15 @@
 
 void				do_st(t_vm *vm, t_cur *cur)
 {
-
 	t_4bytes		arg;
 	int				skip;
 
-	if (cur->args_type[0] == T_REG)
-		cur->args[0] = vm->arena[(cur->pos + 2) % MEM_SIZE];
+	cur->args[0] = vm->arena[(cur->pos + 2) % MEM_SIZE];
 	if (cur->args_type[1] == T_REG)
 	{
 		cur->args[1] = vm->arena[(cur->pos + 2 + cur->arg_size[0]) % MEM_SIZE];
 		cur->reg[cur->args[1] - 1] = cur->reg[cur->args[0] - 1];
+		(vm->l == 1) ? ft_printf("st \n") : 0;
 	}
 	else if (cur->args_type[1] == T_IND)
 	{
@@ -44,6 +43,8 @@ void				do_add(t_vm *vm, t_cur *cur)
 		cur->carry = 1;
 	else
 		cur->carry = 0;
+	if (vm->l == 1)
+		ft_printf("add r%d r%d r%d\n", cur->args[0], cur->args[1], cur->args[2]);
 }
 
 void				do_sub(t_vm *vm, t_cur *cur)
