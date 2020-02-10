@@ -49,6 +49,66 @@ CMakeFiles/CORE.dir/libft/ft_memmove.c.o
 CMakeFiles/CORE.dir/libft/ft_memset.c.o
  /Users/sdoughnu/Desktop/CORE/libft/ft_memset.c
  /Users/sdoughnu/Desktop/CORE/libft/libft.h
+CMakeFiles/CORE.dir/libft/ft_printf/assoc.c.o
+ /Users/sdoughnu/Desktop/CORE/libft/ft_printf/assoc.c
+ /Users/sdoughnu/Desktop/CORE/libft/ft_printf/ft_printf.h
+CMakeFiles/CORE.dir/libft/ft_printf/delete.c.o
+ /Users/sdoughnu/Desktop/CORE/libft/ft_printf/delete.c
+ /Users/sdoughnu/Desktop/CORE/libft/ft_printf/ft_printf.h
+CMakeFiles/CORE.dir/libft/ft_printf/float.c.o
+ /Users/sdoughnu/Desktop/CORE/libft/ft_printf/float.c
+ /Users/sdoughnu/Desktop/CORE/libft/ft_printf/ft_printf.h
+CMakeFiles/CORE.dir/libft/ft_printf/ft_arg_di.c.o
+ /Users/sdoughnu/Desktop/CORE/libft/ft_printf/ft_arg_di.c
+ /Users/sdoughnu/Desktop/CORE/libft/ft_printf/ft_printf.h
+CMakeFiles/CORE.dir/libft/ft_printf/ft_arg_f.c.o
+ /Users/sdoughnu/Desktop/CORE/libft/ft_printf/ft_arg_f.c
+ /Users/sdoughnu/Desktop/CORE/libft/ft_printf/ft_printf.h
+CMakeFiles/CORE.dir/libft/ft_printf/ft_arg_o.c.o
+ /Users/sdoughnu/Desktop/CORE/libft/ft_printf/ft_arg_o.c
+ /Users/sdoughnu/Desktop/CORE/libft/ft_printf/ft_printf.h
+CMakeFiles/CORE.dir/libft/ft_printf/ft_arg_xx.c.o
+ /Users/sdoughnu/Desktop/CORE/libft/ft_printf/ft_arg_xx.c
+ /Users/sdoughnu/Desktop/CORE/libft/ft_printf/ft_printf.h
+CMakeFiles/CORE.dir/libft/ft_printf/ft_itoa_u.c.o
+ /Users/sdoughnu/Desktop/CORE/libft/ft_printf/ft_itoa_u.c
+ /Users/sdoughnu/Desktop/CORE/libft/ft_printf/ft_printf.h
+CMakeFiles/CORE.dir/libft/ft_printf/ft_printf.c.o
+ /Users/sdoughnu/Desktop/CORE/libft/ft_printf/ft_printf.c
+ /Users/sdoughnu/Desktop/CORE/libft/ft_printf/ft_printf.h
+CMakeFiles/CORE.dir/libft/ft_printf/parse.c.o
+ /Users/sdoughnu/Desktop/CORE/libft/ft_printf/ft_printf.h
+ /Users/sdoughnu/Desktop/CORE/libft/ft_printf/parse.c
+CMakeFiles/CORE.dir/libft/ft_printf/print_c.c.o
+ /Users/sdoughnu/Desktop/CORE/libft/ft_printf/ft_printf.h
+ /Users/sdoughnu/Desktop/CORE/libft/ft_printf/print_c.c
+CMakeFiles/CORE.dir/libft/ft_printf/print_di.c.o
+ /Users/sdoughnu/Desktop/CORE/libft/ft_printf/ft_printf.h
+ /Users/sdoughnu/Desktop/CORE/libft/ft_printf/print_di.c
+CMakeFiles/CORE.dir/libft/ft_printf/print_f.c.o
+ /Users/sdoughnu/Desktop/CORE/libft/ft_printf/ft_printf.h
+ /Users/sdoughnu/Desktop/CORE/libft/ft_printf/print_f.c
+CMakeFiles/CORE.dir/libft/ft_printf/print_o.c.o
+ /Users/sdoughnu/Desktop/CORE/libft/ft_printf/ft_printf.h
+ /Users/sdoughnu/Desktop/CORE/libft/ft_printf/print_o.c
+CMakeFiles/CORE.dir/libft/ft_printf/print_p.c.o
+ /Users/sdoughnu/Desktop/CORE/libft/ft_printf/ft_printf.h
+ /Users/sdoughnu/Desktop/CORE/libft/ft_printf/print_p.c
+CMakeFiles/CORE.dir/libft/ft_printf/print_perc.c.o
+ /Users/sdoughnu/Desktop/CORE/libft/ft_printf/ft_printf.h
+ /Users/sdoughnu/Desktop/CORE/libft/ft_printf/print_perc.c
+CMakeFiles/CORE.dir/libft/ft_printf/print_s.c.o
+ /Users/sdoughnu/Desktop/CORE/libft/ft_printf/ft_printf.h
+ /Users/sdoughnu/Desktop/CORE/libft/ft_printf/print_s.c
+CMakeFiles/CORE.dir/libft/ft_printf/print_u.c.o
+ /Users/sdoughnu/Desktop/CORE/libft/ft_printf/ft_printf.h
+ /Users/sdoughnu/Desktop/CORE/libft/ft_printf/print_u.c
+CMakeFiles/CORE.dir/libft/ft_printf/print_xx.c.o
+ /Users/sdoughnu/Desktop/CORE/libft/ft_printf/ft_printf.h
+ /Users/sdoughnu/Desktop/CORE/libft/ft_printf/print_xx.c
+CMakeFiles/CORE.dir/libft/ft_printf/treatment.c.o
+ /Users/sdoughnu/Desktop/CORE/libft/ft_printf/ft_printf.h
+ /Users/sdoughnu/Desktop/CORE/libft/ft_printf/treatment.c
 CMakeFiles/CORE.dir/libft/ft_putchar.c.o
  /Users/sdoughnu/Desktop/CORE/libft/ft_putchar.c
  /Users/sdoughnu/Desktop/CORE/libft/libft.h

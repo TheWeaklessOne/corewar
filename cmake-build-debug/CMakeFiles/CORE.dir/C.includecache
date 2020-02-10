@@ -50,11 +50,7 @@ ctype.h
 stdio.h
 -
 
-/Users/sdoughnu/Desktop/CORE/vm/main.c
-../includes/vm.h
-/Users/sdoughnu/Desktop/CORE/includes/vm.h
-
-/Users/sdoughnu/Desktop/CORE/vm/war.c
+/Users/sdoughnu/Desktop/CORE/vm/init_champion.c
 ../includes/vm.h
 /Users/sdoughnu/Desktop/CORE/includes/vm.h
 

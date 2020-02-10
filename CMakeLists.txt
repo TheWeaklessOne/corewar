@@ -5,12 +5,34 @@ set(CMAKE_C_STANDARD 11)
 
 include_directories(includes)
 include_directories(libft)
+include_directories(libft/ft_printf)
 
 set(CMAKE_CXX_FLAGS "-lncurses")
 
 add_executable(CORE
         includes/op.h
         includes/vm.h
+        libft/ft_printf/assoc.c
+        libft/ft_printf/delete.c
+        libft/ft_printf/float.c
+        libft/ft_printf/ft_arg_di.c
+        libft/ft_printf/ft_arg_f.c
+        libft/ft_printf/ft_arg_o.c
+        libft/ft_printf/ft_arg_xx.c
+        libft/ft_printf/ft_itoa_u.c
+        libft/ft_printf/ft_printf.c
+        libft/ft_printf/ft_printf.h
+        libft/ft_printf/parse.c
+        libft/ft_printf/print_c.c
+        libft/ft_printf/print_di.c
+        libft/ft_printf/print_f.c
+        libft/ft_printf/print_o.c
+        libft/ft_printf/print_p.c
+        libft/ft_printf/print_perc.c
+        libft/ft_printf/print_s.c
+        libft/ft_printf/print_u.c
+        libft/ft_printf/print_xx.c
+        libft/ft_printf/treatment.c
         libft/ft_atoi.c
         libft/ft_bzero.c
         libft/ft_isalnum.c
@@ -69,15 +91,20 @@ add_executable(CORE
         libft/ft_tolower.c
         libft/ft_toupper.c
         libft/libft.h
-        vm/main.c
-        vm/init_champion.c
         vm/arena.c
-		vm/fork.c
+        vm/args.c
+        vm/commands.c
+        vm/commands2.c
+        vm/cur.c
+        vm/cursor.c
+        vm/fork.c
         vm/init2.c
+        vm/init_champion.c
+        vm/ld_other.c
+        vm/main.c
+        vm/op_action.c
+        vm/op_tab.c
         vm/print.c
-		vm/cur.c
-		vm/commands2.c
-		vm/ld_other.c
-		vm/war.c vm/args.c vm/commands.c vm/cursor.c vm/op_action.c vm/op_tab.c)
+        vm/war.c)
 
 target_link_libraries(CORE ncurses)

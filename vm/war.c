@@ -82,7 +82,7 @@ int					war_coming(t_vm *v)
 			}
 			v->live_count = 0;
 		}
-		if (v->global == 41)
+		if (v->global == 946)
 			v->color = v->color;
 		do_cycle(v);
 		if (v->curs_alive == 0)
@@ -100,6 +100,7 @@ int					war_coming(t_vm *v)
 		endwin();
 	if (v->last_champ)
 		printf("Contestant %u, \"%s\", has won !\n", v->last_champ->n, v->last_champ->name);
+		//printf("%s (player %d) won!", v->last_champ->name, v->last_champ->n);
 	else
 		printf("Global - [%lu]\nNo one won...\n", v->global);
 	printf("[%lu] - global\n", v->global);

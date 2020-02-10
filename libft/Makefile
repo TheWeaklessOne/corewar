@@ -81,7 +81,6 @@ SRC_BASE	=   ft_atoi.c               \
                 ft_printf/ft_arg_xx.c   \
                 ft_printf/ft_itoa_u.c   \
                 ft_printf/ft_printf.c   \
-                ft_printf/func_str.c    \
                 ft_printf/parse.c       \
                 ft_printf/print_c.c     \
                 ft_printf/print_di.c    \

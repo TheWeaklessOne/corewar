@@ -49,6 +49,66 @@ CMakeFiles/CORE.dir/libft/ft_memmove.c.o: ../libft/libft.h
 CMakeFiles/CORE.dir/libft/ft_memset.c.o: ../libft/ft_memset.c
 CMakeFiles/CORE.dir/libft/ft_memset.c.o: ../libft/libft.h
 
+CMakeFiles/CORE.dir/libft/ft_printf/assoc.c.o: ../libft/ft_printf/assoc.c
+CMakeFiles/CORE.dir/libft/ft_printf/assoc.c.o: ../libft/ft_printf/ft_printf.h
+
+CMakeFiles/CORE.dir/libft/ft_printf/delete.c.o: ../libft/ft_printf/delete.c
+CMakeFiles/CORE.dir/libft/ft_printf/delete.c.o: ../libft/ft_printf/ft_printf.h
+
+CMakeFiles/CORE.dir/libft/ft_printf/float.c.o: ../libft/ft_printf/float.c
+CMakeFiles/CORE.dir/libft/ft_printf/float.c.o: ../libft/ft_printf/ft_printf.h
+
+CMakeFiles/CORE.dir/libft/ft_printf/ft_arg_di.c.o: ../libft/ft_printf/ft_arg_di.c
+CMakeFiles/CORE.dir/libft/ft_printf/ft_arg_di.c.o: ../libft/ft_printf/ft_printf.h
+
+CMakeFiles/CORE.dir/libft/ft_printf/ft_arg_f.c.o: ../libft/ft_printf/ft_arg_f.c
+CMakeFiles/CORE.dir/libft/ft_printf/ft_arg_f.c.o: ../libft/ft_printf/ft_printf.h
+
+CMakeFiles/CORE.dir/libft/ft_printf/ft_arg_o.c.o: ../libft/ft_printf/ft_arg_o.c
+CMakeFiles/CORE.dir/libft/ft_printf/ft_arg_o.c.o: ../libft/ft_printf/ft_printf.h
+
+CMakeFiles/CORE.dir/libft/ft_printf/ft_arg_xx.c.o: ../libft/ft_printf/ft_arg_xx.c
+CMakeFiles/CORE.dir/libft/ft_printf/ft_arg_xx.c.o: ../libft/ft_printf/ft_printf.h
+
+CMakeFiles/CORE.dir/libft/ft_printf/ft_itoa_u.c.o: ../libft/ft_printf/ft_itoa_u.c
+CMakeFiles/CORE.dir/libft/ft_printf/ft_itoa_u.c.o: ../libft/ft_printf/ft_printf.h
+
+CMakeFiles/CORE.dir/libft/ft_printf/ft_printf.c.o: ../libft/ft_printf/ft_printf.c
+CMakeFiles/CORE.dir/libft/ft_printf/ft_printf.c.o: ../libft/ft_printf/ft_printf.h
+
+CMakeFiles/CORE.dir/libft/ft_printf/parse.c.o: ../libft/ft_printf/ft_printf.h
+CMakeFiles/CORE.dir/libft/ft_printf/parse.c.o: ../libft/ft_printf/parse.c
+
+CMakeFiles/CORE.dir/libft/ft_printf/print_c.c.o: ../libft/ft_printf/ft_printf.h
+CMakeFiles/CORE.dir/libft/ft_printf/print_c.c.o: ../libft/ft_printf/print_c.c
+
+CMakeFiles/CORE.dir/libft/ft_printf/print_di.c.o: ../libft/ft_printf/ft_printf.h
+CMakeFiles/CORE.dir/libft/ft_printf/print_di.c.o: ../libft/ft_printf/print_di.c
+
+CMakeFiles/CORE.dir/libft/ft_printf/print_f.c.o: ../libft/ft_printf/ft_printf.h
+CMakeFiles/CORE.dir/libft/ft_printf/print_f.c.o: ../libft/ft_printf/print_f.c
+
+CMakeFiles/CORE.dir/libft/ft_printf/print_o.c.o: ../libft/ft_printf/ft_printf.h
+CMakeFiles/CORE.dir/libft/ft_printf/print_o.c.o: ../libft/ft_printf/print_o.c
+
+CMakeFiles/CORE.dir/libft/ft_printf/print_p.c.o: ../libft/ft_printf/ft_printf.h
+CMakeFiles/CORE.dir/libft/ft_printf/print_p.c.o: ../libft/ft_printf/print_p.c
+
+CMakeFiles/CORE.dir/libft/ft_printf/print_perc.c.o: ../libft/ft_printf/ft_printf.h
+CMakeFiles/CORE.dir/libft/ft_printf/print_perc.c.o: ../libft/ft_printf/print_perc.c
+
+CMakeFiles/CORE.dir/libft/ft_printf/print_s.c.o: ../libft/ft_printf/ft_printf.h
+CMakeFiles/CORE.dir/libft/ft_printf/print_s.c.o: ../libft/ft_printf/print_s.c
+
+CMakeFiles/CORE.dir/libft/ft_printf/print_u.c.o: ../libft/ft_printf/ft_printf.h
+CMakeFiles/CORE.dir/libft/ft_printf/print_u.c.o: ../libft/ft_printf/print_u.c
+
+CMakeFiles/CORE.dir/libft/ft_printf/print_xx.c.o: ../libft/ft_printf/ft_printf.h
+CMakeFiles/CORE.dir/libft/ft_printf/print_xx.c.o: ../libft/ft_printf/print_xx.c
+
+CMakeFiles/CORE.dir/libft/ft_printf/treatment.c.o: ../libft/ft_printf/ft_printf.h
+CMakeFiles/CORE.dir/libft/ft_printf/treatment.c.o: ../libft/ft_printf/treatment.c
+
 CMakeFiles/CORE.dir/libft/ft_putchar.c.o: ../libft/ft_putchar.c
 CMakeFiles/CORE.dir/libft/ft_putchar.c.o: ../libft/libft.h
 

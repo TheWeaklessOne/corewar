@@ -101,7 +101,7 @@ int				main(int ac, char **av)
 	}
 	init(&vm);
 	if (!(parser(&vm, ac, av)))
-		exit(1);
+		exit(0);
 	if (vm.players == 0)
 		exit(!printf("You have not entered champions\n"));
 	vm.curs_alive = vm.players;

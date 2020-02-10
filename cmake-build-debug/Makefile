@@ -555,6 +555,546 @@ libft/ft_memset.c.s:
 	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/libft/ft_memset.c.s
 .PHONY : libft/ft_memset.c.s
 
+libft/ft_printf/assoc.o: libft/ft_printf/assoc.c.o
+
+.PHONY : libft/ft_printf/assoc.o
+
+# target to build an object file
+libft/ft_printf/assoc.c.o:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/libft/ft_printf/assoc.c.o
+.PHONY : libft/ft_printf/assoc.c.o
+
+libft/ft_printf/assoc.i: libft/ft_printf/assoc.c.i
+
+.PHONY : libft/ft_printf/assoc.i
+
+# target to preprocess a source file
+libft/ft_printf/assoc.c.i:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/libft/ft_printf/assoc.c.i
+.PHONY : libft/ft_printf/assoc.c.i
+
+libft/ft_printf/assoc.s: libft/ft_printf/assoc.c.s
+
+.PHONY : libft/ft_printf/assoc.s
+
+# target to generate assembly for a file
+libft/ft_printf/assoc.c.s:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/libft/ft_printf/assoc.c.s
+.PHONY : libft/ft_printf/assoc.c.s
+
+libft/ft_printf/delete.o: libft/ft_printf/delete.c.o
+
+.PHONY : libft/ft_printf/delete.o
+
+# target to build an object file
+libft/ft_printf/delete.c.o:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/libft/ft_printf/delete.c.o
+.PHONY : libft/ft_printf/delete.c.o
+
+libft/ft_printf/delete.i: libft/ft_printf/delete.c.i
+
+.PHONY : libft/ft_printf/delete.i
+
+# target to preprocess a source file
+libft/ft_printf/delete.c.i:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/libft/ft_printf/delete.c.i
+.PHONY : libft/ft_printf/delete.c.i
+
+libft/ft_printf/delete.s: libft/ft_printf/delete.c.s
+
+.PHONY : libft/ft_printf/delete.s
+
+# target to generate assembly for a file
+libft/ft_printf/delete.c.s:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/libft/ft_printf/delete.c.s
+.PHONY : libft/ft_printf/delete.c.s
+
+libft/ft_printf/float.o: libft/ft_printf/float.c.o
+
+.PHONY : libft/ft_printf/float.o
+
+# target to build an object file
+libft/ft_printf/float.c.o:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/libft/ft_printf/float.c.o
+.PHONY : libft/ft_printf/float.c.o
+
+libft/ft_printf/float.i: libft/ft_printf/float.c.i
+
+.PHONY : libft/ft_printf/float.i
+
+# target to preprocess a source file
+libft/ft_printf/float.c.i:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/libft/ft_printf/float.c.i
+.PHONY : libft/ft_printf/float.c.i
+
+libft/ft_printf/float.s: libft/ft_printf/float.c.s
+
+.PHONY : libft/ft_printf/float.s
+
+# target to generate assembly for a file
+libft/ft_printf/float.c.s:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/libft/ft_printf/float.c.s
+.PHONY : libft/ft_printf/float.c.s
+
+libft/ft_printf/ft_arg_di.o: libft/ft_printf/ft_arg_di.c.o
+
+.PHONY : libft/ft_printf/ft_arg_di.o
+
+# target to build an object file
+libft/ft_printf/ft_arg_di.c.o:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/libft/ft_printf/ft_arg_di.c.o
+.PHONY : libft/ft_printf/ft_arg_di.c.o
+
+libft/ft_printf/ft_arg_di.i: libft/ft_printf/ft_arg_di.c.i
+
+.PHONY : libft/ft_printf/ft_arg_di.i
+
+# target to preprocess a source file
+libft/ft_printf/ft_arg_di.c.i:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/libft/ft_printf/ft_arg_di.c.i
+.PHONY : libft/ft_printf/ft_arg_di.c.i
+
+libft/ft_printf/ft_arg_di.s: libft/ft_printf/ft_arg_di.c.s
+
+.PHONY : libft/ft_printf/ft_arg_di.s
+
+# target to generate assembly for a file
+libft/ft_printf/ft_arg_di.c.s:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/libft/ft_printf/ft_arg_di.c.s
+.PHONY : libft/ft_printf/ft_arg_di.c.s
+
+libft/ft_printf/ft_arg_f.o: libft/ft_printf/ft_arg_f.c.o
+
+.PHONY : libft/ft_printf/ft_arg_f.o
+
+# target to build an object file
+libft/ft_printf/ft_arg_f.c.o:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/libft/ft_printf/ft_arg_f.c.o
+.PHONY : libft/ft_printf/ft_arg_f.c.o
+
+libft/ft_printf/ft_arg_f.i: libft/ft_printf/ft_arg_f.c.i
+
+.PHONY : libft/ft_printf/ft_arg_f.i
+
+# target to preprocess a source file
+libft/ft_printf/ft_arg_f.c.i:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/libft/ft_printf/ft_arg_f.c.i
+.PHONY : libft/ft_printf/ft_arg_f.c.i
+
+libft/ft_printf/ft_arg_f.s: libft/ft_printf/ft_arg_f.c.s
+
+.PHONY : libft/ft_printf/ft_arg_f.s
+
+# target to generate assembly for a file
+libft/ft_printf/ft_arg_f.c.s:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/libft/ft_printf/ft_arg_f.c.s
+.PHONY : libft/ft_printf/ft_arg_f.c.s
+
+libft/ft_printf/ft_arg_o.o: libft/ft_printf/ft_arg_o.c.o
+
+.PHONY : libft/ft_printf/ft_arg_o.o
+
+# target to build an object file
+libft/ft_printf/ft_arg_o.c.o:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/libft/ft_printf/ft_arg_o.c.o
+.PHONY : libft/ft_printf/ft_arg_o.c.o
+
+libft/ft_printf/ft_arg_o.i: libft/ft_printf/ft_arg_o.c.i
+
+.PHONY : libft/ft_printf/ft_arg_o.i
+
+# target to preprocess a source file
+libft/ft_printf/ft_arg_o.c.i:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/libft/ft_printf/ft_arg_o.c.i
+.PHONY : libft/ft_printf/ft_arg_o.c.i
+
+libft/ft_printf/ft_arg_o.s: libft/ft_printf/ft_arg_o.c.s
+
+.PHONY : libft/ft_printf/ft_arg_o.s
+
+# target to generate assembly for a file
+libft/ft_printf/ft_arg_o.c.s:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/libft/ft_printf/ft_arg_o.c.s
+.PHONY : libft/ft_printf/ft_arg_o.c.s
+
+libft/ft_printf/ft_arg_xx.o: libft/ft_printf/ft_arg_xx.c.o
+
+.PHONY : libft/ft_printf/ft_arg_xx.o
+
+# target to build an object file
+libft/ft_printf/ft_arg_xx.c.o:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/libft/ft_printf/ft_arg_xx.c.o
+.PHONY : libft/ft_printf/ft_arg_xx.c.o
+
+libft/ft_printf/ft_arg_xx.i: libft/ft_printf/ft_arg_xx.c.i
+
+.PHONY : libft/ft_printf/ft_arg_xx.i
+
+# target to preprocess a source file
+libft/ft_printf/ft_arg_xx.c.i:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/libft/ft_printf/ft_arg_xx.c.i
+.PHONY : libft/ft_printf/ft_arg_xx.c.i
+
+libft/ft_printf/ft_arg_xx.s: libft/ft_printf/ft_arg_xx.c.s
+
+.PHONY : libft/ft_printf/ft_arg_xx.s
+
+# target to generate assembly for a file
+libft/ft_printf/ft_arg_xx.c.s:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/libft/ft_printf/ft_arg_xx.c.s
+.PHONY : libft/ft_printf/ft_arg_xx.c.s
+
+libft/ft_printf/ft_itoa_u.o: libft/ft_printf/ft_itoa_u.c.o
+
+.PHONY : libft/ft_printf/ft_itoa_u.o
+
+# target to build an object file
+libft/ft_printf/ft_itoa_u.c.o:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/libft/ft_printf/ft_itoa_u.c.o
+.PHONY : libft/ft_printf/ft_itoa_u.c.o
+
+libft/ft_printf/ft_itoa_u.i: libft/ft_printf/ft_itoa_u.c.i
+
+.PHONY : libft/ft_printf/ft_itoa_u.i
+
+# target to preprocess a source file
+libft/ft_printf/ft_itoa_u.c.i:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/libft/ft_printf/ft_itoa_u.c.i
+.PHONY : libft/ft_printf/ft_itoa_u.c.i
+
+libft/ft_printf/ft_itoa_u.s: libft/ft_printf/ft_itoa_u.c.s
+
+.PHONY : libft/ft_printf/ft_itoa_u.s
+
+# target to generate assembly for a file
+libft/ft_printf/ft_itoa_u.c.s:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/libft/ft_printf/ft_itoa_u.c.s
+.PHONY : libft/ft_printf/ft_itoa_u.c.s
+
+libft/ft_printf/ft_printf.o: libft/ft_printf/ft_printf.c.o
+
+.PHONY : libft/ft_printf/ft_printf.o
+
+# target to build an object file
+libft/ft_printf/ft_printf.c.o:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/libft/ft_printf/ft_printf.c.o
+.PHONY : libft/ft_printf/ft_printf.c.o
+
+libft/ft_printf/ft_printf.i: libft/ft_printf/ft_printf.c.i
+
+.PHONY : libft/ft_printf/ft_printf.i
+
+# target to preprocess a source file
+libft/ft_printf/ft_printf.c.i:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/libft/ft_printf/ft_printf.c.i
+.PHONY : libft/ft_printf/ft_printf.c.i
+
+libft/ft_printf/ft_printf.s: libft/ft_printf/ft_printf.c.s
+
+.PHONY : libft/ft_printf/ft_printf.s
+
+# target to generate assembly for a file
+libft/ft_printf/ft_printf.c.s:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/libft/ft_printf/ft_printf.c.s
+.PHONY : libft/ft_printf/ft_printf.c.s
+
+libft/ft_printf/parse.o: libft/ft_printf/parse.c.o
+
+.PHONY : libft/ft_printf/parse.o
+
+# target to build an object file
+libft/ft_printf/parse.c.o:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/libft/ft_printf/parse.c.o
+.PHONY : libft/ft_printf/parse.c.o
+
+libft/ft_printf/parse.i: libft/ft_printf/parse.c.i
+
+.PHONY : libft/ft_printf/parse.i
+
+# target to preprocess a source file
+libft/ft_printf/parse.c.i:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/libft/ft_printf/parse.c.i
+.PHONY : libft/ft_printf/parse.c.i
+
+libft/ft_printf/parse.s: libft/ft_printf/parse.c.s
+
+.PHONY : libft/ft_printf/parse.s
+
+# target to generate assembly for a file
+libft/ft_printf/parse.c.s:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/libft/ft_printf/parse.c.s
+.PHONY : libft/ft_printf/parse.c.s
+
+libft/ft_printf/print_c.o: libft/ft_printf/print_c.c.o
+
+.PHONY : libft/ft_printf/print_c.o
+
+# target to build an object file
+libft/ft_printf/print_c.c.o:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/libft/ft_printf/print_c.c.o
+.PHONY : libft/ft_printf/print_c.c.o
+
+libft/ft_printf/print_c.i: libft/ft_printf/print_c.c.i
+
+.PHONY : libft/ft_printf/print_c.i
+
+# target to preprocess a source file
+libft/ft_printf/print_c.c.i:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/libft/ft_printf/print_c.c.i
+.PHONY : libft/ft_printf/print_c.c.i
+
+libft/ft_printf/print_c.s: libft/ft_printf/print_c.c.s
+
+.PHONY : libft/ft_printf/print_c.s
+
+# target to generate assembly for a file
+libft/ft_printf/print_c.c.s:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/libft/ft_printf/print_c.c.s
+.PHONY : libft/ft_printf/print_c.c.s
+
+libft/ft_printf/print_di.o: libft/ft_printf/print_di.c.o
+
+.PHONY : libft/ft_printf/print_di.o
+
+# target to build an object file
+libft/ft_printf/print_di.c.o:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/libft/ft_printf/print_di.c.o
+.PHONY : libft/ft_printf/print_di.c.o
+
+libft/ft_printf/print_di.i: libft/ft_printf/print_di.c.i
+
+.PHONY : libft/ft_printf/print_di.i
+
+# target to preprocess a source file
+libft/ft_printf/print_di.c.i:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/libft/ft_printf/print_di.c.i
+.PHONY : libft/ft_printf/print_di.c.i
+
+libft/ft_printf/print_di.s: libft/ft_printf/print_di.c.s
+
+.PHONY : libft/ft_printf/print_di.s
+
+# target to generate assembly for a file
+libft/ft_printf/print_di.c.s:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/libft/ft_printf/print_di.c.s
+.PHONY : libft/ft_printf/print_di.c.s
+
+libft/ft_printf/print_f.o: libft/ft_printf/print_f.c.o
+
+.PHONY : libft/ft_printf/print_f.o
+
+# target to build an object file
+libft/ft_printf/print_f.c.o:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/libft/ft_printf/print_f.c.o
+.PHONY : libft/ft_printf/print_f.c.o
+
+libft/ft_printf/print_f.i: libft/ft_printf/print_f.c.i
+
+.PHONY : libft/ft_printf/print_f.i
+
+# target to preprocess a source file
+libft/ft_printf/print_f.c.i:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/libft/ft_printf/print_f.c.i
+.PHONY : libft/ft_printf/print_f.c.i
+
+libft/ft_printf/print_f.s: libft/ft_printf/print_f.c.s
+
+.PHONY : libft/ft_printf/print_f.s
+
+# target to generate assembly for a file
+libft/ft_printf/print_f.c.s:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/libft/ft_printf/print_f.c.s
+.PHONY : libft/ft_printf/print_f.c.s
+
+libft/ft_printf/print_o.o: libft/ft_printf/print_o.c.o
+
+.PHONY : libft/ft_printf/print_o.o
+
+# target to build an object file
+libft/ft_printf/print_o.c.o:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/libft/ft_printf/print_o.c.o
+.PHONY : libft/ft_printf/print_o.c.o
+
+libft/ft_printf/print_o.i: libft/ft_printf/print_o.c.i
+
+.PHONY : libft/ft_printf/print_o.i
+
+# target to preprocess a source file
+libft/ft_printf/print_o.c.i:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/libft/ft_printf/print_o.c.i
+.PHONY : libft/ft_printf/print_o.c.i
+
+libft/ft_printf/print_o.s: libft/ft_printf/print_o.c.s
+
+.PHONY : libft/ft_printf/print_o.s
+
+# target to generate assembly for a file
+libft/ft_printf/print_o.c.s:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/libft/ft_printf/print_o.c.s
+.PHONY : libft/ft_printf/print_o.c.s
+
+libft/ft_printf/print_p.o: libft/ft_printf/print_p.c.o
+
+.PHONY : libft/ft_printf/print_p.o
+
+# target to build an object file
+libft/ft_printf/print_p.c.o:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/libft/ft_printf/print_p.c.o
+.PHONY : libft/ft_printf/print_p.c.o
+
+libft/ft_printf/print_p.i: libft/ft_printf/print_p.c.i
+
+.PHONY : libft/ft_printf/print_p.i
+
+# target to preprocess a source file
+libft/ft_printf/print_p.c.i:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/libft/ft_printf/print_p.c.i
+.PHONY : libft/ft_printf/print_p.c.i
+
+libft/ft_printf/print_p.s: libft/ft_printf/print_p.c.s
+
+.PHONY : libft/ft_printf/print_p.s
+
+# target to generate assembly for a file
+libft/ft_printf/print_p.c.s:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/libft/ft_printf/print_p.c.s
+.PHONY : libft/ft_printf/print_p.c.s
+
+libft/ft_printf/print_perc.o: libft/ft_printf/print_perc.c.o
+
+.PHONY : libft/ft_printf/print_perc.o
+
+# target to build an object file
+libft/ft_printf/print_perc.c.o:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/libft/ft_printf/print_perc.c.o
+.PHONY : libft/ft_printf/print_perc.c.o
+
+libft/ft_printf/print_perc.i: libft/ft_printf/print_perc.c.i
+
+.PHONY : libft/ft_printf/print_perc.i
+
+# target to preprocess a source file
+libft/ft_printf/print_perc.c.i:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/libft/ft_printf/print_perc.c.i
+.PHONY : libft/ft_printf/print_perc.c.i
+
+libft/ft_printf/print_perc.s: libft/ft_printf/print_perc.c.s
+
+.PHONY : libft/ft_printf/print_perc.s
+
+# target to generate assembly for a file
+libft/ft_printf/print_perc.c.s:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/libft/ft_printf/print_perc.c.s
+.PHONY : libft/ft_printf/print_perc.c.s
+
+libft/ft_printf/print_s.o: libft/ft_printf/print_s.c.o
+
+.PHONY : libft/ft_printf/print_s.o
+
+# target to build an object file
+libft/ft_printf/print_s.c.o:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/libft/ft_printf/print_s.c.o
+.PHONY : libft/ft_printf/print_s.c.o
+
+libft/ft_printf/print_s.i: libft/ft_printf/print_s.c.i
+
+.PHONY : libft/ft_printf/print_s.i
+
+# target to preprocess a source file
+libft/ft_printf/print_s.c.i:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/libft/ft_printf/print_s.c.i
+.PHONY : libft/ft_printf/print_s.c.i
+
+libft/ft_printf/print_s.s: libft/ft_printf/print_s.c.s
+
+.PHONY : libft/ft_printf/print_s.s
+
+# target to generate assembly for a file
+libft/ft_printf/print_s.c.s:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/libft/ft_printf/print_s.c.s
+.PHONY : libft/ft_printf/print_s.c.s
+
+libft/ft_printf/print_u.o: libft/ft_printf/print_u.c.o
+
+.PHONY : libft/ft_printf/print_u.o
+
+# target to build an object file
+libft/ft_printf/print_u.c.o:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/libft/ft_printf/print_u.c.o
+.PHONY : libft/ft_printf/print_u.c.o
+
+libft/ft_printf/print_u.i: libft/ft_printf/print_u.c.i
+
+.PHONY : libft/ft_printf/print_u.i
+
+# target to preprocess a source file
+libft/ft_printf/print_u.c.i:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/libft/ft_printf/print_u.c.i
+.PHONY : libft/ft_printf/print_u.c.i
+
+libft/ft_printf/print_u.s: libft/ft_printf/print_u.c.s
+
+.PHONY : libft/ft_printf/print_u.s
+
+# target to generate assembly for a file
+libft/ft_printf/print_u.c.s:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/libft/ft_printf/print_u.c.s
+.PHONY : libft/ft_printf/print_u.c.s
+
+libft/ft_printf/print_xx.o: libft/ft_printf/print_xx.c.o
+
+.PHONY : libft/ft_printf/print_xx.o
+
+# target to build an object file
+libft/ft_printf/print_xx.c.o:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/libft/ft_printf/print_xx.c.o
+.PHONY : libft/ft_printf/print_xx.c.o
+
+libft/ft_printf/print_xx.i: libft/ft_printf/print_xx.c.i
+
+.PHONY : libft/ft_printf/print_xx.i
+
+# target to preprocess a source file
+libft/ft_printf/print_xx.c.i:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/libft/ft_printf/print_xx.c.i
+.PHONY : libft/ft_printf/print_xx.c.i
+
+libft/ft_printf/print_xx.s: libft/ft_printf/print_xx.c.s
+
+.PHONY : libft/ft_printf/print_xx.s
+
+# target to generate assembly for a file
+libft/ft_printf/print_xx.c.s:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/libft/ft_printf/print_xx.c.s
+.PHONY : libft/ft_printf/print_xx.c.s
+
+libft/ft_printf/treatment.o: libft/ft_printf/treatment.c.o
+
+.PHONY : libft/ft_printf/treatment.o
+
+# target to build an object file
+libft/ft_printf/treatment.c.o:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/libft/ft_printf/treatment.c.o
+.PHONY : libft/ft_printf/treatment.c.o
+
+libft/ft_printf/treatment.i: libft/ft_printf/treatment.c.i
+
+.PHONY : libft/ft_printf/treatment.i
+
+# target to preprocess a source file
+libft/ft_printf/treatment.c.i:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/libft/ft_printf/treatment.c.i
+.PHONY : libft/ft_printf/treatment.c.i
+
+libft/ft_printf/treatment.s: libft/ft_printf/treatment.c.s
+
+.PHONY : libft/ft_printf/treatment.s
+
+# target to generate assembly for a file
+libft/ft_printf/treatment.c.s:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/libft/ft_printf/treatment.c.s
+.PHONY : libft/ft_printf/treatment.c.s
+
 libft/ft_putchar.o: libft/ft_putchar.c.o
 
 .PHONY : libft/ft_putchar.o
@@ -2124,6 +2664,66 @@ help:
 	@echo "... libft/ft_memset.o"
 	@echo "... libft/ft_memset.i"
 	@echo "... libft/ft_memset.s"
+	@echo "... libft/ft_printf/assoc.o"
+	@echo "... libft/ft_printf/assoc.i"
+	@echo "... libft/ft_printf/assoc.s"
+	@echo "... libft/ft_printf/delete.o"
+	@echo "... libft/ft_printf/delete.i"
+	@echo "... libft/ft_printf/delete.s"
+	@echo "... libft/ft_printf/float.o"
+	@echo "... libft/ft_printf/float.i"
+	@echo "... libft/ft_printf/float.s"
+	@echo "... libft/ft_printf/ft_arg_di.o"
+	@echo "... libft/ft_printf/ft_arg_di.i"
+	@echo "... libft/ft_printf/ft_arg_di.s"
+	@echo "... libft/ft_printf/ft_arg_f.o"
+	@echo "... libft/ft_printf/ft_arg_f.i"
+	@echo "... libft/ft_printf/ft_arg_f.s"
+	@echo "... libft/ft_printf/ft_arg_o.o"
+	@echo "... libft/ft_printf/ft_arg_o.i"
+	@echo "... libft/ft_printf/ft_arg_o.s"
+	@echo "... libft/ft_printf/ft_arg_xx.o"
+	@echo "... libft/ft_printf/ft_arg_xx.i"
+	@echo "... libft/ft_printf/ft_arg_xx.s"
+	@echo "... libft/ft_printf/ft_itoa_u.o"
+	@echo "... libft/ft_printf/ft_itoa_u.i"
+	@echo "... libft/ft_printf/ft_itoa_u.s"
+	@echo "... libft/ft_printf/ft_printf.o"
+	@echo "... libft/ft_printf/ft_printf.i"
+	@echo "... libft/ft_printf/ft_printf.s"
+	@echo "... libft/ft_printf/parse.o"
+	@echo "... libft/ft_printf/parse.i"
+	@echo "... libft/ft_printf/parse.s"
+	@echo "... libft/ft_printf/print_c.o"
+	@echo "... libft/ft_printf/print_c.i"
+	@echo "... libft/ft_printf/print_c.s"
+	@echo "... libft/ft_printf/print_di.o"
+	@echo "... libft/ft_printf/print_di.i"
+	@echo "... libft/ft_printf/print_di.s"
+	@echo "... libft/ft_printf/print_f.o"
+	@echo "... libft/ft_printf/print_f.i"
+	@echo "... libft/ft_printf/print_f.s"
+	@echo "... libft/ft_printf/print_o.o"
+	@echo "... libft/ft_printf/print_o.i"
+	@echo "... libft/ft_printf/print_o.s"
+	@echo "... libft/ft_printf/print_p.o"
+	@echo "... libft/ft_printf/print_p.i"
+	@echo "... libft/ft_printf/print_p.s"
+	@echo "... libft/ft_printf/print_perc.o"
+	@echo "... libft/ft_printf/print_perc.i"
+	@echo "... libft/ft_printf/print_perc.s"
+	@echo "... libft/ft_printf/print_s.o"
+	@echo "... libft/ft_printf/print_s.i"
+	@echo "... libft/ft_printf/print_s.s"
+	@echo "... libft/ft_printf/print_u.o"
+	@echo "... libft/ft_printf/print_u.i"
+	@echo "... libft/ft_printf/print_u.s"
+	@echo "... libft/ft_printf/print_xx.o"
+	@echo "... libft/ft_printf/print_xx.i"
+	@echo "... libft/ft_printf/print_xx.s"
+	@echo "... libft/ft_printf/treatment.o"
+	@echo "... libft/ft_printf/treatment.i"
+	@echo "... libft/ft_printf/treatment.s"
 	@echo "... libft/ft_putchar.o"
 	@echo "... libft/ft_putchar.i"
 	@echo "... libft/ft_putchar.s"

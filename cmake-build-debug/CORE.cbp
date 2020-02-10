@@ -46,6 +46,7 @@
 				<Compiler>
 					<Add directory="/Users/sdoughnu/Desktop/CORE/includes"/>
 					<Add directory="/Users/sdoughnu/Desktop/CORE/libft"/>
+					<Add directory="/Users/sdoughnu/Desktop/CORE/libft/ft_printf"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
@@ -69,6 +70,7 @@
 				<Compiler>
 					<Add directory="/Users/sdoughnu/Desktop/CORE/includes"/>
 					<Add directory="/Users/sdoughnu/Desktop/CORE/libft"/>
+					<Add directory="/Users/sdoughnu/Desktop/CORE/libft/ft_printf"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
@@ -136,6 +138,69 @@
 			<Option target="CORE"/>
 		</Unit>
 		<Unit filename="/Users/sdoughnu/Desktop/CORE/libft/ft_memset.c">
+			<Option target="CORE"/>
+		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/CORE/libft/ft_printf/assoc.c">
+			<Option target="CORE"/>
+		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/CORE/libft/ft_printf/delete.c">
+			<Option target="CORE"/>
+		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/CORE/libft/ft_printf/float.c">
+			<Option target="CORE"/>
+		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/CORE/libft/ft_printf/ft_arg_di.c">
+			<Option target="CORE"/>
+		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/CORE/libft/ft_printf/ft_arg_f.c">
+			<Option target="CORE"/>
+		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/CORE/libft/ft_printf/ft_arg_o.c">
+			<Option target="CORE"/>
+		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/CORE/libft/ft_printf/ft_arg_xx.c">
+			<Option target="CORE"/>
+		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/CORE/libft/ft_printf/ft_itoa_u.c">
+			<Option target="CORE"/>
+		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/CORE/libft/ft_printf/ft_printf.c">
+			<Option target="CORE"/>
+		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/CORE/libft/ft_printf/ft_printf.h">
+			<Option target="CORE"/>
+		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/CORE/libft/ft_printf/parse.c">
+			<Option target="CORE"/>
+		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/CORE/libft/ft_printf/print_c.c">
+			<Option target="CORE"/>
+		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/CORE/libft/ft_printf/print_di.c">
+			<Option target="CORE"/>
+		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/CORE/libft/ft_printf/print_f.c">
+			<Option target="CORE"/>
+		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/CORE/libft/ft_printf/print_o.c">
+			<Option target="CORE"/>
+		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/CORE/libft/ft_printf/print_p.c">
+			<Option target="CORE"/>
+		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/CORE/libft/ft_printf/print_perc.c">
+			<Option target="CORE"/>
+		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/CORE/libft/ft_printf/print_s.c">
+			<Option target="CORE"/>
+		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/CORE/libft/ft_printf/print_u.c">
+			<Option target="CORE"/>
+		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/CORE/libft/ft_printf/print_xx.c">
+			<Option target="CORE"/>
+		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/CORE/libft/ft_printf/treatment.c">
 			<Option target="CORE"/>
 		</Unit>
 		<Unit filename="/Users/sdoughnu/Desktop/CORE/libft/ft_putchar.c">

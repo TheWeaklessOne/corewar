@@ -74,17 +74,17 @@ int					init_champ(int *i, char **av, int n, t_vm *vm)
 	if (vm->players > MAX_PLAYERS)
 		return (!printf("Too much champions\n"));
 	if (!check_ch_name(av, *i))
-		return (!printf("You gave not a *.cor file!\n"));
+		return (!ft_printf("You gave not a *.cor file - %s\n", av[*i]));
 	if ((fd = open(av[*i], O_RDONLY)) < 0)
-		return (!printf("Can't open file...\n"));
+		return (!ft_printf("Can't open file %s\n", av[*i]));
 	if (!exec_magic(fd))
-		return (!printf("Corewar_exec_magic doesn't match\n"));
+		return (!ft_printf("Corewar_exec_magic doesn't match - %s\n", av[*i]));
 	if (!(ch = (t_champion*)malloc(sizeof(t_champion))))
 		return (!printf("Memory not allocated\n"));
 	ch->n = 0;
 	read_name(ch, fd);
 	if ((ch->size = read_size(fd)) > CHAMP_MAX_SIZE)
-		return (!printf("Big champion exec code size\n"));
+		return (!ft_printf("Big champion exec code size - %s\n", av[*i]));
 	read_com(ch, fd);
 	if (!read_code(fd, ch))
 		return (0);
