@@ -6,7 +6,7 @@
 /*   By: djoye <djoye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/16 18:24:30 by djoye             #+#    #+#             */
-/*   Updated: 2020/02/06 19:32:03 by djoye            ###   ########.fr       */
+/*   Updated: 2020/02/10 17:58:55 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,29 +16,31 @@ void			print_sub_win(t_vm *vm, WINDOW *vm_window)
 {
 	int			i;
 
-	i = -1;
-	while (++i < vm->players)
+	i = 0;
+	while (++i <= vm->players)
 	{
-		wattron(vm_window, COLOR_PAIR(i + 1));
-		mvwprintw(vm_window, i + 1, COMMENT, "player %d : %s", i + 1,
-		vm->champ[i]->name);
-		wattroff(vm_window, COLOR_PAIR(i + 1));
+		wattron(vm_window, COLOR_PAIR(i));
+		mvwprintw(vm_window, i, COMMENT, "player %d: %s", i,
+		vm->champ[i - 1]->name);
+		wattroff(vm_window, COLOR_PAIR(i));
 	}
-	//mvwprintw(vm_window, ++i + 1, COMMENT, "Cycles/second : %12d", (int)(500.0/(vm->speed/1000.0)));
-	mvwprintw(vm_window, ++i + 1, COMMENT, "Cycle : %20d", vm->global);
-	mvwprintw(vm_window, ++i + 1, COMMENT, "Cursors : %18u", vm->curs_alive);
-	mvwprintw(vm_window, ++i + 1, COMMENT, "players : %18d", vm->players);
-	mvwprintw(vm_window, ++i + 1, COMMENT, "Cycle to die : %13d", vm->cycles_to_die);
-	mvwprintw(vm_window, ++i + 1, COMMENT, "Cycle delta : %14d", CYCLE_DELTA);
-	mvwprintw(vm_window, ++i + 1, COMMENT, "Lives : %17d/%2d", vm->live_count,
+	mvwprintw(vm_window, ++i + 1, COMMENT, "Cycle: %11d", vm->global);
+	mvwprintw(vm_window, ++i + 1, COMMENT, "Cursors: %9u", vm->curs_alive);
+	mvwprintw(vm_window, ++i + 1, COMMENT, "Cycle to die: %4d", vm->cycles_to_die);
+	mvwprintw(vm_window, ++i + 1, COMMENT, "Cycle delta: %5d", CYCLE_DELTA);
+	mvwprintw(vm_window, ++i + 1, COMMENT, "Lives: %8d/%2d", vm->live_count,
 	NBR_LIVE);
-	mvwprintw(vm_window, ++i + 1, COMMENT, "Checks : %16d/%2d", vm->checks,
+	mvwprintw(vm_window, ++i + 1, COMMENT, "Checks: %7d/%2d", vm->checks,
 	MAX_CHECKS);
 	if (vm->last_champ)
-		mvwprintw(vm_window, ++i + 1, COMMENT, "Last champion : %s", vm->last_champ->name);
+	{
+		wattron(vm_window, COLOR_PAIR((int)vm->last_champ->n));
+		mvwprintw(vm_window, ++i + 2, COMMENT, "Last live:%s\n", vm->last_champ->name);
+		wattroff(vm_window, COLOR_PAIR((int)vm->last_champ->n));
+	}
 }
 
-WINDOW			*init_visu(WINDOW *vm_window)
+WINDOW			*init_visu(WINDOW *vm_window, t_vm *vm)
 {
 	initscr();
 	keypad(stdscr, true);
@@ -57,7 +59,8 @@ WINDOW			*init_visu(WINDOW *vm_window)
 	init_pair(12, COLOR_BLACK, COLOR_GREEN);
 	init_pair(13, COLOR_BLACK, COLOR_YELLOW);
 	init_pair(14, COLOR_BLACK, COLOR_BLUE);
-	vm_window = newwin(HEIGHT, WIDTH, 0, 0);
+	max_name(vm);
+	vm_window = newwin(HEIGHT, vm->width, 0, 0);
 	return (vm_window);
 }
 
@@ -88,6 +91,24 @@ void			print_matrix(WINDOW *vm_window, t_vm *vm)
 	}
 }
 
+void			small_screen(WINDOW *vm_window, t_vm *vm)
+{
+	struct winsize	w;
+	
+	ioctl(0, TIOCGWINSZ, &w);
+	if (w.ws_col < vm->width || w.ws_row < HEIGHT)
+	{
+		delwin(vm_window);
+		endwin();
+		printf("USAGE: small window for work with flag -v: ");
+		if (w.ws_col < getmaxx(vm_window))
+			printf("needs %d columns\n", vm->width - w.ws_col);
+		if (w.ws_row < getmaxy(vm_window))
+			printf("needs %d rows\n", HEIGHT - w.ws_row);
+		exit (0);
+	}
+}
+
 void			print_visu(WINDOW *vm_window, t_vm *vm)
 {
 	int			key;
@@ -97,15 +118,34 @@ void			print_visu(WINDOW *vm_window, t_vm *vm)
 		vm->speed < 600000.0 ? vm->speed *= 2 : 0;
 	else if (key == KEY_UP)
 		vm->speed > 60.0 ? vm->speed /= 2 : 0;
-	else if (key == 27)
+	else if (key == KEY_ESC)
 		exit (endwin());
 	else if (key == KEY_SPACE)
 		while ((key = getch()))
+		{
 			if (key == KEY_SPACE)
 				break ;
+			else if (key == KEY_ESC)
+				exit (endwin());
+		}
+	small_screen(vm_window, vm);
 	print_matrix(vm_window, vm);
 	print_sub_win(vm, vm_window);
-	mvwprintw(vm_window, 50, COMMENT, "key %d\n", key);
 	wrefresh(vm_window);
 	usleep(vm->speed);
+}
+
+void			max_name(t_vm *vm)
+{
+	int			i;
+
+	vm->len_name = 0;
+	i = 0;
+	while (i < vm->players)
+	{
+		if (ft_strlen(vm->champ[i]->name) > vm->len_name)
+			vm->len_name = ft_strlen(vm->champ[i]->name);
+		i++;
+	}
+	vm->width = WIDTH + (vm->len_name > 20 ? vm->len_name - 7 : 0);
 }
