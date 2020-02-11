@@ -1,45 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   free.c                                             :+:      :+:    :+:   */
+/*   utils2.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: stross <stross@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/15 20:26:20 by stross            #+#    #+#             */
-/*   Updated: 2020/02/10 15:15:20 by stross           ###   ########.fr       */
+/*   Created: 2020/02/07 15:05:38 by stross            #+#    #+#             */
+/*   Updated: 2020/02/07 15:14:00 by stross           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "asm.h"
 
-void	free_head(t_head *head)
+int	ft_strchlen(char *str, char ch)
 {
-	int		i;
+	int i;
 
 	i = 0;
-	while (head->commands[i])
-	{
-		if (head->commands[i]->label)
-			free(head->commands[i]->label);
-//		if (head->commands[i]->command)
-//			free(head->commands[i]->command);
-		free(head->commands[i]);
+	while (str[i] && str[i] != ch)
 		i++;
-	}
-	if (head->commands)
-		free(head->commands);
-	free(head);
+	return (i);
 }
 
-void	free_split(char **arr)
+int	strstr_zero(char *hey, char *need)
 {
-	unsigned int	x;
-
-	x = 0;
-	while (arr[x])
+	while (*hey && *need)
 	{
-		free(arr[x]);
-		x++;
+		if (*hey == *need)
+		{
+			hey++;
+			need++;
+			if (*need == '\0')
+				return (1);
+		}
+		else
+			return (0);
 	}
-	free(arr);
+	return (0);
 }

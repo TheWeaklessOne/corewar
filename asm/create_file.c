@@ -6,7 +6,7 @@
 /*   By: stross <stross@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/15 18:49:17 by stross            #+#    #+#             */
-/*   Updated: 2020/01/16 14:14:02 by stross           ###   ########.fr       */
+/*   Updated: 2020/02/10 14:46:26 by stross           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,14 +59,17 @@ static char	*get_new_ext(char *filename, int *mod)
 	return (f_name);
 }
 
-void		create_file(char *str , char *filename)
+void		create_file(char **argv, t_head *head)
 {
 	char	*new_fn;
+	char	*filename;
 	int		fd;
 	int		mod;
 
-	(void)str;
+	filename = argv[1];
 	new_fn = get_new_ext(filename, &mod);
+	if (mod == ASM)
+		validator(argv, head);
 	if ((fd = open(new_fn, O_WRONLY | O_CREAT | O_EXCL, 0644)) == -1)
 	{
 		write(2, "Failed to create file\n", 22);
@@ -77,7 +80,7 @@ void		create_file(char *str , char *filename)
 	write(1, "\n", 1);
 	free(new_fn);
 	if (mod == ASM)
-		assembly(fd, str);
+		assembly(fd, head);
 	else
 		exit(1); //TODO disassambly
 }

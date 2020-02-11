@@ -1,45 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   free.c                                             :+:      :+:    :+:   */
+/*   utils_write.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: stross <stross@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/15 20:26:20 by stross            #+#    #+#             */
-/*   Updated: 2020/02/10 15:15:20 by stross           ###   ########.fr       */
+/*   Created: 2020/02/10 18:19:51 by stross            #+#    #+#             */
+/*   Updated: 2020/02/11 14:38:37 by stross           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "asm.h"
 
-void	free_head(t_head *head)
+void	write_arg_type()
+
+char	*get_comm_label(char *str)
 {
 	int		i;
+	char	*ret;
+	char	*temp;
 
 	i = 0;
-	while (head->commands[i])
-	{
-		if (head->commands[i]->label)
-			free(head->commands[i]->label);
-//		if (head->commands[i]->command)
-//			free(head->commands[i]->command);
-		free(head->commands[i]);
+	if (*str == LABEL_CHAR)
+		str++;
+	while (str[i] && str[i] != ' ' && str[i] != SEPARATOR_CHAR && str[i] != '\t')
 		i++;
-	}
-	if (head->commands)
-		free(head->commands);
-	free(head);
-}
-
-void	free_split(char **arr)
-{
-	unsigned int	x;
-
-	x = 0;
-	while (arr[x])
-	{
-		free(arr[x]);
-		x++;
-	}
-	free(arr);
+	ret = (char*)ft_memalloc(i + 1);
+	temp = ret;
+	i = 0;
+	while (str[i] && str[i] != ' ' && str[i] != SEPARATOR_CHAR && str[i] != '\t')
+		*ret++ = *str++;
+	return (temp);
 }
