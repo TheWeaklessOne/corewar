@@ -59,7 +59,7 @@ int					war_coming(t_vm *v)
 	WINDOW *vm_window = NULL;
 
 	if (v->color == 1)
-		vm_window = init_visu(vm_window);
+		vm_window = init_visu(vm_window, v);
 	if (v->d == 1 && v->d_count == 0)
 		return (print_arena(v, 64) + 1);
 	if (v->dump == 1 && v->dump_count == 0)
@@ -68,6 +68,7 @@ int					war_coming(t_vm *v)
 	{
 		if (v->l == 1)
 			ft_printf("It is now cycle %lu\n", v->global);
+		(v->global == 30761) ? printf("") : 0;
 		if ((v->cycles_to_die > 0) ? !(v->global % v->cycles_to_die) : 1)
 		{
 			delete_deads(v);
@@ -84,8 +85,6 @@ int					war_coming(t_vm *v)
 			}
 			v->live_count = 0;
 		}
-		if (v->global == 946)
-			v->color = v->color;
 		do_cycle(v);
 		if (v->curs_alive == 0)
 			break ;

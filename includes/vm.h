@@ -22,13 +22,15 @@
 # include "./op.h"
 # include "../libft/libft.h"
 # include <ncurses.h>
+#include <sys/ioctl.h>
 
 # define SIZE_64				64
 # define HEIGHT (MEM_SIZE / SIZE_64 + 4)
 # define WIDTH	(SIZE_64 * 3 + 100)
 # define COMMENT SIZE_64 * 3 + 5
 # define KEY_SPACE 32
-# define IND(X) ((X) - 1)
+# define KEY_ESC 27
+# define KEY_STEP 115
 
 typedef struct		s_champion
 {
@@ -114,6 +116,9 @@ typedef struct		s_vm
 	unsigned		curs_alive; // количество живых кареток
 	t_champion		*last_champ;
 	double			speed;
+	size_t 			len_name;
+	int 			width;
+	int 			step;
 }					t_vm;
 
 extern const t_op	g_op_tab[17];
@@ -148,7 +153,6 @@ t_cur				*cur_remove_at(t_cur *cur, int at);
 t_cur				*cur_at(t_cur *cur, int at);
 void				delete_deads(t_vm *vm);
 
-void				print_arena_test(t_vm *vm, int step);
 int					print_arena(t_vm *vm, int size);
 int					war_coming(t_vm *v);
 
@@ -164,10 +168,10 @@ void				get_arg_types(unsigned char c, unsigned *args);
 
 /*--------------------------visualization--------------------------*/
 
-WINDOW				*init_visu(WINDOW *vm_window);
+WINDOW				*init_visu(WINDOW *vm_window, t_vm *vm);
 void				print_visu(WINDOW *vm_window, t_vm *vm);
 void				print_matrix(WINDOW *vm_window, t_vm *vm);
 void				print_sub_win(t_vm *vm, WINDOW *vm_window);
-
+void				max_name(t_vm *vm);
 
 #endif
