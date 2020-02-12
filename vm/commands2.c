@@ -36,6 +36,7 @@ void				do_st(t_vm *vm, t_cur *cur)
 				vm->arena[MEM_SIZE + (cur->pos + (skip - 1) % IDX_MOD)] = arg.f.o3;
 				vm->arena[MEM_SIZE + (cur->pos + (skip - 2) % IDX_MOD)] = arg.f.o2;
 				vm->arena[MEM_SIZE + (cur->pos + (skip - 3) % IDX_MOD)] = arg.f.o1;
+				(vm->l == 1) ? ft_printf("st r%d %d\n", cur->args[0], cur->args[1]) : 0;
 				return ;
 			}
 		}
@@ -44,6 +45,7 @@ void				do_st(t_vm *vm, t_cur *cur)
 		vm->arena[(cur->pos + (skip + 2) % IDX_MOD) % MEM_SIZE] = arg.f.o2;
 		vm->arena[(cur->pos + (skip + 3) % IDX_MOD) % MEM_SIZE] = arg.f.o1;
 	}
+	(vm->l == 1) ? ft_printf("st r%d %d\n", cur->args[0], cur->args[1]) : 0;
 }
 
 void				do_add(t_vm *vm, t_cur *cur)
@@ -77,6 +79,7 @@ void				do_and(t_vm *vm, t_cur *cur)
 		cur->args[1] = cur->reg[cur->args[1] - 1];
 	cur->reg[cur->args[2] - 1] = cur->args[0] & cur->args[1];
 	cur->carry = (cur->reg[cur->args[2] - 1] == 0) ? 1 : 0;
+	(vm->l == 1) ? ft_printf("and %d %d r%d\n", cur->args[0], cur->args[1], cur->args[2]) : 0;
 }
 
 void				do_or(t_vm *vm, t_cur *cur)

@@ -61,6 +61,8 @@ void				do_live(t_vm *vm, t_cur *cur)
 
 	cur->last_cyc_live = vm->global;
 	vm->live_count++;
+	if (vm->global == 30151)
+		printf("");
 	arg = -read_t_dir(vm, (cur->pos + 1) % MEM_SIZE, cur->arg_size[0]);
 	if (vm->l == 1)
 		ft_printf("live %d\n", (-arg));

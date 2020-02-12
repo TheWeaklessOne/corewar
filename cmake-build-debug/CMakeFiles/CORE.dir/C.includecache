@@ -52,7 +52,21 @@ ctype.h
 stdio.h
 -
 
-/Users/sdoughnu/Desktop/CORE/vm/op_action.c
+/Users/sdoughnu/Desktop/CORE/vm/commands2.c
+../includes/vm.h
+/Users/sdoughnu/Desktop/CORE/includes/vm.h
+
+/Users/sdoughnu/Desktop/CORE/vm/cur.c
+../includes/vm.h
+/Users/sdoughnu/Desktop/CORE/includes/vm.h
+
+/Users/sdoughnu/Desktop/CORE/vm/fork.c
+../includes/vm.h
+/Users/sdoughnu/Desktop/CORE/includes/vm.h
+
+/Users/sdoughnu/Desktop/CORE/vm/ld_other.c
+zconf.h
+-
 ../includes/vm.h
 /Users/sdoughnu/Desktop/CORE/includes/vm.h
 
