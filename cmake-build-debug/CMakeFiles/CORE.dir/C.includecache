@@ -56,14 +56,6 @@ stdio.h
 ../includes/vm.h
 /Users/sdoughnu/Desktop/CORE/includes/vm.h
 
-/Users/sdoughnu/Desktop/CORE/vm/cur.c
-../includes/vm.h
-/Users/sdoughnu/Desktop/CORE/includes/vm.h
-
-/Users/sdoughnu/Desktop/CORE/vm/fork.c
-../includes/vm.h
-/Users/sdoughnu/Desktop/CORE/includes/vm.h
-
 /Users/sdoughnu/Desktop/CORE/vm/ld_other.c
 zconf.h
 -

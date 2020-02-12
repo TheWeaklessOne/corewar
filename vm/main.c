@@ -85,6 +85,7 @@ void			init(t_vm *vm)
 	vm->dump = -1;
 	vm->color = -1;
 	vm->d = -1;
+	vm->zj = 0;
 	vm->players = 0;
 	vm->global = 0;
 	vm->l = 0;

@@ -17,6 +17,8 @@ void			do_ldi(t_vm *vm, t_cur *cur)
 {
 	int 		addr;
 
+	if (vm->global == 2510)
+		printf("");
 	read_args(vm, cur);
 	addr = (cur->pos + (cur->args[0] + cur->args[1]) % IDX_MOD) % MEM_SIZE;
 	cur->reg[cur->args[2] - 1] = read_t_dir(vm, addr, 4);

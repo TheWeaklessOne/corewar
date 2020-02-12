@@ -90,4 +90,5 @@ void				do_zjmp(t_vm *vm, t_cur *cur)
 		ft_printf("zjmp %d %s", dir, cur->carry ? "OK\n" : "FAILED\n");
 	if (cur->carry)
 		cur->pos = (cur->pos + dir % IDX_MOD) % MEM_SIZE;
+	vm->zj = 1;
 }

@@ -45,7 +45,7 @@ void				do_st(t_vm *vm, t_cur *cur)
 		vm->arena[(cur->pos + (skip + 2) % IDX_MOD) % MEM_SIZE] = arg.f.o2;
 		vm->arena[(cur->pos + (skip + 3) % IDX_MOD) % MEM_SIZE] = arg.f.o1;
 	}
-	(vm->l == 1) ? ft_printf("st r%d %d\n", cur->args[0], cur->args[1]) : 0;
+	(vm->l == 1) ? ft_printf("st r%d %d\n", cur->args[0], skip) : 0;
 }
 
 void				do_add(t_vm *vm, t_cur *cur)

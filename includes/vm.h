@@ -104,6 +104,7 @@ typedef struct		s_vm
 	long			dump_count;
 	long			d_count;
 	int				color;
+	int				zj;
 	int				players;
 	unsigned long	global;
 	t_champion		*champ[MAX_PLAYERS];

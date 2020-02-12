@@ -43,8 +43,11 @@ void				do_cycle(t_vm *v)
 			if (!(skip = check_op(v, c)))
 			{
 				do_op(v, c);
-				c->pos = (c->pos + 1 + g_op_tab[c->operation].code_type_arg +
-				c->arg_size[0] + c->arg_size[1] + c->arg_size[2]) % MEM_SIZE;
+				if (!v->zj)
+					c->pos = (c->pos + 1 + g_op_tab[c->operation].code_type_arg +
+							c->arg_size[0] + c->arg_size[1] + c->arg_size[2]) % MEM_SIZE;
+				else
+					v->zj = 0;
 				reset_cur_args(c);
 			}
 			else
@@ -76,16 +79,16 @@ int					war_coming(t_vm *v)
 			{
 				v->cycles_to_die -= CYCLE_DELTA;
 				v->checks = 0;
+				(v->l == 1) ? ft_printf("Cycle to die is now %d\n", v->cycles_to_die) : 0;
 			}
 			else if (v->checks == MAX_CHECKS)
 			{
 				v->cycles_to_die -= CYCLE_DELTA;
 				v->checks = 0;
+				(v->l == 1) ? ft_printf("Cycle to die is now %d\n", v->cycles_to_die) : 0;
 			}
 			v->live_count = 0;
 		}
-		if (v->global == 71)
-			printf("");
 		do_cycle(v);
 		if (v->curs_alive == 0)
 			break ;
