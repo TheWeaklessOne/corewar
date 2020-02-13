@@ -55,7 +55,7 @@ void				do_sti(t_vm *vm, t_cur *cur)
 		ft_printf("       | -> store to %d + %d = %d ", cur->args[1], cur->args[2],
 				(cur->args[1] + cur->args[2]));
 		ft_printf("(with pc and mod %d)\n",
-				(cur->pos + (cur->args[1] + cur->args[2]) % IDX_MOD) % MEM_SIZE);
+				(cur->pos + (cur->args[1] + cur->args[2]) % IDX_MOD));
 	}
 }
 
@@ -93,6 +93,8 @@ void				do_zjmp(t_vm *vm, t_cur *cur)
 	if (vm->l == 1)
 		ft_printf("zjmp %d %s", dir, cur->carry ? "OK\n" : "FAILED\n");
 	if (cur->carry)
+	{
 		cur->pos = (cur->pos + dir % IDX_MOD) % MEM_SIZE;
-	vm->zj = 1;
+		vm->zj = 1;
+	}
 }

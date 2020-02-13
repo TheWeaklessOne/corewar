@@ -52,10 +52,6 @@ ctype.h
 stdio.h
 -
 
-/Users/sdoughnu/Desktop/CORE/vm/commands.c
-../includes/vm.h
-/Users/sdoughnu/Desktop/CORE/includes/vm.h
-
 /Users/sdoughnu/Desktop/CORE/vm/war.c
 ../includes/vm.h
 /Users/sdoughnu/Desktop/CORE/includes/vm.h

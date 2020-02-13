@@ -32,8 +32,6 @@ void				do_cycle(t_vm *v)
 	int				skip;
 
 	c = v->curs;
-	if (v->global == 2646)
-		printf("");
 	while (c)
 	{
 		if (c->cyc_before_op <= 0)
@@ -62,7 +60,9 @@ void				do_cycle(t_vm *v)
 int					war_coming(t_vm *v)
 {
 	WINDOW *vm_window = NULL;
+	int				check_count;
 
+	check_count = v->cycles_to_die;
 	if (v->color == 1)
 		vm_window = init_visu(vm_window, v);
 	if (v->d == 1 && v->d_count == 0)
@@ -73,7 +73,9 @@ int					war_coming(t_vm *v)
 	{
 		if (v->l == 1)
 			ft_printf("It is now cycle %lu\n", v->global);
-		if ((v->cycles_to_die > 0) ? !(v->global % v->cycles_to_die) : 1)
+		check_count--;
+		do_cycle(v);
+		if ((v->cycles_to_die > 0) ? !check_count : 1) // !(v->global % v->cycles_to_die) : 1)
 		{
 			delete_deads(v);
 			v->checks++;
@@ -82,16 +84,16 @@ int					war_coming(t_vm *v)
 				v->cycles_to_die -= CYCLE_DELTA;
 				v->checks = 0;
 				(v->l == 1) ? ft_printf("Cycle to die is now %d\n", v->cycles_to_die) : 0;
+				check_count = v->cycles_to_die;
 			}
-			else if (v->checks == MAX_CHECKS)
-			{
+			else if (v->checks == MAX_CHECKS) {
 				v->cycles_to_die -= CYCLE_DELTA;
 				v->checks = 0;
 				(v->l == 1) ? ft_printf("Cycle to die is now %d\n", v->cycles_to_die) : 0;
+				check_count = v->cycles_to_die;
 			}
 			v->live_count = 0;
 		}
-		do_cycle(v);
 		if (v->curs_alive == 0)
 			break ;
 		if (v->d == 1 && v->global == (unsigned long)v->d_count)
@@ -107,6 +109,5 @@ int					war_coming(t_vm *v)
 		printf("Contestant %u, \"%s\", has won !\n", v->last_champ->n, v->last_champ->name);
 	else
 		printf("Global - [%lu]\nNo one won...\n", v->global);
-	printf("[%lu] - global\n", v->global);
 	return (1);
 }
