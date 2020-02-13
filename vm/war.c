@@ -32,6 +32,8 @@ void				do_cycle(t_vm *v)
 	int				skip;
 
 	c = v->curs;
+	if (v->global == 2646)
+		printf("");
 	while (c)
 	{
 		if (c->cyc_before_op <= 0)

@@ -42,6 +42,10 @@ void				do_sti(t_vm *vm, t_cur *cur)
     int             skip;
 
 	read_args(vm, cur);
+	if (cur->args_type[1] == T_REG)
+		cur->args[1] = cur->reg[cur->args[1] - 1];
+	else if (cur->args_type[2] == T_REG)
+		cur->args[2] = cur->reg[cur->args[2] - 1];
 	arg.hex = cur->reg[cur->args[0] - 1];
 	skip = (cur->args[1] + cur->args[2]) % IDX_MOD;
     place_to_arena(vm, arg.hex, cur->pos, skip);
