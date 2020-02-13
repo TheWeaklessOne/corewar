@@ -6,7 +6,7 @@
 /*   By: stross <stross@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/15 17:54:11 by stross            #+#    #+#             */
-/*   Updated: 2020/02/10 19:28:47 by stross           ###   ########.fr       */
+/*   Updated: 2020/02/13 13:52:30 by stross           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -136,14 +136,16 @@ void		validator(char **argv, t_head *head)
 	char		**arr;
 
 	str = get_string(argv);
-	arr = split(str, '\n');
+	arr = split(str, '\n'); //
+//	for (int i = 0; arr[i]; i++)
+//		printf("%s", arr[i]);
 	remove_comments(arr);
 	set_struct(arr, head);
 //	int i = 0;//
 //	while (head->list)
 //	{
 //		i += head->list->command->byte_size;
-//		printf("%d --- %d ----mod %d\n", head->list->command->is_label, head->list->command->byte_size, head->list->command->name);
+//		printf("%s\n", head->list->command->command);
 //		head->list = head->list->next;
 //	}
 //	printf("%d\n", i);//

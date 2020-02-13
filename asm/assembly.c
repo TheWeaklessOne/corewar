@@ -6,7 +6,7 @@
 /*   By: stross <stross@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/16 13:38:54 by stross            #+#    #+#             */
-/*   Updated: 2020/02/10 19:28:47 by stross           ###   ########.fr       */
+/*   Updated: 2020/02/12 13:22:31 by stross           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -118,7 +118,8 @@ void	assembly(int fd, t_head *head)
 	write(fd, "\0\0\0\0", 4);
 	write_commands(fd, head->commands);
 	free(head->main_str);
-	free(head->split_str);
+	free(head->split_str); //FIXME for my shitty split
+//	free_split(head->split_str); //FIXME for ft_split
 	if ((close(fd)) == -1)
 	{
 		write(2, "Failed to close file\n", 22);

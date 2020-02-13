@@ -6,7 +6,7 @@
 /*   By: stross <stross@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/15 15:43:02 by stross            #+#    #+#             */
-/*   Updated: 2020/02/11 11:54:35 by stross           ###   ########.fr       */
+/*   Updated: 2020/02/13 11:45:41 by stross           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,21 @@ extern char *g_op[17];
 //enum e_commands { LABEL, LIVE, AFF, STI, ADD, SUB, AND, OR, XOR,
 //	ZJMP, LDI, ST, FORK, LLDI, LLD, LFORK, LD, TRASH };
 
+typedef struct			s_oct
+{
+	unsigned char	at:2;
+	unsigned char	bt:2;
+	unsigned char	ct:2;
+	unsigned char	dt:2;
+
+}						t_oct;
+
+typedef	union			u_oct
+{
+	t_oct			field;
+	unsigned char	num;
+}						t_one_byte;
+
 typedef struct			s_bit_field
 {
 	int				octet1 : 8;
@@ -115,8 +130,14 @@ void					validator(char **argv, t_head *head);
 void					create_file(char **argv, t_head *head);
 void					remove_comments(char **arr);
 void					error_usage(void);
+void					write_arg_type(char *str, int fd, int mod);
 void					no_label_error(void);
 void					length_error(int mod);
+void					write_reg(int fd, char *str);
+void					write_exec_code_2b(int size, int fd);
+void					handle_dir_2size(int fd, char *str, t_command *command, t_command **commands);
+void					handle_dir(int fd, char *str, t_command *command, t_command **commands);
+void					main_write(int fd, t_command *command, t_command **commands, int mod);
 void					insruction_token(char *str, int line, int row);
 void					get_comm_bytes(char *str, t_head *head, int line, int row);
 void					get_name_bytes(char *str, t_head *head, int line, int row);
@@ -142,6 +163,7 @@ void					free_head(t_head *head);
 void					write_command(int fd, t_command *command, t_command **commands);
 char					**split(char *str, char sep);
 int						ft_isspace(char ch);
+int						get_label_distance(t_command *command, t_command **commands, char *label, int *mod);
 int						find_command(char *str, char mod);
 int						ft_strchlen(char *str, char ch);
 int						strstr_zero(char *hey, char *need);
