@@ -74,6 +74,7 @@ int				parser(t_vm *vm, int ac, char **av)
 		if (i < ac && !init_champ(&i, av, n, vm))
 			return (0);
 	}
+	vm->last_champ = vm->champ[vm->players - 1];
 	return (1);
 }
 

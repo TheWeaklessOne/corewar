@@ -1,0 +1,3653 @@
+57084d57083
+< P    1 | zjmp 0 OK
+57101a57101
+> P    1 | zjmp 0 OK
+57218d57217
+< P    1 | zjmp 0 OK
+57247a57247
+> P    1 | zjmp 0 OK
+57375d57374
+< P    1 | zjmp 0 OK
+57389a57389
+> P    1 | zjmp 0 OK
+57511d57510
+< P    1 | zjmp 0 OK
+57531a57531
+> P    1 | zjmp 0 OK
+57651d57650
+< P    1 | zjmp 0 OK
+57672a57672
+> P    1 | zjmp 0 OK
+57784d57783
+< P    1 | zjmp 0 OK
+57811a57811
+> P    1 | zjmp 0 OK
+57933d57932
+< P    1 | zjmp 0 OK
+57945a57945
+> P    1 | zjmp 0 OK
+58062d58061
+< P    1 | zjmp 0 OK
+58078a58078
+> P    1 | zjmp 0 OK
+58196d58195
+< P    1 | zjmp 0 OK
+58225a58225
+> P    1 | zjmp 0 OK
+58345d58344
+< P    1 | zjmp 0 OK
+58370a58370
+> P    1 | zjmp 0 OK
+58482d58481
+< P    1 | zjmp 0 OK
+58497a58497
+> P    1 | zjmp 0 OK
+58624d58623
+< P    1 | zjmp 0 OK
+58643a58643
+> P    1 | zjmp 0 OK
+58757d58756
+< P    1 | zjmp 0 OK
+58787a58787
+> P    1 | zjmp 0 OK
+58897d58896
+< P    1 | zjmp 0 OK
+58915a58915
+> P    1 | zjmp 0 OK
+59036d59035
+< P    1 | zjmp 0 OK
+59047a59047
+> P    1 | zjmp 0 OK
+59174d59173
+< P    1 | zjmp 0 OK
+59195a59195
+> P    1 | zjmp 0 OK
+59310d59309
+< P    1 | zjmp 0 OK
+59350a59350
+> P    1 | zjmp 0 OK
+59463d59462
+< P    1 | zjmp 0 OK
+59476a59476
+> P    1 | zjmp 0 OK
+59606d59605
+< P    1 | zjmp 0 OK
+59622a59622
+> P    1 | zjmp 0 OK
+59733d59732
+< P    1 | zjmp 0 OK
+59769a59769
+> P    1 | zjmp 0 OK
+59873d59872
+< P    1 | zjmp 0 OK
+59895a59895
+> P    1 | zjmp 0 OK
+60023d60022
+< P    1 | zjmp 0 OK
+60034a60034
+> P    1 | zjmp 0 OK
+60148d60147
+< P    1 | zjmp 0 OK
+60175a60175
+> P    1 | zjmp 0 OK
+60289d60288
+< P    1 | zjmp 0 OK
+60323a60323
+> P    1 | zjmp 0 OK
+60438d60437
+< P    1 | zjmp 0 OK
+60454a60454
+> P    1 | zjmp 0 OK
+60582d60581
+< P    1 | zjmp 0 OK
+60593a60593
+> P    1 | zjmp 0 OK
+60705d60704
+< P    1 | zjmp 0 OK
+60735a60735
+> P    1 | zjmp 0 OK
+60851d60850
+< P    1 | zjmp 0 OK
+60874a60874
+> P    1 | zjmp 0 OK
+60987d60986
+< P    1 | zjmp 0 OK
+61007a61007
+> P    1 | zjmp 0 OK
+61128d61127
+< P    1 | zjmp 0 OK
+61142a61142
+> P    1 | zjmp 0 OK
+61276d61275
+< P    1 | zjmp 0 OK
+61292a61292
+> P    1 | zjmp 0 OK
+80781a80782
+> P    7 | ld 0 r2
+80817a80819
+> P    7 | ld 4 r3
+80849a80852
+> P    7 | ld 96 r5
+81087a81091,81092
+> P    7 | sti r1 51 1
+>        | -> store to 51 + 1 = 52 (with pc and mod 504)
+81108a81114
+> P    7 | st r1 6
+81192a81199
+> P    7 | live -2
+81314d81320
+< P    7 | live 57671936
+81405a81412,81413
+> P    7 | ldi -38 0 r4
+>        | -> load from -38 + 0 = -38 (with pc and mod 431)
+81517,81518d81524
+< P    7 | ldi -38 96 r4
+<        | -> load from -38 + 96 = 58 (with pc and mod 527)
+81600a81607,81608
+> P    7 | sti r4 400 0
+>        | -> store to 400 + 0 = 400 (with pc and mod 875)
+81687a81696
+> P    7 | add r2 r3 r2
+81745,81746d81753
+< P    7 | sti r4 400 96
+<        | -> store to 400 + 96 = 496 (with pc and mod 971)
+81816d81822
+< P    7 | add r2 r3 r2
+81914a81921,81922
+> P    7 | ldi -55 4 r4
+>        | -> load from -55 + 4 = -51 (with pc and mod 435)
+82031,82032d82038
+< P    7 | ldi -55 100 r4
+<        | -> load from -55 + 100 = 45 (with pc and mod 531)
+82117a82124,82125
+> P    7 | sti r4 383 4
+>        | -> store to 383 + 4 = 387 (with pc and mod 879)
+82191a82200
+> P    7 | add r2 r3 r2
+82247,82248d82255
+< P    7 | sti r4 383 100
+<        | -> store to 383 + 100 = 483 (with pc and mod 975)
+82280a82288
+> P    7 | live -2
+82337d82344
+< P    7 | add r2 r3 r2
+82349a82357
+> P    7 | xor 8 96 r15
+82421d82428
+< P    7 | live -2
+82454d82460
+< P    7 | xor 104 96 r15
+82501a82508
+> P    7 | zjmp 362 FAILED
+82559a82567
+> P    7 | ld 0 r15
+82619d82626
+< P    7 | zjmp 362 FAILED
+82664d82670
+< P    7 | ld 0 r15
+82719a82726
+> P    7 | zjmp -59 OK
+82795a82803
+> P    7 | live -2
+82837d82844
+< P    7 | zjmp -59 OK
+82924d82930
+< P    7 | live -2
+82999a83006,83007
+> P    7 | ldi -38 8 r4
+>        | -> load from -38 + 8 = -30 (with pc and mod 439)
+83119,83120d83126
+< P    7 | ldi -38 104 r4
+<        | -> load from -38 + 104 = 66 (with pc and mod 535)
+83225a83232,83233
+> P    7 | sti r4 400 8
+>        | -> store to 400 + 8 = 408 (with pc and mod 883)
+83302a83311
+> P    7 | add r2 r3 r2
+83328,83329d83336
+< P    7 | sti r4 400 104
+<        | -> store to 400 + 104 = 504 (with pc and mod 979)
+83422d83428
+< P    7 | add r2 r3 r2
+83503a83510,83511
+> P    7 | ldi -55 12 r4
+>        | -> load from -55 + 12 = -43 (with pc and mod 443)
+83603,83604d83610
+< P    7 | ldi -55 108 r4
+<        | -> load from -55 + 108 = 53 (with pc and mod 539)
+83716a83723,83724
+> P    7 | sti r4 383 12
+>        | -> store to 383 + 12 = 395 (with pc and mod 887)
+83801a83810
+> P    7 | add r2 r3 r2
+83817,83818d83825
+< P    7 | sti r4 383 108
+<        | -> store to 383 + 108 = 491 (with pc and mod 983)
+83882a83890
+> P    7 | live -2
+83903d83910
+< P    7 | add r2 r3 r2
+83923a83931
+> P    7 | xor 16 96 r15
+83991d83998
+< P    7 | live -2
+84041d84047
+< P    7 | xor 112 96 r15
+84095a84102
+> P    7 | zjmp 362 FAILED
+84144a84152
+> P    7 | ld 0 r15
+84218d84225
+< P    7 | zjmp 362 FAILED
+84249d84255
+< P    7 | ld 0 r15
+84317a84324
+> P    7 | zjmp -59 OK
+84398a84406
+> P    7 | live -2
+84417d84424
+< P    7 | zjmp -59 OK
+84503d84509
+< P    7 | live -2
+84603a84610,84611
+> P    7 | ldi -38 16 r4
+>        | -> load from -38 + 16 = -22 (with pc and mod 447)
+84708,84709d84715
+< P    7 | ldi -38 112 r4
+<        | -> load from -38 + 112 = 74 (with pc and mod 543)
+84813a84820,84821
+> P    7 | sti r4 400 16
+>        | -> store to 400 + 16 = 416 (with pc and mod 891)
+84897a84906
+> P    7 | add r2 r3 r2
+84914,84915d84922
+< P    7 | sti r4 400 112
+<        | -> store to 400 + 112 = 512 (with pc and mod 475)
+84989d84995
+< P    7 | add r2 r3 r2
+85089a85096,85097
+> P    7 | ldi -55 20 r4
+>        | -> load from -55 + 20 = -35 (with pc and mod 451)
+85208,85209d85215
+< P    7 | ldi -55 116 r4
+<        | -> load from -55 + 116 = 61 (with pc and mod 547)
+85302a85309,85310
+> P    7 | sti r4 383 20
+>        | -> store to 383 + 20 = 403 (with pc and mod 895)
+85388a85397
+> P    7 | add r2 r3 r2
+85414,85415d85422
+< P    7 | sti r4 383 116
+<        | -> store to 383 + 116 = 499 (with pc and mod 991)
+85473a85481
+> P    7 | live -2
+85493d85500
+< P    7 | add r2 r3 r2
+85503a85511
+> P    7 | xor 24 96 r15
+85575d85582
+< P    7 | live -2
+85634d85640
+< P    7 | xor 120 96 r15
+85677a85684
+> P    7 | zjmp 362 FAILED
+85718a85726
+> P    7 | ld 0 r15
+85804d85811
+< P    7 | zjmp 362 FAILED
+85837d85843
+< P    7 | ld 0 r15
+85891a85898
+> P    7 | zjmp -59 OK
+85974a85982
+> P    7 | live -2
+85992d85999
+< P    7 | zjmp -59 OK
+86077d86083
+< P    7 | live -2
+86173a86180,86181
+> P    7 | ldi -38 24 r4
+>        | -> load from -38 + 24 = -14 (with pc and mod 455)
+86304,86305d86311
+< P    7 | ldi -38 120 r4
+<        | -> load from -38 + 120 = 82 (with pc and mod 551)
+86386a86393,86394
+> P    7 | sti r4 400 24
+>        | -> store to 400 + 24 = 424 (with pc and mod 899)
+86466a86475
+> P    7 | add r2 r3 r2
+86640,86641d86648
+< P    7 | ldi -55 120 r4
+<        | -> load from -55 + 120 = 65 (with pc and mod 551)
+86681a86689,86690
+> P    7 | ldi -55 28 r4
+>        | -> load from -55 + 28 = -27 (with pc and mod 459)
+86830,86831d86838
+< P    7 | sti r4 383 120
+<        | -> store to 383 + 120 = 503 (with pc and mod 995)
+86896a86904,86905
+> P    7 | sti r4 383 28
+>        | -> store to 383 + 28 = 411 (with pc and mod 903)
+86931d86939
+< P    7 | add r2 r3 r2
+86977a86986
+> P    7 | add r2 r3 r2
+87008d87016
+< P    7 | live -2
+87065c87073
+< P    7 | xor 124 96 r15
+---
+> P    7 | live -2
+87103a87112
+> P    7 | xor 32 96 r15
+87229d87237
+< P    7 | zjmp 362 FAILED
+87254d87261
+< P    7 | ld 0 r15
+87260a87268
+> P    7 | zjmp 362 FAILED
+87322a87331
+> P    7 | ld 0 r15
+87427d87435
+< P    7 | zjmp -59 OK
+87482a87491
+> P    7 | zjmp -59 OK
+87512d87520
+< P    7 | live -2
+87524a87533
+> P    9 | ld 0 r2
+87557a87567
+> P    7 | live -2
+87561a87572
+> P    9 | ld 4 r3
+87597a87609
+> P    9 | ld 96 r5
+87730,87731d87741
+< P    7 | ldi -38 124 r4
+<        | -> load from -38 + 124 = 86 (with pc and mod 555)
+87773a87784,87785
+> P    7 | ldi -38 32 r4
+>        | -> load from -38 + 32 = -6 (with pc and mod 463)
+87842a87855,87856
+> P    9 | sti r1 51 1
+>        | -> store to 51 + 1 = 52 (with pc and mod 504)
+87863a87878
+> P    9 | st r1 6
+87952a87968
+> P    9 | live -2
+87996a88013,88014
+> P    7 | sti r4 400 32
+>        | -> store to 400 + 32 = 432 (with pc and mod 907)
+88079d88096
+< P    9 | live 57671936
+88084,88085d88100
+< P    7 | ldi -55 124 r4
+<        | -> load from -55 + 124 = 69 (with pc and mod 555)
+88087a88103
+> P    7 | add r2 r3 r2
+88176a88193,88194
+> P    9 | ldi -38 0 r4
+>        | -> load from -38 + 0 = -38 (with pc and mod 431)
+88289,88290d88306
+< P    7 | sti r4 383 124
+<        | -> store to 383 + 124 = 507 (with pc and mod 999)
+88293,88294c88309,88310
+< P    9 | ldi -38 96 r4
+<        | -> load from -38 + 96 = 58 (with pc and mod 527)
+---
+> P    7 | ldi -55 36 r4
+>        | -> load from -55 + 36 = -19 (with pc and mod 467)
+88374d88389
+< P    7 | add r2 r3 r2
+88380a88396,88397
+> P    9 | sti r4 400 0
+>        | -> store to 400 + 0 = 400 (with pc and mod 875)
+88461d88477
+< P    7 | live -2
+88469a88486
+> P    9 | add r2 r3 r2
+88529c88546,88547
+< P    7 | xor 128 96 r15
+---
+> P    7 | sti r4 383 36
+>        | -> store to 383 + 36 = 419 (with pc and mod 911)
+88601a88620
+> P    7 | add r2 r3 r2
+88632,88633d88650
+< P    9 | ldi -55 96 r4
+<        | -> load from -55 + 96 = 41 (with pc and mod 527)
+88698c88715
+< P    7 | zjmp 362 FAILED
+---
+> P    7 | live -2
+88703a88721,88722
+> P    9 | ldi -55 4 r4
+>        | -> load from -55 + 4 = -51 (with pc and mod 435)
+88742d88760
+< P    7 | ld 0 r15
+88748a88767
+> P    7 | xor 40 96 r15
+88866,88867d88884
+< P    9 | sti r4 383 96
+<        | -> store to 383 + 96 = 479 (with pc and mod 971)
+88913d88929
+< P    7 | zjmp -59 OK
+88916a88933,88935
+> P    9 | sti r4 383 4
+>        | -> store to 383 + 4 = 387 (with pc and mod 879)
+> P    7 | zjmp 362 FAILED
+88961d88979
+< P    9 | add r2 r3 r2
+88969a88988
+> P    7 | ld 0 r15
+88990d89008
+< P    7 | live -2
+88993a89012
+> P    9 | add r2 r3 r2
+89050d89068
+< P    9 | live -2
+89083c89101
+< P    9 | xor 100 96 r15
+---
+> P    9 | live -2
+89150a89169
+> P    7 | zjmp -59 OK
+89156a89176
+> P    9 | xor 8 96 r15
+89231,89232d89250
+< P    7 | ldi -38 128 r4
+<        | -> load from -38 + 128 = 90 (with pc and mod 559)
+89234a89253
+> P    7 | live -2
+89265d89283
+< P    9 | zjmp 362 FAILED
+89312d89329
+< P    9 | ld 0 r15
+89316a89334
+> P    9 | zjmp 362 FAILED
+89376a89395
+> P    9 | ld 0 r15
+89436a89456,89457
+> P    7 | ldi -38 40 r4
+>        | -> load from -38 + 40 = 2 (with pc and mod 471)
+89482d89502
+< P    9 | zjmp -59 OK
+89539a89560
+> P    9 | zjmp -59 OK
+89556,89557d89576
+< P    7 | ldi -55 128 r4
+<        | -> load from -55 + 128 = 73 (with pc and mod 559)
+89570d89588
+< P    9 | live -2
+89620a89639
+> P    9 | live -2
+89662a89682,89683
+> P    7 | sti r4 400 40
+>        | -> store to 400 + 40 = 440 (with pc and mod 915)
+89751a89773
+> P    7 | add r2 r3 r2
+89764,89765d89785
+< P    7 | sti r4 383 128
+<        | -> store to 383 + 128 = 511 (with pc and mod 1003)
+89769,89770d89788
+< P    9 | ldi -38 100 r4
+<        | -> load from -38 + 100 = 62 (with pc and mod 531)
+89833a89852,89853
+> P    9 | ldi -38 8 r4
+>        | -> load from -38 + 8 = -30 (with pc and mod 439)
+89847d89866
+< P    7 | add r2 r3 r2
+89944d89962
+< P    7 | live -2
+89955a89974,89975
+> P    7 | ldi -55 44 r4
+>        | -> load from -55 + 44 = -11 (with pc and mod 475)
+90001d90020
+< P    7 | xor 132 96 r15
+90066a90086,90087
+> P    9 | sti r4 400 8
+>        | -> store to 400 + 8 = 408 (with pc and mod 883)
+90124,90125d90144
+< P    9 | ldi -55 100 r4
+<        | -> load from -55 + 100 = 45 (with pc and mod 531)
+90148a90168
+> P    9 | add r2 r3 r2
+90175c90195,90196
+< P    7 | zjmp 362 FAILED
+---
+> P    7 | sti r4 383 44
+>        | -> store to 383 + 44 = 427 (with pc and mod 919)
+90205d90225
+< P    7 | ld 0 r15
+90251d90270
+< P    9 | live 2130838612
+90270a90290
+> P    7 | add r2 r3 r2
+90352a90373
+> P    7 | live -2
+90356a90378,90379
+> P    9 | ldi -55 12 r4
+>        | -> load from -55 + 12 = -43 (with pc and mod 443)
+90370d90392
+< P    7 | zjmp -59 OK
+90397a90420
+> P    7 | xor 48 96 r15
+90419d90441
+< P    9 | xor 100 96 r15
+90461d90482
+< P    7 | live -2
+90578a90600,90601
+> P    9 | sti r4 383 12
+>        | -> store to 383 + 12 = 395 (with pc and mod 887)
+90579a90603
+> P    7 | zjmp 362 FAILED
+90590d90613
+< P    9 | zjmp 362 FAILED
+90600a90624
+> P    7 | ld 0 r15
+90620d90643
+< P    9 | ld 0 r15
+90665a90689
+> P    9 | add r2 r3 r2
+90682,90683d90705
+< P    7 | ldi -38 132 r4
+<        | -> load from -38 + 132 = 94 (with pc and mod 563)
+90749a90772
+> P    9 | live -2
+90780a90804
+> P    7 | zjmp -59 OK
+90792a90817
+> P    9 | xor 16 96 r15
+90796d90820
+< P    9 | zjmp -59 OK
+90872a90897
+> P    7 | live -2
+90879d90903
+< P    9 | live -2
+90968a90993
+> P    9 | zjmp 362 FAILED
+91018a91044
+> P    9 | ld 0 r15
+91047,91048d91072
+< P    7 | ldi -55 132 r4
+<        | -> load from -55 + 132 = 77 (with pc and mod 563)
+91095a91120,91121
+> P    7 | ldi -38 48 r4
+>        | -> load from -38 + 48 = 10 (with pc and mod 479)
+91116,91117d91141
+< P    9 | ldi -38 100 r4
+<        | -> load from -38 + 100 = 62 (with pc and mod 531)
+91140d91163
+< P    7 | live 2130838612
+91198a91222
+> P    9 | zjmp -59 OK
+91284a91309
+> P    9 | live -2
+91302a91328,91329
+> P    7 | sti r4 400 48
+>        | -> store to 400 + 48 = 448 (with pc and mod 923)
+91316d91342
+< P    7 | xor 132 96 r15
+91391a91418
+> P    7 | add r2 r3 r2
+91459,91460d91485
+< P    9 | ldi -55 100 r4
+<        | -> load from -55 + 100 = 45 (with pc and mod 531)
+91494a91520,91521
+> P    9 | ldi -38 16 r4
+>        | -> load from -38 + 16 = -22 (with pc and mod 447)
+91499d91525
+< P    7 | zjmp 362 FAILED
+91540d91565
+< P    7 | ld 0 r15
+91566d91590
+< P    9 | live 2130838612
+91607a91632,91633
+> P    7 | ldi -55 52 r4
+>        | -> load from -55 + 52 = -3 (with pc and mod 483)
+91713a91740,91741
+> P    9 | sti r4 400 16
+>        | -> store to 400 + 16 = 416 (with pc and mod 891)
+91721d91748
+< P    7 | zjmp -59 OK
+91733d91759
+< P    9 | xor 100 96 r15
+91804a91831
+> P    9 | add r2 r3 r2
+91811d91837
+< P    7 | live -2
+91821a91848,91849
+> P    7 | sti r4 383 52
+>        | -> store to 383 + 52 = 435 (with pc and mod 927)
+91896c91924
+< P    9 | zjmp 362 FAILED
+---
+> P    7 | add r2 r3 r2
+91953d91980
+< P    9 | ld 0 r15
+91991a92019
+> P    7 | live -2
+92002a92031,92032
+> P    9 | ldi -55 20 r4
+>        | -> load from -55 + 20 = -35 (with pc and mod 451)
+92014,92015d92043
+< P    7 | ldi -38 132 r4
+<        | -> load from -38 + 132 = 94 (with pc and mod 563)
+92054a92083
+> P    7 | xor 56 96 r15
+92124d92152
+< P    9 | zjmp -59 OK
+92212d92239
+< P    9 | live -2
+92222a92250,92252
+> P    9 | sti r4 383 20
+>        | -> store to 383 + 20 = 403 (with pc and mod 895)
+> P    7 | zjmp 362 FAILED
+92234,92235d92263
+< P    7 | sti r4 400 132
+<        | -> store to 400 + 132 = 532 (with pc and mod 495)
+92265a92294
+> P    7 | ld 0 r15
+92313a92343
+> P    9 | add r2 r3 r2
+92328d92357
+< P    7 | add r2 r3 r2
+92398a92428
+> P    9 | live -2
+92418,92419d92447
+< P    9 | ldi -38 100 r4
+<        | -> load from -38 + 100 = 62 (with pc and mod 531)
+92425a92454
+> P    7 | zjmp -59 OK
+92429a92459
+> P    9 | xor 24 96 r15
+92511a92542
+> P    7 | live -2
+92519,92520d92549
+< P    7 | ldi -55 136 r4
+<        | -> load from -55 + 136 = 81 (with pc and mod 567)
+92612a92642
+> P    9 | zjmp 362 FAILED
+92647,92648d92676
+< P    9 | sti r4 400 100
+<        | -> store to 400 + 100 = 500 (with pc and mod 975)
+92655a92684
+> P    9 | ld 0 r15
+92738d92766
+< P    9 | add r2 r3 r2
+92742a92771,92772
+> P    7 | ldi -38 56 r4
+>        | -> load from -38 + 56 = 18 (with pc and mod 487)
+92770d92799
+< P    7 | xor 136 96 r15
+92834a92864
+> P    9 | zjmp -59 OK
+92920a92951
+> P    9 | live -2
+92938,92940d92968
+< P    9 | ldi -55 104 r4
+<        | -> load from -55 + 104 = 49 (with pc and mod 535)
+< P    7 | zjmp 362 FAILED
+92942a92971,92972
+> P    7 | sti r4 400 56
+>        | -> store to 400 + 56 = 456 (with pc and mod 931)
+92985d93014
+< P    7 | ld 0 r15
+93030a93060
+> P    7 | add r2 r3 r2
+93127a93158,93159
+> P    9 | ldi -38 24 r4
+>        | -> load from -38 + 24 = -14 (with pc and mod 455)
+93168d93199
+< P    7 | zjmp -59 OK
+93180d93210
+< P    9 | xor 104 96 r15
+93263d93292
+< P    7 | live -2
+93266a93296,93297
+> P    7 | ldi -55 60 r4
+>        | -> load from -55 + 60 = 5 (with pc and mod 491)
+93348a93380,93381
+> P    9 | sti r4 400 24
+>        | -> store to 400 + 24 = 424 (with pc and mod 899)
+93354d93386
+< P    9 | zjmp 362 FAILED
+93391d93422
+< P    9 | ld 0 r15
+93433a93465
+> P    9 | add r2 r3 r2
+93470,93471d93501
+< P    7 | ldi -38 136 r4
+<        | -> load from -38 + 136 = 98 (with pc and mod 567)
+93473a93504,93505
+> P    7 | sti r4 383 60
+>        | -> store to 383 + 60 = 443 (with pc and mod 935)
+93556a93589
+> P    7 | add r2 r3 r2
+93564d93596
+< P    9 | zjmp -59 OK
+93646a93679
+> P    7 | live -2
+93652a93686,93687
+> P    9 | ldi -55 28 r4
+>        | -> load from -55 + 28 = -27 (with pc and mod 459)
+93656d93690
+< P    9 | live -2
+93693,93694d93726
+< P    7 | sti r4 400 136
+<        | -> store to 400 + 136 = 536 (with pc and mod 499)
+93713a93746
+> P    7 | xor 64 96 r15
+93776d93808
+< P    7 | add r2 r3 r2
+93877a93910,93912
+> P    9 | sti r4 383 28
+>        | -> store to 383 + 28 = 411 (with pc and mod 903)
+> P    7 | zjmp 362 FAILED
+93881,93882d93915
+< P    9 | ldi -38 104 r4
+<        | -> load from -38 + 104 = 66 (with pc and mod 535)
+93921a93955
+> P    7 | ld 0 r15
+93960a93995
+> P    9 | add r2 r3 r2
+93988,93989d94022
+< P    7 | ldi -55 140 r4
+<        | -> load from -55 + 140 = 85 (with pc and mod 571)
+94053a94087
+> P    9 | live -2
+94089a94124
+> P    7 | zjmp -59 OK
+94094,94095c94129
+< P    9 | sti r4 400 104
+<        | -> store to 400 + 104 = 504 (with pc and mod 979)
+---
+> P    9 | xor 32 96 r15
+94169d94202
+< P    7 | live -2
+94171a94205
+> P    7 | live -2
+94175d94208
+< P    9 | add r2 r3 r2
+94228d94260
+< P    7 | xor 140 96 r15
+94259a94292
+> P    9 | zjmp 362 FAILED
+94322a94356
+> P    9 | ld 0 r15
+94401c94435,94436
+< P    7 | zjmp 362 FAILED
+---
+> P    7 | ldi -38 64 r4
+>        | -> load from -38 + 64 = 26 (with pc and mod 495)
+94404,94405d94438
+< P    9 | ldi -55 108 r4
+<        | -> load from -55 + 108 = 53 (with pc and mod 539)
+94434d94466
+< P    7 | ld 0 r15
+94491a94524
+> P    9 | zjmp -59 OK
+94532a94566
+> P   12 | ld 0 r2
+94566a94601
+> P    9 | live -2
+94571c94606
+< P    9 | live -2
+---
+> P   12 | ld 4 r3
+94606c94641,94642
+< P    7 | zjmp -59 OK
+---
+> P    7 | sti r4 400 64
+>        | -> store to 400 + 64 = 464 (with pc and mod 939)
+94610a94647
+> P   12 | ld 96 r5
+94635d94671
+< P    9 | xor 108 96 r15
+94703c94739
+< P    7 | live -2
+---
+> P    7 | add r2 r3 r2
+94789a94826,94827
+> P    9 | ldi -38 32 r4
+>        | -> load from -38 + 32 = -6 (with pc and mod 463)
+94819d94856
+< P    9 | zjmp 362 FAILED
+94860a94898,94899
+> P   12 | sti r1 51 1
+>        | -> store to 51 + 1 = 52 (with pc and mod 504)
+94864d94902
+< P    9 | ld 0 r15
+94882a94921
+> P   12 | st r1 6
+94942,94943c94981,94982
+< P    7 | ldi -38 140 r4
+<        | -> load from -38 + 140 = 102 (with pc and mod 571)
+---
+> P    7 | ldi -55 68 r4
+>        | -> load from -55 + 68 = 13 (with pc and mod 499)
+94978a95018
+> P   12 | live -2
+95025a95066,95067
+> P    9 | sti r4 400 32
+>        | -> store to 400 + 32 = 432 (with pc and mod 907)
+95032d95073
+< P    9 | zjmp -59 OK
+95111d95151
+< P   12 | live 57671936
+95116a95157
+> P    9 | add r2 r3 r2
+95130d95170
+< P    9 | live -2
+95153,95154c95193,95194
+< P    7 | sti r4 400 140
+<        | -> store to 400 + 140 = 540 (with pc and mod 503)
+---
+> P    7 | sti r4 383 68
+>        | -> store to 383 + 68 = 451 (with pc and mod 943)
+95209a95250,95251
+> P   12 | ldi -38 0 r4
+>        | -> load from -38 + 0 = -38 (with pc and mod 431)
+95329a95372
+> P    7 | live -2
+95332,95333c95375,95376
+< P   12 | ldi -38 96 r4
+<        | -> load from -38 + 96 = 58 (with pc and mod 527)
+---
+> P    9 | ldi -55 36 r4
+>        | -> load from -55 + 36 = -19 (with pc and mod 467)
+95365,95366d95407
+< P    9 | ldi -38 108 r4
+<        | -> load from -38 + 108 = 70 (with pc and mod 539)
+95395a95437
+> P    7 | xor 72 96 r15
+95423a95466,95467
+> P   12 | sti r4 400 0
+>        | -> store to 400 + 0 = 400 (with pc and mod 875)
+95476,95477d95519
+< P    7 | ldi -55 144 r4
+<        | -> load from -55 + 144 = 89 (with pc and mod 575)
+95516a95559
+> P   12 | add r2 r3 r2
+95577,95578c95620,95622
+< P   12 | sti r4 400 96
+<        | -> store to 400 + 96 = 496 (with pc and mod 971)
+---
+> P    9 | sti r4 383 36
+>        | -> store to 383 + 36 = 419 (with pc and mod 911)
+> P    7 | zjmp 362 FAILED
+95583,95584d95626
+< P    9 | sti r4 400 108
+<        | -> store to 400 + 108 = 508 (with pc and mod 983)
+95596a95639
+> P    7 | ld 0 r15
+95654d95696
+< P   12 | add r2 r3 r2
+95655a95698
+> P    9 | add r2 r3 r2
+95668d95710
+< P    9 | add r2 r3 r2
+95678,95679d95719
+< P    7 | sti r4 383 144
+<        | -> store to 383 + 144 = 527 (with pc and mod 507)
+95756a95797
+> P    9 | live -2
+95761a95803,95804
+> P   12 | ldi -55 4 r4
+>        | -> load from -55 + 4 = -51 (with pc and mod 435)
+95799a95843
+> P    7 | zjmp -59 OK
+95805a95850
+> P    9 | xor 40 96 r15
+95883,95884d95927
+< P   12 | ldi -55 100 r4
+<        | -> load from -55 + 100 = 45 (with pc and mod 531)
+95885a95929
+> P    7 | live -2
+95914,95915d95957
+< P    9 | ldi -55 112 r4
+<        | -> load from -55 + 112 = 57 (with pc and mod 543)
+95979a96022,96024
+> P   12 | sti r4 383 4
+>        | -> store to 383 + 4 = 387 (with pc and mod 879)
+> P    9 | zjmp 362 FAILED
+96033c96078
+< P    7 | ld 0 r15
+---
+> P    9 | ld 0 r15
+96056a96102
+> P   12 | add r2 r3 r2
+96114,96115c96160,96161
+< P   12 | sti r4 383 100
+<        | -> store to 383 + 100 = 483 (with pc and mod 975)
+---
+> P    7 | ldi -38 72 r4
+>        | -> load from -38 + 72 = 34 (with pc and mod 503)
+96131,96132d96176
+< P    9 | sti r4 383 112
+<        | -> store to 383 + 112 = 495 (with pc and mod 987)
+96149a96194
+> P   12 | live -2
+96221a96267
+> P    9 | zjmp -59 OK
+96228,96229c96274
+< P    9 | add r2 r3 r2
+< P    7 | zjmp 0 OK
+---
+> P   12 | xor 8 96 r15
+96308a96354
+> P    9 | live -2
+96329a96376,96377
+> P    7 | sti r4 400 72
+>        | -> store to 400 + 72 = 472 (with pc and mod 947)
+96390c96438
+< P    7 | zjmp 0 OK
+---
+> P   12 | zjmp 362 FAILED
+96419a96468
+> P    7 | add r2 r3 r2
+96426d96474
+< P    9 | ld 0 r15
+96451a96500
+> P   12 | ld 0 r15
+96465d96513
+< P   12 | ld 0 r15
+96517a96566,96567
+> P    9 | ldi -38 40 r4
+>        | -> load from -38 + 40 = 2 (with pc and mod 471)
+96576d96625
+< P    7 | zjmp 0 OK
+96623a96673
+> P   12 | zjmp -59 OK
+96625d96674
+< P    9 | zjmp 0 OK
+96642a96692,96693
+> P    7 | ldi -55 76 r4
+>        | -> load from -55 + 76 = 21 (with pc and mod 507)
+96654d96704
+< P   12 | zjmp 0 OK
+96706a96757
+> P   12 | live -2
+96750a96802,96803
+> P    9 | sti r4 400 40
+>        | -> store to 400 + 40 = 440 (with pc and mod 915)
+96756d96808
+< P    7 | zjmp 0 OK
+96798d96849
+< P    9 | zjmp 0 OK
+96844c96895
+< P   12 | zjmp 0 OK
+---
+> P    9 | add r2 r3 r2
+96856a96908,96909
+> P    7 | sti r4 383 76
+>        | -> store to 383 + 76 = 459 (with pc and mod 951)
+96925c96978,96979
+< P    7 | zjmp 0 OK
+---
+> P   12 | ldi -38 8 r4
+>        | -> load from -38 + 8 = -30 (with pc and mod 439)
+96938a96993
+> P    7 | add r2 r3 r2
+96985d97039
+< P    9 | zjmp 0 OK
+97005d97058
+< P   12 | zjmp 0 OK
+97039a97093
+> P    7 | live -2
+97050a97105,97106
+> P    9 | ldi -55 44 r4
+>        | -> load from -55 + 44 = -11 (with pc and mod 475)
+97096a97153
+> P    7 | xor 80 96 r15
+97100d97156
+< P    7 | zjmp 0 OK
+97165c97221,97222
+< P    9 | zjmp 0 OK
+---
+> P   12 | sti r4 400 8
+>        | -> store to 400 + 8 = 408 (with pc and mod 883)
+97182d97238
+< P   12 | zjmp 0 OK
+97249a97306
+> P   12 | add r2 r3 r2
+97276a97334,97336
+> P    9 | sti r4 383 44
+>        | -> store to 383 + 44 = 427 (with pc and mod 919)
+> P    7 | zjmp 362 FAILED
+97284d97343
+< P    7 | zjmp 0 OK
+97306a97366
+> P    7 | ld 0 r15
+97332d97391
+< P    9 | zjmp 0 OK
+97373c97432
+< P   12 | zjmp 0 OK
+---
+> P    9 | add r2 r3 r2
+97458a97518
+> P    9 | live -2
+97465c97525,97526
+< P    7 | zjmp 0 OK
+---
+> P   12 | ldi -55 12 r4
+>        | -> load from -55 + 12 = -43 (with pc and mod 443)
+97478a97540
+> P    7 | zjmp -59 OK
+97506c97568
+< P    9 | zjmp 0 OK
+---
+> P    9 | xor 48 96 r15
+97543d97604
+< P   12 | zjmp 0 OK
+97572a97634
+> P    7 | live -2
+97634d97695
+< P    7 | zjmp 0 OK
+97691a97753,97754
+> P   12 | sti r4 383 12
+>        | -> store to 383 + 12 = 395 (with pc and mod 887)
+97693c97756
+< P    9 | zjmp 0 OK
+---
+> P    9 | zjmp 362 FAILED
+97711d97773
+< P   12 | zjmp 0 OK
+97715a97778
+> P    9 | ld 0 r15
+97783a97847
+> P   12 | add r2 r3 r2
+97800a97865,97866
+> P    7 | ldi -38 80 r4
+>        | -> load from -38 + 80 = 42 (with pc and mod 511)
+97806d97871
+< P    7 | zjmp 0 OK
+97869a97935
+> P   12 | live -2
+97871d97936
+< P    9 | zjmp 0 OK
+97895d97959
+< P   12 | zjmp 0 OK
+97903a97968
+> P    9 | zjmp -59 OK
+97915a97981
+> P   12 | xor 16 96 r15
+97998c98064
+< P    7 | zjmp 0 OK
+---
+> P    9 | live -2
+98012a98079,98080
+> P    7 | sti r4 400 80
+>        | -> store to 400 + 80 = 480 (with pc and mod 955)
+98039d98106
+< P    9 | zjmp 0 OK
+98085d98151
+< P   12 | zjmp 0 OK
+98098a98165
+> P   12 | zjmp 362 FAILED
+98107a98175
+> P    7 | add r2 r3 r2
+98149a98218
+> P   12 | ld 0 r15
+98184d98252
+< P    7 | zjmp 0 OK
+98228c98296,98297
+< P    9 | zjmp 0 OK
+---
+> P    9 | ldi -38 48 r4
+>        | -> load from -38 + 48 = 10 (with pc and mod 479)
+98258d98326
+< P   12 | zjmp 0 OK
+98331a98400
+> P   12 | zjmp -59 OK
+98337a98407,98408
+> P    7 | ldi -55 84 r4
+>        | -> load from -55 + 84 = 29 (with pc and mod 515)
+98345d98415
+< P    7 | zjmp 0 OK
+98417d98486
+< P    9 | zjmp 0 OK
+98424a98494
+> P   12 | live -2
+98436d98505
+< P   12 | zjmp 0 OK
+98444a98514,98515
+> P    9 | sti r4 400 48
+>        | -> store to 400 + 48 = 448 (with pc and mod 923)
+98536c98607
+< P    7 | zjmp 0 OK
+---
+> P    9 | add r2 r3 r2
+98566a98638,98639
+> P    7 | sti r4 383 84
+>        | -> store to 383 + 84 = 467 (with pc and mod 959)
+98589d98661
+< P    9 | zjmp 0 OK
+98629d98700
+< P   12 | zjmp 0 OK
+98641a98713,98714
+> P   12 | ldi -38 16 r4
+>        | -> load from -38 + 16 = -22 (with pc and mod 447)
+98648a98722
+> P    7 | add r2 r3 r2
+98712d98785
+< P    7 | zjmp 0 OK
+98730a98804
+> P    7 | live -2
+98756c98830,98831
+< P    9 | zjmp 0 OK
+---
+> P    9 | ldi -55 52 r4
+>        | -> load from -55 + 52 = -3 (with pc and mod 483)
+98798d98872
+< P   12 | zjmp 0 OK
+98802a98877
+> P    7 | xor 88 96 r15
+98871a98947,98948
+> P   12 | sti r4 400 16
+>        | -> store to 400 + 16 = 416 (with pc and mod 891)
+98891d98967
+< P    7 | zjmp 0 OK
+98959d99034
+< P    9 | zjmp 0 OK
+98967a99043
+> P   12 | add r2 r3 r2
+98983d99058
+< P   12 | zjmp 0 OK
+98984a99060,99062
+> P    9 | sti r4 383 52
+>        | -> store to 383 + 52 = 435 (with pc and mod 927)
+> P    7 | zjmp 362 FAILED
+99043a99122
+> P    7 | ld 0 r15
+99061c99140
+< P    7 | zjmp 0 OK
+---
+> P    9 | add r2 r3 r2
+99120d99198
+< P    9 | zjmp 0 OK
+99146d99223
+< P   12 | zjmp 0 OK
+99159a99237
+> P    9 | live -2
+99169a99248,99249
+> P   12 | ldi -55 20 r4
+>        | -> load from -55 + 20 = -35 (with pc and mod 451)
+99213a99294
+> P    7 | zjmp -59 OK
+99220a99302
+> P    9 | xor 56 96 r15
+99258d99339
+< P    7 | zjmp 0 OK
+99295d99375
+< P    9 | zjmp 0 OK
+99296a99377
+> P    7 | live -2
+99332d99412
+< P   12 | zjmp 0 OK
+99397a99478,99480
+> P   12 | sti r4 383 20
+>        | -> store to 383 + 20 = 403 (with pc and mod 895)
+> P    9 | zjmp 362 FAILED
+99435d99517
+< P    7 | zjmp 0 OK
+99439a99522
+> P    9 | ld 0 r15
+99479d99561
+< P    9 | zjmp 0 OK
+99489a99572
+> P   12 | add r2 r3 r2
+99514d99596
+< P   12 | zjmp 0 OK
+99515a99598,99599
+> P    7 | ldi -38 88 r4
+>        | -> load from -38 + 88 = 50 (with pc and mod 519)
+99579a99664
+> P   12 | live -2
+99599d99683
+< P    7 | zjmp 0 OK
+99605a99690
+> P    9 | zjmp -59 OK
+99609a99695
+> P   12 | xor 24 96 r15
+99665d99750
+< P    9 | zjmp 0 OK
+99686d99770
+< P   12 | zjmp 0 OK
+99695a99780
+> P    9 | live -2
+99749a99835,99836
+> P    7 | sti r4 400 88
+>        | -> store to 400 + 88 = 488 (with pc and mod 963)
+99776d99862
+< P    7 | zjmp 0 OK
+99800a99887
+> P   12 | zjmp 362 FAILED
+99836d99922
+< P    9 | zjmp 0 OK
+99837a99924
+> P    7 | add r2 r3 r2
+99843a99931
+> P   12 | ld 0 r15
+99863d99950
+< P   12 | zjmp 0 OK
+99931a100019,100020
+> P    9 | ldi -38 56 r4
+>        | -> load from -38 + 56 = 18 (with pc and mod 487)
+99961d100049
+< P    7 | zjmp 0 OK
+100006d100093
+< P    9 | zjmp 0 OK
+100029a100117
+> P   12 | zjmp -59 OK
+100051d100138
+< P   12 | zjmp 0 OK
+100058a100146,100147
+> P    7 | ldi -55 92 r4
+>        | -> load from -55 + 92 = 37 (with pc and mod 523)
+100116a100206
+> P   12 | live -2
+100135d100224
+< P    7 | zjmp 0 OK
+100136a100226,100227
+> P    9 | sti r4 400 56
+>        | -> store to 400 + 56 = 456 (with pc and mod 931)
+100179d100269
+< P    9 | zjmp 0 OK
+100219d100308
+< P   12 | zjmp 0 OK
+100228a100318
+> P    9 | add r2 r3 r2
+100291a100382,100383
+> P    7 | sti r4 383 92
+>        | -> store to 383 + 92 = 475 (with pc and mod 967)
+100319d100410
+< P    7 | zjmp 0 OK
+100329a100421,100422
+> P   12 | ldi -38 24 r4
+>        | -> load from -38 + 24 = -14 (with pc and mod 455)
+100370d100462
+< P    9 | zjmp 0 OK
+100371a100464
+> P    7 | add r2 r3 r2
+100385d100477
+< P   12 | zjmp 0 OK
+100466a100559
+> P    7 | live -2
+100469a100563,100564
+> P    9 | ldi -55 60 r4
+>        | -> load from -55 + 60 = 5 (with pc and mod 491)
+100493d100587
+< P    7 | zjmp 0 OK
+100508a100603
+> P    7 | xor 96 96 r15
+100548d100642
+< P    9 | zjmp 0 OK
+100558a100653,100654
+> P   12 | sti r4 400 24
+>        | -> store to 400 + 24 = 424 (with pc and mod 899)
+100571d100666
+< P   12 | zjmp 0 OK
+100645a100741
+> P   12 | add r2 r3 r2
+100682d100777
+< P    7 | zjmp 0 OK
+100685a100781,100783
+> P    9 | sti r4 383 60
+>        | -> store to 383 + 60 = 443 (with pc and mod 935)
+> P    7 | zjmp 362 OK
+100727d100824
+< P    9 | zjmp 0 OK
+100765d100861
+< P   12 | zjmp 0 OK
+100770a100867
+> P    9 | add r2 r3 r2
+100862d100958
+< P    7 | zjmp 0 OK
+100865a100962
+> P    9 | live -2
+100871a100969,100971
+> P   12 | ldi -55 28 r4
+>        | -> load from -55 + 28 = -27 (with pc and mod 459)
+> P    7 | zjmp 0 OK
+100911d101010
+< P    9 | zjmp 0 OK
+100933a101033
+> P    9 | xor 64 96 r15
+100938d101037
+< P   12 | zjmp 0 OK
+101029d101127
+< P    7 | zjmp 0 OK
+101046a101145
+> P    7 | zjmp 0 OK
+101096d101194
+< P    9 | zjmp 0 OK
+101105a101204,101206
+> P   12 | sti r4 383 28
+>        | -> store to 383 + 28 = 411 (with pc and mod 903)
+> P    9 | zjmp 362 FAILED
+101118d101218
+< P   12 | zjmp 0 OK
+101148a101249
+> P    9 | ld 0 r15
+101187a101289
+> P   12 | add r2 r3 r2
+101215d101316
+< P    7 | zjmp 0 OK
+101227a101329
+> P    7 | zjmp 0 OK
+101265d101366
+< P    9 | zjmp 0 OK
+101283a101385
+> P   12 | live -2
+101306d101407
+< P   12 | zjmp 0 OK
+101322a101424
+> P    9 | zjmp -59 OK
+101326a101429
+> P   12 | xor 32 96 r15
+101398d101500
+< P    7 | zjmp 0 OK
+101403a101506,101507
+> P    9 | live -2
+> P    7 | zjmp 0 OK
+101435d101538
+< P    9 | zjmp 0 OK
+101473d101575
+< P   12 | zjmp 0 OK
+101494a101597
+> P   12 | zjmp 362 FAILED
+101560a101664
+> P   12 | ld 0 r15
+101569d101672
+< P    7 | zjmp 0 OK
+101575a101679
+> P    7 | zjmp 0 OK
+101630d101733
+< P    9 | zjmp 0 OK
+101642a101746,101747
+> P    9 | ldi -38 64 r4
+>        | -> load from -38 + 64 = 26 (with pc and mod 495)
+101646d101750
+< P   12 | zjmp 0 OK
+101730a101835
+> P   12 | zjmp -59 OK
+101740d101844
+< P    7 | zjmp 0 OK
+101762a101867
+> P    7 | zjmp 0 OK
+101776a101882
+> P   16 | ld 0 r2
+101801d101906
+< P    9 | zjmp 0 OK
+101812a101918
+> P   12 | live -2
+101817c101923
+< P   12 | zjmp 0 OK
+---
+> P   16 | ld 4 r3
+101853a101960,101961
+> P    9 | sti r4 400 64
+>        | -> store to 400 + 64 = 464 (with pc and mod 939)
+101857a101966
+> P   16 | ld 96 r5
+101940d102048
+< P    7 | zjmp 0 OK
+101951a102060,102061
+> P    9 | add r2 r3 r2
+> P    7 | zjmp 0 OK
+101981d102090
+< P    9 | zjmp 0 OK
+102019d102127
+< P   12 | zjmp 0 OK
+102039a102148,102149
+> P   12 | ldi -38 32 r4
+>        | -> load from -38 + 32 = -6 (with pc and mod 463)
+102114a102225,102226
+> P   16 | sti r1 51 1
+>        | -> store to 51 + 1 = 52 (with pc and mod 504)
+102118d102229
+< P    7 | zjmp 0 OK
+102123a102235
+> P    7 | zjmp 0 OK
+102136a102249
+> P   16 | st r1 6
+102175d102287
+< P    9 | zjmp 0 OK
+102200a102313,102314
+> P    9 | ldi -55 68 r4
+>        | -> load from -55 + 68 = 13 (with pc and mod 499)
+102209d102322
+< P   12 | zjmp 0 OK
+102235a102349
+> P   16 | live -2
+102284a102399,102400
+> P   12 | sti r4 400 32
+>        | -> store to 400 + 32 = 432 (with pc and mod 907)
+102291d102406
+< P    7 | zjmp 0 OK
+102308a102424
+> P    7 | zjmp 0 OK
+102366d102481
+< P    9 | zjmp 0 OK
+102374d102488
+< P   16 | live 57671936
+102379a102494
+> P   12 | add r2 r3 r2
+102383d102497
+< P   12 | zjmp 0 OK
+102415a102530,102531
+> P    9 | sti r4 383 68
+>        | -> store to 383 + 68 = 451 (with pc and mod 943)
+102471a102588,102589
+> P   16 | ldi -38 0 r4
+>        | -> load from -38 + 0 = -38 (with pc and mod 431)
+102480d102597
+< P    7 | zjmp 0 OK
+102502a102620,102621
+> P    9 | add r2 r3 r2
+> P    7 | zjmp 0 OK
+102534d102652
+< P    9 | zjmp 0 OK
+102565d102682
+< P   12 | zjmp 0 OK
+102599a102717
+> P    9 | live -2
+102601,102602c102719,102720
+< P   16 | ldi -38 96 r4
+<        | -> load from -38 + 96 = 58 (with pc and mod 527)
+---
+> P   12 | ldi -55 36 r4
+>        | -> load from -55 + 36 = -19 (with pc and mod 467)
+102663a102782
+> P    9 | xor 72 96 r15
+102676d102794
+< P    7 | zjmp 0 OK
+102686a102805
+> P    7 | zjmp 0 OK
+102692a102812,102813
+> P   16 | sti r4 400 0
+>        | -> store to 400 + 0 = 400 (with pc and mod 875)
+102722d102842
+< P    9 | zjmp 0 OK
+102768d102887
+< P   12 | zjmp 0 OK
+102788a102908
+> P   16 | add r2 r3 r2
+102850,102851c102970,102971
+< P   16 | sti r4 400 96
+<        | -> store to 400 + 96 = 496 (with pc and mod 971)
+---
+> P   12 | sti r4 383 36
+>        | -> store to 383 + 36 = 419 (with pc and mod 911)
+102852a102973
+> P    9 | zjmp 362 FAILED
+102858d102978
+< P    7 | zjmp 0 OK
+102865a102986
+> P    7 | zjmp 0 OK
+102870a102992
+> P    9 | ld 0 r15
+102907d103028
+< P    9 | zjmp 0 OK
+102930d103050
+< P   16 | add r2 r3 r2
+102932a103053
+> P   12 | add r2 r3 r2
+102936d103056
+< P   12 | zjmp 0 OK
+103031a103152
+> P   12 | live -2
+103036a103158,103159
+> P   16 | ldi -55 4 r4
+>        | -> load from -55 + 4 = -51 (with pc and mod 435)
+103048d103170
+< P    7 | zjmp 0 OK
+103077a103200
+> P    9 | zjmp -59 OK
+103085a103209
+> P   12 | xor 40 96 r15
+103107d103230
+< P    9 | zjmp 0 OK
+103108a103232
+> P    7 | zjmp 0 OK
+103123d103246
+< P   12 | zjmp 0 OK
+103166,103167d103288
+< P   16 | ldi -55 100 r4
+<        | -> load from -55 + 100 = 45 (with pc and mod 531)
+103170a103292
+> P    9 | live -2
+103231d103352
+< P    7 | zjmp 0 OK
+103264a103386,103388
+> P   16 | sti r4 383 4
+>        | -> store to 383 + 4 = 387 (with pc and mod 879)
+> P   12 | zjmp 362 FAILED
+103290d103413
+< P    9 | zjmp 0 OK
+103291a103415
+> P    7 | zjmp 2 OK
+103320c103444
+< P   12 | zjmp 0 OK
+---
+> P   12 | ld 0 r15
+103343a103468
+> P   16 | add r2 r3 r2
+103402,103403d103526
+< P   16 | sti r4 383 100
+<        | -> store to 383 + 100 = 483 (with pc and mod 975)
+103405a103529,103530
+> P    9 | ldi -38 72 r4
+>        | -> load from -38 + 72 = 34 (with pc and mod 503)
+103439a103565
+> P   16 | live -2
+103503d103628
+< P   16 | add r2 r3 r2
+103515a103641
+> P   12 | zjmp -59 OK
+103521a103648
+> P   16 | xor 8 96 r15
+103523a103651
+> P    7 | zjmp 0 OK
+103598d103725
+< P   16 | live -2
+103604a103732
+> P   12 | live -2
+103625a103754,103755
+> P    9 | sti r4 400 72
+>        | -> store to 400 + 72 = 472 (with pc and mod 947)
+103635d103764
+< P   16 | xor 104 96 r15
+103689a103819
+> P   16 | zjmp 362 FAILED
+103710a103841
+> P    7 | zjmp 0 OK
+103718a103850
+> P    9 | add r2 r3 r2
+103749a103882
+> P   16 | ld 0 r15
+103816c103949,103950
+< P   16 | zjmp 362 FAILED
+---
+> P   12 | ldi -38 40 r4
+>        | -> load from -38 + 40 = 2 (with pc and mod 471)
+103866d103999
+< P   16 | ld 0 r15
+103896a104030
+> P    7 | zjmp 0 OK
+103927a104062
+> P   16 | zjmp -59 OK
+103946a104082,104083
+> P    9 | ldi -55 76 r4
+>        | -> load from -55 + 76 = 21 (with pc and mod 507)
+104009a104147
+> P   16 | live -2
+104054d104191
+< P   16 | zjmp -59 OK
+104056a104194,104195
+> P   12 | sti r4 400 40
+>        | -> store to 400 + 40 = 440 (with pc and mod 915)
+104065a104205
+> P    7 | zjmp 0 OK
+104150c104290
+< P   16 | live -2
+---
+> P   12 | add r2 r3 r2
+104164a104305,104306
+> P    9 | sti r4 383 76
+>        | -> store to 383 + 76 = 459 (with pc and mod 951)
+104233a104376,104377
+> P   16 | ldi -38 8 r4
+>        | -> load from -38 + 8 = -30 (with pc and mod 439)
+104238a104383
+> P    7 | zjmp 0 OK
+104246a104392
+> P    9 | add r2 r3 r2
+104346a104493
+> P    9 | live -2
+104358,104359c104505,104506
+< P   16 | ldi -38 104 r4
+<        | -> load from -38 + 104 = 66 (with pc and mod 535)
+---
+> P   12 | ldi -55 44 r4
+>        | -> load from -55 + 44 = -11 (with pc and mod 475)
+104410a104558
+> P    9 | xor 80 96 r15
+104437a104586
+> P    7 | zjmp 0 OK
+104479a104629,104630
+> P   16 | sti r4 400 8
+>        | -> store to 400 + 8 = 408 (with pc and mod 883)
+104562a104714
+> P   16 | add r2 r3 r2
+104591,104592c104743,104745
+< P   16 | sti r4 400 104
+<        | -> store to 400 + 104 = 504 (with pc and mod 979)
+---
+> P   12 | sti r4 383 44
+>        | -> store to 383 + 44 = 427 (with pc and mod 919)
+> P    9 | zjmp 362 FAILED
+104615a104769
+> P    7 | zjmp 0 OK
+104621a104776
+> P    9 | ld 0 r15
+104688c104843
+< P   16 | add r2 r3 r2
+---
+> P   12 | add r2 r3 r2
+104780a104936
+> P   12 | live -2
+104786a104943,104944
+> P   16 | ldi -55 12 r4
+>        | -> load from -55 + 12 = -43 (with pc and mod 443)
+104799a104958
+> P    9 | zjmp -59 OK
+104826a104986
+> P   12 | xor 48 96 r15
+104828a104989
+> P    7 | zjmp 656 OK
+104895,104896c105056
+< P   16 | ldi -55 108 r4
+<        | -> load from -55 + 108 = 53 (with pc and mod 539)
+---
+> P    9 | live -2
+105017a105178,105179
+> P   16 | sti r4 383 12
+>        | -> store to 383 + 12 = 395 (with pc and mod 887)
+105018a105181
+> P   12 | zjmp 362 FAILED
+105019a105183
+> P    7 | zjmp -1 OK
+105040a105205
+> P   12 | ld 0 r15
+105108a105274
+> P   16 | add r2 r3 r2
+105129,105130c105295,105296
+< P   16 | sti r4 383 108
+<        | -> store to 383 + 108 = 491 (with pc and mod 983)
+---
+> P    9 | ldi -38 80 r4
+>        | -> load from -38 + 80 = 42 (with pc and mod 511)
+105200a105367
+> P   16 | live -2
+105208a105376
+> P    7 | zjmp -1 OK
+105226d105393
+< P   16 | add r2 r3 r2
+105234a105402
+> P   12 | zjmp -59 OK
+105246a105415
+> P   16 | xor 16 96 r15
+105318d105486
+< P   16 | live -2
+105331a105500
+> P   12 | live -2
+105346a105516,105517
+> P    9 | sti r4 400 80
+>        | -> store to 400 + 80 = 480 (with pc and mod 955)
+105372d105542
+< P   16 | xor 112 96 r15
+105390a105561
+> P    7 | zjmp -1 OK
+105433a105605
+> P   16 | zjmp 362 FAILED
+105442a105615
+> P    9 | add r2 r3 r2
+105485a105659
+> P   16 | ld 0 r15
+105563c105737,105738
+< P   16 | zjmp 362 FAILED
+---
+> P   12 | ldi -38 48 r4
+>        | -> load from -38 + 48 = 10 (with pc and mod 479)
+105588a105764
+> P    7 | zjmp -1 OK
+105596d105771
+< P   16 | ld 0 r15
+105671a105847
+> P   16 | zjmp -59 OK
+105677a105854,105855
+> P    9 | ldi -55 84 r4
+>        | -> load from -55 + 84 = 29 (with pc and mod 515)
+105765a105944
+> P   16 | live -2
+105776a105956
+> P    7 | zjmp -1 OK
+105784d105963
+< P   16 | zjmp -59 OK
+105786a105966,105967
+> P   12 | sti r4 400 48
+>        | -> store to 400 + 48 = 448 (with pc and mod 923)
+105877d106057
+< P   16 | live -2
+105879a106060
+> P   12 | add r2 r3 r2
+105908a106090,106091
+> P    9 | sti r4 383 84
+>        | -> store to 383 + 84 = 467 (with pc and mod 959)
+105979a106163
+> P    7 | zjmp -1 OK
+105986a106171,106172
+> P   16 | ldi -38 16 r4
+>        | -> load from -38 + 16 = -22 (with pc and mod 447)
+105993a106180
+> P    9 | add r2 r3 r2
+106077a106265
+> P    9 | live -2
+106100,106101d106287
+< P   16 | ldi -38 112 r4
+<        | -> load from -38 + 112 = 74 (with pc and mod 543)
+106106a106293,106294
+> P   12 | ldi -55 52 r4
+>        | -> load from -55 + 52 = -3 (with pc and mod 483)
+106152a106341
+> P    9 | xor 88 96 r15
+106157a106347
+> P    7 | zjmp -1 OK
+106222a106413,106414
+> P   16 | sti r4 400 16
+>        | -> store to 400 + 16 = 416 (with pc and mod 891)
+106319a106512
+> P   16 | add r2 r3 r2
+106336,106337c106529,106531
+< P   16 | sti r4 400 112
+<        | -> store to 400 + 112 = 512 (with pc and mod 475)
+---
+> P   12 | sti r4 383 52
+>        | -> store to 383 + 52 = 435 (with pc and mod 927)
+> P    9 | zjmp 362 FAILED
+106349a106544
+> P    7 | zjmp -1 OK
+106397a106593
+> P    9 | ld 0 r15
+106417c106613
+< P   16 | add r2 r3 r2
+---
+> P   12 | add r2 r3 r2
+106516a106713
+> P   12 | live -2
+106526a106724,106725
+> P   16 | ldi -55 20 r4
+>        | -> load from -55 + 20 = -35 (with pc and mod 451)
+106541a106741
+> P    7 | zjmp -1 OK
+106570a106771
+> P    9 | zjmp -59 OK
+106578a106780
+> P   12 | xor 56 96 r15
+106654,106655d106855
+< P   16 | ldi -55 116 r4
+<        | -> load from -55 + 116 = 61 (with pc and mod 547)
+106656a106857
+> P    9 | live -2
+106723a106925
+> P    7 | zjmp -1 OK
+106759a106962,106964
+> P   16 | sti r4 383 20
+>        | -> store to 383 + 20 = 403 (with pc and mod 895)
+> P   12 | zjmp 362 FAILED
+106800a107006
+> P   12 | ld 0 r15
+106850a107057
+> P   16 | add r2 r3 r2
+106876,106877c107083,107084
+< P   16 | sti r4 383 116
+<        | -> store to 383 + 116 = 499 (with pc and mod 991)
+---
+> P    9 | ldi -38 88 r4
+>        | -> load from -38 + 88 = 50 (with pc and mod 519)
+106931a107139
+> P    7 | zjmp -1 OK
+106942a107151
+> P   16 | live -2
+106966d107174
+< P   16 | add r2 r3 r2
+106972a107181
+> P   12 | zjmp -59 OK
+106976a107186
+> P   16 | xor 24 96 r15
+107059d107268
+< P   16 | live -2
+107064a107274
+> P   12 | live -2
+107119a107330,107331
+> P    9 | sti r4 400 88
+>        | -> store to 400 + 88 = 488 (with pc and mod 963)
+107125c107337
+< P   16 | xor 120 96 r15
+---
+> P    7 | zjmp -1 OK
+107170a107383
+> P   16 | zjmp 362 FAILED
+107206a107420
+> P    9 | add r2 r3 r2
+107213a107428
+> P   16 | ld 0 r15
+107306c107521,107522
+< P   16 | zjmp 362 FAILED
+---
+> P   12 | ldi -38 56 r4
+>        | -> load from -38 + 56 = 18 (with pc and mod 487)
+107309a107526
+> P    7 | zjmp -1 OK
+107343d107559
+< P   16 | ld 0 r15
+107406a107623
+> P   16 | zjmp -59 OK
+107434a107652,107653
+> P    9 | ldi -55 92 r4
+>        | -> load from -55 + 92 = 37 (with pc and mod 523)
+107495a107715
+> P   16 | live -2
+107503a107724
+> P    7 | zjmp -1 OK
+107517c107738,107739
+< P   16 | zjmp -59 OK
+---
+> P   12 | sti r4 400 56
+>        | -> store to 400 + 56 = 456 (with pc and mod 931)
+107609c107831
+< P   16 | live -2
+---
+> P   12 | add r2 r3 r2
+107672a107895,107896
+> P    9 | sti r4 383 92
+>        | -> store to 383 + 92 = 475 (with pc and mod 967)
+107695a107920
+> P    7 | zjmp -1 OK
+107712a107938,107939
+> P   16 | ldi -38 24 r4
+>        | -> load from -38 + 24 = -14 (with pc and mod 455)
+107755a107983
+> P    9 | add r2 r3 r2
+107849a108078
+> P    9 | live -2
+107854,107855c108083,108084
+< P   16 | ldi -38 120 r4
+<        | -> load from -38 + 120 = 82 (with pc and mod 551)
+---
+> P   12 | ldi -55 60 r4
+>        | -> load from -55 + 60 = 5 (with pc and mod 491)
+107878a108108
+> P    7 | zjmp -1 OK
+107895a108126
+> P    9 | xor 96 96 r15
+107945a108177,108178
+> P   16 | sti r4 400 24
+>        | -> store to 400 + 24 = 424 (with pc and mod 899)
+108034a108268
+> P   16 | add r2 r3 r2
+108073a108308,108311
+> P   12 | sti r4 383 60
+>        | -> store to 383 + 60 = 443 (with pc and mod 935)
+> P    9 | zjmp 362 OK
+> P    7 | zjmp -1 OK
+108157a108396
+> P   12 | add r2 r3 r2
+108215,108216d108453
+< P   16 | ldi -55 120 r4
+<        | -> load from -55 + 120 = 65 (with pc and mod 551)
+108258a108496
+> P   12 | live -2
+108265a108504,108506
+> P   16 | ldi -55 28 r4
+>        | -> load from -55 + 28 = -27 (with pc and mod 459)
+> P    9 | zjmp 0 OK
+108327a108569
+> P   12 | xor 64 96 r15
+108431,108432d108672
+< P   16 | sti r4 383 120
+<        | -> store to 383 + 120 = 503 (with pc and mod 995)
+108444a108685
+> P    9 | zjmp 0 OK
+108502a108744,108746
+> P   16 | sti r4 383 28
+>        | -> store to 383 + 28 = 411 (with pc and mod 903)
+> P   12 | zjmp 362 FAILED
+108538d108781
+< P   16 | add r2 r3 r2
+108545a108789
+> P   12 | ld 0 r15
+108589a108834
+> P   16 | add r2 r3 r2
+108624d108868
+< P   16 | live -2
+108631a108876
+> P    9 | zjmp 0 OK
+108688c108933
+< P   16 | xor 124 96 r15
+---
+> P   16 | live -2
+108726a108972
+> P   12 | zjmp -59 OK
+108732a108979
+> P   16 | xor 32 96 r15
+108811a109059,109060
+> P   12 | live -2
+> P    9 | zjmp 0 OK
+108869d109117
+< P   16 | zjmp 362 FAILED
+108896d109143
+< P   16 | ld 0 r15
+108902a109150
+> P   16 | zjmp 362 FAILED
+108969a109218
+> P   16 | ld 0 r15
+108985a109235
+> P    9 | zjmp 0 OK
+109054a109305,109306
+> P   12 | ldi -38 64 r4
+>        | -> load from -38 + 64 = 26 (with pc and mod 495)
+109085d109336
+< P   16 | zjmp -59 OK
+109143a109395
+> P   16 | zjmp -59 OK
+109173d109424
+< P   16 | live -2
+109177a109429
+> P    9 | zjmp 0 OK
+109191a109444
+> P   20 | ld 0 r2
+109227a109481
+> P   16 | live -2
+109231a109486
+> P   20 | ld 4 r3
+109267a109523,109524
+> P   12 | sti r4 400 64
+>        | -> store to 400 + 64 = 464 (with pc and mod 939)
+109272a109530
+> P   20 | ld 96 r5
+109359a109618,109619
+> P   12 | add r2 r3 r2
+> P    9 | zjmp 0 OK
+109402,109403d109661
+< P   16 | ldi -38 124 r4
+<        | -> load from -38 + 124 = 86 (with pc and mod 555)
+109441a109700,109701
+> P   16 | ldi -38 32 r4
+>        | -> load from -38 + 32 = -6 (with pc and mod 463)
+109520a109781,109782
+> P   20 | sti r1 51 1
+>        | -> store to 51 + 1 = 52 (with pc and mod 504)
+109527a109790
+> P    9 | zjmp 0 OK
+109540a109804
+> P   20 | st r1 6
+109600a109865,109866
+> P   12 | ldi -55 68 r4
+>        | -> load from -55 + 68 = 13 (with pc and mod 499)
+109632a109899
+> P   20 | live -2
+109679a109947,109948
+> P   16 | sti r4 400 32
+>        | -> store to 400 + 32 = 432 (with pc and mod 907)
+109698a109968
+> P    9 | zjmp 0 OK
+109763d110032
+< P   20 | live 57671936
+109767,109768d110035
+< P   16 | ldi -55 124 r4
+<        | -> load from -55 + 124 = 69 (with pc and mod 555)
+109770a110038
+> P   16 | add r2 r3 r2
+109804a110073,110074
+> P   12 | sti r4 383 68
+>        | -> store to 383 + 68 = 451 (with pc and mod 943)
+109864a110135,110136
+> P   20 | ldi -38 0 r4
+>        | -> load from -38 + 0 = -38 (with pc and mod 431)
+109894a110167,110168
+> P   12 | add r2 r3 r2
+> P    9 | zjmp 0 OK
+109985,109986c110259
+< P   16 | sti r4 383 124
+<        | -> store to 383 + 124 = 507 (with pc and mod 999)
+---
+> P   12 | live -2
+109988,109989c110261,110262
+< P   20 | ldi -38 96 r4
+<        | -> load from -38 + 96 = 58 (with pc and mod 527)
+---
+> P   16 | ldi -55 36 r4
+>        | -> load from -55 + 36 = -19 (with pc and mod 467)
+110048a110322
+> P   12 | xor 72 96 r15
+110071c110345
+< P   16 | add r2 r3 r2
+---
+> P    9 | zjmp 0 OK
+110077a110352,110353
+> P   20 | sti r4 400 0
+>        | -> store to 400 + 0 = 400 (with pc and mod 875)
+110162d110437
+< P   16 | live -2
+110170a110446
+> P   20 | add r2 r3 r2
+110230c110506,110507
+< P   16 | xor 128 96 r15
+---
+> P   16 | sti r4 383 36
+>        | -> store to 383 + 36 = 419 (with pc and mod 911)
+110232a110510
+> P   12 | zjmp 362 FAILED
+110243a110522
+> P    9 | zjmp 0 OK
+110248a110528
+> P   12 | ld 0 r15
+110310a110591
+> P   16 | add r2 r3 r2
+110340,110341d110620
+< P   20 | ldi -55 96 r4
+<        | -> load from -55 + 96 = 41 (with pc and mod 527)
+110410c110689
+< P   16 | zjmp 362 FAILED
+---
+> P   16 | live -2
+110415a110695,110696
+> P   20 | ldi -55 4 r4
+>        | -> load from -55 + 4 = -51 (with pc and mod 435)
+110450d110730
+< P   16 | ld 0 r15
+110454a110735
+> P   12 | zjmp -59 OK
+110460a110742
+> P   16 | xor 40 96 r15
+110483a110766
+> P    9 | zjmp 0 OK
+110542a110826
+> P   12 | live -2
+110585,110586d110868
+< P   20 | sti r4 383 96
+<        | -> store to 383 + 96 = 479 (with pc and mod 971)
+110634d110915
+< P   16 | zjmp -59 OK
+110637a110919,110921
+> P   20 | sti r4 383 4
+>        | -> store to 383 + 4 = 387 (with pc and mod 879)
+> P   16 | zjmp 362 FAILED
+110662a110947
+> P    9 | zjmp 2 OK
+110684d110968
+< P   20 | add r2 r3 r2
+110692a110977
+> P   16 | ld 0 r15
+110713d110997
+< P   16 | live -2
+110716a111001
+> P   20 | add r2 r3 r2
+110771d111055
+< P   20 | live -2
+110775a111060,111061
+> P   12 | ldi -38 72 r4
+>        | -> load from -38 + 72 = 34 (with pc and mod 503)
+110810c111096
+< P   20 | xor 100 96 r15
+---
+> P   20 | live -2
+110883a111170
+> P   16 | zjmp -59 OK
+110890a111178
+> P   20 | xor 8 96 r15
+110892a111181
+> P    9 | zjmp 0 OK
+110967,110968d111255
+< P   16 | ldi -38 128 r4
+<        | -> load from -38 + 128 = 90 (with pc and mod 559)
+110972a111260
+> P   16 | live -2
+110990a111279,111280
+> P   12 | sti r4 400 72
+>        | -> store to 400 + 72 = 472 (with pc and mod 947)
+111000d111289
+< P   20 | zjmp 362 FAILED
+111049d111337
+< P   20 | ld 0 r15
+111053a111342
+> P   20 | zjmp 362 FAILED
+111074a111364
+> P    9 | zjmp 0 OK
+111082a111373
+> P   12 | add r2 r3 r2
+111116a111408
+> P   20 | ld 0 r15
+111181a111474,111475
+> P   16 | ldi -38 40 r4
+>        | -> load from -38 + 40 = 2 (with pc and mod 471)
+111230d111523
+< P   20 | zjmp -59 OK
+111259a111553
+> P    9 | zjmp 0 OK
+111291a111586
+> P   20 | zjmp -59 OK
+111312,111313c111607,111608
+< P   16 | ldi -55 128 r4
+<        | -> load from -55 + 128 = 73 (with pc and mod 559)
+---
+> P   12 | ldi -55 76 r4
+>        | -> load from -55 + 76 = 21 (with pc and mod 507)
+111325d111619
+< P   20 | live -2
+111378a111673
+> P   20 | live -2
+111423a111719,111720
+> P   16 | sti r4 400 40
+>        | -> store to 400 + 40 = 440 (with pc and mod 915)
+111431a111729
+> P    9 | zjmp 0 OK
+111513a111812
+> P   16 | add r2 r3 r2
+111529,111530c111828,111829
+< P   16 | sti r4 383 128
+<        | -> store to 383 + 128 = 511 (with pc and mod 1003)
+---
+> P   12 | sti r4 383 76
+>        | -> store to 383 + 76 = 459 (with pc and mod 951)
+111534,111535d111832
+< P   20 | ldi -38 100 r4
+<        | -> load from -38 + 100 = 62 (with pc and mod 531)
+111603a111901,111902
+> P   20 | ldi -38 8 r4
+>        | -> load from -38 + 8 = -30 (with pc and mod 439)
+111608a111908
+> P    9 | zjmp 0 OK
+111617c111917
+< P   16 | add r2 r3 r2
+---
+> P   12 | add r2 r3 r2
+111714c112014
+< P   16 | live -2
+---
+> P   12 | live -2
+111725a112026,112027
+> P   16 | ldi -55 44 r4
+>        | -> load from -55 + 44 = -11 (with pc and mod 475)
+111777c112079
+< P   16 | xor 132 96 r15
+---
+> P   12 | xor 80 96 r15
+111802a112105
+> P    9 | zjmp 0 OK
+111844a112148,112149
+> P   20 | sti r4 400 8
+>        | -> store to 400 + 8 = 408 (with pc and mod 883)
+111906,111907d112210
+< P   20 | ldi -55 100 r4
+<        | -> load from -55 + 100 = 45 (with pc and mod 531)
+111931a112235
+> P   20 | add r2 r3 r2
+111961c112265,112267
+< P   16 | zjmp 362 FAILED
+---
+> P   16 | sti r4 383 44
+>        | -> store to 383 + 44 = 427 (with pc and mod 919)
+> P   12 | zjmp 362 FAILED
+111982a112289
+> P    9 | zjmp 0 OK
+111989c112296
+< P   16 | ld 0 r15
+---
+> P   12 | ld 0 r15
+112033d112339
+< P   20 | live 2130838612
+112052a112359
+> P   16 | add r2 r3 r2
+112144a112452
+> P   16 | live -2
+112150a112459,112460
+> P   20 | ldi -55 12 r4
+>        | -> load from -55 + 12 = -43 (with pc and mod 443)
+112166c112476
+< P   16 | zjmp -59 OK
+---
+> P   12 | zjmp -59 OK
+112192a112503
+> P   16 | xor 48 96 r15
+112194a112506
+> P    9 | zjmp 656 OK
+112215d112526
+< P   20 | xor 100 96 r15
+112259c112570
+< P   16 | live -2
+---
+> P   12 | live -2
+112377a112689,112690
+> P   20 | sti r4 383 12
+>        | -> store to 383 + 12 = 395 (with pc and mod 887)
+112378a112692
+> P   16 | zjmp 362 FAILED
+112381a112696
+> P    9 | zjmp -1 OK
+112396d112710
+< P   20 | zjmp 362 FAILED
+112406a112721
+> P   16 | ld 0 r15
+112424d112738
+< P   20 | ld 0 r15
+112472a112787
+> P   20 | add r2 r3 r2
+112494,112495c112809,112810
+< P   16 | ldi -38 132 r4
+<        | -> load from -38 + 132 = 94 (with pc and mod 563)
+---
+> P   12 | ldi -38 80 r4
+>        | -> load from -38 + 80 = 42 (with pc and mod 511)
+112562a112878
+> P   20 | live -2
+112573a112890
+> P    9 | zjmp -1 OK
+112598a112916
+> P   16 | zjmp -59 OK
+112609a112928
+> P   20 | xor 16 96 r15
+112615d112933
+< P   20 | zjmp -59 OK
+112695a113014
+> P   16 | live -2
+112703d113021
+< P   20 | live -2
+112710a113029,113030
+> P   12 | sti r4 400 80
+>        | -> store to 400 + 80 = 480 (with pc and mod 955)
+112793a113114
+> P   20 | zjmp 362 FAILED
+112804a113126
+> P   12 | add r2 r3 r2
+112847a113170
+> P   20 | ld 0 r15
+112879,112880d113201
+< P   16 | ldi -55 132 r4
+<        | -> load from -55 + 132 = 77 (with pc and mod 563)
+112928a113250,113251
+> P   16 | ldi -38 48 r4
+>        | -> load from -38 + 48 = 10 (with pc and mod 479)
+112950,112951d113272
+< P   20 | ldi -38 100 r4
+<        | -> load from -38 + 100 = 62 (with pc and mod 531)
+112969d113289
+< P   16 | live 2130838612
+113033a113354
+> P   20 | zjmp -59 OK
+113041a113363,113364
+> P   12 | ldi -55 84 r4
+>        | -> load from -55 + 84 = 29 (with pc and mod 515)
+113127a113451
+> P   20 | live -2
+113149a113474,113475
+> P   16 | sti r4 400 48
+>        | -> store to 400 + 48 = 448 (with pc and mod 923)
+113162d113487
+< P   16 | xor 132 96 r15
+113240a113566
+> P   16 | add r2 r3 r2
+113268a113595,113596
+> P   12 | sti r4 383 84
+>        | -> store to 383 + 84 = 467 (with pc and mod 959)
+113305,113306d113632
+< P   20 | ldi -55 100 r4
+<        | -> load from -55 + 100 = 45 (with pc and mod 531)
+113344a113671,113672
+> P   20 | ldi -38 16 r4
+>        | -> load from -38 + 16 = -22 (with pc and mod 447)
+113353d113680
+< P   16 | zjmp 362 FAILED
+113356a113684
+> P   12 | add r2 r3 r2
+113394d113721
+< P   16 | ld 0 r15
+113420d113746
+< P   20 | live 2130838612
+113442a113769
+> P   12 | live -2
+113468a113796,113797
+> P   16 | ldi -55 52 r4
+>        | -> load from -55 + 52 = -3 (with pc and mod 483)
+113512a113842
+> P   12 | xor 88 96 r15
+113579a113910,113911
+> P   20 | sti r4 400 16
+>        | -> store to 400 + 16 = 416 (with pc and mod 891)
+113589d113920
+< P   16 | zjmp -59 OK
+113601d113931
+< P   20 | xor 100 96 r15
+113678a114009
+> P   20 | add r2 r3 r2
+113689d114019
+< P   16 | live -2
+113699a114030,114032
+> P   16 | sti r4 383 52
+>        | -> store to 383 + 52 = 435 (with pc and mod 927)
+> P   12 | zjmp 362 FAILED
+113754a114088
+> P   12 | ld 0 r15
+113775c114109
+< P   20 | zjmp 362 FAILED
+---
+> P   16 | add r2 r3 r2
+113833d114166
+< P   20 | ld 0 r15
+113876a114210
+> P   16 | live -2
+113886a114221,114222
+> P   20 | ldi -55 20 r4
+>        | -> load from -55 + 20 = -35 (with pc and mod 451)
+113898,113899d114233
+< P   16 | ldi -38 132 r4
+<        | -> load from -38 + 132 = 94 (with pc and mod 563)
+113933a114268
+> P   12 | zjmp -59 OK
+113942a114278
+> P   16 | xor 56 96 r15
+114016d114351
+< P   20 | zjmp -59 OK
+114017a114353
+> P   12 | live -2
+114107d114442
+< P   20 | live -2
+114120a114456,114458
+> P   20 | sti r4 383 20
+>        | -> store to 383 + 20 = 403 (with pc and mod 895)
+> P   16 | zjmp 362 FAILED
+114132,114133d114469
+< P   16 | sti r4 400 132
+<        | -> store to 400 + 132 = 532 (with pc and mod 495)
+114165a114502
+> P   16 | ld 0 r15
+114215a114553
+> P   20 | add r2 r3 r2
+114230d114567
+< P   16 | add r2 r3 r2
+114241a114579,114580
+> P   12 | ldi -38 88 r4
+>        | -> load from -38 + 88 = 50 (with pc and mod 519)
+114299a114639
+> P   20 | live -2
+114325,114326d114664
+< P   20 | ldi -38 100 r4
+<        | -> load from -38 + 100 = 62 (with pc and mod 531)
+114332a114671
+> P   16 | zjmp -59 OK
+114335a114675
+> P   20 | xor 24 96 r15
+114422a114763
+> P   16 | live -2
+114429,114430d114769
+< P   16 | ldi -55 136 r4
+<        | -> load from -55 + 136 = 81 (with pc and mod 567)
+114477a114817,114818
+> P   12 | sti r4 400 88
+>        | -> store to 400 + 88 = 488 (with pc and mod 963)
+114527a114869
+> P   20 | zjmp 362 FAILED
+114561,114562d114902
+< P   20 | sti r4 400 100
+<        | -> store to 400 + 100 = 500 (with pc and mod 975)
+114564a114905
+> P   12 | add r2 r3 r2
+114572a114914
+> P   20 | ld 0 r15
+114658d114999
+< P   20 | add r2 r3 r2
+114665a115007,115008
+> P   16 | ldi -38 56 r4
+>        | -> load from -38 + 56 = 18 (with pc and mod 487)
+114692d115034
+< P   16 | xor 136 96 r15
+114763a115106
+> P   20 | zjmp -59 OK
+114789a115133,115134
+> P   12 | ldi -55 92 r4
+>        | -> load from -55 + 92 = 37 (with pc and mod 523)
+114848a115194
+> P   20 | live -2
+114869,114871d115214
+< P   20 | ldi -55 104 r4
+<        | -> load from -55 + 104 = 49 (with pc and mod 535)
+< P   16 | zjmp 362 FAILED
+114872a115216,115217
+> P   16 | sti r4 400 56
+>        | -> store to 400 + 56 = 456 (with pc and mod 931)
+114913d115257
+< P   16 | ld 0 r15
+114967a115312
+> P   16 | add r2 r3 r2
+115026a115372,115373
+> P   12 | sti r4 383 92
+>        | -> store to 383 + 92 = 475 (with pc and mod 967)
+115067a115415,115416
+> P   20 | ldi -38 24 r4
+>        | -> load from -38 + 24 = -14 (with pc and mod 455)
+115110d115458
+< P   16 | zjmp -59 OK
+115111a115460
+> P   12 | add r2 r3 r2
+115126d115474
+< P   20 | xor 104 96 r15
+115210d115557
+< P   16 | live -2
+115211a115559
+> P   12 | live -2
+115216a115565,115566
+> P   16 | ldi -55 60 r4
+>        | -> load from -55 + 60 = 5 (with pc and mod 491)
+115252a115603
+> P   12 | xor 96 96 r15
+115302a115654,115655
+> P   20 | sti r4 400 24
+>        | -> store to 400 + 24 = 424 (with pc and mod 899)
+115308d115660
+< P   20 | zjmp 362 FAILED
+115347d115698
+< P   20 | ld 0 r15
+115392a115744
+> P   20 | add r2 r3 r2
+115431,115432d115782
+< P   16 | ldi -38 136 r4
+<        | -> load from -38 + 136 = 98 (with pc and mod 567)
+115435a115786,115788
+> P   16 | sti r4 383 60
+>        | -> store to 383 + 60 = 443 (with pc and mod 935)
+> P   12 | zjmp 362 OK
+115517a115871
+> P   16 | add r2 r3 r2
+115524d115877
+< P   20 | zjmp -59 OK
+115614a115968
+> P   16 | live -2
+115620a115975,115977
+> P   20 | ldi -55 28 r4
+>        | -> load from -55 + 28 = -27 (with pc and mod 459)
+> P   12 | zjmp 0 OK
+115624d115980
+< P   20 | live -2
+115658,115659d116013
+< P   16 | sti r4 400 136
+<        | -> store to 400 + 136 = 536 (with pc and mod 499)
+115683a116038
+> P   16 | xor 64 96 r15
+115749d116103
+< P   16 | add r2 r3 r2
+115799a116154
+> P   12 | zjmp 0 OK
+115857a116213,116215
+> P   20 | sti r4 383 28
+>        | -> store to 383 + 28 = 411 (with pc and mod 903)
+> P   16 | zjmp 362 FAILED
+115861,115862d116218
+< P   20 | ldi -38 104 r4
+<        | -> load from -38 + 104 = 66 (with pc and mod 535)
+115897a116254
+> P   16 | ld 0 r15
+115945a116303
+> P   20 | add r2 r3 r2
+115971,115972d116328
+< P   16 | ldi -55 140 r4
+<        | -> load from -55 + 140 = 85 (with pc and mod 571)
+115987a116344
+> P   12 | zjmp 0 OK
+116042a116400
+> P   20 | live -2
+116078a116437
+> P   16 | zjmp -59 OK
+116084,116085c116443
+< P   20 | sti r4 400 104
+<        | -> store to 400 + 104 = 504 (with pc and mod 979)
+---
+> P   20 | xor 32 96 r15
+116162d116519
+< P   16 | live -2
+116163a116521,116522
+> P   16 | live -2
+> P   12 | zjmp 0 OK
+116166d116524
+< P   20 | add r2 r3 r2
+116224d116581
+< P   16 | xor 140 96 r15
+116257a116615
+> P   20 | zjmp 362 FAILED
+116322a116681
+> P   20 | ld 0 r15
+116338a116698
+> P   12 | zjmp 0 OK
+116408c116768,116769
+< P   16 | zjmp 362 FAILED
+---
+> P   16 | ldi -38 64 r4
+>        | -> load from -38 + 64 = 26 (with pc and mod 495)
+116410,116411d116770
+< P   20 | ldi -55 108 r4
+<        | -> load from -55 + 108 = 53 (with pc and mod 539)
+116442d116800
+< P   16 | ld 0 r15
+116500a116859
+> P   20 | zjmp -59 OK
+116531a116891
+> P   12 | zjmp 0 OK
+116545a116906
+> P   24 | ld 0 r2
+116581a116943
+> P   20 | live -2
+116586c116948
+< P   20 | live -2
+---
+> P   24 | ld 4 r3
+116621c116983,116984
+< P   16 | zjmp -59 OK
+---
+> P   16 | sti r4 400 64
+>        | -> store to 400 + 64 = 464 (with pc and mod 939)
+116626a116990
+> P   24 | ld 96 r5
+116650d117013
+< P   20 | xor 108 96 r15
+116719c117082,117083
+< P   16 | live -2
+---
+> P   16 | add r2 r3 r2
+> P   12 | zjmp 0 OK
+116798a117163,117164
+> P   20 | ldi -38 32 r4
+>        | -> load from -38 + 32 = -6 (with pc and mod 463)
+116822d117187
+< P   20 | zjmp 362 FAILED
+116874a117240,117241
+> P   24 | sti r1 51 1
+>        | -> store to 51 + 1 = 52 (with pc and mod 504)
+116879d117245
+< P   20 | ld 0 r15
+116884a117251
+> P   12 | zjmp 0 OK
+116897a117265
+> P   24 | st r1 6
+116956,116957c117324,117325
+< P   16 | ldi -38 140 r4
+<        | -> load from -38 + 140 = 102 (with pc and mod 571)
+---
+> P   16 | ldi -55 68 r4
+>        | -> load from -55 + 68 = 13 (with pc and mod 499)
+116989a117358
+> P   24 | live -2
+117036a117406,117407
+> P   20 | sti r4 400 32
+>        | -> store to 400 + 32 = 432 (with pc and mod 907)
+117039d117409
+< P   20 | zjmp -59 OK
+117056a117427
+> P   12 | zjmp 0 OK
+117121d117491
+< P   24 | live 57671936
+117126a117497
+> P   20 | add r2 r3 r2
+117135d117505
+< P   20 | live -2
+117158,117159c117528,117529
+< P   16 | sti r4 400 140
+<        | -> store to 400 + 140 = 540 (with pc and mod 503)
+---
+> P   16 | sti r4 383 68
+>        | -> store to 383 + 68 = 451 (with pc and mod 943)
+117221a117592,117593
+> P   24 | ldi -38 0 r4
+>        | -> load from -38 + 0 = -38 (with pc and mod 431)
+117250a117623
+> P   12 | zjmp 0 OK
+117340a117714
+> P   16 | live -2
+117342,117343c117716,117717
+< P   24 | ldi -38 96 r4
+<        | -> load from -38 + 96 = 58 (with pc and mod 527)
+---
+> P   20 | ldi -55 36 r4
+>        | -> load from -55 + 36 = -19 (with pc and mod 467)
+117371,117372d117744
+< P   20 | ldi -38 108 r4
+<        | -> load from -38 + 108 = 70 (with pc and mod 539)
+117402a117775
+> P   16 | xor 72 96 r15
+117424a117798
+> P   12 | zjmp 0 OK
+117430a117805,117806
+> P   24 | sti r4 400 0
+>        | -> store to 400 + 0 = 400 (with pc and mod 875)
+117482,117483d117857
+< P   16 | ldi -55 144 r4
+<        | -> load from -55 + 144 = 89 (with pc and mod 575)
+117526a117901
+> P   24 | add r2 r3 r2
+117583,117584c117958,117959
+< P   24 | sti r4 400 96
+<        | -> store to 400 + 96 = 496 (with pc and mod 971)
+---
+> P   20 | sti r4 383 36
+>        | -> store to 383 + 36 = 419 (with pc and mod 911)
+117586a117962
+> P   16 | zjmp 362 FAILED
+117593,117594d117968
+< P   20 | sti r4 400 108
+<        | -> store to 400 + 108 = 508 (with pc and mod 983)
+117599a117974
+> P   12 | zjmp 0 OK
+117604a117980
+> P   16 | ld 0 r15
+117665d118040
+< P   24 | add r2 r3 r2
+117667a118043
+> P   20 | add r2 r3 r2
+117680d118055
+< P   20 | add r2 r3 r2
+117690,117691d118064
+< P   16 | sti r4 383 144
+<        | -> store to 383 + 144 = 527 (with pc and mod 507)
+117769a118143
+> P   20 | live -2
+117774a118149,118150
+> P   24 | ldi -55 4 r4
+>        | -> load from -55 + 4 = -51 (with pc and mod 435)
+117793a118170
+> P   12 | zjmp 0 OK
+117810a118188
+> P   16 | zjmp -59 OK
+117815a118194
+> P   20 | xor 40 96 r15
+117892,117893d118270
+< P   24 | ldi -55 100 r4
+<        | -> load from -55 + 100 = 45 (with pc and mod 531)
+117897a118275
+> P   16 | live -2
+117922,117923d118299
+< P   20 | ldi -55 112 r4
+<        | -> load from -55 + 112 = 57 (with pc and mod 543)
+117982a118359
+> P   12 | zjmp 0 OK
+117991a118369,118371
+> P   24 | sti r4 383 4
+>        | -> store to 383 + 4 = 387 (with pc and mod 879)
+> P   20 | zjmp 362 FAILED
+118046c118426
+< P   16 | ld 0 r15
+---
+> P   20 | ld 0 r15
+118069a118450
+> P   24 | add r2 r3 r2
+118120,118121d118500
+< P   24 | sti r4 383 100
+<        | -> store to 383 + 100 = 483 (with pc and mod 975)
+118125a118505,118506
+> P   16 | ldi -38 72 r4
+>        | -> load from -38 + 72 = 34 (with pc and mod 503)
+118142,118143d118522
+< P   20 | sti r4 383 112
+<        | -> store to 383 + 112 = 495 (with pc and mod 987)
+118154a118534
+> P   12 | zjmp 0 OK
+118164a118545
+> P   24 | live -2
+118236a118618
+> P   20 | zjmp -59 OK
+118244,118245c118626
+< P   20 | add r2 r3 r2
+< P   16 | zjmp 0 OK
+---
+> P   24 | xor 8 96 r15
+118327a118709
+> P   20 | live -2
+118339a118722
+> P   12 | zjmp 0 OK
+118345a118729,118730
+> P   16 | sti r4 400 72
+>        | -> store to 400 + 72 = 472 (with pc and mod 947)
+118407c118792
+< P   16 | zjmp 0 OK
+---
+> P   24 | zjmp 362 FAILED
+118432a118818
+> P   16 | add r2 r3 r2
+118439d118824
+< P   20 | ld 0 r15
+118465a118851
+> P   24 | ld 0 r15
+118482d118867
+< P   24 | ld 0 r15
+118522a118908
+> P   12 | zjmp 0 OK
+118534a118921,118922
+> P   20 | ldi -38 40 r4
+>        | -> load from -38 + 40 = 2 (with pc and mod 471)
+118599d118986
+< P   16 | zjmp 0 OK
+118645a119033
+> P   24 | zjmp -59 OK
+118647d119034
+< P   20 | zjmp 0 OK
+118666a119054,119055
+> P   16 | ldi -55 76 r4
+>        | -> load from -55 + 76 = 21 (with pc and mod 507)
+118678d119066
+< P   24 | zjmp 0 OK
+118702a119091
+> P   12 | zjmp 0 OK
+118730a119120
+> P   24 | live -2
+118776a119167,119168
+> P   20 | sti r4 400 40
+>        | -> store to 400 + 40 = 440 (with pc and mod 915)
+118783d119174
+< P   16 | zjmp 0 OK
+118824d119214
+< P   20 | zjmp 0 OK
+118869c119259
+< P   24 | zjmp 0 OK
+---
+> P   20 | add r2 r3 r2
+118880a119271
+> P   12 | zjmp 0 OK
+118882a119274,119275
+> P   16 | sti r4 383 76
+>        | -> store to 383 + 76 = 459 (with pc and mod 951)
+118952c119345,119346
+< P   16 | zjmp 0 OK
+---
+> P   24 | ldi -38 8 r4
+>        | -> load from -38 + 8 = -30 (with pc and mod 439)
+118965a119360
+> P   16 | add r2 r3 r2
+119009d119403
+< P   20 | zjmp 0 OK
+119036d119429
+< P   24 | zjmp 0 OK
+119055a119449
+> P   12 | zjmp 0 OK
+119064a119459
+> P   16 | live -2
+119075a119471,119472
+> P   20 | ldi -55 44 r4
+>        | -> load from -55 + 44 = -11 (with pc and mod 475)
+119128a119526
+> P   16 | xor 80 96 r15
+119132d119529
+< P   16 | zjmp 0 OK
+119194c119591,119592
+< P   20 | zjmp 0 OK
+---
+> P   24 | sti r4 400 8
+>        | -> store to 400 + 8 = 408 (with pc and mod 883)
+119215d119612
+< P   24 | zjmp 0 OK
+119246a119644
+> P   12 | zjmp 0 OK
+119278a119677
+> P   24 | add r2 r3 r2
+119308a119708,119710
+> P   20 | sti r4 383 44
+>        | -> store to 383 + 44 = 427 (with pc and mod 919)
+> P   16 | zjmp 362 FAILED
+119316d119717
+< P   16 | zjmp 0 OK
+119340a119742
+> P   16 | ld 0 r15
+119364d119765
+< P   20 | zjmp 0 OK
+119400c119801
+< P   24 | zjmp 0 OK
+---
+> P   20 | add r2 r3 r2
+119423a119825
+> P   12 | zjmp 0 OK
+119491a119894
+> P   20 | live -2
+119498c119901,119902
+< P   16 | zjmp 0 OK
+---
+> P   24 | ldi -55 12 r4
+>        | -> load from -55 + 12 = -43 (with pc and mod 443)
+119515a119920
+> P   16 | zjmp -59 OK
+119540c119945
+< P   20 | zjmp 0 OK
+---
+> P   20 | xor 48 96 r15
+119580d119984
+< P   24 | zjmp 0 OK
+119595a120000
+> P   12 | zjmp 0 OK
+119609a120015
+> P   16 | live -2
+119671d120076
+< P   16 | zjmp 0 OK
+119721a120127,120128
+> P   24 | sti r4 383 12
+>        | -> store to 383 + 12 = 395 (with pc and mod 887)
+119723c120130
+< P   20 | zjmp 0 OK
+---
+> P   20 | zjmp 362 FAILED
+119749d120155
+< P   24 | zjmp 0 OK
+119753a120160
+> P   20 | ld 0 r15
+119770a120178
+> P   12 | zjmp 0 OK
+119817a120226
+> P   24 | add r2 r3 r2
+119839a120249,120250
+> P   16 | ldi -38 80 r4
+>        | -> load from -38 + 80 = 42 (with pc and mod 511)
+119847d120257
+< P   16 | zjmp 0 OK
+119903a120314
+> P   24 | live -2
+119905d120315
+< P   20 | zjmp 0 OK
+119931d120340
+< P   24 | zjmp 0 OK
+119939a120349
+> P   20 | zjmp -59 OK
+119950a120361
+> P   24 | xor 16 96 r15
+119957a120369
+> P   12 | zjmp 0 OK
+120036a120449
+> P   20 | live -2
+120039d120451
+< P   16 | zjmp 0 OK
+120053a120466,120467
+> P   16 | sti r4 400 80
+>        | -> store to 400 + 80 = 480 (with pc and mod 955)
+120078d120491
+< P   20 | zjmp 0 OK
+120121d120533
+< P   24 | zjmp 0 OK
+120136a120549
+> P   24 | zjmp 362 FAILED
+120145a120559
+> P   16 | add r2 r3 r2
+120187a120602
+> P   24 | ld 0 r15
+120225d120639
+< P   16 | zjmp 0 OK
+120267c120681,120682
+< P   20 | zjmp 0 OK
+---
+> P   20 | ldi -38 48 r4
+>        | -> load from -38 + 48 = 10 (with pc and mod 479)
+120302d120716
+< P   24 | zjmp 0 OK
+120373a120788
+> P   24 | zjmp -59 OK
+120383a120799,120800
+> P   16 | ldi -55 84 r4
+>        | -> load from -55 + 84 = 29 (with pc and mod 515)
+120391d120807
+< P   16 | zjmp 0 OK
+120457d120872
+< P   20 | zjmp 0 OK
+120467a120883
+> P   24 | live -2
+120481d120896
+< P   24 | zjmp 0 OK
+120490a120906,120907
+> P   20 | sti r4 400 48
+>        | -> store to 400 + 48 = 448 (with pc and mod 923)
+120582c120999
+< P   16 | zjmp 0 OK
+---
+> P   20 | add r2 r3 r2
+120614a121032,121033
+> P   16 | sti r4 383 84
+>        | -> store to 383 + 84 = 467 (with pc and mod 959)
+120635d121053
+< P   20 | zjmp 0 OK
+120668d121085
+< P   24 | zjmp 0 OK
+120684a121102,121103
+> P   24 | ldi -38 16 r4
+>        | -> load from -38 + 16 = -22 (with pc and mod 447)
+120697a121117
+> P   16 | add r2 r3 r2
+120759d121178
+< P   16 | zjmp 0 OK
+120781a121201
+> P   16 | live -2
+120807c121227,121228
+< P   20 | zjmp 0 OK
+---
+> P   20 | ldi -55 52 r4
+>        | -> load from -55 + 52 = -3 (with pc and mod 483)
+120847d121267
+< P   24 | zjmp 0 OK
+120854a121275
+> P   16 | xor 88 96 r15
+120921a121343,121344
+> P   24 | sti r4 400 16
+>        | -> store to 400 + 16 = 416 (with pc and mod 891)
+120944d121366
+< P   16 | zjmp 0 OK
+121004d121425
+< P   20 | zjmp 0 OK
+121014a121436
+> P   24 | add r2 r3 r2
+121036d121457
+< P   24 | zjmp 0 OK
+121037a121459,121461
+> P   20 | sti r4 383 52
+>        | -> store to 383 + 52 = 435 (with pc and mod 927)
+> P   16 | zjmp 362 FAILED
+121091a121516
+> P   16 | ld 0 r15
+121113c121538
+< P   16 | zjmp 0 OK
+---
+> P   20 | add r2 r3 r2
+121169d121593
+< P   20 | zjmp 0 OK
+121196d121619
+< P   24 | zjmp 0 OK
+121209a121633
+> P   20 | live -2
+121219a121644,121645
+> P   24 | ldi -55 20 r4
+>        | -> load from -55 + 20 = -35 (with pc and mod 451)
+121265a121692
+> P   16 | zjmp -59 OK
+121274a121702
+> P   20 | xor 56 96 r15
+121312d121739
+< P   16 | zjmp 0 OK
+121350d121776
+< P   20 | zjmp 0 OK
+121351a121778
+> P   16 | live -2
+121382d121808
+< P   24 | zjmp 0 OK
+121449a121876,121878
+> P   24 | sti r4 383 20
+>        | -> store to 383 + 20 = 403 (with pc and mod 895)
+> P   20 | zjmp 362 FAILED
+121489d121917
+< P   16 | zjmp 0 OK
+121493a121922
+> P   20 | ld 0 r15
+121531d121959
+< P   20 | zjmp 0 OK
+121544a121973
+> P   24 | add r2 r3 r2
+121573d122001
+< P   24 | zjmp 0 OK
+121574a122003,122004
+> P   16 | ldi -38 88 r4
+>        | -> load from -38 + 88 = 50 (with pc and mod 519)
+121630a122061
+> P   24 | live -2
+121657d122087
+< P   16 | zjmp 0 OK
+121663a122094
+> P   20 | zjmp -59 OK
+121666a122098
+> P   24 | xor 24 96 r15
+121717d122148
+< P   20 | zjmp 0 OK
+121744d122174
+< P   24 | zjmp 0 OK
+121753a122184
+> P   20 | live -2
+121805a122237,122238
+> P   16 | sti r4 400 88
+>        | -> store to 400 + 88 = 488 (with pc and mod 963)
+121832d122264
+< P   16 | zjmp 0 OK
+121856a122289
+> P   24 | zjmp 362 FAILED
+121894d122326
+< P   20 | zjmp 0 OK
+121895a122328
+> P   16 | add r2 r3 r2
+121902a122336
+> P   24 | ld 0 r15
+121914d122347
+< P   24 | zjmp 0 OK
+121993a122427,122428
+> P   20 | ldi -38 56 r4
+>        | -> load from -38 + 56 = 18 (with pc and mod 487)
+122018d122452
+< P   16 | zjmp 0 OK
+122066d122499
+< P   20 | zjmp 0 OK
+122092a122526
+> P   24 | zjmp -59 OK
+122114d122547
+< P   24 | zjmp 0 OK
+122121a122555,122556
+> P   16 | ldi -55 92 r4
+>        | -> load from -55 + 92 = 37 (with pc and mod 523)
+122178a122614
+> P   24 | live -2
+122199d122634
+< P   16 | zjmp 0 OK
+122200a122636,122637
+> P   20 | sti r4 400 56
+>        | -> store to 400 + 56 = 456 (with pc and mod 931)
+122236d122672
+< P   20 | zjmp 0 OK
+122285d122720
+< P   24 | zjmp 0 OK
+122294a122730
+> P   20 | add r2 r3 r2
+122352a122789,122790
+> P   16 | sti r4 383 92
+>        | -> store to 383 + 92 = 475 (with pc and mod 967)
+122383d122820
+< P   16 | zjmp 0 OK
+122393a122831,122832
+> P   24 | ldi -38 24 r4
+>        | -> load from -38 + 24 = -14 (with pc and mod 455)
+122433d122871
+< P   20 | zjmp 0 OK
+122434a122873
+> P   16 | add r2 r3 r2
+122451d122889
+< P   24 | zjmp 0 OK
+122532a122971
+> P   16 | live -2
+122538a122978,122979
+> P   20 | ldi -55 60 r4
+>        | -> load from -55 + 60 = 5 (with pc and mod 491)
+122558d122998
+< P   16 | zjmp 0 OK
+122575a123016
+> P   16 | xor 96 96 r15
+122615d123055
+< P   20 | zjmp 0 OK
+122628a123069,123070
+> P   24 | sti r4 400 24
+>        | -> store to 400 + 24 = 424 (with pc and mod 899)
+122639d123080
+< P   24 | zjmp 0 OK
+122712a123154
+> P   24 | add r2 r3 r2
+122751d123192
+< P   16 | zjmp 0 OK
+122754a123196,123198
+> P   20 | sti r4 383 60
+>        | -> store to 383 + 60 = 443 (with pc and mod 935)
+> P   16 | zjmp 362 OK
+122792d123235
+< P   20 | zjmp 0 OK
+122837d123279
+< P   24 | zjmp 0 OK
+122842a123285
+> P   20 | add r2 r3 r2
+122934d123376
+< P   16 | zjmp 0 OK
+122937a123380
+> P   20 | live -2
+122943a123387,123389
+> P   24 | ldi -55 28 r4
+>        | -> load from -55 + 28 = -27 (with pc and mod 459)
+> P   16 | zjmp 0 OK
+122977d123422
+< P   20 | zjmp 0 OK
+123000a123446
+> P   20 | xor 64 96 r15
+123009d123454
+< P   24 | zjmp 0 OK
+123098d123542
+< P   16 | zjmp 0 OK
+123116a123561
+> P   16 | zjmp 0 OK
+123166d123610
+< P   20 | zjmp 0 OK
+123179a123624,123626
+> P   24 | sti r4 383 28
+>        | -> store to 383 + 28 = 411 (with pc and mod 903)
+> P   20 | zjmp 362 FAILED
+123213a123661
+> P   20 | ld 0 r15
+123263a123712
+> P   24 | add r2 r3 r2
+123301a123751
+> P   16 | zjmp 0 OK
+123357a123808
+> P   24 | live -2
+123394a123846
+> P   20 | zjmp -59 OK
+123399a123852
+> P   24 | xor 32 96 r15
+123476a123930,123931
+> P   20 | live -2
+> P   16 | zjmp 0 OK
+123565a124021
+> P   24 | zjmp 362 FAILED
+123629a124086
+> P   24 | ld 0 r15
+123645a124103
+> P   16 | zjmp 0 OK
+123712a124171,124172
+> P   20 | ldi -38 64 r4
+>        | -> load from -38 + 64 = 26 (with pc and mod 495)
+123802a124263
+> P   24 | zjmp -59 OK
+123833a124295
+> P   16 | zjmp 0 OK
+123845a124308
+> P   28 | ld 0 r2
+123883a124347
+> P   24 | live -2
+123887a124352
+> P   28 | ld 4 r3
+123919a124385,124386
+> P   20 | sti r4 400 64
+>        | -> store to 400 + 64 = 464 (with pc and mod 939)
+123923a124391
+> P   28 | ld 96 r5
+124012a124481,124482
+> P   20 | add r2 r3 r2
+> P   16 | zjmp 0 OK
+124092a124563,124564
+> P   24 | ldi -38 32 r4
+>        | -> load from -38 + 32 = -6 (with pc and mod 463)
+124164a124637,124638
+> P   28 | sti r1 51 1
+>        | -> store to 51 + 1 = 52 (with pc and mod 504)
+124175a124650
+> P   16 | zjmp 0 OK
+124188a124664
+> P   28 | st r1 6
+124244a124721,124722
+> P   20 | ldi -55 68 r4
+>        | -> load from -55 + 68 = 13 (with pc and mod 499)
+124276a124755
+> P   28 | live -2
+124323a124803,124804
+> P   24 | sti r4 400 32
+>        | -> store to 400 + 32 = 432 (with pc and mod 907)
+124342a124824
+> P   16 | zjmp 0 OK
+124409d124890
+< P   28 | live 57671936
+124414a124896
+> P   24 | add r2 r3 r2
+124440a124923,124924
+> P   20 | sti r4 383 68
+>        | -> store to 383 + 68 = 451 (with pc and mod 943)
+124504a124989,124990
+> P   28 | ldi -38 0 r4
+>        | -> load from -38 + 0 = -38 (with pc and mod 431)
+124530a125017,125018
+> P   20 | add r2 r3 r2
+> P   16 | zjmp 0 OK
+124622a125111
+> P   20 | live -2
+124624,124625c125113,125114
+< P   28 | ldi -38 96 r4
+<        | -> load from -38 + 96 = 58 (with pc and mod 527)
+---
+> P   24 | ldi -55 36 r4
+>        | -> load from -55 + 36 = -19 (with pc and mod 467)
+124681a125171
+> P   20 | xor 72 96 r15
+124703a125194
+> P   16 | zjmp 0 OK
+124709a125201,125202
+> P   28 | sti r4 400 0
+>        | -> store to 400 + 0 = 400 (with pc and mod 875)
+124799a125293
+> P   28 | add r2 r3 r2
+124857,124858c125351,125352
+< P   28 | sti r4 400 96
+<        | -> store to 400 + 96 = 496 (with pc and mod 971)
+---
+> P   24 | sti r4 383 36
+>        | -> store to 383 + 36 = 419 (with pc and mod 911)
+124860a125355
+> P   20 | zjmp 362 FAILED
+124871a125367
+> P   16 | zjmp 0 OK
+124876a125373
+> P   20 | ld 0 r15
+124935d125431
+< P   28 | add r2 r3 r2
+124937a125434
+> P   24 | add r2 r3 r2
+125035a125533
+> P   24 | live -2
+125039a125538,125539
+> P   28 | ldi -55 4 r4
+>        | -> load from -55 + 4 = -51 (with pc and mod 435)
+125058a125559
+> P   16 | zjmp 0 OK
+125075a125577
+> P   20 | zjmp -59 OK
+125080a125583
+> P   24 | xor 40 96 r15
+125156,125157d125658
+< P   28 | ldi -55 100 r4
+<        | -> load from -55 + 100 = 45 (with pc and mod 531)
+125161a125663
+> P   20 | live -2
+125241a125744
+> P   16 | zjmp 0 OK
+125250a125754,125756
+> P   28 | sti r4 383 4
+>        | -> store to 383 + 4 = 387 (with pc and mod 879)
+> P   24 | zjmp 362 FAILED
+125303a125810
+> P   24 | ld 0 r15
+125330a125838
+> P   28 | add r2 r3 r2
+125379,125380d125886
+< P   28 | sti r4 383 100
+<        | -> store to 383 + 100 = 483 (with pc and mod 975)
+125384a125891,125892
+> P   20 | ldi -38 72 r4
+>        | -> load from -38 + 72 = 34 (with pc and mod 503)
+125413a125922
+> P   16 | zjmp 0 OK
+125423a125933
+> P   28 | live -2
+125482d125991
+< P   28 | add r2 r3 r2
+125494a126004
+> P   24 | zjmp -59 OK
+125501a126012
+> P   28 | xor 8 96 r15
+125576d126086
+< P   28 | live -2
+125582a126093
+> P   24 | live -2
+125594a126106
+> P   16 | zjmp 0 OK
+125600a126113,126114
+> P   20 | sti r4 400 72
+>        | -> store to 400 + 72 = 472 (with pc and mod 947)
+125610d126123
+< P   28 | xor 104 96 r15
+125666a126180
+> P   28 | zjmp 362 FAILED
+125688a126203
+> P   20 | add r2 r3 r2
+125719a126235
+> P   28 | ld 0 r15
+125787c126303,126304
+< P   28 | zjmp 362 FAILED
+---
+> P   24 | ldi -38 40 r4
+>        | -> load from -38 + 40 = 2 (with pc and mod 471)
+125839d126355
+< P   28 | ld 0 r15
+125901a126418
+> P   28 | zjmp -59 OK
+125922a126440,126441
+> P   20 | ldi -55 76 r4
+>        | -> load from -55 + 76 = 21 (with pc and mod 507)
+125984a126504
+> P   28 | live -2
+126026d126545
+< P   28 | zjmp -59 OK
+126028a126548,126549
+> P   24 | sti r4 400 40
+>        | -> store to 400 + 40 = 440 (with pc and mod 915)
+126119c126640
+< P   28 | live -2
+---
+> P   24 | add r2 r3 r2
+126132a126654,126655
+> P   20 | sti r4 383 76
+>        | -> store to 383 + 76 = 459 (with pc and mod 951)
+126198a126722,126723
+> P   28 | ldi -38 8 r4
+>        | -> load from -38 + 8 = -30 (with pc and mod 439)
+126209a126735
+> P   20 | add r2 r3 r2
+126306a126833
+> P   20 | live -2
+126318,126319c126845,126846
+< P   28 | ldi -38 104 r4
+<        | -> load from -38 + 104 = 66 (with pc and mod 535)
+---
+> P   24 | ldi -55 44 r4
+>        | -> load from -55 + 44 = -11 (with pc and mod 475)
+126373a126901
+> P   20 | xor 80 96 r15
+126434a126963,126964
+> P   28 | sti r4 400 8
+>        | -> store to 400 + 8 = 408 (with pc and mod 883)
+126513a127044
+> P   28 | add r2 r3 r2
+126545,126546c127076,127078
+< P   28 | sti r4 400 104
+<        | -> store to 400 + 104 = 504 (with pc and mod 979)
+---
+> P   24 | sti r4 383 44
+>        | -> store to 383 + 44 = 427 (with pc and mod 919)
+> P   20 | zjmp 362 FAILED
+126581a127114
+> P   20 | ld 0 r15
+126638c127171
+< P   28 | add r2 r3 r2
+---
+> P   24 | add r2 r3 r2
+126728a127262
+> P   24 | live -2
+126733a127268,127269
+> P   28 | ldi -55 12 r4
+>        | -> load from -55 + 12 = -43 (with pc and mod 443)
+126750a127287
+> P   20 | zjmp -59 OK
+126773a127311
+> P   24 | xor 48 96 r15
+126843,126844c127381
+< P   28 | ldi -55 108 r4
+<        | -> load from -55 + 108 = 53 (with pc and mod 539)
+---
+> P   20 | live -2
+126954a127492,127493
+> P   28 | sti r4 383 12
+>        | -> store to 383 + 12 = 395 (with pc and mod 887)
+126955a127495
+> P   24 | zjmp 362 FAILED
+126986a127527
+> P   24 | ld 0 r15
+127047a127589
+> P   28 | add r2 r3 r2
+127073,127074c127615,127616
+< P   28 | sti r4 383 108
+<        | -> store to 383 + 108 = 491 (with pc and mod 983)
+---
+> P   20 | ldi -38 80 r4
+>        | -> load from -38 + 80 = 42 (with pc and mod 511)
+127138a127681
+> P   28 | live -2
+127166d127708
+< P   28 | add r2 r3 r2
+127174a127717
+> P   24 | zjmp -59 OK
+127185a127729
+> P   28 | xor 16 96 r15
+127252d127795
+< P   28 | live -2
+127265a127809
+> P   24 | live -2
+127283a127828,127829
+> P   20 | sti r4 400 80
+>        | -> store to 400 + 80 = 480 (with pc and mod 955)
+127306d127851
+< P   28 | xor 112 96 r15
+127364a127910
+> P   28 | zjmp 362 FAILED
+127373a127920
+> P   20 | add r2 r3 r2
+127415a127963
+> P   28 | ld 0 r15
+127487c128035,128036
+< P   28 | zjmp 362 FAILED
+---
+> P   24 | ldi -38 48 r4
+>        | -> load from -38 + 48 = 10 (with pc and mod 479)
+127527d128075
+< P   28 | ld 0 r15
+127595a128144
+> P   28 | zjmp -59 OK
+127607a128157,128158
+> P   20 | ldi -55 84 r4
+>        | -> load from -55 + 84 = 29 (with pc and mod 515)
+127687a128239
+> P   28 | live -2
+127706d128257
+< P   28 | zjmp -59 OK
+127708a128260,128261
+> P   24 | sti r4 400 48
+>        | -> store to 400 + 48 = 448 (with pc and mod 923)
+127797d128349
+< P   28 | live -2
+127799a128352
+> P   24 | add r2 r3 r2
+127835a128389,128390
+> P   20 | sti r4 383 84
+>        | -> store to 383 + 84 = 467 (with pc and mod 959)
+127901a128457,128458
+> P   28 | ldi -38 16 r4
+>        | -> load from -38 + 16 = -22 (with pc and mod 447)
+127916a128474
+> P   20 | add r2 r3 r2
+127995a128554
+> P   20 | live -2
+128016,128017d128574
+< P   28 | ldi -38 112 r4
+<        | -> load from -38 + 112 = 74 (with pc and mod 543)
+128022a128580,128581
+> P   24 | ldi -55 52 r4
+>        | -> load from -55 + 52 = -3 (with pc and mod 483)
+128068a128628
+> P   20 | xor 88 96 r15
+128135a128696,128697
+> P   28 | sti r4 400 16
+>        | -> store to 400 + 16 = 416 (with pc and mod 891)
+128224a128787
+> P   28 | add r2 r3 r2
+128249,128250c128812,128814
+< P   28 | sti r4 400 112
+<        | -> store to 400 + 112 = 512 (with pc and mod 475)
+---
+> P   24 | sti r4 383 52
+>        | -> store to 383 + 52 = 435 (with pc and mod 927)
+> P   20 | zjmp 362 FAILED
+128301a128866
+> P   20 | ld 0 r15
+128325c128890
+< P   28 | add r2 r3 r2
+---
+> P   24 | add r2 r3 r2
+128420a128986
+> P   24 | live -2
+128429a128996,128997
+> P   28 | ldi -55 20 r4
+>        | -> load from -55 + 20 = -35 (with pc and mod 451)
+128474a129043
+> P   20 | zjmp -59 OK
+128484a129054
+> P   24 | xor 56 96 r15
+128556,128557d129125
+< P   28 | ldi -55 116 r4
+<        | -> load from -55 + 116 = 61 (with pc and mod 547)
+128558a129127
+> P   20 | live -2
+128655a129225,129227
+> P   28 | sti r4 383 20
+>        | -> store to 383 + 20 = 403 (with pc and mod 895)
+> P   24 | zjmp 362 FAILED
+128695a129268
+> P   24 | ld 0 r15
+128743a129317
+> P   28 | add r2 r3 r2
+128775,128776c129349,129350
+< P   28 | sti r4 383 116
+<        | -> store to 383 + 116 = 499 (with pc and mod 991)
+---
+> P   20 | ldi -38 88 r4
+>        | -> load from -38 + 88 = 50 (with pc and mod 519)
+128832a129407
+> P   28 | live -2
+128861d129435
+< P   28 | add r2 r3 r2
+128867a129442
+> P   24 | zjmp -59 OK
+128870a129446
+> P   28 | xor 24 96 r15
+128947d129522
+< P   28 | live -2
+128952a129528
+> P   24 | live -2
+129003a129580,129581
+> P   20 | sti r4 400 88
+>        | -> store to 400 + 88 = 488 (with pc and mod 963)
+129012d129589
+< P   28 | xor 120 96 r15
+129055a129633
+> P   28 | zjmp 362 FAILED
+129097a129676
+> P   20 | add r2 r3 r2
+129105a129685
+> P   28 | ld 0 r15
+129190c129770,129771
+< P   28 | zjmp 362 FAILED
+---
+> P   24 | ldi -38 56 r4
+>        | -> load from -38 + 56 = 18 (with pc and mod 487)
+129221d129801
+< P   28 | ld 0 r15
+129285a129866
+> P   28 | zjmp -59 OK
+129313a129895,129896
+> P   20 | ldi -55 92 r4
+>        | -> load from -55 + 92 = 37 (with pc and mod 523)
+129369a129953
+> P   28 | live -2
+129395c129979,129980
+< P   28 | zjmp -59 OK
+---
+> P   24 | sti r4 400 56
+>        | -> store to 400 + 56 = 456 (with pc and mod 931)
+129485c130070
+< P   28 | live -2
+---
+> P   24 | add r2 r3 r2
+129540a130126,130127
+> P   20 | sti r4 383 92
+>        | -> store to 383 + 92 = 475 (with pc and mod 967)
+129581a130169,130170
+> P   28 | ldi -38 24 r4
+>        | -> load from -38 + 24 = -14 (with pc and mod 455)
+129620a130210
+> P   20 | add r2 r3 r2
+129713a130304
+> P   20 | live -2
+129721,129722c130312,130313
+< P   28 | ldi -38 120 r4
+<        | -> load from -38 + 120 = 82 (with pc and mod 551)
+---
+> P   24 | ldi -55 60 r4
+>        | -> load from -55 + 60 = 5 (with pc and mod 491)
+129755a130347
+> P   20 | xor 96 96 r15
+129809a130402,130403
+> P   28 | sti r4 400 24
+>        | -> store to 400 + 24 = 424 (with pc and mod 899)
+129892a130487
+> P   28 | add r2 r3 r2
+129933a130529,130531
+> P   24 | sti r4 383 60
+>        | -> store to 383 + 60 = 443 (with pc and mod 935)
+> P   20 | zjmp 362 OK
+130017a130616
+> P   24 | add r2 r3 r2
+130066,130067d130664
+< P   28 | ldi -55 120 r4
+<        | -> load from -55 + 120 = 65 (with pc and mod 551)
+130112a130710
+> P   24 | live -2
+130117a130716,130718
+> P   28 | ldi -55 28 r4
+>        | -> load from -55 + 28 = -27 (with pc and mod 459)
+> P   20 | zjmp 0 OK
+130173a130775
+> P   24 | xor 64 96 r15
+130271,130272d130872
+< P   28 | sti r4 383 120
+<        | -> store to 383 + 120 = 503 (with pc and mod 995)
+130284a130885
+> P   20 | zjmp 0 OK
+130349a130951,130953
+> P   28 | sti r4 383 28
+>        | -> store to 383 + 28 = 411 (with pc and mod 903)
+> P   24 | zjmp 362 FAILED
+130375d130978
+< P   28 | add r2 r3 r2
+130382a130986
+> P   24 | ld 0 r15
+130431a131036
+> P   28 | add r2 r3 r2
+130460d131064
+< P   28 | live -2
+130467a131072
+> P   20 | zjmp 0 OK
+130522c131127
+< P   28 | xor 124 96 r15
+---
+> P   28 | live -2
+130558a131164
+> P   24 | zjmp -59 OK
+130563a131170
+> P   28 | xor 32 96 r15
+130645a131253,131254
+> P   24 | live -2
+> P   20 | zjmp 0 OK
+130697d131305
+< P   28 | zjmp 362 FAILED
+130728d131335
+< P   28 | ld 0 r15
+130734a131342
+> P   28 | zjmp 362 FAILED
+130796a131405
+> P   28 | ld 0 r15
+130814a131424
+> P   20 | zjmp 0 OK
+130883a131494,131495
+> P   24 | ldi -38 64 r4
+>        | -> load from -38 + 64 = 26 (with pc and mod 495)
+130911d131522
+< P   28 | zjmp -59 OK
+130972a131584
+> P   28 | zjmp -59 OK
+130996d131607
+< P   28 | live -2
+131000a131612
+> P   20 | zjmp 0 OK
+131012a131625
+> P   32 | ld 0 r2
+131052a131666
+> P   28 | live -2
+131056a131671
+> P   32 | ld 4 r3
+131089a131705,131706
+> P   24 | sti r4 400 64
+>        | -> store to 400 + 64 = 464 (with pc and mod 939)
+131093a131711
+> P   32 | ld 96 r5
+131182a131801,131802
+> P   24 | add r2 r3 r2
+> P   20 | zjmp 0 OK
+131220,131221d131839
+< P   28 | ldi -38 124 r4
+<        | -> load from -38 + 124 = 86 (with pc and mod 555)
+131263a131882,131883
+> P   28 | ldi -38 32 r4
+>        | -> load from -38 + 32 = -6 (with pc and mod 463)
+131331a131952,131953
+> P   32 | sti r1 51 1
+>        | -> store to 51 + 1 = 52 (with pc and mod 504)
+131344a131967
+> P   20 | zjmp 0 OK
+131357a131981
+> P   32 | st r1 6
+131414a132039,132040
+> P   24 | ldi -55 68 r4
+>        | -> load from -55 + 68 = 13 (with pc and mod 499)
+131444a132071
+> P   32 | live -2
+131489a132117,132118
+> P   28 | sti r4 400 32
+>        | -> store to 400 + 32 = 432 (with pc and mod 907)
+131570d132198
+< P   32 | live 57671936
+131574,131575d132201
+< P   28 | ldi -55 124 r4
+<        | -> load from -55 + 124 = 69 (with pc and mod 555)
+131577a132204
+> P   28 | add r2 r3 r2
+131597a132225,132226
+> P   24 | sti r4 383 68
+>        | -> store to 383 + 68 = 451 (with pc and mod 943)
+131663a132293,132294
+> P   32 | ldi -38 0 r4
+>        | -> load from -38 + 0 = -38 (with pc and mod 431)
