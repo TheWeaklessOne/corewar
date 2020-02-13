@@ -34,8 +34,6 @@ void				do_cycle(t_vm *v)
 	c = v->curs;
 	while (c)
 	{
-		if (v->global == 15432 && c->p == 1)
-			printf("");
 		if (c->cyc_before_op <= 0)
 			if ((c->operation = v->arena[c->pos]) >= 0x01
 				&& c->operation <= 0x10)
@@ -73,8 +71,8 @@ int					war_coming(t_vm *v)
 		return (print_arena(v, 32) + 1);
 	while (++v->global)
 	{
-		if (v->global == 24402)
-			printf("");
+		//if (v->global == 3074)
+			printf("%d\n", v->global);
 		if (v->l == 1)
 			ft_printf("It is now cycle %lu\n", v->global);
 		do_cycle(v);
