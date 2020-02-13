@@ -6,7 +6,7 @@
 /*   By: stross <stross@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/10 17:53:29 by stross            #+#    #+#             */
-/*   Updated: 2020/02/11 14:38:37 by stross           ###   ########.fr       */
+/*   Updated: 2020/02/12 16:43:11 by stross           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@ void		write_command_code(int fd, int name)
 	static int	arr[16] = { 1, 16, 11, 4, 5, 6 ,7 ,8, 9, 10, 3, 12, 14, 13, 15, 2 };
 
 	octet = arr[name - 1];
-	printf("%d", octet);
 	write(fd, &octet, 1);
 }
 
@@ -30,7 +29,7 @@ int			get_label_distance(t_command *command, t_command **commands, char *label, 
 	int		i;
 
 	i = 0;
-	lab = -1;
+	lab = 0; //was -1
 	dist = 0;
 	while (commands[i])
 	{
@@ -42,22 +41,24 @@ int			get_label_distance(t_command *command, t_command **commands, char *label, 
 	}
 	if (lab > comm)
 	{
-		while (comm <= lab)
+		while (comm < lab)
 		{
-			comm++;
 			dist += commands[comm]->byte_size;
+			comm++;
 		}
 		*mod = 1; //POSITIVE
 	}
 	else if (lab < comm)
 	{
-		while (comm > lab + 1)
+		while (comm > lab)
 		{
-			lab++;
 			dist += commands[lab]->byte_size;
+			lab++;
 		}
 		*mod = 2; // NEGATIVE
 	}
+	else
+		return (-1);
 	free(label);
 	return (dist);
 }
@@ -96,7 +97,11 @@ void		write_command(int fd, t_command *command, t_command **commands)
 	else
 	{
 		write_command_code(fd, command->name);
-		if (command->name != 9 && command->name != 12 && command->name != 15)
-
+		if (command->name != 9 && command->name != 12 && command->name != 15 && command->name != 0)
+			write_arg_type(command->command, fd, command->name);
+		if (command->name == 9 || command->name == 10 || command->name == 3 || command->name == 12 || command->name == 13 || command->name == 15)
+			main_write(fd, command, commands, 2);
+		else
+			main_write(fd, command, commands, 4);
 	}
 }

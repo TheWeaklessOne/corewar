@@ -6,7 +6,7 @@
 /*   By: stross <stross@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/31 14:34:41 by stross            #+#    #+#             */
-/*   Updated: 2020/02/08 14:50:47 by stross           ###   ########.fr       */
+/*   Updated: 2020/02/12 15:47:20 by stross           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,13 @@ void	remove_comments(char **arr)
 		{
 			if (arr[i][si] == COMMENT_CHAR)
 			{
-				arr[i][si] = '\0';
+//				arr[i][si] = '\0';
+//				break ;
+				while (arr[i][si])
+				{
+					arr[i][si] = '\0';
+					si++;
+				}
 				break ;
 			}
 			si++;

@@ -43,7 +43,7 @@ static void	open_and_close(int *fd, char **argv, char mod)
 		*fd = open(argv[1], O_RDONLY);
 		if (*fd == -1)
 		{
-			write(2, "Failed to open file\n", 21);
+			write(2, "Failed to open file\n", 20);
 			exit(1);
 		}
 	}
@@ -52,7 +52,7 @@ static void	open_and_close(int *fd, char **argv, char mod)
 		*fd = close(*fd);
 		if (*fd == -1)
 		{
-			write(2, "Failed to close file\n", 22);
+			write(2, "Failed to close file\n", 21);
 			exit(1);
 		}
 	}
