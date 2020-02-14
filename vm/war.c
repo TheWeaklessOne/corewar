@@ -72,7 +72,7 @@ int					war_coming(t_vm *v)
 	while (++v->global)
 	{
 		//if (v->global == 3074)
-			printf("%d\n", v->global);
+		//	printf("%lu\n", v->global);
 		if (v->l == 1)
 			ft_printf("It is now cycle %lu\n", v->global);
 		do_cycle(v);
