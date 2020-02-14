@@ -44,11 +44,22 @@ void				do_sti(t_vm *vm, t_cur *cur)
 	read_args(vm, cur);
 	if (cur->args_type[1] == T_REG)
 		cur->args[1] = cur->reg[cur->args[1] - 1];
-	else if (cur->args_type[2] == T_REG)
+	if (cur->args_type[2] == T_REG)
 		cur->args[2] = cur->reg[cur->args[2] - 1];
 	arg.hex = cur->reg[cur->args[0] - 1];
 	skip = (cur->args[1] + cur->args[2]) % IDX_MOD;
-    place_to_arena(vm, arg.hex, cur->pos, skip);
+	if (-skip > cur->pos)
+	{
+		skip += cur->pos;
+		skip %= MEM_SIZE;
+		skip = MEM_SIZE + skip;
+		vm->arena[skip] = arg.f.o4;
+		vm->arena[(skip + 1) % MEM_SIZE] = arg.f.o3;
+		vm->arena[(skip + 2) % MEM_SIZE] = arg.f.o2;
+		vm->arena[(skip + 3) % MEM_SIZE] = arg.f.o1;
+	}
+	else
+		place_to_arena(vm, arg.hex, cur->pos, skip);
 	if (vm->l == 1)
 	{
 		ft_printf("sti r%d %d %d\n", cur->args[0], cur->args[1], cur->args[2]);
@@ -89,12 +100,19 @@ void				do_zjmp(t_vm *vm, t_cur *cur)
 {
 	int				dir;
 
-	dir = read_t_dir(vm, ((cur->pos + 1) % MEM_SIZE), cur->arg_size[0]);
+	dir = read_t_dir(vm, ((cur->pos + 1) % MEM_SIZE), cur->arg_size[0]) % IDX_MOD;
 	if (vm->l == 1)
 		ft_printf("zjmp %d %s", dir, cur->carry ? "OK\n" : "FAILED\n");
 	if (cur->carry)
 	{
-		cur->pos = (cur->pos + dir % IDX_MOD) % MEM_SIZE;
+		if (-dir > cur->pos)
+		{
+			dir += cur->pos;
+			dir %= MEM_SIZE;
+			(cur->carry) ? cur->pos = MEM_SIZE + dir : 0;
+		}
+		else
+			cur->pos = (cur->pos + dir) % MEM_SIZE;
 		vm->zj = 1;
 	}
 }

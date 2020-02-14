@@ -29,22 +29,23 @@ void				do_st(t_vm *vm, t_cur *cur)
 		skip = read_t_dir(vm, (cur->pos + 2 + cur->arg_size[0]) % MEM_SIZE, cur->arg_size[1]) % IDX_MOD;
 		cur->args[1] = skip;
 		arg.hex = cur->reg[cur->args[0] - 1];
-		if (skip < 0)
+		if (-skip > cur->pos)
 		{
-			if (-skip > cur->pos)  // ?????????????????????????????????????????????
-			{
-				vm->arena[MEM_SIZE + (cur->pos + skip)] = arg.f.o4;
-				vm->arena[MEM_SIZE + (cur->pos + (skip - 1) % IDX_MOD)] = arg.f.o3;
-				vm->arena[MEM_SIZE + (cur->pos + (skip - 2) % IDX_MOD)] = arg.f.o2;
-				vm->arena[MEM_SIZE + (cur->pos + (skip - 3) % IDX_MOD)] = arg.f.o1;
-				(vm->l == 1) ? ft_printf("st r%d %d\n", cur->args[0], cur->args[1]) : 0;
-				return ;
-			}
+			skip += cur->pos;
+			skip %= MEM_SIZE;
+			skip = MEM_SIZE + skip;
+			vm->arena[skip] = arg.f.o4;
+			vm->arena[(skip + 1) % MEM_SIZE] = arg.f.o3;
+			vm->arena[(skip + 2) % MEM_SIZE] = arg.f.o2;
+			vm->arena[(skip + 3) % MEM_SIZE] = arg.f.o1;
 		}
-		vm->arena[(cur->pos + skip) % MEM_SIZE] = arg.f.o4;
-		vm->arena[(cur->pos + (skip + 1) % IDX_MOD) % MEM_SIZE] = arg.f.o3;
-		vm->arena[(cur->pos + (skip + 2) % IDX_MOD) % MEM_SIZE] = arg.f.o2;
-		vm->arena[(cur->pos + (skip + 3) % IDX_MOD) % MEM_SIZE] = arg.f.o1;
+		else
+		{
+			vm->arena[(cur->pos + skip) % MEM_SIZE] = arg.f.o4;
+			vm->arena[(cur->pos + (skip + 1) % IDX_MOD) % MEM_SIZE] = arg.f.o3;
+			vm->arena[(cur->pos + (skip + 2) % IDX_MOD) % MEM_SIZE] = arg.f.o2;
+			vm->arena[(cur->pos + (skip + 3) % IDX_MOD) % MEM_SIZE] = arg.f.o1;
+		}
 	}
 	(vm->l == 1) ? ft_printf("st r%d %d\n", cur->args[0], cur->args[1]) : 0;
 }
