@@ -71,8 +71,8 @@ int					war_coming(t_vm *v)
 		return (print_arena(v, 32) + 1);
 	while (++v->global)
 	{
-		//if (v->global == 3074)
-		//	printf("%lu\n", v->global);
+		if (v->global == 4671)
+			printf("");
 		if (v->l == 1)
 			ft_printf("It is now cycle %lu\n", v->global);
 		do_cycle(v);
@@ -89,6 +89,7 @@ int					war_coming(t_vm *v)
 			}
 			check_count = v->cycles_to_die;
 			v->live_count = 0;
+			v->lives_in_cur_period = 0;
 		}
 		if (v->curs_alive == 0)
 			break ;

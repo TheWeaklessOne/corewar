@@ -85,6 +85,8 @@ void			init(t_vm *vm)
 	i = -1;
 	vm->dump = -1;
 	vm->color = -1;
+	vm->last_live = 0;
+	vm->lives_in_cur_period = 0;
 	vm->d = -1;
 	vm->zj = 0;
 	vm->players = 0;

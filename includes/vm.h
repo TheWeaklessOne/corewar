@@ -113,6 +113,8 @@ typedef struct		s_vm
 	int				cycles_to_die;
 	int				checks;
 	unsigned int	live_count;
+	unsigned long	last_live;
+	unsigned int	lives_in_cur_period;
 	t_cur			*curs;
 	unsigned		curs_alive; // количество живых кареток
 	t_champion		*last_champ;
