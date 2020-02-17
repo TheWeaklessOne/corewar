@@ -6,7 +6,7 @@
 /*   By: djoye <djoye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 10:48:04 by sdoughnu          #+#    #+#             */
-/*   Updated: 2020/02/17 17:44:55 by djoye            ###   ########.fr       */
+/*   Updated: 2020/02/17 18:24:37 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,6 @@ void				do_cycle(t_vm *v)
 	t_cur			*c;
 	int				skip;
 
-	//int				check = 0; // проверка, потом удалить
-
 	c = v->curs;
 	while (c)
 	{
@@ -47,20 +45,9 @@ void				do_cycle(t_vm *v)
 			{
 				do_op(v, c);
 				if (!v->zj)
-				{
-					//c->pos = (c->pos + 1 + g_op_tab[c->operation].code_type_arg + c->arg_size[0] + c->arg_size[1] + c->arg_size[2]) % MEM_SIZE;
-
-					c->pos = (c->pos + skip_uncorrect(c, &g_op_tab[c->operation])) % MEM_SIZE; //+ g_op_tab[c->operation].code_type_arg
-					
-					/*
-					c->pos = (c->pos + 1 + g_op_tab[c->operation].code_type_arg + c->arg_size[0] + 
-					g_op_tab[c->operation].arg_type[1] ? c->arg_size[1] : 0 + 
-					g_op_tab[c->operation].arg_type[2] ? c->arg_size[2] : 0) % MEM_SIZE;*/
-				}
-					
+					c->pos = (c->pos + skip_uncorrect(c, &g_op_tab[c->operation])) % MEM_SIZE;
 				else
 					v->zj = 0;
-				//reset_cur_args(c);
 			}
 			else
 				c->pos = (c->pos + skip) % MEM_SIZE;

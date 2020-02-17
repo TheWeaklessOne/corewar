@@ -6,7 +6,7 @@
 /*   By: djoye <djoye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/05 17:15:21 by sdoughnu          #+#    #+#             */
-/*   Updated: 2020/02/17 17:38:10 by djoye            ###   ########.fr       */
+/*   Updated: 2020/02/17 18:35:49 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,9 @@ void				do_st(t_vm *vm, t_cur *cur)
 	}
 	else if (cur->args_type[1] == T_IND)
 	{
-		skip = read_t_dir(vm, (cur->pos + 2 + cur->arg_size[0]) % MEM_SIZE, cur->arg_size[1]) % IDX_MOD;
+		skip = read_t_dir(vm, (cur->pos + 2 + cur->arg_size[0]) % MEM_SIZE, cur->arg_size[1]);
 		cur->args[1] = skip;
+		skip %= IDX_MOD;
 		arg.hex = cur->reg[cur->args[0] - 1];
 		if (-skip > cur->pos)
 		{
