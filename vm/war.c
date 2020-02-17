@@ -6,7 +6,7 @@
 /*   By: djoye <djoye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 10:48:04 by sdoughnu          #+#    #+#             */
-/*   Updated: 2020/02/17 17:08:13 by djoye            ###   ########.fr       */
+/*   Updated: 2020/02/17 17:44:55 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,6 +100,7 @@ int					war_coming(t_vm *v)
 			}
 			check_count = 0;
 			v->live_count = 0;
+			v->lives_in_cur_period = 0;
 		}
 		if (v->curs_alive == 0)
 			break ;

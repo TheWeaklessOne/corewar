@@ -6,13 +6,13 @@
 /*   By: djoye <djoye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/04 20:19:50 by wstygg            #+#    #+#             */
-/*   Updated: 2020/02/17 15:24:53 by djoye            ###   ########.fr       */
+/*   Updated: 2020/02/17 17:45:26 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/vm.h"
 
-void				calc_arg_size(unsigned *args_t, int *arg_size, int size)
+void				  calc_arg_size(unsigned *args_t, int *arg_size, int size)
 {
 	(args_t[0] == T_IND) ? arg_size[0] = IND_SIZE : 0;
 	(args_t[0] == T_REG) ? arg_size[0] = 1 : 0;
@@ -53,14 +53,17 @@ int					check_t_reg(t_vm *vm, t_cur *cur, unsigned *args_t)
 
 int					check_types(unsigned *args_type, t_op op)
 {
-	if (!(op.arg_type[0] & args_type[0]))
-		return (0);
-	if (op.arg_type[1] && !(op.arg_type[1] & args_type[1]))
-		return (0);
-	if (op.arg_type[2] && !(op.arg_type[2] & args_type[2]))
-		return (0);
-	if (args_type[3])
-		return (0);
+	if (op.arg_count >= 1)
+		if (!(op.arg_type[0] & args_type[0]))
+			return (0);
+	if (op.arg_count >= 2)
+		if (op.arg_type[1] && !(op.arg_type[1] & args_type[1]))
+			return (0);
+	if (op.arg_count >= 3)
+		if (op.arg_type[2] && !(op.arg_type[2] & args_type[2]))
+			return (0);
+//	if (args_type[3])
+//		return (0);
 	return (1);
 }
 
@@ -82,7 +85,9 @@ int					skip_uncorrect(t_cur *cur, const t_op *op)
 int					check_op(t_vm *vm, t_cur *cur)
 {
 	t_op			op;
+	int 			t;
 
+	t = 0;
 	if (cur->operation >= 0x01 && cur->operation <= 0x10)
 	{
 		op = g_op_tab[cur->operation];
