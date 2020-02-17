@@ -6,7 +6,7 @@
 /*   By: djoye <djoye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/11 10:21:55 by sdoughnu          #+#    #+#             */
-/*   Updated: 2020/02/06 19:05:03 by djoye            ###   ########.fr       */
+/*   Updated: 2020/02/17 13:16:17 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -166,6 +166,8 @@ int					read_t_ind(t_vm *vm, int pos, int cpos);
 int					get_t_ind(t_vm *vm, int pos);
 void				read_args(t_vm *v, t_cur *c);
 void				get_arg_types(unsigned char c, unsigned *args);
+
+int					skip_uncorrect(t_cur *cur, const t_op *op);
 
 /*--------------------------visualization--------------------------*/
 

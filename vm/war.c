@@ -6,7 +6,7 @@
 /*   By: djoye <djoye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 10:48:04 by sdoughnu          #+#    #+#             */
-/*   Updated: 2020/02/06 19:20:31 by djoye            ###   ########.fr       */
+/*   Updated: 2020/02/17 17:08:13 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ void				do_cycle(t_vm *v)
 	t_cur			*c;
 	int				skip;
 
+	//int				check = 0; // проверка, потом удалить
+
 	c = v->curs;
 	while (c)
 	{
@@ -40,15 +42,25 @@ void				do_cycle(t_vm *v)
 				c->cyc_before_op = g_op_tab[c->operation].need_cycles;
 		if (--c->cyc_before_op <= 0)
 		{
+			reset_cur_args(c);
 			if (!(skip = check_op(v, c)))
 			{
 				do_op(v, c);
 				if (!v->zj)
-					c->pos = (c->pos + 1 + g_op_tab[c->operation].code_type_arg +
-							c->arg_size[0] + c->arg_size[1] + c->arg_size[2]) % MEM_SIZE;
+				{
+					//c->pos = (c->pos + 1 + g_op_tab[c->operation].code_type_arg + c->arg_size[0] + c->arg_size[1] + c->arg_size[2]) % MEM_SIZE;
+
+					c->pos = (c->pos + skip_uncorrect(c, &g_op_tab[c->operation])) % MEM_SIZE; //+ g_op_tab[c->operation].code_type_arg
+					
+					/*
+					c->pos = (c->pos + 1 + g_op_tab[c->operation].code_type_arg + c->arg_size[0] + 
+					g_op_tab[c->operation].arg_type[1] ? c->arg_size[1] : 0 + 
+					g_op_tab[c->operation].arg_type[2] ? c->arg_size[2] : 0) % MEM_SIZE;*/
+				}
+					
 				else
 					v->zj = 0;
-				reset_cur_args(c);
+				//reset_cur_args(c);
 			}
 			else
 				c->pos = (c->pos + skip) % MEM_SIZE;
@@ -69,25 +81,24 @@ int					war_coming(t_vm *v)
 		return (print_arena(v, 64) + 1);
 	if (v->dump == 1 && v->dump_count == 0)
 		return (print_arena(v, 32) + 1);
+	check_count = 0;
 	while (++v->global)
 	{
-		//if (v->global == 3074)
-		//	printf("%lu\n", v->global);
 		if (v->l == 1)
 			ft_printf("It is now cycle %lu\n", v->global);
 		do_cycle(v);
-		check_count--;
-		if (v->cycles_to_die <= 0 || check_count == 0)
+		check_count++;
+		if (check_count >= v->cycles_to_die) //v->cycles_to_die <= 0 || 
 		{
-			delete_deads(v);
 			v->checks++;
+			delete_deads(v);
 			if (v->live_count >= NBR_LIVE || v->checks == MAX_CHECKS)
 			{
 				v->cycles_to_die -= CYCLE_DELTA;
 				v->checks = 0;
 				(v->l == 1) ? ft_printf("Cycle to die is now %d\n", v->cycles_to_die) : 0;
 			}
-			check_count = v->cycles_to_die;
+			check_count = 0;
 			v->live_count = 0;
 		}
 		if (v->curs_alive == 0)

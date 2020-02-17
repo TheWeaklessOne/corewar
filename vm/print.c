@@ -6,7 +6,7 @@
 /*   By: djoye <djoye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/16 18:24:30 by djoye             #+#    #+#             */
-/*   Updated: 2020/02/11 14:11:38 by djoye            ###   ########.fr       */
+/*   Updated: 2020/02/11 17:26:12 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -129,8 +129,6 @@ void			remote(t_vm *vm)
 		vm->speed < 600000.0 ? vm->speed *= 2 : 0;
 	else if (key == KEY_UP)
 		vm->speed > 60.0 ? vm->speed /= 2 : 0;
-	else if (key == KEY_ESC)
-		exit(endwin());
 	else if (key == KEY_SPACE)
 		while ((key = getch()))
 		{
@@ -146,6 +144,8 @@ void			remote(t_vm *vm)
 			break ;
 		else if (key != -1)
 			vm->step = 0;
+	if (key == KEY_ESC)
+		exit(endwin());
 }
 
 void			print_visu(WINDOW *vm_window, t_vm *vm)

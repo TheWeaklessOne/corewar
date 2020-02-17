@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   op_action.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wstygg <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: djoye <djoye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/04 20:19:50 by wstygg            #+#    #+#             */
-/*   Updated: 2020/02/04 20:19:51 by wstygg           ###   ########.fr       */
+/*   Updated: 2020/02/17 15:24:53 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,21 @@ int					check_types(unsigned *args_type, t_op op)
 	return (1);
 }
 
+int					skip_uncorrect(t_cur *cur, const t_op *op)
+{
+	int				skip;
+	int				i;
+
+	skip = op->code_type_arg ? 2 : 1;
+	i = 0;
+	while (i < op->arg_count)
+	{
+		skip += cur->arg_size[i];
+		i++;
+	}
+	return (skip);
+}
+
 int					check_op(t_vm *vm, t_cur *cur)
 {
 	t_op			op;
@@ -78,7 +93,7 @@ int					check_op(t_vm *vm, t_cur *cur)
 			if (check_types(cur->args_type, op))
 				if (check_t_reg(vm, cur, cur->args_type))
 					return (0);
-			return (2 + cur->arg_size[0] + cur->arg_size[1] + cur->arg_size[2]);
+			return (skip_uncorrect(cur, &op));//1 + cur->arg_size[0] + cur->arg_size[1] + cur->arg_size[2]); // why??? + 2
 		}
 		cur->arg_size[0] = 4 - 2 * op.dir_size;
 		cur->args_type[0] = T_DIR;

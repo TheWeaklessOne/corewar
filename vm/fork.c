@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   fork.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sdoughnu <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: djoye <djoye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/06 12:19:44 by sdoughnu          #+#    #+#             */
-/*   Updated: 2020/02/06 12:19:45 by sdoughnu         ###   ########.fr       */
+/*   Updated: 2020/02/17 15:49:02 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,6 @@ void			do_lfork(t_vm *vm, t_cur *cur)
 	new->next = vm->curs;
 	vm->curs = new;
 	vm->curs_alive++;
-	(vm->l == 1) ? ft_printf("fork %d (%d)\n", cur->args[0],
+	(vm->l == 1) ? ft_printf("lfork %d (%d)\n", cur->args[0],
 							 ((cur->pos + cur->args[0]) % MEM_SIZE)) : 0;
 }
