@@ -44,7 +44,7 @@ void			do_fork(t_vm *vm, t_cur *cur)
 	vm->curs = new;
 	vm->curs_alive++;
 	(vm->l == 1) ? ft_printf("fork %d (%d)\n", cur->args[0],
-			((cur->pos + cur->args[0] % IDX_MOD) % MEM_SIZE)) : 0;
+			((cur->pos + cur->args[0] % IDX_MOD))) : 0;
 }
 
 void			do_lfork(t_vm *vm, t_cur *cur)
@@ -58,5 +58,5 @@ void			do_lfork(t_vm *vm, t_cur *cur)
 	vm->curs = new;
 	vm->curs_alive++;
 	(vm->l == 1) ? ft_printf("lfork %d (%d)\n", cur->args[0],
-							 ((cur->pos + cur->args[0]) % MEM_SIZE)) : 0;
+							 ((cur->pos + cur->args[0]))) : 0;
 }
