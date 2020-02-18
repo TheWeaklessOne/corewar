@@ -6,7 +6,7 @@
 /*   By: djoye <djoye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 10:48:04 by sdoughnu          #+#    #+#             */
-/*   Updated: 2020/02/18 17:24:39 by djoye            ###   ########.fr       */
+/*   Updated: 2020/02/18 18:10:02 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,7 +89,7 @@ int					war_coming(t_vm *v)
 				(v->l == 1) ? ft_printf("Cycle to die is now %d\n", v->cycles_to_die) : 0;
 			}
 			check_count = 0;
-			//v->live_count = 0; перенес выше
+			v->live_count = 0;
 			v->lives_in_cur_period = 0;
 		}
 		if (v->curs_alive == 0)
