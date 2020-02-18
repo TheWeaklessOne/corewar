@@ -6,7 +6,7 @@
 /*   By: djoye <djoye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/05 17:15:21 by sdoughnu          #+#    #+#             */
-/*   Updated: 2020/02/17 18:35:49 by djoye            ###   ########.fr       */
+/*   Updated: 2020/02/18 15:25:30 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,13 +47,13 @@ void				do_st(t_vm *vm, t_cur *cur)
 		else
 		{
 			vm->arena[(cur->pos + skip) % MEM_SIZE] = arg.f.o4;
-			vm->arena[(cur->pos + (skip + 1) % IDX_MOD) % MEM_SIZE] = arg.f.o3;
-			vm->arena[(cur->pos + (skip + 2) % IDX_MOD) % MEM_SIZE] = arg.f.o2;
-			vm->arena[(cur->pos + (skip + 3) % IDX_MOD) % MEM_SIZE] = arg.f.o1;
+			vm->arena[(cur->pos + (skip + 1)) % MEM_SIZE] = arg.f.o3;
+			vm->arena[(cur->pos + (skip + 2)) % MEM_SIZE] = arg.f.o2;
+			vm->arena[(cur->pos + (skip + 3)) % MEM_SIZE] = arg.f.o1;
 			vm->map_color[(cur->pos + skip) % MEM_SIZE] = cur->id;
-			vm->map_color[(cur->pos + (skip + 1) % IDX_MOD) % MEM_SIZE] = cur->id;
-			vm->map_color[(cur->pos + (skip + 2) % IDX_MOD) % MEM_SIZE] = cur->id;
-			vm->map_color[(cur->pos + (skip + 3) % IDX_MOD) % MEM_SIZE] = cur->id;
+			vm->map_color[(cur->pos + (skip + 1)) % MEM_SIZE] = cur->id;
+			vm->map_color[(cur->pos + (skip + 2)) % MEM_SIZE] = cur->id;
+			vm->map_color[(cur->pos + (skip + 3)) % MEM_SIZE] = cur->id;
 		}
 	}
 	(vm->l == 1) ? ft_printf("st r%d %d\n", cur->args[0], cur->args[1]) : 0;

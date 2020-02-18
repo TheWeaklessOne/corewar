@@ -6,7 +6,7 @@
 /*   By: djoye <djoye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/04 20:11:34 by wstygg            #+#    #+#             */
-/*   Updated: 2020/02/17 17:44:27 by djoye            ###   ########.fr       */
+/*   Updated: 2020/02/18 14:51:12 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,13 +31,13 @@ void                place_to_arena(t_vm *vm, int place, int pos, int skip, t_cur
 
     arg.hex = place;
     vm->arena[(pos + skip) % MEM_SIZE] = arg.f.o4;
-    vm->arena[(pos + (skip + 1) % IDX_MOD) % MEM_SIZE] = arg.f.o3;
-    vm->arena[(pos + (skip + 2) % IDX_MOD) % MEM_SIZE] = arg.f.o2;
-    vm->arena[(pos + (skip + 3) % IDX_MOD) % MEM_SIZE] = arg.f.o1;
+    vm->arena[(pos + (skip + 1) ) % MEM_SIZE] = arg.f.o3;
+    vm->arena[(pos + (skip + 2) ) % MEM_SIZE] = arg.f.o2;
+    vm->arena[(pos + (skip + 3) ) % MEM_SIZE] = arg.f.o1;
 	vm->map_color[(pos + skip) % MEM_SIZE] = cur->id;
-    vm->map_color[(pos + (skip + 1) % IDX_MOD) % MEM_SIZE] = cur->id;
-    vm->map_color[(pos + (skip + 2) % IDX_MOD) % MEM_SIZE] = cur->id;
-    vm->map_color[(pos + (skip + 3) % IDX_MOD) % MEM_SIZE] = cur->id;
+    vm->map_color[(pos + (skip + 1) ) % MEM_SIZE] = cur->id;
+    vm->map_color[(pos + (skip + 2) ) % MEM_SIZE] = cur->id;
+    vm->map_color[(pos + (skip + 3) ) % MEM_SIZE] = cur->id;
 }
 
 void				do_sti(t_vm *vm, t_cur *cur)
@@ -84,11 +84,17 @@ void				do_live(t_vm *vm, t_cur *cur)
 
 	arg = -read_t_dir(vm, (cur->pos + 1) % MEM_SIZE, cur->arg_size[0]);
 	if (vm->l == 1)
-		ft_printf("live %d\n", (-arg));
+		{
+			ft_printf("live %ld\n", (long)(-arg));
+			//printf("live %d\n", (-arg));
+			//ft_printf("live %d\n", (-arg));
+		}
 	cur->last_cyc_live = vm->global;
+	vm->live_count++; // replace
 	if (arg >= 1 && arg <= vm->players)
 	{
-		vm->live_count++;
+		//vm->live_count++;
+		vm->lives_in_cur_period++;
 		vm->last_champ = vm->champ[arg - 1];
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: djoye <djoye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/11 10:21:55 by sdoughnu          #+#    #+#             */
-/*   Updated: 2020/02/17 13:16:17 by djoye            ###   ########.fr       */
+/*   Updated: 2020/02/18 17:07:46 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,18 @@ typedef	union		u_4bytes
 	t_bit_field		f;
 	int				hex;
 }					t_4bytes;
+
+typedef	union		u_2bytes
+{
+	t_bit_field		f;
+	short			hex;
+}					t_2bytes;
+
+typedef struct		s_short
+{
+	char			o1;
+	char			o2;
+}					t_short;
 
 typedef struct		s_arg
 {

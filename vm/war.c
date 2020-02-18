@@ -6,7 +6,7 @@
 /*   By: djoye <djoye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 10:48:04 by sdoughnu          #+#    #+#             */
-/*   Updated: 2020/02/17 18:24:37 by djoye            ###   ########.fr       */
+/*   Updated: 2020/02/18 17:24:39 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,6 +71,8 @@ int					war_coming(t_vm *v)
 	check_count = 0;
 	while (++v->global)
 	{
+		if (v->global == 49)
+			printf("");
 		if (v->l == 1)
 			ft_printf("It is now cycle %lu\n", v->global);
 		do_cycle(v);
@@ -81,12 +83,13 @@ int					war_coming(t_vm *v)
 			delete_deads(v);
 			if (v->live_count >= NBR_LIVE || v->checks == MAX_CHECKS)
 			{
+				v->live_count = 0; // перенес сюда
 				v->cycles_to_die -= CYCLE_DELTA;
 				v->checks = 0;
 				(v->l == 1) ? ft_printf("Cycle to die is now %d\n", v->cycles_to_die) : 0;
 			}
 			check_count = 0;
-			v->live_count = 0;
+			//v->live_count = 0; перенес выше
 			v->lives_in_cur_period = 0;
 		}
 		if (v->curs_alive == 0)
@@ -98,8 +101,8 @@ int					war_coming(t_vm *v)
 		if (v->color == 1)
 			print_visu(vm_window, v);
 	}
-	if (v->color == 1)
-		endwin();
+	//if (v->color == 1)
+	//	endwin();
 	if (v->last_champ)
 		printf("Contestant %u, \"%s\", has won !\n", v->last_champ->n, v->last_champ->name);
 	return (1);

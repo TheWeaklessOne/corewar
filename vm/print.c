@@ -6,7 +6,7 @@
 /*   By: djoye <djoye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/16 18:24:30 by djoye             #+#    #+#             */
-/*   Updated: 2020/02/11 17:26:12 by djoye            ###   ########.fr       */
+/*   Updated: 2020/02/18 13:49:34 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ void			print_sub_win(t_vm *vm, WINDOW *vm_window)
 	}
 	mvwprintw(vm_window, ++i, COMMENT, "Cycle: %11d", vm->global);
 	mvwprintw(vm_window, ++i, COMMENT, "Cursors: %9u", vm->curs_alive);
+	mvwprintw(vm_window, ++i, COMMENT, "Lives_in_CP: %5d", vm->lives_in_cur_period);
 	mvwprintw(vm_window, ++i, COMMENT, "Cycle to die: %4d", vm->cycles_to_die);
 	mvwprintw(vm_window, ++i, COMMENT, "Cycle delta: %5d", CYCLE_DELTA);
 	mvwprintw(vm_window, ++i, COMMENT, "Lives: %8d/%2d", vm->live_count,

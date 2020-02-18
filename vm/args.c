@@ -6,7 +6,7 @@
 /*   By: djoye <djoye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/04 20:06:04 by wstygg            #+#    #+#             */
-/*   Updated: 2020/02/17 16:21:10 by djoye            ###   ########.fr       */
+/*   Updated: 2020/02/18 17:07:45 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,18 +51,37 @@ int					read_t_dir(t_vm *vm, int pos, int size)
 int					read_t_ind(t_vm *vm, int pos, int cpos)
 {
 	t_4bytes		ret;
-	t_4bytes		arg;
+	//t_4bytes		arg;
+	t_2bytes		arg;
 	int				skip;
+	
+	arg.f.o1 = vm->arena[(pos + 1) % MEM_SIZE];
+	arg.f.o2 = vm->arena[pos];
+// arg.f.o4 = vm->arena[pos];
+// 	arg.f.o3 = vm->arena[(pos + 1) % MEM_SIZE];
+// 	arg.f.o2 = vm->arena[(pos + 2) % MEM_SIZE];
+// 	arg.f.o1 = vm->arena[(pos + 3) % MEM_SIZE];
+	skip = (int)arg.hex;
+	if (-skip > cpos)
+	{
+		skip %= IDX_MOD;
+		skip += cpos;
+		skip %= MEM_SIZE;
+		skip = MEM_SIZE + skip;
 
-	arg.f.o4 = vm->arena[pos];
-	arg.f.o3 = vm->arena[(pos + 1) % MEM_SIZE];
-	arg.f.o2 = vm->arena[(pos + 2) % MEM_SIZE];
-	arg.f.o1 = vm->arena[(pos + 3) % MEM_SIZE];
-	skip = arg.hex;
-	ret.f.o4 = vm->arena[(cpos + skip % IDX_MOD) % MEM_SIZE];
-	ret.f.o3 = vm->arena[(cpos + (skip + 1) % IDX_MOD) % MEM_SIZE];
-	ret.f.o2 = vm->arena[(cpos + (skip + 2) % IDX_MOD) % MEM_SIZE];
-	ret.f.o1 = vm->arena[(cpos + (skip + 3) % IDX_MOD) % MEM_SIZE];
+		ret.f.o4 = vm->arena[(skip) % MEM_SIZE];
+		ret.f.o3 = vm->arena[(skip + 1) % MEM_SIZE];
+		ret.f.o2 = vm->arena[(skip + 2) % MEM_SIZE];
+		ret.f.o1 = vm->arena[(skip + 3) % MEM_SIZE];
+	}
+	else
+	{
+		skip %= IDX_MOD;
+		ret.f.o4 = vm->arena[(cpos + skip) % MEM_SIZE];
+		ret.f.o3 = vm->arena[(cpos + (skip + 1)) % MEM_SIZE];
+		ret.f.o2 = vm->arena[(cpos + (skip + 2)) % MEM_SIZE];
+		ret.f.o1 = vm->arena[(cpos + (skip + 3)) % MEM_SIZE];
+	}
 	return (ret.hex);
 }
 
