@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ld_other.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sdoughnu <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: djoye <djoye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/06 12:18:35 by sdoughnu          #+#    #+#             */
-/*   Updated: 2020/02/06 12:18:39 by sdoughnu         ###   ########.fr       */
+/*   Updated: 2020/02/18 18:20:39 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void			do_ldi(t_vm *vm, t_cur *cur)
 	(vm->l == 1) ? ft_printf("ldi %d %d r%d\n", cur->args[0], cur->args[1], cur->args[2]) : 0;
 	(vm->l == 1) ? ft_printf("       | -> load from %d + %d = %d (with pc and mod %d)\n",
 			cur->args[0], cur->args[1], (cur->args[0] + cur->args[1]),
-			((cur->pos + (cur->args[0] + cur->args[1]) % IDX_MOD) % MEM_SIZE)) : 0;
+			((cur->pos + (cur->args[0] + cur->args[1]) % IDX_MOD))) : 0;
 }
 
 void			do_lld(t_vm *vm, t_cur *cur) // то же, что и ld, но без усечения по модулю в T_IND !!
