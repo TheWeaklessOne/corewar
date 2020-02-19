@@ -59,8 +59,10 @@ int					read_code(int fd, t_champion *ch)
 {
 	if (!(ch->code = (char*)malloc(sizeof(char) * (ch->size + 1))))
 		return (!printf("%s", "Memory not allocated\n"));
-	if (!(read(fd, ch->code, ch->size)))
-		return (!printf("Read error\n"));
+	if (read(fd, ch->code, ch->size) != ch->size)
+		return (!printf("Champion size error\n"));
+	if (read(fd, NULL, 1))
+		return (!printf("Champion size error\n"));
 	ch->code[ch->size] = '\0';
 	return (1);
 }

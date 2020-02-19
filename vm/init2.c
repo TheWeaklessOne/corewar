@@ -18,7 +18,8 @@ int					exec_magic(int fd)
 	unsigned int	c;
 	unsigned char	tmp;
 
-	read(fd, &c, 4);
+	if (read(fd, &c, 4) <= 0)
+		exit(!ft_printf("Magic read error\n"));
 	num.hex = c;
 	tmp = num.f.o1;
 	num.f.o1 = num.f.o4;

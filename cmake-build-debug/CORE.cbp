@@ -8,45 +8,45 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/Users/sdoughnu/Desktop/COR/cmake-build-debug"/>
+				<Option working_dir="/Users/sdoughnu/Desktop/COR1/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/COR/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/COR/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/COR/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/COR/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/COR1/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/COR1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/COR1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/COR1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/Users/sdoughnu/Desktop/COR/cmake-build-debug"/>
+				<Option working_dir="/Users/sdoughnu/Desktop/COR1/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/COR/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/COR/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/COR/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/COR/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/COR1/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/COR1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/COR1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/COR1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/Users/sdoughnu/Desktop/COR/cmake-build-debug"/>
+				<Option working_dir="/Users/sdoughnu/Desktop/COR1/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/COR/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/COR/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/COR/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/COR/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/COR1/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/COR1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/COR1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/COR1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="CORE">
-				<Option output="/Users/sdoughnu/Desktop/COR/cmake-build-debug/CORE" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/sdoughnu/Desktop/COR/cmake-build-debug"/>
+				<Option output="/Users/sdoughnu/Desktop/COR1/cmake-build-debug/CORE" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/sdoughnu/Desktop/COR1/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/sdoughnu/Desktop/COR/includes"/>
-					<Add directory="/Users/sdoughnu/Desktop/COR/libft"/>
-					<Add directory="/Users/sdoughnu/Desktop/COR/libft/ft_printf"/>
+					<Add directory="/Users/sdoughnu/Desktop/COR1/includes"/>
+					<Add directory="/Users/sdoughnu/Desktop/COR1/libft"/>
+					<Add directory="/Users/sdoughnu/Desktop/COR1/libft/ft_printf"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
@@ -55,22 +55,22 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/COR/cmake-build-debug/Makefile&quot;  VERBOSE=1 CORE"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/COR/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/COR/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/COR/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/COR1/cmake-build-debug/Makefile&quot;  VERBOSE=1 CORE"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/COR1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/COR1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/COR1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="CORE/fast">
-				<Option output="/Users/sdoughnu/Desktop/COR/cmake-build-debug/CORE" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/sdoughnu/Desktop/COR/cmake-build-debug"/>
+				<Option output="/Users/sdoughnu/Desktop/COR1/cmake-build-debug/CORE" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/sdoughnu/Desktop/COR1/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/sdoughnu/Desktop/COR/includes"/>
-					<Add directory="/Users/sdoughnu/Desktop/COR/libft"/>
-					<Add directory="/Users/sdoughnu/Desktop/COR/libft/ft_printf"/>
+					<Add directory="/Users/sdoughnu/Desktop/COR1/includes"/>
+					<Add directory="/Users/sdoughnu/Desktop/COR1/libft"/>
+					<Add directory="/Users/sdoughnu/Desktop/COR1/libft/ft_printf"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
@@ -79,302 +79,302 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/COR/cmake-build-debug/Makefile&quot;  VERBOSE=1 CORE/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/COR/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/COR/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/COR/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/COR1/cmake-build-debug/Makefile&quot;  VERBOSE=1 CORE/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/COR1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/COR1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/COR1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/sdoughnu/Desktop/COR/includes/op.h">
+		<Unit filename="/Users/sdoughnu/Desktop/COR1/includes/op.h">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/COR/includes/vm.h">
+		<Unit filename="/Users/sdoughnu/Desktop/COR1/includes/vm.h">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/COR/libft/ft_atoi.c">
+		<Unit filename="/Users/sdoughnu/Desktop/COR1/libft/ft_atoi.c">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/COR/libft/ft_bzero.c">
+		<Unit filename="/Users/sdoughnu/Desktop/COR1/libft/ft_bzero.c">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/COR/libft/ft_isalnum.c">
+		<Unit filename="/Users/sdoughnu/Desktop/COR1/libft/ft_isalnum.c">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/COR/libft/ft_isalpha.c">
+		<Unit filename="/Users/sdoughnu/Desktop/COR1/libft/ft_isalpha.c">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/COR/libft/ft_isascii.c">
+		<Unit filename="/Users/sdoughnu/Desktop/COR1/libft/ft_isascii.c">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/COR/libft/ft_isdigit.c">
+		<Unit filename="/Users/sdoughnu/Desktop/COR1/libft/ft_isdigit.c">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/COR/libft/ft_isprint.c">
+		<Unit filename="/Users/sdoughnu/Desktop/COR1/libft/ft_isprint.c">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/COR/libft/ft_itoa.c">
+		<Unit filename="/Users/sdoughnu/Desktop/COR1/libft/ft_itoa.c">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/COR/libft/ft_memalloc.c">
+		<Unit filename="/Users/sdoughnu/Desktop/COR1/libft/ft_memalloc.c">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/COR/libft/ft_memccpy.c">
+		<Unit filename="/Users/sdoughnu/Desktop/COR1/libft/ft_memccpy.c">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/COR/libft/ft_memchr.c">
+		<Unit filename="/Users/sdoughnu/Desktop/COR1/libft/ft_memchr.c">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/COR/libft/ft_memcmp.c">
+		<Unit filename="/Users/sdoughnu/Desktop/COR1/libft/ft_memcmp.c">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/COR/libft/ft_memcpy.c">
+		<Unit filename="/Users/sdoughnu/Desktop/COR1/libft/ft_memcpy.c">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/COR/libft/ft_memdel.c">
+		<Unit filename="/Users/sdoughnu/Desktop/COR1/libft/ft_memdel.c">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/COR/libft/ft_memmove.c">
+		<Unit filename="/Users/sdoughnu/Desktop/COR1/libft/ft_memmove.c">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/COR/libft/ft_memset.c">
+		<Unit filename="/Users/sdoughnu/Desktop/COR1/libft/ft_memset.c">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/COR/libft/ft_printf/assoc.c">
+		<Unit filename="/Users/sdoughnu/Desktop/COR1/libft/ft_printf/assoc.c">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/COR/libft/ft_printf/delete.c">
+		<Unit filename="/Users/sdoughnu/Desktop/COR1/libft/ft_printf/delete.c">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/COR/libft/ft_printf/float.c">
+		<Unit filename="/Users/sdoughnu/Desktop/COR1/libft/ft_printf/float.c">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/COR/libft/ft_printf/ft_arg_di.c">
+		<Unit filename="/Users/sdoughnu/Desktop/COR1/libft/ft_printf/ft_arg_di.c">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/COR/libft/ft_printf/ft_arg_f.c">
+		<Unit filename="/Users/sdoughnu/Desktop/COR1/libft/ft_printf/ft_arg_f.c">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/COR/libft/ft_printf/ft_arg_o.c">
+		<Unit filename="/Users/sdoughnu/Desktop/COR1/libft/ft_printf/ft_arg_o.c">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/COR/libft/ft_printf/ft_arg_xx.c">
+		<Unit filename="/Users/sdoughnu/Desktop/COR1/libft/ft_printf/ft_arg_xx.c">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/COR/libft/ft_printf/ft_itoa_u.c">
+		<Unit filename="/Users/sdoughnu/Desktop/COR1/libft/ft_printf/ft_itoa_u.c">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/COR/libft/ft_printf/ft_printf.c">
+		<Unit filename="/Users/sdoughnu/Desktop/COR1/libft/ft_printf/ft_printf.c">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/COR/libft/ft_printf/ft_printf.h">
+		<Unit filename="/Users/sdoughnu/Desktop/COR1/libft/ft_printf/ft_printf.h">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/COR/libft/ft_printf/parse.c">
+		<Unit filename="/Users/sdoughnu/Desktop/COR1/libft/ft_printf/parse.c">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/COR/libft/ft_printf/print_c.c">
+		<Unit filename="/Users/sdoughnu/Desktop/COR1/libft/ft_printf/print_c.c">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/COR/libft/ft_printf/print_di.c">
+		<Unit filename="/Users/sdoughnu/Desktop/COR1/libft/ft_printf/print_di.c">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/COR/libft/ft_printf/print_f.c">
+		<Unit filename="/Users/sdoughnu/Desktop/COR1/libft/ft_printf/print_f.c">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/COR/libft/ft_printf/print_o.c">
+		<Unit filename="/Users/sdoughnu/Desktop/COR1/libft/ft_printf/print_o.c">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/COR/libft/ft_printf/print_p.c">
+		<Unit filename="/Users/sdoughnu/Desktop/COR1/libft/ft_printf/print_p.c">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/COR/libft/ft_printf/print_perc.c">
+		<Unit filename="/Users/sdoughnu/Desktop/COR1/libft/ft_printf/print_perc.c">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/COR/libft/ft_printf/print_s.c">
+		<Unit filename="/Users/sdoughnu/Desktop/COR1/libft/ft_printf/print_s.c">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/COR/libft/ft_printf/print_u.c">
+		<Unit filename="/Users/sdoughnu/Desktop/COR1/libft/ft_printf/print_u.c">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/COR/libft/ft_printf/print_xx.c">
+		<Unit filename="/Users/sdoughnu/Desktop/COR1/libft/ft_printf/print_xx.c">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/COR/libft/ft_printf/treatment.c">
+		<Unit filename="/Users/sdoughnu/Desktop/COR1/libft/ft_printf/treatment.c">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/COR/libft/ft_putchar.c">
+		<Unit filename="/Users/sdoughnu/Desktop/COR1/libft/ft_putchar.c">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/COR/libft/ft_putchar_fd.c">
+		<Unit filename="/Users/sdoughnu/Desktop/COR1/libft/ft_putchar_fd.c">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/COR/libft/ft_putendl.c">
+		<Unit filename="/Users/sdoughnu/Desktop/COR1/libft/ft_putendl.c">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/COR/libft/ft_putendl_fd.c">
+		<Unit filename="/Users/sdoughnu/Desktop/COR1/libft/ft_putendl_fd.c">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/COR/libft/ft_putnbr.c">
+		<Unit filename="/Users/sdoughnu/Desktop/COR1/libft/ft_putnbr.c">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/COR/libft/ft_putnbr_fd.c">
+		<Unit filename="/Users/sdoughnu/Desktop/COR1/libft/ft_putnbr_fd.c">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/COR/libft/ft_putstr.c">
+		<Unit filename="/Users/sdoughnu/Desktop/COR1/libft/ft_putstr.c">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/COR/libft/ft_putstr_fd.c">
+		<Unit filename="/Users/sdoughnu/Desktop/COR1/libft/ft_putstr_fd.c">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/COR/libft/ft_str_is_alpha.c">
+		<Unit filename="/Users/sdoughnu/Desktop/COR1/libft/ft_str_is_alpha.c">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/COR/libft/ft_str_is_numeric.c">
+		<Unit filename="/Users/sdoughnu/Desktop/COR1/libft/ft_str_is_numeric.c">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/COR/libft/ft_strcapitalize.c">
+		<Unit filename="/Users/sdoughnu/Desktop/COR1/libft/ft_strcapitalize.c">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/COR/libft/ft_strcat.c">
+		<Unit filename="/Users/sdoughnu/Desktop/COR1/libft/ft_strcat.c">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/COR/libft/ft_strchr.c">
+		<Unit filename="/Users/sdoughnu/Desktop/COR1/libft/ft_strchr.c">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/COR/libft/ft_strclr.c">
+		<Unit filename="/Users/sdoughnu/Desktop/COR1/libft/ft_strclr.c">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/COR/libft/ft_strcmp.c">
+		<Unit filename="/Users/sdoughnu/Desktop/COR1/libft/ft_strcmp.c">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/COR/libft/ft_strcpy.c">
+		<Unit filename="/Users/sdoughnu/Desktop/COR1/libft/ft_strcpy.c">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/COR/libft/ft_strdel.c">
+		<Unit filename="/Users/sdoughnu/Desktop/COR1/libft/ft_strdel.c">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/COR/libft/ft_strdup.c">
+		<Unit filename="/Users/sdoughnu/Desktop/COR1/libft/ft_strdup.c">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/COR/libft/ft_strequ.c">
+		<Unit filename="/Users/sdoughnu/Desktop/COR1/libft/ft_strequ.c">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/COR/libft/ft_striter.c">
+		<Unit filename="/Users/sdoughnu/Desktop/COR1/libft/ft_striter.c">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/COR/libft/ft_striteri.c">
+		<Unit filename="/Users/sdoughnu/Desktop/COR1/libft/ft_striteri.c">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/COR/libft/ft_strjoin.c">
+		<Unit filename="/Users/sdoughnu/Desktop/COR1/libft/ft_strjoin.c">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/COR/libft/ft_strlcat.c">
+		<Unit filename="/Users/sdoughnu/Desktop/COR1/libft/ft_strlcat.c">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/COR/libft/ft_strlen.c">
+		<Unit filename="/Users/sdoughnu/Desktop/COR1/libft/ft_strlen.c">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/COR/libft/ft_strlowcase.c">
+		<Unit filename="/Users/sdoughnu/Desktop/COR1/libft/ft_strlowcase.c">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/COR/libft/ft_strmap.c">
+		<Unit filename="/Users/sdoughnu/Desktop/COR1/libft/ft_strmap.c">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/COR/libft/ft_strmapi.c">
+		<Unit filename="/Users/sdoughnu/Desktop/COR1/libft/ft_strmapi.c">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/COR/libft/ft_strncat.c">
+		<Unit filename="/Users/sdoughnu/Desktop/COR1/libft/ft_strncat.c">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/COR/libft/ft_strncmp.c">
+		<Unit filename="/Users/sdoughnu/Desktop/COR1/libft/ft_strncmp.c">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/COR/libft/ft_strncpy.c">
+		<Unit filename="/Users/sdoughnu/Desktop/COR1/libft/ft_strncpy.c">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/COR/libft/ft_strnequ.c">
+		<Unit filename="/Users/sdoughnu/Desktop/COR1/libft/ft_strnequ.c">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/COR/libft/ft_strnew.c">
+		<Unit filename="/Users/sdoughnu/Desktop/COR1/libft/ft_strnew.c">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/COR/libft/ft_strnstr.c">
+		<Unit filename="/Users/sdoughnu/Desktop/COR1/libft/ft_strnstr.c">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/COR/libft/ft_strrchr.c">
+		<Unit filename="/Users/sdoughnu/Desktop/COR1/libft/ft_strrchr.c">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/COR/libft/ft_strsplit.c">
+		<Unit filename="/Users/sdoughnu/Desktop/COR1/libft/ft_strsplit.c">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/COR/libft/ft_strstr.c">
+		<Unit filename="/Users/sdoughnu/Desktop/COR1/libft/ft_strstr.c">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/COR/libft/ft_strsub.c">
+		<Unit filename="/Users/sdoughnu/Desktop/COR1/libft/ft_strsub.c">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/COR/libft/ft_strtrim.c">
+		<Unit filename="/Users/sdoughnu/Desktop/COR1/libft/ft_strtrim.c">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/COR/libft/ft_strupcase.c">
+		<Unit filename="/Users/sdoughnu/Desktop/COR1/libft/ft_strupcase.c">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/COR/libft/ft_tolower.c">
+		<Unit filename="/Users/sdoughnu/Desktop/COR1/libft/ft_tolower.c">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/COR/libft/ft_toupper.c">
+		<Unit filename="/Users/sdoughnu/Desktop/COR1/libft/ft_toupper.c">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/COR/libft/libft.h">
+		<Unit filename="/Users/sdoughnu/Desktop/COR1/libft/libft.h">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/COR/vm/arena.c">
+		<Unit filename="/Users/sdoughnu/Desktop/COR1/vm/arena.c">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/COR/vm/args.c">
+		<Unit filename="/Users/sdoughnu/Desktop/COR1/vm/args.c">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/COR/vm/commands.c">
+		<Unit filename="/Users/sdoughnu/Desktop/COR1/vm/commands.c">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/COR/vm/commands2.c">
+		<Unit filename="/Users/sdoughnu/Desktop/COR1/vm/commands2.c">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/COR/vm/cur.c">
+		<Unit filename="/Users/sdoughnu/Desktop/COR1/vm/cur.c">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/COR/vm/cursor.c">
+		<Unit filename="/Users/sdoughnu/Desktop/COR1/vm/cursor.c">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/COR/vm/fork.c">
+		<Unit filename="/Users/sdoughnu/Desktop/COR1/vm/fork.c">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/COR/vm/init2.c">
+		<Unit filename="/Users/sdoughnu/Desktop/COR1/vm/init2.c">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/COR/vm/init_champion.c">
+		<Unit filename="/Users/sdoughnu/Desktop/COR1/vm/init_champion.c">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/COR/vm/ld_other.c">
+		<Unit filename="/Users/sdoughnu/Desktop/COR1/vm/ld_other.c">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/COR/vm/main.c">
+		<Unit filename="/Users/sdoughnu/Desktop/COR1/vm/main.c">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/COR/vm/op_action.c">
+		<Unit filename="/Users/sdoughnu/Desktop/COR1/vm/op_action.c">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/COR/vm/op_tab.c">
+		<Unit filename="/Users/sdoughnu/Desktop/COR1/vm/op_tab.c">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/COR/vm/print.c">
+		<Unit filename="/Users/sdoughnu/Desktop/COR1/vm/print.c">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/COR/vm/war.c">
+		<Unit filename="/Users/sdoughnu/Desktop/COR1/vm/war.c">
 			<Option target="CORE"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/COR/CMakeLists.txt">
+		<Unit filename="/Users/sdoughnu/Desktop/COR1/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>
