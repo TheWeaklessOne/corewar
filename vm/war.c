@@ -61,7 +61,6 @@ int					war_coming(t_vm *v)
 	WINDOW *vm_window = NULL;
 	int				check_count;
 
-	check_count = v->cycles_to_die;
 	if (v->color == 1)
 		vm_window = init_visu(vm_window, v);
 	if (v->d == 1 && v->d_count == 0)
@@ -75,7 +74,7 @@ int					war_coming(t_vm *v)
 			ft_printf("It is now cycle %lu\n", v->global);
 		do_cycle(v);
 		check_count++;
-		if (check_count >= v->cycles_to_die) //v->cycles_to_die <= 0 || 
+		if (check_count >= v->cycles_to_die)
 		{
 			v->checks++;
 			delete_deads(v);

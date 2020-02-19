@@ -65,7 +65,7 @@ int				cur_init(t_vm *vm)
 	while (++i < vm->players)
 	{
 		if (!(c = new_cur(i + 1)))
-			return (printf("Memory not allocated\n") - 21);
+			return (print_fd("Memory not allocated\n", 2));
 		c->pos = start;
 		id_cur_flag_l(c);
 		push_cur(c, vm);

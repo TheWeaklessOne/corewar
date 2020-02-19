@@ -84,16 +84,11 @@ void				do_live(t_vm *vm, t_cur *cur)
 
 	arg = -read_t_dir(vm, (cur->pos + 1) % MEM_SIZE, cur->arg_size[0]);
 	if (vm->l == 1)
-		{
-			ft_printf("live %ld\n", (long)(-arg));
-			//printf("live %d\n", (-arg));
-			//ft_printf("live %d\n", (-arg));
-		}
+		ft_printf("live %ld\n", (long)(-arg));
 	cur->last_cyc_live = vm->global;
-	vm->live_count++; // replace
+	vm->live_count++;
 	if (arg >= 1 && arg <= vm->players)
 	{
-		//vm->live_count++;
 		vm->lives_in_cur_period++;
 		vm->last_champ = vm->champ[arg - 1];
 	}

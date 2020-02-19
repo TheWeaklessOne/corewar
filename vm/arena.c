@@ -18,7 +18,7 @@ int				position(t_vm *vm, int player, int i)
 
 	c = -1;
 	if (vm->champ[player] == NULL)
-		return (printf("You enter the flag [-n] incorrectly .-.\n") - 40);
+		return (print_fd("You enter the flag [-n] incorrectly .-.\n", 2));
 	while (++c < vm->champ[player]->size)
 	{
 		vm->arena[i] = vm->champ[player]->code[c];
@@ -36,10 +36,10 @@ int				print_arena(t_vm *vm, int size)
 	while (i < MEM_SIZE)
 	{
 		if (i == 0 || (i % size) == 0)
-			printf("0x%0.4x : ", i);
-		printf("%0.2x ", (unsigned char)vm->arena[i]);
+			ft_printf("0x%0.4x : ", i);
+		ft_printf("%0.2x ", (unsigned char)vm->arena[i]);
 		if (((i + 1) % size == 0) && i != 0)
-			printf("\n");
+			write(1, "\n", 1);
 		i++;
 	}
 	return (0);
