@@ -5,13 +5,13 @@
 #                                                     +:+ +:+         +:+      #
 #    By: wstygg <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2020/02/07 17:17:26 by wstygg            #+#    #+#              #
-#    Updated: 2020/02/09 14:02:04 by sdoughnu         ###   ########.fr        #
+#    Created: 2020/02/19 15:28:43 by wstygg            #+#    #+#              #
+#    Updated: 2020/02/19 15:28:55 by wstygg           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		=   asm
-POSITION    =   ../asm
+
 CC			=	gcc
 FLAGS		=	-Wall -Wextra -Werror -g
 D_FLAGS		=	-g
