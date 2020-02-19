@@ -28,7 +28,7 @@ int				flag(int *i, int c, char **v, t_vm *vm)
 		vm->dump_count = ft_atoi(v[++(*i)]);
 		vm->dump = 1;
 		if (vm->dump_count < 0)
-			return (!printf("Invalid option in flag [-dump]\n"));
+			return (print_fd("Invalid option in flag [-dump]\n", 2));
 		(*i)++;
 		return (1);
 	}
@@ -43,12 +43,12 @@ int				flag(int *i, int c, char **v, t_vm *vm)
 		vm->d_count = ft_atoi(v[++(*i)]);
 		vm->d = 1;
 		if (vm->d_count < 0)
-			return (!printf("Invalid option in flag [-d]\n"));
+			return (print_fd("Invalid option in flag [-d]\n", 2));
 		(*i)++;
 		return (1);
 	}
 	if ((!ft_strcmp(v[*i], "-dump") || !ft_strcmp(v[*i], "-d")) && *i + 1 >= c)
-		return (!printf("The flag is missing a number\n"));
+		return (print_fd("The flag is missing a number\n", 2));
 	return (1);
 }
 
@@ -68,7 +68,7 @@ int				parser(t_vm *vm, int ac, char **av)
 		{
 			n = ft_atoi(av[++i]);
 			if (n > MAX_PLAYERS || n < 1 || !check_n(vm, (unsigned)n))
-				return (!printf("Invalid option in flag [-n]\n"));
+				return (print_fd("Invalid option in flag [-n]\n", 2));
 			i++;
 		}
 		if (i < ac && !init_champ(&i, av, n, vm))
@@ -117,7 +117,7 @@ int				main(int ac, char **av)
 	if (!(parser(&vm, ac, av)))
 		exit(0);
 	if (vm.players == 0)
-		exit(!printf("You have not entered champions\n"));
+		exit(print_fd("You have not entered champions\n", 2));
 	vm.curs_alive = vm.players;
 	if (!build_arena(&vm) || !cur_init(&vm) || !war_coming(&vm))
 		exit(-1);

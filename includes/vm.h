@@ -182,6 +182,8 @@ void				read_args(t_vm *v, t_cur *c);
 void				get_arg_types(unsigned char c, unsigned *args);
 
 int					skip_uncorrect(t_cur *cur, const t_op *op);
+int					print_fd(const char *s, int fd);
+int 				error_in(const char *s1, const char *s2, int fd);
 
 /*--------------------------visualization--------------------------*/
 

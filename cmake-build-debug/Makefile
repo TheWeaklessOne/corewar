@@ -48,10 +48,10 @@ RM = /Users/sdoughnu/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/sdoughnu/Desktop/COR1
+CMAKE_SOURCE_DIR = /Users/sdoughnu/Desktop/COR2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/sdoughnu/Desktop/COR1/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/sdoughnu/Desktop/COR2/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/sdoughnu/Desktop/COR1/cmake-build-debug/CMakeFiles /Users/sdoughnu/Desktop/COR1/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/sdoughnu/Desktop/COR2/cmake-build-debug/CMakeFiles /Users/sdoughnu/Desktop/COR2/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/sdoughnu/Desktop/COR1/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/sdoughnu/Desktop/COR2/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -2256,6 +2256,33 @@ vm/args.c.s:
 	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/vm/args.c.s
 .PHONY : vm/args.c.s
 
+vm/color.o: vm/color.c.o
+
+.PHONY : vm/color.o
+
+# target to build an object file
+vm/color.c.o:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/vm/color.c.o
+.PHONY : vm/color.c.o
+
+vm/color.i: vm/color.c.i
+
+.PHONY : vm/color.i
+
+# target to preprocess a source file
+vm/color.c.i:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/vm/color.c.i
+.PHONY : vm/color.c.i
+
+vm/color.s: vm/color.c.s
+
+.PHONY : vm/color.s
+
+# target to generate assembly for a file
+vm/color.c.s:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/vm/color.c.s
+.PHONY : vm/color.c.s
+
 vm/commands.o: vm/commands.c.o
 
 .PHONY : vm/commands.o
@@ -2853,6 +2880,9 @@ help:
 	@echo "... vm/args.o"
 	@echo "... vm/args.i"
 	@echo "... vm/args.s"
+	@echo "... vm/color.o"
+	@echo "... vm/color.i"
+	@echo "... vm/color.s"
 	@echo "... vm/commands.o"
 	@echo "... vm/commands.i"
 	@echo "... vm/commands.s"

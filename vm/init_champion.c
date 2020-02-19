@@ -17,8 +17,8 @@ void				read_name(t_champion *ch, int fd)
 	int				i;
 	char			c;
 
-	if (!(read(fd, ch->name, PROG_NAME_LENGTH)))
-		exit(!printf("Read error"));
+	if (read(fd, ch->name, PROG_NAME_LENGTH) <= 0)
+		exit(print_fd("Read champion name error\n", 2));
 	ch->name[PROG_NAME_LENGTH] = '\0';
 	i = -1;
 	while (++i < 4)
@@ -31,7 +31,8 @@ unsigned int		read_size(fd)
 	unsigned int	c;
 	unsigned char	tmp;
 
-	read(fd, &c, 4);
+	if (read(fd, &c, 4) <= 0)
+		exit(print_fd("Read champion exec code size error\n", 2));
 	num.hex = c;
 	tmp = num.f.o1;
 	num.f.o1 = num.f.o4;
@@ -47,8 +48,8 @@ void				read_com(t_champion *ch, int fd)
 	int				i;
 	char			c;
 
-	if (!(read(fd, ch->com, COMMENT_LENGTH)))
-		exit(!printf("Read error\n"));
+	if (read(fd, ch->com, COMMENT_LENGTH) <= 0)
+		exit(print_fd("Read error\n", 2));
 	ch->com[COMMENT_LENGTH] = '\0';
 	i = -1;
 	while (++i < 4)
@@ -58,11 +59,11 @@ void				read_com(t_champion *ch, int fd)
 int					read_code(int fd, t_champion *ch)
 {
 	if (!(ch->code = (char*)malloc(sizeof(char) * (ch->size + 1))))
-		return (!printf("%s", "Memory not allocated\n"));
+		return (print_fd("Memory not allocated\n", 2));
 	if (read(fd, ch->code, ch->size) != ch->size)
-		return (!printf("Champion size error\n"));
+		return (print_fd("Champion size error (too small)\n", 2));
 	if (read(fd, NULL, 1))
-		return (!printf("Champion size error\n"));
+		return (print_fd("Champion size error (too big)\n", 2));
 	ch->code[ch->size] = '\0';
 	return (1);
 }
@@ -74,19 +75,19 @@ int					init_champ(int *i, char **av, int n, t_vm *vm)
 
 	vm->players += 1;
 	if (vm->players > MAX_PLAYERS)
-		return (!printf("Too much champions\n"));
+		return (print_fd("Too much champions\n", 2));
 	if (!check_ch_name(av, *i))
-		return (!ft_printf("You gave not a *.cor file - %s\n", av[*i]));
+		return (error_in("You gave not a *.cor file - ", av[*i], 2));
 	if ((fd = open(av[*i], O_RDONLY)) < 0)
-		return (!ft_printf("Can't open file %s\n", av[*i]));
+		return (error_in("Can't open file ", av[*i], 2));
 	if (!exec_magic(fd))
-		return (!ft_printf("Corewar_exec_magic doesn't match - %s\n", av[*i]));
+		return (error_in("Corewar_exec_magic doesn't match - ", av[*i], 2));
 	if (!(ch = (t_champion*)malloc(sizeof(t_champion))))
-		return (!printf("Memory not allocated\n"));
+		return (print_fd("Memory not allocated\n", 2));
 	ch->n = 0;
 	read_name(ch, fd);
 	if ((ch->size = read_size(fd)) > CHAMP_MAX_SIZE)
-		return (!ft_printf("Big champion exec code size - %s\n", av[*i]));
+		return (error_in("Different champion exec code size - ", av[*i], 2));
 	read_com(ch, fd);
 	if (!read_code(fd, ch))
 		return (0);

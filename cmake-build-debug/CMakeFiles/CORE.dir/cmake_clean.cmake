@@ -78,6 +78,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/CORE.dir/libft/ft_toupper.c.o"
   "CMakeFiles/CORE.dir/vm/arena.c.o"
   "CMakeFiles/CORE.dir/vm/args.c.o"
+  "CMakeFiles/CORE.dir/vm/color.c.o"
   "CMakeFiles/CORE.dir/vm/commands.c.o"
   "CMakeFiles/CORE.dir/vm/commands2.c.o"
   "CMakeFiles/CORE.dir/vm/cur.c.o"
