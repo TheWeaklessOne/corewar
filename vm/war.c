@@ -6,7 +6,7 @@
 /*   By: djoye <djoye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 10:48:04 by sdoughnu          #+#    #+#             */
-/*   Updated: 2020/02/18 18:10:02 by djoye            ###   ########.fr       */
+/*   Updated: 2020/02/19 14:38:31 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,7 +99,7 @@ int					war_coming(t_vm *v)
 		if (v->dump == 1 && v->global == (unsigned long)v->dump_count)
 			return (print_arena(v, 32) + 1);
 		if (v->color == 1)
-			print_visu(vm_window, v);
+			remote(vm_window, v);
 	}
 	//if (v->color == 1)
 	//	endwin();
