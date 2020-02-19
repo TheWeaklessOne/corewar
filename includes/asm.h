@@ -6,7 +6,7 @@
 /*   By: stross <stross@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/15 15:43:02 by stross            #+#    #+#             */
-/*   Updated: 2020/02/19 14:04:04 by stross           ###   ########.fr       */
+/*   Updated: 2020/02/19 17:22:59 by stross           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -140,6 +140,7 @@ void					error_argument_overflow(int line);
 void					error_reg_overflow(int line);
 void 					create_struct(t_head *head);
 void					write_reg(int fd, char *str);
+void					check_lb(char *str);
 void					write_exec_code_2b(int size, int fd);
 void					handle_dir_2size(int fd, char *str, t_command *command, t_command **commands);
 void					handle_dir(int fd, char *str, t_command *command, t_command **commands);
@@ -154,6 +155,7 @@ void					unexpected_token(int line, int row, char *str);
 void					error_allocation(void);
 void					write_exec_code(int size, int fd);
 void					free_split(char **arr);
+void					validate_labels(t_asm_list *list);
 void					create_command(char *str, int mod, int byte_size, t_head *head);
 void					token_label(char *str, int line, int row);
 void					c_ld_lld(char *str, t_head *head, int mod, int *arr);

@@ -6,7 +6,7 @@
 /*   By: stross <stross@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/15 18:49:17 by stross            #+#    #+#             */
-/*   Updated: 2020/02/18 11:49:12 by stross           ###   ########.fr       */
+/*   Updated: 2020/02/19 16:54:33 by stross           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,6 +68,11 @@ void		create_file(char **argv, t_head *head)
 
 	filename = argv[1];
 	new_fn = get_new_ext(filename, &mod);
+	if (mod != ASM)
+	{
+		write(2, "Disassambly mode is not ready yet\n", 34);
+		exit(1);
+	}
 	if (mod == ASM)
 		validator(argv, head);
 	if ((fd = open(new_fn, O_WRONLY | O_CREAT | O_EXCL, 0644)) == -1)
