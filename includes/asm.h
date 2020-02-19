@@ -6,7 +6,7 @@
 /*   By: stross <stross@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/15 15:43:02 by stross            #+#    #+#             */
-/*   Updated: 2020/02/14 14:28:29 by stross           ###   ########.fr       */
+/*   Updated: 2020/02/19 14:04:04 by stross           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,11 @@
 # include <stdio.h>
 # include <limits.h>
 # include <string.h>
+# include <limits.h>
 
 # define BUFF_SIZE 1024
-# define ASM 2
-# define DISASM 1
+# define ASM 1
+# define DISASM 2
 
 /*
 ** REG 1
@@ -130,10 +131,13 @@ void					validator(char **argv, t_head *head);
 void					create_file(char **argv, t_head *head);
 void					remove_comments(char **arr);
 void					error_usage(void);
+void					validate_overflow(t_asm_list *list);
 void					find_separator(char **cpy, int mod ,int num);
 void					write_arg_type(char *str, int fd, int mod);
 void					no_label_error(void);
 void					length_error(int mod);
+void					error_argument_overflow(int line);
+void					error_reg_overflow(int line);
 void 					create_struct(t_head *head);
 void					write_reg(int fd, char *str);
 void					write_exec_code_2b(int size, int fd);
