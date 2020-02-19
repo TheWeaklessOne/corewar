@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: wstygg <marvin@42.fr>                      +#+  +:+       +#+         #
+#    By: stross <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2020/02/19 15:28:43 by wstygg            #+#    #+#              #
-#    Updated: 2020/02/19 15:28:55 by wstygg           ###   ########.fr        #
+#    Created: 2020/02/19 15:50:24 by stross            #+#    #+#              #
+#    Updated: 2020/02/19 15:52:08 by stross           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,6 +48,7 @@ SRC_BASE    =   asm.c               \
                 validation.c        \
                 write_arguments.c   \
                 write_commands.c    \
+				more_validation
 
 SRCS		=	$(addprefix $(SRC_DIR), $(SRC_BASE))
 OBJS		=	$(addprefix $(OBJ_DIR), $(SRC_BASE:.c=.o))
