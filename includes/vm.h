@@ -6,7 +6,7 @@
 /*   By: djoye <djoye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/11 10:21:55 by sdoughnu          #+#    #+#             */
-/*   Updated: 2020/02/18 17:07:46 by djoye            ###   ########.fr       */
+/*   Updated: 2020/02/19 14:38:34 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -130,7 +130,7 @@ typedef struct		s_vm
 	t_cur			*curs;
 	unsigned		curs_alive; // количество живых кареток
 	t_champion		*last_champ;
-	double			speed;
+	int				speed;
 	size_t 			len_name;
 	int 			width;
 	int 			step;
@@ -186,6 +186,7 @@ int					skip_uncorrect(t_cur *cur, const t_op *op);
 /*--------------------------visualization--------------------------*/
 
 WINDOW				*init_visu(WINDOW *vm_window, t_vm *vm);
+void				remote(WINDOW *vm_window, t_vm *vm);
 void				print_visu(WINDOW *vm_window, t_vm *vm);
 void				print_matrix(WINDOW *vm_window, t_vm *vm);
 void				print_sub_win(t_vm *vm, WINDOW *vm_window);
