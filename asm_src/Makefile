@@ -10,42 +10,44 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME		=	corewar
-
+NAME		=   asm
+POSITION    =   ../asm
 CC			=	gcc
 FLAGS		=	-Wall -Wextra -Werror -g
 D_FLAGS		=	-g
 
 DELTA		=	$$(echo "$$(tput cols)-47"|bc)
 
-ASM_DIR     =   asm_src/
-
-LIBFT_DIR	=	libft/
+LIBFT_DIR	=	../libft/
 LIBFT_LIB	=	$(LIBFT_DIR)libft.a
 LIBFT_INC	=	$(LIBFT_DIR)libft.h
 
-LIBS		=	-lncurses
+LIBS		=
 
-SRC_DIR		=	vm/
-INC_DIR		=	includes/
+SRC_DIR		=	./
+INC_DIR		=	../includes/
 OBJ_DIR		=	.objs/
 
-SRC_BASE    =   arena.c         \
-                args.c          \
-                commands.c      \
-                commands2.c     \
-                cur.c           \
-                cursor.c        \
-                fork.c          \
-                init2.c         \
-                init_champion.c \
-                ld_other.c      \
-                main.c          \
-                op_action.c     \
-                op_tab.c        \
-                print.c         \
-                war.c           \
-                color.c         \
+SRC_BASE    =   asm.c               \
+                assembly_2.c        \
+                assembly.c          \
+                check_commands_2.c  \
+                check_commands_3.c  \
+                check_commands.c    \
+                create_file.c       \
+                errors_three.c      \
+                errors_two.c        \
+                errors.c            \
+                free.c              \
+                list_functions.c    \
+                parse.c             \
+                utils_write.c       \
+                utils.c             \
+                utils2.c            \
+                validation_utils.c  \
+                validation.c        \
+                write_arguments.c   \
+                write_commands.c    \
 
 SRCS		=	$(addprefix $(SRC_DIR), $(SRC_BASE))
 OBJS		=	$(addprefix $(OBJ_DIR), $(SRC_BASE:.c=.o))
@@ -53,19 +55,18 @@ NB			=	$(words $(SRC_BASE))
 INDEX		=	0
 
 all :
-	@make -C $(LIBFT_DIR)
-	@make -C $(ASM_DIR)
 	@make -j $(NAME)
 
 $(NAME):		$(LIBFT_LIB) $(OBJ_DIR) $(OBJS)
-	@$(CC) $(OBJS) -o $(NAME) \
-		-I $(INC_DIR) \
-		-I $(LIBFT_INC) \
-		$(LIBS) \
-		$(LIBFT_LIB) \
+	@$(CC) $(OBJS) -o $(NAME)   \
+		-I $(INC_DIR)           \
+		-I $(LIBFT_INC)         \
+		$(LIBS)                 \
+		$(LIBFT_LIB)            \
 		$(FLAGS) $(D_FLAGS)
 	@strip -x $@
 	@printf "\r\033[48;5;15;38;5;25m✅ MAKE $(NAME)\033[0m\033[K\n"
+	@cp asm ../asm
 
 $(LIBFT_LIB):
 	@make -C $(LIBFT_DIR)
@@ -85,31 +86,14 @@ $(OBJ_DIR)%.o :	$(SRC_DIR)%.c | $(OBJ_DIR)
 		-I $(LIBFT_INC)
 	@$(eval INDEX=$(shell echo $$(($(INDEX)+1))))
 
-clean:          cleanlib cleanasm
+clean:
 	@rm -rf $(OBJ_DIR)
 	@printf "\r\033[38;5;202m✖ clean $(NAME)\033[0m\033[K\n"
 
-cleanasm:
-	@make -C $(ASM_DIR) clean
-
-cleanlib:
-	@make -C $(LIBFT_DIR) clean
-
-cleancor:
-	@rm -rf $(OBJ_DIR)
-	@printf "\r\033[38;5;202m✖ clean $(NAME)\033[0m\033[K\n"
-
-fclean:			fcleanlib fcleanasm cleancor
+fclean:			clean
 	@rm -f $(NAME)
 	@printf "\r\033[38;5;196m❌ fclean $(NAME)\033[0m\033[K\n"
 
-fcleanasm:
-	@make -C $(ASM_DIR) fclean
-
-fcleanlib:
-	@make -C $(LIBFT_DIR) fclean
-
 re:				fclean all
-
 
 -include $(OBJS:.o=.d)

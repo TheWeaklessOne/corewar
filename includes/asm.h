@@ -26,8 +26,8 @@
 # include <string.h>
 
 # define BUFF_SIZE 1024
-# define ASM 1
-# define DISASM 2
+# define ASM 2
+# define DISASM 1
 
 /*
 ** REG 1

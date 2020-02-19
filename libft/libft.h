@@ -25,7 +25,6 @@
 # include <ctype.h>
 # include <stdio.h>
 
-
 typedef struct		s_list
 {
 	int				plus;
