@@ -6,7 +6,7 @@
 /*   By: djoye <djoye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/11 10:21:55 by sdoughnu          #+#    #+#             */
-/*   Updated: 2020/02/19 14:38:34 by djoye            ###   ########.fr       */
+/*   Updated: 2020/02/19 16:14:00 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,9 @@
 #include <sys/ioctl.h>
 
 # define SIZE_64				64
-# define HEIGHT (MEM_SIZE / SIZE_64 + 4)
-# define WIDTH	(SIZE_64 * 3 + 100)
-# define COMMENT SIZE_64 * 3 + 5
+# define HEIGHT (MEM_SIZE / SIZE_64 + 1)
+# define WIDTH	(SIZE_64 * 3 + 20)
+# define SUB SIZE_64 * 3 + 3
 # define KEY_SPACE 32
 # define KEY_ESC 27
 # define KEY_STEP 115
