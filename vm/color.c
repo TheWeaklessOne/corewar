@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   color.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sdoughnu <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: djoye <djoye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/16 19:58:36 by sdoughnu          #+#    #+#             */
-/*   Updated: 2020/02/16 19:58:37 by sdoughnu         ###   ########.fr       */
+/*   Updated: 2020/02/20 14:26:17 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/vm.h"
 
-int 		print_fd(const char *s, int fd)
+int			print_fd(const char *s, int fd)
 {
 	write(fd, "\033[31m", 5);
 	write(fd, s, ft_strlen(s));
@@ -20,7 +20,7 @@ int 		print_fd(const char *s, int fd)
 	return (0);
 }
 
-int 		error_in(const char *s1, const char *s2, int fd)
+int			error_in(const char *s1, const char *s2, int fd)
 {
 	write(fd, "\033[31m", 5);
 	write(fd, s1, ft_strlen(s1));
@@ -30,7 +30,7 @@ int 		error_in(const char *s1, const char *s2, int fd)
 	return (0);
 }
 
-int 		print_fd2(const char *s, int fd)
+int			print_fd2(const char *s, int fd)
 {
 	write(fd, "\033[31m", 5);
 	write(fd, s, ft_strlen(s));

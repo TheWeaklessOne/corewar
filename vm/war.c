@@ -6,7 +6,7 @@
 /*   By: djoye <djoye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 10:48:04 by sdoughnu          #+#    #+#             */
-/*   Updated: 2020/02/19 16:06:06 by djoye            ###   ########.fr       */
+/*   Updated: 2020/02/20 14:37:33 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,9 +34,8 @@ void				do_cycle(t_vm *v)
 	c = v->curs;
 	while (c)
 	{
-		if (c->cyc_before_op <= 0)
-			if ((c->operation = v->arena[c->pos]) >= 0x01
-				&& c->operation <= 0x10)
+		if (c->cyc_before_op <= 0 && (c->operation = v->arena[c->pos]))
+			if (c->operation >= 0x01 && c->operation <= 0x10)
 				c->cyc_before_op = g_op_tab[c->operation].need_cycles;
 		if (--c->cyc_before_op <= 0)
 		{
@@ -45,12 +44,12 @@ void				do_cycle(t_vm *v)
 			{
 				do_op(v, c);
 				if (!v->zj)
-					c->pos = (c->pos + skip_uncorrect(c, &g_op_tab[c->operation])) % MEM_SIZE;
+					c->pos = (c->pos +
+					skip_uncorrect(c, &g_op_tab[c->operation])) % MEM_SIZE;
 				else
 					v->zj = 0;
 			}
-			else
-				c->pos = (c->pos + skip) % MEM_SIZE;
+				else c->pos = (c->pos + skip) % MEM_SIZE;
 		}
 		c = c->next;
 	}
@@ -58,9 +57,10 @@ void				do_cycle(t_vm *v)
 
 int					war_coming(t_vm *v)
 {
-	WINDOW *vm_window = NULL;
 	int				check_count;
 
+	WINDOW * vm_window;
+	vm_window = NULL;
 	if (v->color == 1)
 		vm_window = init_visu(vm_window, v);
 	if (v->d == 1 && v->d_count == 0)
@@ -80,10 +80,11 @@ int					war_coming(t_vm *v)
 			delete_deads(v);
 			if (v->live_count >= NBR_LIVE || v->checks == MAX_CHECKS)
 			{
-				v->live_count = 0; // перенес сюда
+				v->live_count = 0;
 				v->cycles_to_die -= CYCLE_DELTA;
 				v->checks = 0;
-				(v->l == 1) ? ft_printf("Cycle to die is now %d\n", v->cycles_to_die) : 0;
+				if (v->l == 1)
+					ft_printf("Cycle to die is now %d\n", v->cycles_to_die);
 			}
 			check_count = 0;
 			v->live_count = 0;
@@ -98,9 +99,8 @@ int					war_coming(t_vm *v)
 		if (v->color == 1)
 			remote(vm_window, v);
 	}
-	//if (v->color == 1)
-	//	endwin();
 	if (v->last_champ)
-		printf("Contestant %u, \"%s\", has won !\n", v->last_champ->n, v->last_champ->name);
+		printf("Contestant %u, \"%s\", has won !\n", v->last_champ->n,
+		v->last_champ->name);
 	return (1);
 }

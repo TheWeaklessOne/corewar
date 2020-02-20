@@ -6,7 +6,7 @@
 /*   By: djoye <djoye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/04 20:06:04 by wstygg            #+#    #+#             */
-/*   Updated: 2020/02/20 14:10:11 by djoye            ###   ########.fr       */
+/*   Updated: 2020/02/20 14:24:45 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,17 +74,16 @@ int					read_t_ind(t_vm *vm, int pos, int cpos)
 		skip %= IDX_MOD;
 		skip += cpos;
 	}
-		ret.f.o4 = vm->arena[(skip) % MEM_SIZE];
-		ret.f.o3 = vm->arena[(skip + 1) % MEM_SIZE];
-		ret.f.o2 = vm->arena[(skip + 2) % MEM_SIZE];
-		ret.f.o1 = vm->arena[(skip + 3) % MEM_SIZE];
-		/*
-		ret.f.o4 = vm->arena[(cpos + skip) % MEM_SIZE];
-		ret.f.o3 = vm->arena[(cpos + (skip + 1)) % MEM_SIZE]; взято из else
-		ret.f.o2 = vm->arena[(cpos + (skip + 2)) % MEM_SIZE];
-		ret.f.o1 = vm->arena[(cpos + (skip + 3)) % MEM_SIZE];
-		*/
-	
+	ret.f.o4 = vm->arena[(skip) % MEM_SIZE];
+	ret.f.o3 = vm->arena[(skip + 1) % MEM_SIZE];
+	ret.f.o2 = vm->arena[(skip + 2) % MEM_SIZE];
+	ret.f.o1 = vm->arena[(skip + 3) % MEM_SIZE];
+	/*
+	ret.f.o4 = vm->arena[(cpos + skip) % MEM_SIZE];
+	ret.f.o3 = vm->arena[(cpos + (skip + 1)) % MEM_SIZE]; взято из else
+	ret.f.o2 = vm->arena[(cpos + (skip + 2)) % MEM_SIZE];
+	ret.f.o1 = vm->arena[(cpos + (skip + 3)) % MEM_SIZE];
+	*/
 	return (ret.hex);
 }
 
