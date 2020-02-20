@@ -6,7 +6,7 @@
 /*   By: djoye <djoye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/16 18:24:30 by djoye             #+#    #+#             */
-/*   Updated: 2020/02/19 16:16:12 by djoye            ###   ########.fr       */
+/*   Updated: 2020/02/20 12:46:21 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,24 +30,14 @@ void			print_sub_win(t_vm *vm, WINDOW *vm_window)
 	wattron(vm_window, COLOR_PAIR(vm->step == 0 ? 2 : 1));
 	mvwprintw(vm_window, ++i, SUB,
 	vm->step == 0 ? "********RUN********\n" : "*******PAUSE*******\n");
+	mvwprintw(vm_window, ++i, SUB, "Speed: %12d\n", vm->speed);
 	wattroff(vm_window, COLOR_PAIR(vm->step == 0 ? 2 : 1));
-	mvwprintw(vm_window, i += 2, SUB, "Speed: %12d", vm->speed);
 	mvwprintw(vm_window, ++i, SUB, "Cycle: %12d", vm->global);
 	mvwprintw(vm_window, ++i, SUB, "Cursors: %10u", vm->curs_alive);
 	mvwprintw(vm_window, ++i, SUB, "Cycle to die: %5d", vm->cycles_to_die);
 	mvwprintw(vm_window, ++i, SUB, "Cycle delta: %6d", CYCLE_DELTA);
 	mvwprintw(vm_window, ++i, SUB, "Lives: %9d/%2d", vm->live_count, NBR_LIVE);
 	mvwprintw(vm_window, ++i, SUB, "Checks: %8d/%2d", vm->checks, MAX_CHECKS);
-}
-
-void			print_usage(WINDOW *vm_window)
-{
-	mvwprintw(vm_window, 58, SUB, "HELP");
-	mvwprintw(vm_window, 60, SUB, "speed+: up");
-	mvwprintw(vm_window, 61, SUB, "speed-: down");
-	mvwprintw(vm_window, 62, SUB, "pause: space");
-	mvwprintw(vm_window, 63, SUB, "step: s");
-	mvwprintw(vm_window, 64, SUB, "exit: esc\n");
 }
 
 WINDOW			*init_visu(WINDOW *vm_window, t_vm *vm)
@@ -71,7 +61,7 @@ WINDOW			*init_visu(WINDOW *vm_window, t_vm *vm)
 	init_pair(14, COLOR_BLACK, COLOR_BLUE);
 	max_name(vm);
 	vm->step = 1;
-	vm->speed = 100;
+	vm->speed = 5;
 	vm_window = newwin(HEIGHT, vm->width, 0, 0);
 	return (vm_window);
 }
@@ -128,12 +118,18 @@ void			pause_step(WINDOW *vm_window, t_vm *vm)
 	vm->step = 1;
 	while (vm->step && (key = getch()))
 	{
-		if ((key == KEY_SPACE && (vm->step = 0)) ||
-			(key == KEY_STEP && (vm->step = 1)))
-			break ;
-		else if (key == KEY_ESC)
+		if (key == KEY_ESC)
 			exit(endwin());
-		print_visu(vm_window, vm);
+		else if (((key == ' ' || key == '0') && (vm->step = 0)) ||
+		(key == KEY_STEP && (vm->step = 1)))
+			break ;
+		else if ((key == KEY_DOWN || key == '-') && vm->speed > 1)
+			vm->speed--;
+		else if ((key == KEY_UP || key == '+') && vm->speed < 9)
+			vm->speed++;
+		else if (key >= '1' && key <= '9')
+			vm->speed = key - 48;
+		print_visu(vm_window, vm, 1);
 	}
 }
 
@@ -142,25 +138,33 @@ void			remote(WINDOW *vm_window, t_vm *vm)
 	int			key;
 
 	key = getch();
-	if (key == KEY_DOWN && vm->speed > 100)
-		vm->speed -= 100; // < 600000.0 ? vm->speed *= 2 : 0;
-	else if (key == KEY_UP && vm->speed < 500)
-		vm->speed += 100;// > 60.0 ? vm->speed /= 2 : 0;
-	if (vm->step == 1 || key == KEY_STEP || key == KEY_SPACE)
-		pause_step(vm_window, vm);
 	if (key == KEY_ESC)
 		exit(endwin());
-	print_visu(vm_window, vm);
+	else if (vm->step == 1 || key == KEY_STEP || key == ' ' || key == '0')
+		pause_step(vm_window, vm);
+	else if ((key == KEY_DOWN || key == '-') && vm->speed > 1)
+		vm->speed--;
+	else if ((key == KEY_UP || key == '+') && vm->speed < 9)
+		vm->speed++;
+	else if (key >= '1' && key <= '9')
+		vm->speed = key - 48;
+	mvwprintw(vm_window, 30, SUB, "key: %12d", key);
+	print_visu(vm_window, vm, 0);
 }
 
-void			print_visu(WINDOW *vm_window, t_vm *vm)
+void			print_visu(WINDOW *vm_window, t_vm *vm, int flag)
 {
 	small_screen(vm_window, vm);
 	print_matrix(vm_window, vm);
 	print_sub_win(vm, vm_window);
-	print_usage(vm_window);
+	mvwprintw(vm_window, 58, SUB, "HELP");
+	mvwprintw(vm_window, 60, SUB, "speed+: up");
+	mvwprintw(vm_window, 61, SUB, "speed-: down");
+	mvwprintw(vm_window, 62, SUB, "pause: space");
+	mvwprintw(vm_window, 63, SUB, "step: s");
+	mvwprintw(vm_window, 64, SUB, "exit: esc\n");
 	wrefresh(vm_window);
-	usleep(600000 / vm->speed);
+	usleep(flag ? 10000 : 500000 / (vm->speed * vm->speed * vm->speed));
 }
 
 void			max_name(t_vm *vm)
@@ -175,5 +179,5 @@ void			max_name(t_vm *vm)
 			vm->len_name = ft_strlen(vm->champ[i]->name);
 		i++;
 	}
-	vm->width = WIDTH + (vm->len_name > 8 ? vm->len_name - 7 : 0);
+	vm->width = WIDTH + (vm->len_name > 7 ? vm->len_name - 6 : 0);
 }

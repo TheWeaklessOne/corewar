@@ -6,7 +6,7 @@
 /*   By: djoye <djoye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/11 10:21:55 by sdoughnu          #+#    #+#             */
-/*   Updated: 2020/02/19 16:14:00 by djoye            ###   ########.fr       */
+/*   Updated: 2020/02/20 12:32:45 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,8 @@
 # define HEIGHT (MEM_SIZE / SIZE_64 + 1)
 # define WIDTH	(SIZE_64 * 3 + 20)
 # define SUB SIZE_64 * 3 + 3
-# define KEY_SPACE 32
 # define KEY_ESC 27
-# define KEY_STEP 115
+# define KEY_STEP 10
 
 typedef struct		s_champion
 {
@@ -190,7 +189,7 @@ int 				print_fd2(const char *s, int fd);
 
 WINDOW				*init_visu(WINDOW *vm_window, t_vm *vm);
 void				remote(WINDOW *vm_window, t_vm *vm);
-void				print_visu(WINDOW *vm_window, t_vm *vm);
+void				print_visu(WINDOW *vm_window, t_vm *vm, int flag);
 void				print_matrix(WINDOW *vm_window, t_vm *vm);
 void				print_sub_win(t_vm *vm, WINDOW *vm_window);
 void				max_name(t_vm *vm);
