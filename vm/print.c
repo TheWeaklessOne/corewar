@@ -6,7 +6,7 @@
 /*   By: djoye <djoye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/16 18:24:30 by djoye             #+#    #+#             */
-/*   Updated: 2020/02/20 12:46:21 by djoye            ###   ########.fr       */
+/*   Updated: 2020/02/20 13:10:50 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,9 @@ void			print_sub_win(t_vm *vm, WINDOW *vm_window)
 	wattron(vm_window, COLOR_PAIR(vm->step == 0 ? 2 : 1));
 	mvwprintw(vm_window, ++i, SUB,
 	vm->step == 0 ? "********RUN********\n" : "*******PAUSE*******\n");
-	mvwprintw(vm_window, ++i, SUB, "Speed: %12d\n", vm->speed);
 	wattroff(vm_window, COLOR_PAIR(vm->step == 0 ? 2 : 1));
-	mvwprintw(vm_window, ++i, SUB, "Cycle: %12d", vm->global);
+	mvwprintw(vm_window, ++i, SUB, "Speed: %12d\n", vm->speed);
+	mvwprintw(vm_window, i += 2, SUB, "Cycle: %12d", vm->global);
 	mvwprintw(vm_window, ++i, SUB, "Cursors: %10u", vm->curs_alive);
 	mvwprintw(vm_window, ++i, SUB, "Cycle to die: %5d", vm->cycles_to_die);
 	mvwprintw(vm_window, ++i, SUB, "Cycle delta: %6d", CYCLE_DELTA);
@@ -148,7 +148,6 @@ void			remote(WINDOW *vm_window, t_vm *vm)
 		vm->speed++;
 	else if (key >= '1' && key <= '9')
 		vm->speed = key - 48;
-	mvwprintw(vm_window, 30, SUB, "key: %12d", key);
 	print_visu(vm_window, vm, 0);
 }
 
@@ -157,11 +156,12 @@ void			print_visu(WINDOW *vm_window, t_vm *vm, int flag)
 	small_screen(vm_window, vm);
 	print_matrix(vm_window, vm);
 	print_sub_win(vm, vm_window);
-	mvwprintw(vm_window, 58, SUB, "HELP");
-	mvwprintw(vm_window, 60, SUB, "speed+: up");
-	mvwprintw(vm_window, 61, SUB, "speed-: down");
-	mvwprintw(vm_window, 62, SUB, "pause: space");
-	mvwprintw(vm_window, 63, SUB, "step: s");
+	mvwprintw(vm_window, 58, SUB + 4, "HELP");
+	mvwprintw(vm_window, 59, SUB, "speed: '1'-'9'");
+	mvwprintw(vm_window, 60, SUB, "speed+: up / '+'");
+	mvwprintw(vm_window, 61, SUB, "speed-: down / '-'");
+	mvwprintw(vm_window, 62, SUB, "pause: space / '0'");
+	mvwprintw(vm_window, 63, SUB, "step: enter");
 	mvwprintw(vm_window, 64, SUB, "exit: esc\n");
 	wrefresh(vm_window);
 	usleep(flag ? 10000 : 500000 / (vm->speed * vm->speed * vm->speed));
