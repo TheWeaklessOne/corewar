@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: wstygg <marvin@42.fr>                      +#+  +:+       +#+         #
+#    By: djoye <djoye@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/19 15:28:16 by wstygg            #+#    #+#              #
-#    Updated: 2020/02/20 11:07:34 by sdoughnu         ###   ########.fr        #
+#    Updated: 2020/02/20 13:33:40 by djoye            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,7 +43,8 @@ SRC_BASE    =   arena.c         \
                 main.c          \
                 op_action.c     \
                 op_tab.c        \
-                print.c         \
+                print.c			\
+				print_helper.c  \
                 war.c           \
                 color.c         \
                 commands3.c     \
