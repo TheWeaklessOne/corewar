@@ -344,6 +344,9 @@
 		<Unit filename="/Users/sdoughnu/Desktop/COR2/vm/commands2.c">
 			<Option target="CORE"/>
 		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/COR2/vm/commands3.c">
+			<Option target="CORE"/>
+		</Unit>
 		<Unit filename="/Users/sdoughnu/Desktop/COR2/vm/cur.c">
 			<Option target="CORE"/>
 		</Unit>

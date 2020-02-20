@@ -103,6 +103,7 @@ add_executable(CORE
         vm/ld_other.c
         vm/main.c
         vm/color.c
+        vm/commands3.c
         vm/op_action.c
         vm/op_tab.c
         vm/print.c

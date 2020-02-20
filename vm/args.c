@@ -51,16 +51,11 @@ int					read_t_dir(t_vm *vm, int pos, int size)
 int					read_t_ind(t_vm *vm, int pos, int cpos)
 {
 	t_4bytes		ret;
-	//t_4bytes		arg;
 	t_2bytes		arg;
 	int				skip;
-	
+
 	arg.f.o1 = vm->arena[(pos + 1) % MEM_SIZE];
 	arg.f.o2 = vm->arena[pos];
-// arg.f.o4 = vm->arena[pos];
-// 	arg.f.o3 = vm->arena[(pos + 1) % MEM_SIZE];
-// 	arg.f.o2 = vm->arena[(pos + 2) % MEM_SIZE];
-// 	arg.f.o1 = vm->arena[(pos + 3) % MEM_SIZE];
 	skip = (int)arg.hex;
 	if (-skip > cpos)
 	{
@@ -68,7 +63,6 @@ int					read_t_ind(t_vm *vm, int pos, int cpos)
 		skip += cpos;
 		skip %= MEM_SIZE;
 		skip = MEM_SIZE + skip;
-
 		ret.f.o4 = vm->arena[(skip) % MEM_SIZE];
 		ret.f.o3 = vm->arena[(skip + 1) % MEM_SIZE];
 		ret.f.o2 = vm->arena[(skip + 2) % MEM_SIZE];
@@ -83,17 +77,6 @@ int					read_t_ind(t_vm *vm, int pos, int cpos)
 		ret.f.o1 = vm->arena[(cpos + (skip + 3)) % MEM_SIZE];
 	}
 	return (ret.hex);
-}
-
-int					get_t_ind(t_vm *vm, int pos)
-{
-	t_4bytes		arg;
-
-	arg.f.o4 = vm->arena[pos];
-	arg.f.o3 = vm->arena[(pos + 1) % MEM_SIZE];
-	arg.f.o2 = vm->arena[(pos + 2) % MEM_SIZE];
-	arg.f.o1 = vm->arena[(pos + 3) % MEM_SIZE];
-	return (arg.hex % IDX_MOD);
 }
 
 void				read_args(t_vm *v, t_cur *c)

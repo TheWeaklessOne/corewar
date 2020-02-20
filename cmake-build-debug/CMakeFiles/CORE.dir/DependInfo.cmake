@@ -86,6 +86,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/sdoughnu/Desktop/COR2/vm/color.c" "/Users/sdoughnu/Desktop/COR2/cmake-build-debug/CMakeFiles/CORE.dir/vm/color.c.o"
   "/Users/sdoughnu/Desktop/COR2/vm/commands.c" "/Users/sdoughnu/Desktop/COR2/cmake-build-debug/CMakeFiles/CORE.dir/vm/commands.c.o"
   "/Users/sdoughnu/Desktop/COR2/vm/commands2.c" "/Users/sdoughnu/Desktop/COR2/cmake-build-debug/CMakeFiles/CORE.dir/vm/commands2.c.o"
+  "/Users/sdoughnu/Desktop/COR2/vm/commands3.c" "/Users/sdoughnu/Desktop/COR2/cmake-build-debug/CMakeFiles/CORE.dir/vm/commands3.c.o"
   "/Users/sdoughnu/Desktop/COR2/vm/cur.c" "/Users/sdoughnu/Desktop/COR2/cmake-build-debug/CMakeFiles/CORE.dir/vm/cur.c.o"
   "/Users/sdoughnu/Desktop/COR2/vm/cursor.c" "/Users/sdoughnu/Desktop/COR2/cmake-build-debug/CMakeFiles/CORE.dir/vm/cursor.c.o"
   "/Users/sdoughnu/Desktop/COR2/vm/fork.c" "/Users/sdoughnu/Desktop/COR2/cmake-build-debug/CMakeFiles/CORE.dir/vm/fork.c.o"

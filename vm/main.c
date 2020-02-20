@@ -32,12 +32,8 @@ int				flag(int *i, int c, char **v, t_vm *vm)
 		(*i)++;
 		return (1);
 	}
-	else if (*i < c && !ft_strcmp(v[*i], "-v"))
-	{
-		vm->color = 1;
-		(*i)++;
+	else if (*i < c && !ft_strcmp(v[*i], "-v") && (vm->color = 1) && (*i)++)
 		return (1);
-	}
 	else if (*i + 1 < c && !ft_strcmp(v[*i], "-d"))
 	{
 		vm->d_count = ft_atoi(v[++(*i)]);

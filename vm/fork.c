@@ -12,10 +12,10 @@
 
 #include "../includes/vm.h"
 
-t_cur 			*create_cursor(t_cur *old)
+t_cur			*create_cursor(t_cur *old)
 {
-	t_cur 		*new;
-	int 		i;
+	t_cur		*new;
+	int			i;
 
 	if (!(new = (t_cur*)malloc(sizeof(t_cur))))
 	{
@@ -37,7 +37,8 @@ void			do_fork(t_vm *vm, t_cur *cur)
 {
 	t_cur		*new;
 
-	cur->args[0] = read_t_dir(vm, ((cur->pos + 1) % MEM_SIZE), cur->arg_size[0]);
+	cur->args[0] = read_t_dir(vm, ((cur->pos + 1) % MEM_SIZE),
+			cur->arg_size[0]);
 	new = create_cursor(cur);
 	new->pos = (cur->pos + cur->args[0] % IDX_MOD) % MEM_SIZE;
 	new->next = vm->curs;
@@ -51,12 +52,13 @@ void			do_lfork(t_vm *vm, t_cur *cur)
 {
 	t_cur		*new;
 
-	cur->args[0] = read_t_dir(vm, ((cur->pos + 1) % MEM_SIZE), cur->arg_size[0]);
+	cur->args[0] = read_t_dir(vm, ((cur->pos + 1) % MEM_SIZE),
+			cur->arg_size[0]);
 	new = create_cursor(cur);
 	new->pos = (cur->pos + cur->args[0]) % MEM_SIZE;
 	new->next = vm->curs;
 	vm->curs = new;
 	vm->curs_alive++;
 	(vm->l == 1) ? ft_printf("lfork %d (%d)\n", cur->args[0],
-							 ((cur->pos + cur->args[0]))) : 0;
+			(cur->pos + cur->args[0])) : 0;
 }

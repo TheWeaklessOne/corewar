@@ -2337,6 +2337,33 @@ vm/commands2.c.s:
 	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/vm/commands2.c.s
 .PHONY : vm/commands2.c.s
 
+vm/commands3.o: vm/commands3.c.o
+
+.PHONY : vm/commands3.o
+
+# target to build an object file
+vm/commands3.c.o:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/vm/commands3.c.o
+.PHONY : vm/commands3.c.o
+
+vm/commands3.i: vm/commands3.c.i
+
+.PHONY : vm/commands3.i
+
+# target to preprocess a source file
+vm/commands3.c.i:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/vm/commands3.c.i
+.PHONY : vm/commands3.c.i
+
+vm/commands3.s: vm/commands3.c.s
+
+.PHONY : vm/commands3.s
+
+# target to generate assembly for a file
+vm/commands3.c.s:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/vm/commands3.c.s
+.PHONY : vm/commands3.c.s
+
 vm/cur.o: vm/cur.c.o
 
 .PHONY : vm/cur.o
@@ -2889,6 +2916,9 @@ help:
 	@echo "... vm/commands2.o"
 	@echo "... vm/commands2.i"
 	@echo "... vm/commands2.s"
+	@echo "... vm/commands3.o"
+	@echo "... vm/commands3.i"
+	@echo "... vm/commands3.s"
 	@echo "... vm/cur.o"
 	@echo "... vm/cur.i"
 	@echo "... vm/cur.s"

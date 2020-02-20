@@ -80,7 +80,7 @@ int					war_coming(t_vm *v)
 			delete_deads(v);
 			if (v->live_count >= NBR_LIVE || v->checks == MAX_CHECKS)
 			{
-				v->live_count = 0; // перенес сюда
+				v->live_count = 0;
 				v->cycles_to_die -= CYCLE_DELTA;
 				v->checks = 0;
 				(v->l == 1) ? ft_printf("Cycle to die is now %d\n", v->cycles_to_die) : 0;
@@ -98,8 +98,6 @@ int					war_coming(t_vm *v)
 		if (v->color == 1)
 			remote(vm_window, v);
 	}
-	//if (v->color == 1)
-	//	endwin();
 	if (v->last_champ)
 		printf("Contestant %u, \"%s\", has won !\n", v->last_champ->n, v->last_champ->name);
 	return (1);

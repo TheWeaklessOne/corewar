@@ -176,7 +176,6 @@ int					check_op(t_vm *vm, t_cur *cur);
 t_4bits				swap_bits(unsigned char nb);
 int					read_t_dir(t_vm *vm, int pos, int size);
 int					read_t_ind(t_vm *vm, int pos, int cpos);
-int					get_t_ind(t_vm *vm, int pos);
 void				read_args(t_vm *v, t_cur *c);
 void				get_arg_types(unsigned char c, unsigned *args);
 
@@ -184,6 +183,10 @@ int					skip_uncorrect(t_cur *cur, const t_op *op);
 int					print_fd(const char *s, int fd);
 int 				error_in(const char *s1, const char *s2, int fd);
 int 				print_fd2(const char *s, int fd);
+
+void				l_for_sti(t_vm *vm, t_cur *cur);
+void				color_map_sti(t_vm *vm, int skip, t_cur *cur);
+void				place_arena_st(int skip, t_cur *cur, t_4bytes arg, t_vm *vm);
 
 /*--------------------------visualization--------------------------*/
 

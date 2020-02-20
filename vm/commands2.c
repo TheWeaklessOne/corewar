@@ -26,35 +26,12 @@ void				do_st(t_vm *vm, t_cur *cur)
 	}
 	else if (cur->args_type[1] == T_IND)
 	{
-		skip = read_t_dir(vm, (cur->pos + 2 + cur->arg_size[0]) % MEM_SIZE, cur->arg_size[1]);
+		skip = read_t_dir(vm, (cur->pos + 2 + cur->arg_size[0]) % MEM_SIZE,
+				cur->arg_size[1]);
 		cur->args[1] = skip;
 		skip %= IDX_MOD;
 		arg.hex = cur->reg[cur->args[0] - 1];
-		if (-skip > cur->pos)
-		{
-			skip += cur->pos;
-			skip %= MEM_SIZE;
-			skip = MEM_SIZE + skip;
-			vm->arena[skip] = arg.f.o4;
-			vm->arena[(skip + 1) % MEM_SIZE] = arg.f.o3;
-			vm->arena[(skip + 2) % MEM_SIZE] = arg.f.o2;
-			vm->arena[(skip + 3) % MEM_SIZE] = arg.f.o1;
-			vm->map_color[skip] = cur->id;
-			vm->map_color[(skip + 1) % MEM_SIZE] = cur->id;
-			vm->map_color[(skip + 2) % MEM_SIZE] = cur->id;
-			vm->map_color[(skip + 3) % MEM_SIZE] = cur->id;
-		}
-		else
-		{
-			vm->arena[(cur->pos + skip) % MEM_SIZE] = arg.f.o4;
-			vm->arena[(cur->pos + (skip + 1)) % MEM_SIZE] = arg.f.o3;
-			vm->arena[(cur->pos + (skip + 2)) % MEM_SIZE] = arg.f.o2;
-			vm->arena[(cur->pos + (skip + 3)) % MEM_SIZE] = arg.f.o1;
-			vm->map_color[(cur->pos + skip) % MEM_SIZE] = cur->id;
-			vm->map_color[(cur->pos + (skip + 1)) % MEM_SIZE] = cur->id;
-			vm->map_color[(cur->pos + (skip + 2)) % MEM_SIZE] = cur->id;
-			vm->map_color[(cur->pos + (skip + 3)) % MEM_SIZE] = cur->id;
-		}
+		place_arena_st(skip, cur, arg, vm);
 	}
 	(vm->l == 1) ? ft_printf("st r%d %d\n", cur->args[0], cur->args[1]) : 0;
 }
@@ -62,24 +39,28 @@ void				do_st(t_vm *vm, t_cur *cur)
 void				do_add(t_vm *vm, t_cur *cur)
 {
 	read_args(vm, cur);
-	cur->reg[cur->args[2] - 1] = cur->reg[cur->args[0] - 1] + cur->reg[cur->args[1] - 1];
+	cur->reg[cur->args[2] - 1] =
+			cur->reg[cur->args[0] - 1] + cur->reg[cur->args[1] - 1];
 	if (cur->reg[cur->args[2] - 1] == 0)
 		cur->carry = 1;
 	else
 		cur->carry = 0;
 	if (vm->l == 1)
-		ft_printf("add r%d r%d r%d\n", cur->args[0], cur->args[1], cur->args[2]);
+		ft_printf("add r%d r%d r%d\n", cur->args[0],
+				cur->args[1], cur->args[2]);
 }
 
 void				do_sub(t_vm *vm, t_cur *cur)
 {
 	read_args(vm, cur);
-	cur->reg[cur->args[2] - 1] = cur->reg[cur->args[0] - 1] - cur->reg[cur->args[1] - 1];
+	cur->reg[cur->args[2] - 1] =
+			cur->reg[cur->args[0] - 1] - cur->reg[cur->args[1] - 1];
 	if (cur->reg[cur->args[2] - 1] == 0)
 		cur->carry = 1;
 	else
 		cur->carry = 0;
-	(vm->l == 1) ? ft_printf("sub r%d r%d r%d\n", cur->args[0], cur->args[1], cur->args[2]) : 0;
+	(vm->l == 1) ? ft_printf("sub r%d r%d r%d\n", cur->args[0],
+			cur->args[1], cur->args[2]) : 0;
 }
 
 void				do_and(t_vm *vm, t_cur *cur)
@@ -91,7 +72,8 @@ void				do_and(t_vm *vm, t_cur *cur)
 		cur->args[1] = cur->reg[cur->args[1] - 1];
 	cur->reg[cur->args[2] - 1] = cur->args[0] & cur->args[1];
 	cur->carry = (cur->reg[cur->args[2] - 1] == 0) ? 1 : 0;
-	(vm->l == 1) ? ft_printf("and %d %d r%d\n", cur->args[0], cur->args[1], cur->args[2]) : 0;
+	(vm->l == 1) ? ft_printf("and %d %d r%d\n", cur->args[0],
+			cur->args[1], cur->args[2]) : 0;
 }
 
 void				do_or(t_vm *vm, t_cur *cur)
@@ -103,5 +85,6 @@ void				do_or(t_vm *vm, t_cur *cur)
 		cur->args[1] = cur->reg[cur->args[1] - 1];
 	cur->reg[cur->args[2] - 1] = cur->args[0] | cur->args[1];
 	cur->carry = (cur->reg[cur->args[2] - 1] == 0) ? 1 : 0;
-	(vm->l == 1) ? ft_printf("or %d %d r%d\n", cur->args[0], cur->args[1], cur->args[2]) : 0;
+	(vm->l == 1) ? ft_printf("or %d %d r%d\n", cur->args[0],
+			cur->args[1], cur->args[2]) : 0;
 }

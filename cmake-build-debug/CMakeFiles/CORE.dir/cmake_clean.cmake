@@ -81,6 +81,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/CORE.dir/vm/color.c.o"
   "CMakeFiles/CORE.dir/vm/commands.c.o"
   "CMakeFiles/CORE.dir/vm/commands2.c.o"
+  "CMakeFiles/CORE.dir/vm/commands3.c.o"
   "CMakeFiles/CORE.dir/vm/cur.c.o"
   "CMakeFiles/CORE.dir/vm/cursor.c.o"
   "CMakeFiles/CORE.dir/vm/fork.c.o"

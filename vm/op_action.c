@@ -12,7 +12,7 @@
 
 #include "../includes/vm.h"
 
-void				  calc_arg_size(unsigned *args_t, int *arg_size, int size)
+void				calc_arg_size(unsigned *args_t, int *arg_size, int size)
 {
 	(args_t[0] == T_IND) ? arg_size[0] = IND_SIZE : 0;
 	(args_t[0] == T_REG) ? arg_size[0] = 1 : 0;
@@ -62,8 +62,6 @@ int					check_types(unsigned *args_type, t_op op)
 	if (op.arg_count >= 3)
 		if (op.arg_type[2] && !(op.arg_type[2] & args_type[2]))
 			return (0);
-//	if (args_type[3])
-//		return (0);
 	return (1);
 }
 
@@ -85,9 +83,7 @@ int					skip_uncorrect(t_cur *cur, const t_op *op)
 int					check_op(t_vm *vm, t_cur *cur)
 {
 	t_op			op;
-	int 			t;
 
-	t = 0;
 	if (cur->operation >= 0x01 && cur->operation <= 0x10)
 	{
 		op = g_op_tab[cur->operation];
@@ -98,33 +94,11 @@ int					check_op(t_vm *vm, t_cur *cur)
 			if (check_types(cur->args_type, op))
 				if (check_t_reg(vm, cur, cur->args_type))
 					return (0);
-			return (skip_uncorrect(cur, &op));//1 + cur->arg_size[0] + cur->arg_size[1] + cur->arg_size[2]); // why??? + 2
+			return (skip_uncorrect(cur, &op));
 		}
 		cur->arg_size[0] = 4 - 2 * op.dir_size;
 		cur->args_type[0] = T_DIR;
 		return (0);
 	}
 	return (1);
-}
-
-void				do_op(t_vm *vm, t_cur *cur)
-{
-	if (vm->l == 1)
-		ft_printf("P %4d | ", cur->p);
-	(cur->operation == 1) ? do_live(vm, cur) : 0;
-	(cur->operation == 2) ? do_ld(vm, cur) : 0;
-	(cur->operation == 3) ? do_st(vm, cur) : 0;
-	(cur->operation == 4) ? do_add(vm, cur) : 0;
-	(cur->operation == 5) ? do_sub(vm, cur) : 0;
-	(cur->operation == 6) ? do_and(vm, cur) : 0;
-	(cur->operation == 7) ? do_or(vm, cur) : 0;
-	(cur->operation == 8) ? do_xor(vm, cur) : 0;
-	(cur->operation == 9) ? do_zjmp(vm, cur) : 0;
-	(cur->operation == 10) ? do_ldi(vm, cur) : 0;
-	(cur->operation == 11) ? do_sti(vm, cur) : 0;
-	(cur->operation == 12) ? do_fork(vm, cur) : 0;
-	(cur->operation == 13) ? do_lld(vm, cur) : 0;
-	(cur->operation == 14) ? do_lldi(vm, cur) : 0;
-	(cur->operation == 15) ? do_lfork(vm, cur) : 0;
-	(cur->operation == 16) ? do_aff(vm, cur) : 0;
 }

@@ -12,38 +12,27 @@
 
 #include "../includes/vm.h"
 
-void				do_xor(t_vm *vm, t_cur *cur)
+void				place_to_arena(t_vm *vm, int place, int skip, t_cur *cur)
 {
-	read_args(vm, cur);
-	if (cur->args_type[0] == T_REG)
-		cur->args[0] = cur->reg[cur->args[0] - 1];
-	if (cur->args_type[1] == T_REG)
-		cur->args[1] = cur->reg[cur->args[1] - 1];
-	cur->reg[cur->args[2] - 1] = cur->args[0] ^ cur->args[1];
-	cur->carry = (cur->reg[cur->args[2] - 1]) == 0 ? 1 : 0;
-	(vm->l == 1) ? ft_printf("xor %d %d r%d\n", cur->args[0],
-			cur->args[1], cur->args[2]) : 0;
-}
+	t_4bytes		arg;
+	int				pos;
 
-void                place_to_arena(t_vm *vm, int place, int pos, int skip, t_cur *cur)
-{
-    t_4bytes        arg;
-
-    arg.hex = place;
-    vm->arena[(pos + skip) % MEM_SIZE] = arg.f.o4;
-    vm->arena[(pos + (skip + 1) ) % MEM_SIZE] = arg.f.o3;
-    vm->arena[(pos + (skip + 2) ) % MEM_SIZE] = arg.f.o2;
-    vm->arena[(pos + (skip + 3) ) % MEM_SIZE] = arg.f.o1;
+	pos = cur->pos;
+	arg.hex = place;
+	vm->arena[(pos + skip) % MEM_SIZE] = arg.f.o4;
+	vm->arena[(pos + (skip + 1)) % MEM_SIZE] = arg.f.o3;
+	vm->arena[(pos + (skip + 2)) % MEM_SIZE] = arg.f.o2;
+	vm->arena[(pos + (skip + 3)) % MEM_SIZE] = arg.f.o1;
 	vm->map_color[(pos + skip) % MEM_SIZE] = cur->id;
-    vm->map_color[(pos + (skip + 1) ) % MEM_SIZE] = cur->id;
-    vm->map_color[(pos + (skip + 2) ) % MEM_SIZE] = cur->id;
-    vm->map_color[(pos + (skip + 3) ) % MEM_SIZE] = cur->id;
+	vm->map_color[(pos + (skip + 1)) % MEM_SIZE] = cur->id;
+	vm->map_color[(pos + (skip + 2)) % MEM_SIZE] = cur->id;
+	vm->map_color[(pos + (skip + 3)) % MEM_SIZE] = cur->id;
 }
 
 void				do_sti(t_vm *vm, t_cur *cur)
 {
-    t_4bytes        arg;
-    int             skip;
+	t_4bytes		arg;
+	int				skip;
 
 	read_args(vm, cur);
 	if (cur->args_type[1] == T_REG)
@@ -61,21 +50,11 @@ void				do_sti(t_vm *vm, t_cur *cur)
 		vm->arena[(skip + 1) % MEM_SIZE] = arg.f.o3;
 		vm->arena[(skip + 2) % MEM_SIZE] = arg.f.o2;
 		vm->arena[(skip + 3) % MEM_SIZE] = arg.f.o1;
-		vm->map_color[skip] = cur->id;
-		vm->map_color[(skip + 1) % MEM_SIZE] = cur->id;
-		vm->map_color[(skip + 2) % MEM_SIZE] = cur->id;
-		vm->map_color[(skip + 3) % MEM_SIZE] = cur->id;
+		color_map_sti(vm, skip, cur);
 	}
 	else
-		place_to_arena(vm, arg.hex, cur->pos, skip, cur);
-	if (vm->l == 1)
-	{
-		ft_printf("sti r%d %d %d\n", cur->args[0], cur->args[1], cur->args[2]);
-		ft_printf("       | -> store to %d + %d = %d ", cur->args[1], cur->args[2],
-				(cur->args[1] + cur->args[2]));
-		ft_printf("(with pc and mod %d)\n",
-				(cur->pos + (cur->args[1] + cur->args[2]) % IDX_MOD));
-	}
+		place_to_arena(vm, arg.hex, skip, cur);
+	l_for_sti(vm, cur);
 }
 
 void				do_live(t_vm *vm, t_cur *cur)

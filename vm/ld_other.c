@@ -15,7 +15,7 @@
 
 void			do_ldi(t_vm *vm, t_cur *cur)
 {
-	int 		addr;
+	int			addr;
 
 	read_args(vm, cur);
 	if (cur->args_type[0] == T_REG)
@@ -24,21 +24,24 @@ void			do_ldi(t_vm *vm, t_cur *cur)
 		cur->args[1] = cur->reg[cur->args[1] - 1];
 	addr = (cur->pos + (cur->args[0] + cur->args[1]) % IDX_MOD) % MEM_SIZE;
 	cur->reg[cur->args[2] - 1] = read_t_dir(vm, addr, 4);
-	(vm->l == 1) ? ft_printf("ldi %d %d r%d\n", cur->args[0], cur->args[1], cur->args[2]) : 0;
-	(vm->l == 1) ? ft_printf("       | -> load from %d + %d = %d (with pc and mod %d)\n",
+	(vm->l == 1) ? ft_printf("ldi %d %d r%d\n", cur->args[0],
+			cur->args[1], cur->args[2]) : 0;
+	(vm->l == 1) ? ft_printf("       | -> load from ") : 0;
+	(vm->l == 1) ? ft_printf("%d + %d = %d (with pc and mod %d)\n",
 			cur->args[0], cur->args[1], (cur->args[0] + cur->args[1]),
 			((cur->pos + (cur->args[0] + cur->args[1]) % IDX_MOD))) : 0;
 }
 
-void			do_lld(t_vm *vm, t_cur *cur) // то же, что и ld, но без усечения по модулю в T_IND !!
+void			do_lld(t_vm *vm, t_cur *cur)
 {
-	t_4bytes		ret;					// (can't use read_args)
+	t_4bytes		ret;
 	t_4bytes		arg;
 	int				pos;
 	int				skip;
 
 	if (cur->args_type[0] == T_DIR)
-		cur->args[0] = read_t_dir(vm, (cur->pos + 2) % MEM_SIZE, cur->arg_size[0]);
+		cur->args[0] = read_t_dir(vm,
+				(cur->pos + 2) % MEM_SIZE, cur->arg_size[0]);
 	else if (cur->args_type[0] == T_IND)
 	{
 		pos = (cur->pos + 2) % MEM_SIZE;
@@ -53,16 +56,14 @@ void			do_lld(t_vm *vm, t_cur *cur) // то же, что и ld, но без ус
 		ret.f.o1 = vm->arena[(cur->pos + (skip + 3)) % MEM_SIZE];
 		cur->args[0] = ret.hex;
 	}
-	if (cur->args_type[1] == T_REG)
-		cur->args[1] = vm->arena[(cur->pos + 2 + cur->arg_size[0]) % MEM_SIZE];
+	cur->args[1] = vm->arena[(cur->pos + 2 + cur->arg_size[0]) % MEM_SIZE];
 	cur->reg[cur->args[1] - 1] = cur->args[0];
 	(vm->l == 1) ? ft_printf("lld %d r%d\n", cur->args[0], cur->args[1]) : 0;
-
 }
 
-void			do_lldi(t_vm *vm, t_cur *cur) // то же, что и ldi без усечения по модулю !!
+void			do_lldi(t_vm *vm, t_cur *cur)
 {
-	int 		addr;
+	int			addr;
 
 	read_args(vm, cur);
 	if (cur->args_type[0] == T_REG)
@@ -71,15 +72,17 @@ void			do_lldi(t_vm *vm, t_cur *cur) // то же, что и ldi без усеч
 		cur->args[1] = cur->reg[cur->args[1] - 1];
 	addr = (cur->pos + (cur->args[0] + cur->args[1])) % MEM_SIZE;
 	cur->reg[cur->args[2] - 1] = read_t_dir(vm, addr, 4);
-	(vm->l == 1) ? ft_printf("lldi %d %d r%d\n", cur->args[0], cur->args[1], cur->args[2]) : 0;
-	(vm->l == 1) ? ft_printf("       | -> load from %d + %d = %d (with pc and mod %d)\n",
-							 cur->args[0], cur->args[1], (cur->args[0] + cur->args[1]),
-							 ((cur->pos + (cur->args[0] + cur->args[1])) % MEM_SIZE)) : 0;
+	(vm->l == 1) ? ft_printf("lldi %d %d r%d\n", cur->args[0],
+			cur->args[1], cur->args[2]) : 0;
+	(vm->l == 1) ? ft_printf("       | -> load from ") : 0;
+	(vm->l == 1) ? ft_printf("%d + %d = %d (with pc and mod %d)\n",
+			cur->args[0], cur->args[1], (cur->args[0] + cur->args[1]),
+			((cur->pos + (cur->args[0] + cur->args[1])) % MEM_SIZE)) : 0;
 }
 
-void 			do_aff(t_vm *vm, t_cur *cur) // отображение в оригинальном corewar только с флагом -a
+void			do_aff(t_vm *vm, t_cur *cur)
 {
-	char 		c;
+	char		c;
 
 	read_args(vm, cur);
 	c = (char)cur->args[0];

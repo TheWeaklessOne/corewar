@@ -46,6 +46,7 @@ SRC_BASE    =   arena.c         \
                 print.c         \
                 war.c           \
                 color.c         \
+                commands3.c     \
 
 SRCS		=	$(addprefix $(SRC_DIR), $(SRC_BASE))
 OBJS		=	$(addprefix $(OBJ_DIR), $(SRC_BASE:.c=.o))

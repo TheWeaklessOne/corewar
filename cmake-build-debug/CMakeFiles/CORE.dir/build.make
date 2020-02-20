@@ -1214,9 +1214,22 @@ CMakeFiles/CORE.dir/vm/color.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/CORE.dir/vm/color.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/sdoughnu/Desktop/COR2/vm/color.c -o CMakeFiles/CORE.dir/vm/color.c.s
 
+CMakeFiles/CORE.dir/vm/commands3.c.o: CMakeFiles/CORE.dir/flags.make
+CMakeFiles/CORE.dir/vm/commands3.c.o: ../vm/commands3.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sdoughnu/Desktop/COR2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_90) "Building C object CMakeFiles/CORE.dir/vm/commands3.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/CORE.dir/vm/commands3.c.o   -c /Users/sdoughnu/Desktop/COR2/vm/commands3.c
+
+CMakeFiles/CORE.dir/vm/commands3.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/CORE.dir/vm/commands3.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/sdoughnu/Desktop/COR2/vm/commands3.c > CMakeFiles/CORE.dir/vm/commands3.c.i
+
+CMakeFiles/CORE.dir/vm/commands3.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/CORE.dir/vm/commands3.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/sdoughnu/Desktop/COR2/vm/commands3.c -o CMakeFiles/CORE.dir/vm/commands3.c.s
+
 CMakeFiles/CORE.dir/vm/op_action.c.o: CMakeFiles/CORE.dir/flags.make
 CMakeFiles/CORE.dir/vm/op_action.c.o: ../vm/op_action.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sdoughnu/Desktop/COR2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_90) "Building C object CMakeFiles/CORE.dir/vm/op_action.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sdoughnu/Desktop/COR2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_91) "Building C object CMakeFiles/CORE.dir/vm/op_action.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/CORE.dir/vm/op_action.c.o   -c /Users/sdoughnu/Desktop/COR2/vm/op_action.c
 
 CMakeFiles/CORE.dir/vm/op_action.c.i: cmake_force
@@ -1229,7 +1242,7 @@ CMakeFiles/CORE.dir/vm/op_action.c.s: cmake_force
 
 CMakeFiles/CORE.dir/vm/op_tab.c.o: CMakeFiles/CORE.dir/flags.make
 CMakeFiles/CORE.dir/vm/op_tab.c.o: ../vm/op_tab.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sdoughnu/Desktop/COR2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_91) "Building C object CMakeFiles/CORE.dir/vm/op_tab.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sdoughnu/Desktop/COR2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_92) "Building C object CMakeFiles/CORE.dir/vm/op_tab.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/CORE.dir/vm/op_tab.c.o   -c /Users/sdoughnu/Desktop/COR2/vm/op_tab.c
 
 CMakeFiles/CORE.dir/vm/op_tab.c.i: cmake_force
@@ -1242,7 +1255,7 @@ CMakeFiles/CORE.dir/vm/op_tab.c.s: cmake_force
 
 CMakeFiles/CORE.dir/vm/print.c.o: CMakeFiles/CORE.dir/flags.make
 CMakeFiles/CORE.dir/vm/print.c.o: ../vm/print.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sdoughnu/Desktop/COR2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_92) "Building C object CMakeFiles/CORE.dir/vm/print.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sdoughnu/Desktop/COR2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_93) "Building C object CMakeFiles/CORE.dir/vm/print.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/CORE.dir/vm/print.c.o   -c /Users/sdoughnu/Desktop/COR2/vm/print.c
 
 CMakeFiles/CORE.dir/vm/print.c.i: cmake_force
@@ -1255,7 +1268,7 @@ CMakeFiles/CORE.dir/vm/print.c.s: cmake_force
 
 CMakeFiles/CORE.dir/vm/war.c.o: CMakeFiles/CORE.dir/flags.make
 CMakeFiles/CORE.dir/vm/war.c.o: ../vm/war.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sdoughnu/Desktop/COR2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_93) "Building C object CMakeFiles/CORE.dir/vm/war.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sdoughnu/Desktop/COR2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_94) "Building C object CMakeFiles/CORE.dir/vm/war.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/CORE.dir/vm/war.c.o   -c /Users/sdoughnu/Desktop/COR2/vm/war.c
 
 CMakeFiles/CORE.dir/vm/war.c.i: cmake_force
@@ -1357,6 +1370,7 @@ CORE_OBJECTS = \
 "CMakeFiles/CORE.dir/vm/ld_other.c.o" \
 "CMakeFiles/CORE.dir/vm/main.c.o" \
 "CMakeFiles/CORE.dir/vm/color.c.o" \
+"CMakeFiles/CORE.dir/vm/commands3.c.o" \
 "CMakeFiles/CORE.dir/vm/op_action.c.o" \
 "CMakeFiles/CORE.dir/vm/op_tab.c.o" \
 "CMakeFiles/CORE.dir/vm/print.c.o" \
@@ -1454,13 +1468,14 @@ CORE: CMakeFiles/CORE.dir/vm/init_champion.c.o
 CORE: CMakeFiles/CORE.dir/vm/ld_other.c.o
 CORE: CMakeFiles/CORE.dir/vm/main.c.o
 CORE: CMakeFiles/CORE.dir/vm/color.c.o
+CORE: CMakeFiles/CORE.dir/vm/commands3.c.o
 CORE: CMakeFiles/CORE.dir/vm/op_action.c.o
 CORE: CMakeFiles/CORE.dir/vm/op_tab.c.o
 CORE: CMakeFiles/CORE.dir/vm/print.c.o
 CORE: CMakeFiles/CORE.dir/vm/war.c.o
 CORE: CMakeFiles/CORE.dir/build.make
 CORE: CMakeFiles/CORE.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/sdoughnu/Desktop/COR2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_94) "Linking C executable CORE"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/sdoughnu/Desktop/COR2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_95) "Linking C executable CORE"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/CORE.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

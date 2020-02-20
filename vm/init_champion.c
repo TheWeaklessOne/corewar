@@ -25,7 +25,7 @@ void				read_name(t_champion *ch, int fd)
 		read(fd, &c, 1);
 }
 
-unsigned int		read_size(fd)
+unsigned int		read_size(int fd)
 {
 	t_4bytes		num;
 	unsigned int	c;
