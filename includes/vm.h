@@ -22,12 +22,12 @@
 # include "./op.h"
 # include "../libft/libft.h"
 # include <ncurses.h>
-#include <sys/ioctl.h>
+# include <sys/ioctl.h>
 
 # define SIZE_64				64
 # define HEIGHT (MEM_SIZE / SIZE_64 + 1)
 # define WIDTH	(SIZE_64 * 3 + 20)
-# define SUB SIZE_64 * 3 + 3
+# define SUB (SIZE_64 * 3 + 3)
 # define KEY_ESC 27
 # define KEY_STEP 10
 
@@ -88,7 +88,7 @@ typedef struct		s_op
 	int				code;
 	int				need_cycles;
 	int				code_type_arg;
-	int				dir_size; // 0 это 4, 1 это 2
+	int				dir_size;
 }					t_op;
 
 typedef struct		s_cur
@@ -111,7 +111,7 @@ typedef struct		s_vm
 {
 	int				dump;
 	int				d;
-	int 			l;
+	int				l;
 	long			dump_count;
 	long			d_count;
 	int				color;
@@ -127,12 +127,12 @@ typedef struct		s_vm
 	unsigned long	last_live;
 	unsigned int	lives_in_cur_period;
 	t_cur			*curs;
-	unsigned		curs_alive; // количество живых кареток
+	unsigned		curs_alive;
 	t_champion		*last_champ;
 	int				speed;
-	size_t 			len_name;
-	int 			width;
-	int 			step;
+	size_t			len_name;
+	int				width;
+	int				step;
 }					t_vm;
 
 extern const t_op	g_op_tab[17];
@@ -181,14 +181,17 @@ void				get_arg_types(unsigned char c, unsigned *args);
 
 int					skip_uncorrect(t_cur *cur, const t_op *op);
 int					print_fd(const char *s, int fd);
-int 				error_in(const char *s1, const char *s2, int fd);
-int 				print_fd2(const char *s, int fd);
+int					error_in(const char *s1, const char *s2, int fd);
+int					print_fd2(const char *s, int fd);
 
 void				l_for_sti(t_vm *vm, t_cur *cur);
 void				color_map_sti(t_vm *vm, int skip, t_cur *cur);
-void				place_arena_st(int skip, t_cur *cur, t_4bytes arg, t_vm *vm);
+void				place_arena_st(int skip, t_cur *cur,
+					t_4bytes arg, t_vm *vm);
 
-/*--------------------------visualization--------------------------*/
+/*
+** --------------------------visualization--------------------------
+*/
 
 WINDOW				*init_visu(WINDOW *vm_window, t_vm *vm);
 void				remote(WINDOW *vm_window, t_vm *vm);
