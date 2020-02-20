@@ -61,9 +61,9 @@ int					read_code(int fd, t_champion *ch)
 	if (!(ch->code = (char*)malloc(sizeof(char) * (ch->size + 1))))
 		return (print_fd("Memory not allocated\n", 2));
 	if (read(fd, ch->code, ch->size) != ch->size)
-		return (print_fd("Champion size error (too small)\n", 2));
+		return (print_fd("Champion size error (too small) ", 2));
 	if (read(fd, NULL, 1))
-		return (print_fd("Champion size error (too big)\n", 2));
+		return (print_fd("Champion size error (too big) ", 2));
 	ch->code[ch->size] = '\0';
 	return (1);
 }
@@ -90,7 +90,7 @@ int					init_champ(int *i, char **av, int n, t_vm *vm)
 		return (error_in("Different champion exec code size - ", av[*i], 2));
 	read_com(ch, fd);
 	if (!read_code(fd, ch))
-		return (0);
+		return (print_fd2(av[*i], 2));
 	close(fd);
 	champ_in_vm(ch, vm, n);
 	(*i)++;
