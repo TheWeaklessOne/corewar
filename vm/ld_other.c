@@ -6,7 +6,7 @@
 /*   By: djoye <djoye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/06 12:18:35 by sdoughnu          #+#    #+#             */
-/*   Updated: 2020/02/20 17:39:20 by djoye            ###   ########.fr       */
+/*   Updated: 2020/02/20 17:56:27 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,11 +77,7 @@ void			do_lldi(t_vm *vm, t_cur *cur)
 	(vm->l == 1) ? ft_printf("       | -> load from ") : 0;
 	(vm->l == 1) ? ft_printf("%d + %d = %d (with pc %d)\n",
 			cur->args[0], cur->args[1], (cur->args[0] + cur->args[1]),
-<<<<<<< HEAD
 			((cur->pos + (cur->args[0] + cur->args[1])))) : 0;
-=======
-			(cur->pos + (cur->args[0] + cur->args[1]))) : 0;
->>>>>>> 0daa4c5bc8927802467832c16ac1bb625d90b51a
 }
 
 void			do_aff(t_vm *vm, t_cur *cur)
