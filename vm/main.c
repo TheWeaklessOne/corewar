@@ -6,7 +6,7 @@
 /*   By: djoye <djoye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/11 10:05:40 by sdoughnu          #+#    #+#             */
-/*   Updated: 2020/02/19 14:38:32 by djoye            ###   ########.fr       */
+/*   Updated: 2020/02/20 15:48:55 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,6 @@ void			init(t_vm *vm)
 	vm->dump = -1;
 	vm->color = -1;
 	vm->last_live = 0;
-	vm->lives_in_cur_period = 0;
 	vm->d = -1;
 	vm->zj = 0;
 	vm->players = 0;

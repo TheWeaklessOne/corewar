@@ -6,7 +6,7 @@
 /*   By: djoye <djoye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 10:48:04 by sdoughnu          #+#    #+#             */
-/*   Updated: 2020/02/20 14:37:33 by djoye            ###   ########.fr       */
+/*   Updated: 2020/02/20 16:00:35 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,29 @@ void				do_cycle(t_vm *v)
 	}
 }
 
+int					war(t_vm *v, int check_count)
+{
+	if (v->l == 1)
+		ft_printf("It is now cycle %lu\n", v->global);
+	do_cycle(v);
+	check_count++;
+	if (check_count >= v->cycles_to_die)
+	{
+		v->checks++;
+		delete_deads(v);
+		if (v->live_count >= NBR_LIVE || v->checks == MAX_CHECKS)
+		{
+			v->cycles_to_die -= CYCLE_DELTA;
+			v->checks = 0;
+			if (v->l == 1)
+				ft_printf("Cycle to die is now %d\n", v->cycles_to_die);
+		}
+		check_count = 0;
+		v->live_count = 0;
+	}
+	return (check_count);
+}
+
 int					war_coming(t_vm *v)
 {
 	int				check_count;
@@ -63,35 +86,14 @@ int					war_coming(t_vm *v)
 	vm_window = NULL;
 	if (v->color == 1)
 		vm_window = init_visu(vm_window, v);
-	if (v->d == 1 && v->d_count == 0)
+	else if (v->d == 1 && v->d_count == 0)
 		return (print_arena(v, 64) + 1);
-	if (v->dump == 1 && v->dump_count == 0)
+	else if (v->dump == 1 && v->dump_count == 0)
 		return (print_arena(v, 32) + 1);
 	check_count = 0;
-	while (++v->global)
+	while (++v->global && v->curs_alive > 0)
 	{
-		if (v->l == 1)
-			ft_printf("It is now cycle %lu\n", v->global);
-		do_cycle(v);
-		check_count++;
-		if (check_count >= v->cycles_to_die)
-		{
-			v->checks++;
-			delete_deads(v);
-			if (v->live_count >= NBR_LIVE || v->checks == MAX_CHECKS)
-			{
-				v->live_count = 0;
-				v->cycles_to_die -= CYCLE_DELTA;
-				v->checks = 0;
-				if (v->l == 1)
-					ft_printf("Cycle to die is now %d\n", v->cycles_to_die);
-			}
-			check_count = 0;
-			v->live_count = 0;
-			v->lives_in_cur_period = 0;
-		}
-		if (v->curs_alive == 0)
-			break ;
+		check_count = war(v, check_count);
 		if (v->d == 1 && v->global == (unsigned long)v->d_count)
 			return (print_arena(v, 64) + 1);
 		if (v->dump == 1 && v->global == (unsigned long)v->dump_count)

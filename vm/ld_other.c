@@ -6,7 +6,7 @@
 /*   By: djoye <djoye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/06 12:18:35 by sdoughnu          #+#    #+#             */
-/*   Updated: 2020/02/18 18:20:39 by djoye            ###   ########.fr       */
+/*   Updated: 2020/02/20 17:39:20 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,9 +75,9 @@ void			do_lldi(t_vm *vm, t_cur *cur)
 	(vm->l == 1) ? ft_printf("lldi %d %d r%d\n", cur->args[0],
 			cur->args[1], cur->args[2]) : 0;
 	(vm->l == 1) ? ft_printf("       | -> load from ") : 0;
-	(vm->l == 1) ? ft_printf("%d + %d = %d (with pc and mod %d)\n",
+	(vm->l == 1) ? ft_printf("%d + %d = %d (with pc %d)\n",
 			cur->args[0], cur->args[1], (cur->args[0] + cur->args[1]),
-			((cur->pos + (cur->args[0] + cur->args[1])) % MEM_SIZE)) : 0;
+			((cur->pos + (cur->args[0] + cur->args[1])))) : 0;
 }
 
 void			do_aff(t_vm *vm, t_cur *cur)

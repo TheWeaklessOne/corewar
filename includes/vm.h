@@ -6,7 +6,7 @@
 /*   By: djoye <djoye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/11 10:21:55 by sdoughnu          #+#    #+#             */
-/*   Updated: 2020/02/20 13:57:28 by djoye            ###   ########.fr       */
+/*   Updated: 2020/02/20 15:47:09 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -125,7 +125,6 @@ typedef struct		s_vm
 	int				checks;
 	unsigned int	live_count;
 	unsigned long	last_live;
-	unsigned int	lives_in_cur_period;
 	t_cur			*curs;
 	unsigned		curs_alive;
 	t_champion		*last_champ;
@@ -169,6 +168,7 @@ void				delete_deads(t_vm *vm);
 
 int					print_arena(t_vm *vm, int size);
 int					war_coming(t_vm *v);
+int					war(t_vm *v, int check_count);
 
 void				do_op(t_vm *vm, t_cur *cur);
 int					check_op(t_vm *vm, t_cur *cur);

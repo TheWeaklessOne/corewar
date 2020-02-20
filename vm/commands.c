@@ -6,7 +6,7 @@
 /*   By: djoye <djoye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/04 20:11:34 by wstygg            #+#    #+#             */
-/*   Updated: 2020/02/18 14:51:12 by djoye            ###   ########.fr       */
+/*   Updated: 2020/02/20 15:48:30 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,10 +67,7 @@ void				do_live(t_vm *vm, t_cur *cur)
 	cur->last_cyc_live = vm->global;
 	vm->live_count++;
 	if (arg >= 1 && arg <= vm->players)
-	{
-		vm->lives_in_cur_period++;
 		vm->last_champ = vm->champ[arg - 1];
-	}
 }
 
 void				do_ld(t_vm *vm, t_cur *cur)
