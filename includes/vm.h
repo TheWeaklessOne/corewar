@@ -6,7 +6,7 @@
 /*   By: djoye <djoye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/11 10:21:55 by sdoughnu          #+#    #+#             */
-/*   Updated: 2020/02/20 12:32:45 by djoye            ###   ########.fr       */
+/*   Updated: 2020/02/20 13:57:28 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -198,6 +198,8 @@ void				remote(WINDOW *vm_window, t_vm *vm);
 void				print_visu(WINDOW *vm_window, t_vm *vm, int flag);
 void				print_matrix(WINDOW *vm_window, t_vm *vm);
 void				print_sub_win(t_vm *vm, WINDOW *vm_window);
+void				small_screen(WINDOW *vm_window, t_vm *vm);
 void				max_name(t_vm *vm);
+void				pause_step(WINDOW *vm_window, t_vm *vm);
 
 #endif
