@@ -121,7 +121,7 @@ int					war_coming(t_vm *v)
 		if (v->color == 1)
 			remote(vm_window, v);
 	}
-	v->color ? end_visu(v, vm_window) : 0;
+	(v->color == 1) ? end_visu(v, vm_window) : 0;
 	ft_printf("Contestant %u, \"%s\", has won !\n", v->last_champ->n,
 			v->last_champ->name);
 	return (1);

@@ -107,6 +107,7 @@ add_executable(CORE
         vm/op_action.c
         vm/op_tab.c
         vm/print.c
+        vm/print_helper.c
         vm/war.c)
 
 target_link_libraries(CORE ncurses)

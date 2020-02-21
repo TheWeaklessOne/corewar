@@ -256,6 +256,11 @@ CMakeFiles/CORE.dir/vm/commands2.c.o
  /Users/sdoughnu/Desktop/COR2/includes/vm.h
  /Users/sdoughnu/Desktop/COR2/libft/libft.h
  /Users/sdoughnu/Desktop/COR2/vm/commands2.c
+CMakeFiles/CORE.dir/vm/commands3.c.o
+ /Users/sdoughnu/Desktop/COR2/includes/op.h
+ /Users/sdoughnu/Desktop/COR2/includes/vm.h
+ /Users/sdoughnu/Desktop/COR2/libft/libft.h
+ /Users/sdoughnu/Desktop/COR2/vm/commands3.c
 CMakeFiles/CORE.dir/vm/cur.c.o
  /Users/sdoughnu/Desktop/COR2/includes/op.h
  /Users/sdoughnu/Desktop/COR2/includes/vm.h
@@ -306,6 +311,11 @@ CMakeFiles/CORE.dir/vm/print.c.o
  /Users/sdoughnu/Desktop/COR2/includes/vm.h
  /Users/sdoughnu/Desktop/COR2/libft/libft.h
  /Users/sdoughnu/Desktop/COR2/vm/print.c
+CMakeFiles/CORE.dir/vm/print_helper.c.o
+ /Users/sdoughnu/Desktop/COR2/includes/op.h
+ /Users/sdoughnu/Desktop/COR2/includes/vm.h
+ /Users/sdoughnu/Desktop/COR2/libft/libft.h
+ /Users/sdoughnu/Desktop/COR2/vm/print_helper.c
 CMakeFiles/CORE.dir/vm/war.c.o
  /Users/sdoughnu/Desktop/COR2/includes/op.h
  /Users/sdoughnu/Desktop/COR2/includes/vm.h

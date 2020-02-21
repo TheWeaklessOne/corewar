@@ -377,6 +377,9 @@
 		<Unit filename="/Users/sdoughnu/Desktop/COR2/vm/print.c">
 			<Option target="CORE"/>
 		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/COR2/vm/print_helper.c">
+			<Option target="CORE"/>
+		</Unit>
 		<Unit filename="/Users/sdoughnu/Desktop/COR2/vm/war.c">
 			<Option target="CORE"/>
 		</Unit>

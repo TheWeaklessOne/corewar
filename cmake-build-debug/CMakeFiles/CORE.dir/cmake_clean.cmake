@@ -92,6 +92,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/CORE.dir/vm/op_action.c.o"
   "CMakeFiles/CORE.dir/vm/op_tab.c.o"
   "CMakeFiles/CORE.dir/vm/print.c.o"
+  "CMakeFiles/CORE.dir/vm/print_helper.c.o"
   "CMakeFiles/CORE.dir/vm/war.c.o"
   "CORE"
   "CORE.pdb"

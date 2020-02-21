@@ -256,6 +256,11 @@ CMakeFiles/CORE.dir/vm/commands2.c.o: ../includes/vm.h
 CMakeFiles/CORE.dir/vm/commands2.c.o: ../libft/libft.h
 CMakeFiles/CORE.dir/vm/commands2.c.o: ../vm/commands2.c
 
+CMakeFiles/CORE.dir/vm/commands3.c.o: ../includes/op.h
+CMakeFiles/CORE.dir/vm/commands3.c.o: ../includes/vm.h
+CMakeFiles/CORE.dir/vm/commands3.c.o: ../libft/libft.h
+CMakeFiles/CORE.dir/vm/commands3.c.o: ../vm/commands3.c
+
 CMakeFiles/CORE.dir/vm/cur.c.o: ../includes/op.h
 CMakeFiles/CORE.dir/vm/cur.c.o: ../includes/vm.h
 CMakeFiles/CORE.dir/vm/cur.c.o: ../libft/libft.h
@@ -305,6 +310,11 @@ CMakeFiles/CORE.dir/vm/print.c.o: ../includes/op.h
 CMakeFiles/CORE.dir/vm/print.c.o: ../includes/vm.h
 CMakeFiles/CORE.dir/vm/print.c.o: ../libft/libft.h
 CMakeFiles/CORE.dir/vm/print.c.o: ../vm/print.c
+
+CMakeFiles/CORE.dir/vm/print_helper.c.o: ../includes/op.h
+CMakeFiles/CORE.dir/vm/print_helper.c.o: ../includes/vm.h
+CMakeFiles/CORE.dir/vm/print_helper.c.o: ../libft/libft.h
+CMakeFiles/CORE.dir/vm/print_helper.c.o: ../vm/print_helper.c
 
 CMakeFiles/CORE.dir/vm/war.c.o: ../includes/op.h
 CMakeFiles/CORE.dir/vm/war.c.o: ../includes/vm.h

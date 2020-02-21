@@ -2634,6 +2634,33 @@ vm/print.c.s:
 	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/vm/print.c.s
 .PHONY : vm/print.c.s
 
+vm/print_helper.o: vm/print_helper.c.o
+
+.PHONY : vm/print_helper.o
+
+# target to build an object file
+vm/print_helper.c.o:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/vm/print_helper.c.o
+.PHONY : vm/print_helper.c.o
+
+vm/print_helper.i: vm/print_helper.c.i
+
+.PHONY : vm/print_helper.i
+
+# target to preprocess a source file
+vm/print_helper.c.i:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/vm/print_helper.c.i
+.PHONY : vm/print_helper.c.i
+
+vm/print_helper.s: vm/print_helper.c.s
+
+.PHONY : vm/print_helper.s
+
+# target to generate assembly for a file
+vm/print_helper.c.s:
+	$(MAKE) -f CMakeFiles/CORE.dir/build.make CMakeFiles/CORE.dir/vm/print_helper.c.s
+.PHONY : vm/print_helper.c.s
+
 vm/war.o: vm/war.c.o
 
 .PHONY : vm/war.o
@@ -2949,6 +2976,9 @@ help:
 	@echo "... vm/print.o"
 	@echo "... vm/print.i"
 	@echo "... vm/print.s"
+	@echo "... vm/print_helper.o"
+	@echo "... vm/print_helper.i"
+	@echo "... vm/print_helper.s"
 	@echo "... vm/war.o"
 	@echo "... vm/war.i"
 	@echo "... vm/war.s"
