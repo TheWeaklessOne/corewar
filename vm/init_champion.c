@@ -58,11 +58,13 @@ void				read_com(t_champion *ch, int fd)
 
 int					read_code(int fd, t_champion *ch)
 {
+	char			buf[10];
+
 	if (!(ch->code = (char*)malloc(sizeof(char) * (ch->size + 1))))
 		return (print_fd("Memory not allocated\n", 2));
 	if (read(fd, ch->code, ch->size) != ch->size)
 		return (print_fd("Champion size error (too small) ", 2));
-	if (read(fd, NULL, 1))
+	if (read(fd, buf, 1))
 		return (print_fd("Champion size error (too big) ", 2));
 	ch->code[ch->size] = '\0';
 	return (1);

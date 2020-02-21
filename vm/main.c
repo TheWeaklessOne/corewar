@@ -78,6 +78,7 @@ void			init(t_vm *vm)
 {
 	int			i;
 
+	ft_bzero(vm, sizeof(t_vm));
 	i = -1;
 	vm->dump = -1;
 	vm->color = -1;

@@ -78,6 +78,26 @@ int					war(t_vm *v, int check_count)
 	return (check_count);
 }
 
+void				end_visu(t_vm *v, WINDOW *vm_window)
+{
+	int				key;
+
+	key = 0;
+	wattron(vm_window, COLOR_PAIR(2));
+	mvwprintw(vm_window, 30, SUB, "Contestant %u:",
+			v->last_champ->n);
+	wattron(vm_window, COLOR_PAIR(3));
+	mvwprintw(vm_window, 31, SUB, "\t\"%s\"",
+			v->last_champ->name);
+	wattron(vm_window, COLOR_PAIR(1));
+	mvwprintw(vm_window, 32, SUB, "\t\thas won!\n");
+	wattron(vm_window, COLOR_PAIR(0));
+	wrefresh(vm_window);
+	while (key != KEY_ESC)
+		key = getch();
+	endwin();
+}
+
 int					war_coming(t_vm *v)
 {
 	int				check_count;
@@ -101,8 +121,8 @@ int					war_coming(t_vm *v)
 		if (v->color == 1)
 			remote(vm_window, v);
 	}
-	if (v->last_champ)
-		printf("Contestant %u, \"%s\", has won !\n", v->last_champ->n,
-		v->last_champ->name);
+	v->color ? end_visu(v, vm_window) : 0;
+	ft_printf("Contestant %u, \"%s\", has won !\n", v->last_champ->n,
+			v->last_champ->name);
 	return (1);
 }
