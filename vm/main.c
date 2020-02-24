@@ -19,6 +19,11 @@ void			flag_l(int *i, int c, char **v, t_vm *vm)
 		vm->l = 1;
 		(*i)++;
 	}
+	else if (*i < c && !ft_strcmp(v[*i], "-a"))
+	{
+		vm->a = 1;
+		(*i)++;
+	}
 }
 
 int				flag(int *i, int c, char **v, t_vm *vm)
@@ -84,6 +89,7 @@ void			init(t_vm *vm)
 	vm->color = -1;
 	vm->last_live = 0;
 	vm->d = -1;
+	vm->a = 0;
 	vm->zj = 0;
 	vm->players = 0;
 	vm->global = 0;

@@ -111,6 +111,7 @@ typedef struct		s_vm
 {
 	int				dump;
 	int				d;
+	int 			a;
 	int				l;
 	long			dump_count;
 	long			d_count;

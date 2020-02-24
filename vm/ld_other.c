@@ -86,5 +86,5 @@ void			do_aff(t_vm *vm, t_cur *cur)
 
 	read_args(vm, cur);
 	c = (char)cur->args[0];
-	write(1, &c, 1);
+	(vm->a == 1) ? write(1, &c, 1) : 0;
 }
