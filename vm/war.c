@@ -101,8 +101,8 @@ void				end_visu(t_vm *v, WINDOW *vm_window)
 int					war_coming(t_vm *v)
 {
 	int				check_count;
+	WINDOW			*vm_window;
 
-	WINDOW * vm_window;
 	vm_window = NULL;
 	if (v->color == 1)
 		vm_window = init_visu(vm_window, v);
@@ -113,8 +113,6 @@ int					war_coming(t_vm *v)
 	check_count = 0;
 	while (++v->global && v->curs_alive > 0)
 	{
-		if (v->global == 2425)
-			printf("");
 		check_count = war(v, check_count);
 		if (v->d == 1 && v->global == (unsigned long)v->d_count)
 			return (print_arena(v, 64) + 1);
