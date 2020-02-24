@@ -6,9 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/Users/sdoughnu/Desktop/COR2/includes/op.h
+/Users/sdoughnu/Desktop/COR/includes/op.h
 
-/Users/sdoughnu/Desktop/COR2/includes/vm.h
+/Users/sdoughnu/Desktop/COR/includes/vm.h
 stdio.h
 -
 unistd.h
@@ -20,15 +20,15 @@ time.h
 stdbool.h
 -
 ./op.h
-/Users/sdoughnu/Desktop/COR2/includes/op.h
+/Users/sdoughnu/Desktop/COR/includes/op.h
 ../libft/libft.h
-/Users/sdoughnu/Desktop/COR2/libft/libft.h
+/Users/sdoughnu/Desktop/COR/libft/libft.h
 ncurses.h
 -
 sys/ioctl.h
 -
 
-/Users/sdoughnu/Desktop/COR2/libft/libft.h
+/Users/sdoughnu/Desktop/COR/libft/libft.h
 stdarg.h
 -
 unistd.h
@@ -52,7 +52,7 @@ ctype.h
 stdio.h
 -
 
-/Users/sdoughnu/Desktop/COR2/vm/war.c
+/Users/sdoughnu/Desktop/COR/vm/fork.c
 ../includes/vm.h
-/Users/sdoughnu/Desktop/COR2/includes/vm.h
+/Users/sdoughnu/Desktop/COR/includes/vm.h
 
