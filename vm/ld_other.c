@@ -6,7 +6,7 @@
 /*   By: djoye <djoye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/06 12:18:35 by sdoughnu          #+#    #+#             */
-/*   Updated: 2020/02/25 14:24:07 by djoye            ###   ########.fr       */
+/*   Updated: 2020/02/25 15:09:30 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,8 @@ void			do_ldi(t_vm *vm, t_cur *cur)
 
 void			do_lld(t_vm *vm, t_cur *cur)
 {
+//	t_4bytes		ret;
+//	t_4bytes		arg;
 	int				pos;
 	int				skip;
 	t_2bytes		arg;
@@ -48,8 +50,16 @@ void			do_lld(t_vm *vm, t_cur *cur)
 		arg.f.o2 = vm->arena[pos];
 		arg.f.o1 = vm->arena[(pos + 1) % MEM_SIZE];
 		skip = arg.hex;
-		ret.f.o2 = vm->arena[(cur->pos + skip) % MEM_SIZE];
-		ret.f.o1 = vm->arena[(cur->pos + (skip + 1)) % MEM_SIZE];
+		if (-skip > cur->pos)
+		{
+			skip += cur->pos;
+			skip %= MEM_SIZE;
+			skip = MEM_SIZE + skip;
+		}
+		else
+			skip = cur->pos + skip;
+		ret.f.o2 = vm->arena[skip % MEM_SIZE];
+		ret.f.o1 = vm->arena[(skip + 1) % MEM_SIZE];
 		cur->args[0] = ret.hex;
 		/*
 		pos = (cur->pos + 2) % MEM_SIZE;
