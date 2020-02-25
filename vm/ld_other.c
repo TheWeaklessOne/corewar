@@ -48,8 +48,16 @@ void			do_lld(t_vm *vm, t_cur *cur)
 		arg.f.o2 = vm->arena[pos];
 		arg.f.o1 = vm->arena[(pos + 1) % MEM_SIZE];
 		skip = arg.hex;
-		ret.f.o2 = vm->arena[(cur->pos + skip) % MEM_SIZE];
-		ret.f.o1 = vm->arena[(cur->pos + (skip + 1)) % MEM_SIZE];
+		if (-skip > cur->pos)
+		{
+			skip += cur->pos;
+			skip %= MEM_SIZE;
+			skip = MEM_SIZE + skip;
+		}
+		else
+			skip = cur->pos + skip;
+		ret.f.o2 = vm->arena[skip % MEM_SIZE];
+		ret.f.o1 = vm->arena[(skip + 1) % MEM_SIZE];
 		cur->args[0] = ret.hex;
 		/*
 		pos = (cur->pos + 2) % MEM_SIZE;
@@ -88,7 +96,7 @@ void			do_lldi(t_vm *vm, t_cur *cur)
 	(vm->l == 1) ? ft_printf("%d + %d = %d (with pc %d)\n",
 			cur->args[0], cur->args[1], (cur->args[0] + cur->args[1]),
 			((cur->pos + (cur->args[0] + cur->args[1])))) : 0;
-	cur->carry = (cur->reg[cur->args[2] - 1] == 0) ? 1 : 0;
+	cur->carry = (cur->args[0] == 0) ? 1 : 0;
 }
 
 void			do_aff(t_vm *vm, t_cur *cur)
