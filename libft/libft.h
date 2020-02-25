@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: djoye <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: djoye <djoye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/06 13:57:57 by djoye             #+#    #+#             */
-/*   Updated: 2019/09/12 11:33:22 by djoye            ###   ########.fr       */
+/*   Updated: 2020/02/25 17:19:05 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,6 @@ typedef struct		s_list
 	int				len;
 	char			*s;
 }					t_flags;
-
 
 void				*ft_memset(void *b, int c, size_t len);
 void				*ft_bzero(void *s, size_t n);
