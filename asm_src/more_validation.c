@@ -6,7 +6,7 @@
 /*   By: stross <stross@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/19 12:33:59 by stross            #+#    #+#             */
-/*   Updated: 2020/02/25 16:13:31 by stross           ###   ########.fr       */
+/*   Updated: 2020/02/25 16:55:29 by stross           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ static int	check_other_arguments(char *str)
 		str++;
 	if (*str == '-')
 		str++;
-	while (*str && *str != SEPARATOR_CHAR && *str != ' ')
+	while (*str && *str != SEPARATOR_CHAR && *str != ' ' && *str != '\t')
 	{
 		if (*str >= '0' && *str <= '9')
 			i++;
