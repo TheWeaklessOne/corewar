@@ -1,43 +1,51 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   free.c                                             :+:      :+:    :+:   */
+/*   norminette.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: stross <stross@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/15 20:26:20 by stross            #+#    #+#             */
+/*   Created: 2020/02/20 12:45:08 by stross            #+#    #+#             */
 /*   Updated: 2020/02/25 11:39:29 by stross           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "asm.h"
 
-void	free_head(t_head *head)
+void	norm_check_comm_bytes(int *i, int *x, int line, int row)
 {
-	int		i;
-
-	i = 0;
-	while (head->commands[i])
-	{
-		if (head->commands[i]->label)
-			free(head->commands[i]->label);
-		free(head->commands[i]);
-		i++;
-	}
-	if (head->commands)
-		free(head->commands);
-	free(head);
+	*i = line;
+	*x = row;
 }
 
-void	free_split(char **arr)
+void	norm_set_struct(int *line, int *i)
 {
-	unsigned int	x;
+	*line = 1;
+	*i = 0;
+}
 
-	x = 0;
-	while (arr[x])
+void	norm_get_name_bytes(int *qm_count, int *i)
+{
+	*qm_count = 0;
+	*i = 0;
+}
+
+void	norm_label(int *ti, char *str, int *si, bool *flag)
+{
+	while (LABEL_CHARS[*ti])
 	{
-		free(arr[x]);
-		x++;
+		if (str[*si] == LABEL_CHARS[*ti])
+			*flag = true;
+		(*ti)++;
 	}
-	free(arr);
+}
+
+void	norm_label2(char *str, int *i)
+{
+	while (str[*i])
+	{
+		if (str[*i] == LABEL_CHAR)
+			break ;
+		(*i)++;
+	}
 }

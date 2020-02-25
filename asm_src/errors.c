@@ -6,43 +6,60 @@
 /*   By: stross <stross@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/15 19:00:57 by stross            #+#    #+#             */
-/*   Updated: 2020/02/18 11:48:42 by stross           ###   ########.fr       */
+/*   Updated: 2020/02/25 12:40:48 by stross           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "asm.h"
 
-void	error_usage(void)
+void		error_usage(void)
 {
-	write(2, "Usage: ./asm (champion.s|champion.cor)\n", 40);
+	write(2, "Usage: ./asm_src (champion.s|champion.cor)\n", 39);
 	write(2, "\tchampion.s   — from assembly to bytecode\n", 44);
 	write(2, "\tchampion.cor — from bytecode to assembly\n", 44);
 	exit(1);
 }
 
-void	error_allocation(void)
+void		error_allocation(void)
 {
 	write(2, "Failed to allocate memory\n", 27);
 	exit(1);
 }
 
-void	unexpected_token(int line, int row, char *str)
+void		unexpected_token(int line, int row, char *str)
 {
 	char *token;
 
 	token = ft_strcdup(str, ' ');
-	printf("Unexpected token \"%s\" COMMAND at [%.3d:%.3d]\n", token, line, row); //FIXME printf
-	free(token);
+	write(2, "Unexpected token \"", 18);
+	ft_putstr_fd(token, 2);
+	write(2, "\" COMMAND at [", 14);
+	ft_putnbr_fd(line, 2);
+	write(2, ":", 1);
+	ft_putnbr_fd(row, 2);
+	write(2, "]\n", 2);
 	exit(1);
 }
 
-void	name_syntax(char *str, int line, int row)
+static void	help_name_syntax(char *temp, int line, int row)
+{
+	write(2, "Syntax error at token [TOKEN][", 30);
+	ft_putnbr_fd(line, 2);
+	write(2, ":", 1);
+	ft_putnbr_fd(row, 2);
+	write(2, "] INSTRUCTION \"", 15);
+	ft_putstr_fd(temp, 2);
+	write(2, "\"\n", 2);
+}
+
+void		name_syntax(char *str, int line, int row, int mod)
 {
 	char	*temp;
 	int		i;
 
 	i = 0;
-	str += ft_strlen(NAME_CMD_STRING);
+	str += (mod == 1 ? ft_strlen(NAME_CMD_STRING)
+			: ft_strlen(COMMENT_CMD_STRING));
 	while (ft_isspace(*str) && *str)
 		str++;
 	if (*str == '"')
@@ -55,16 +72,7 @@ void	name_syntax(char *str, int line, int row)
 		if (temp[i] == '"')
 			temp[i] = '\0';
 	}
-	printf("Syntax error at token [TOKEN][%.3d:%.3d] INSTRUCTION \"%s\"\n", line, row, temp); // FIXME printf
+	help_name_syntax(temp, line, row);
 	free(temp);
-	exit(1);
-}
-
-void	length_error(int mod)
-{
-	if (mod == 1)
-		printf("Champion name too long (Max length %d)\n", PROG_NAME_LENGTH); //FIXME printf
-	if (mod == 2)
-		printf("Champion comment too long (Max length %d)\n", COMMENT_LENGTH); //FIXME printf
 	exit(1);
 }

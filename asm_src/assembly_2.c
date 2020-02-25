@@ -6,7 +6,7 @@
 /*   By: stross <stross@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/14 14:39:11 by stross            #+#    #+#             */
-/*   Updated: 2020/02/18 11:48:42 by stross           ###   ########.fr       */
+/*   Updated: 2020/02/25 11:43:56 by stross           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ static void	write_exec_code_help(t_4bytes num, unsigned char octet, int fd)
 	}
 }
 
-void	write_exec_code(int size, int fd)
+void		write_exec_code(int size, int fd)
 {
 	t_4bytes		num;
 	unsigned char	octet;
@@ -61,7 +61,7 @@ static void	null_vars(int *len, int *i, int *size)
 	*i = 0;
 }
 
-void create_struct(t_head *head)
+void		create_struct(t_head *head)
 {
 	int			len;
 	int			i;

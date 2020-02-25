@@ -6,7 +6,7 @@
 /*   By: stross <stross@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/15 17:54:11 by stross            #+#    #+#             */
-/*   Updated: 2020/02/19 17:21:58 by stross           ###   ########.fr       */
+/*   Updated: 2020/02/25 15:05:30 by stross           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,7 @@ static int	check_comm_bytes(char *str, int line, int row, t_head *head)
 
 	if ((mod = find_command(str, 'z')) == 0)
 		insruction_token(str, line, row);
-	arr[0] = line;
-	arr[1] = row;
+	norm_check_comm_bytes(arr, arr + 1, line, row);
 	if (!head->comm_ex || !head->name_ex)
 		token_syntax_error(ft_strcdup(str, ' '), line, row);
 	if (mod == 1 || mod == 9 || mod == 12 || mod == 15)
@@ -74,20 +73,20 @@ static void	check_string(char *str, t_head *head, int line, int row)
 {
 	while (ft_isspace(*str))
 	{
-		str++;
 		row++;
+		str++;
 	}
 	if (*str == '.')
 	{
 		if (ft_strnequ(str, NAME_CMD_STRING, ft_strlen(NAME_CMD_STRING)))
 		{
-			if (head->name_ex)
-				unexpected_token(line, row, str);
-			else
-				get_name_bytes(str, head, line, row);
+			check_end_token(line, row, str, 1);
+			norm_check_string(head, line, row, str);
 		}
-		else if (ft_strnequ(str, COMMENT_CMD_STRING, ft_strlen(COMMENT_CMD_STRING)))
+		else if (ft_strnequ(str, COMMENT_CMD_STRING,
+				ft_strlen(COMMENT_CMD_STRING)))
 		{
+			check_end_token(line, row, str, 2);
 			if (head->comm_ex)
 				unexpected_token(line, row, str);
 			else
@@ -96,8 +95,7 @@ static void	check_string(char *str, t_head *head, int line, int row)
 		else
 			unexpected_token(line, row, str);
 	}
-	else
-		check_operator(str, head, line, row);
+		else check_operator(str, head, line, row);
 }
 
 static void	set_struct(char **arr, t_head *head)
@@ -107,8 +105,7 @@ static void	set_struct(char **arr, t_head *head)
 	int		line;
 	int		row;
 
-	line = 1;
-	i = 0;
+	norm_set_struct(&line, &i);
 	while (arr[i])
 	{
 		row = 1;
@@ -136,11 +133,11 @@ void		validator(char **argv, t_head *head)
 	char		**arr;
 
 	str = get_string(argv);
-	check_lb(str);
 	arr = split(str, '\n');
+	check_lb(arr);
 	remove_comments(arr);
 	set_struct(arr, head);
-	if (!head->comm_ex && !head->name_ex)
+	if (!head->comm_ex || !head->name_ex)
 	{
 		write(2, "Not enough data\n", 16);
 		exit(1);

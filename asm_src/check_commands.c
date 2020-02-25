@@ -6,13 +6,13 @@
 /*   By: stross <stross@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/07 15:38:18 by stross            #+#    #+#             */
-/*   Updated: 2020/02/14 18:58:46 by stross           ###   ########.fr       */
+/*   Updated: 2020/02/25 13:45:19 by stross           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "asm.h"
 
-void	create_command(char *str, int mod, int byte_size, t_head *head)
+void		create_command(char *str, int mod, int byte_size, t_head *head)
 {
 	t_command	*command;
 
@@ -23,11 +23,12 @@ void	create_command(char *str, int mod, int byte_size, t_head *head)
 	ft_list_push_back(&head->list, command);
 }
 
-int	instruction_size(char ch, int size)
+int			instruction_size(char ch, int size)
 {
 	if (ch == 'r')
 		return (1);
-	else if (ch == ' ' || (ch >= '0' && ch <= '9') || ch == LABEL_CHAR)
+	else if (ch == ' ' || (ch >= '0' && ch <= '9') ||
+	ch == LABEL_CHAR || ch == '-')
 		return (2);
 	else if (ch == '%')
 		return (size);
@@ -35,7 +36,7 @@ int	instruction_size(char ch, int size)
 		return (0);
 }
 
-int	check_instructions(char *str)
+int			check_instructions(char *str)
 {
 	int		i;
 
@@ -44,7 +45,8 @@ int	check_instructions(char *str)
 	{
 		if (*str == LABEL_CHAR)
 		{
-			while (*str && *str != ' ' && *str != SEPARATOR_CHAR && *str != DIRECT_CHAR)
+			while (*str && *str != ' ' &&
+			*str != SEPARATOR_CHAR && *str != DIRECT_CHAR)
 			{
 				i++;
 				str++;
@@ -75,6 +77,7 @@ void		c_live_zjmp_fork_lfork(char *str, t_head *head, int mod, int *arr)
 	if (*cpy != DIRECT_CHAR)
 		invalid_instruction(0, g_op[mod - 1]);
 	byte_size = mod == 1 ? 5 : 3;
+	check_after_arg(g_op[mod - 1], cpy);
 	create_command(str, mod, byte_size, head);
 }
 
@@ -88,7 +91,8 @@ void		c_ld_lld(char *str, t_head *head, int mod, int *arr)
 		cpy++;
 	if (check_instructions(cpy))
 		invalid_ins_sim(arr, cpy, mod);
-	if (*cpy != DIRECT_CHAR && *cpy != ' ' && !(*cpy >= '0' && *cpy <= '9') && *cpy != LABEL_CHAR)
+	if (*cpy != DIRECT_CHAR && *cpy != ' ' &&
+	!(*cpy >= '0' && *cpy <= '9') && *cpy != LABEL_CHAR)
 		invalid_instruction(0, g_op[mod - 1]);
 	byte_size = 3 + (*cpy == DIRECT_CHAR ? 4 : 2);
 	while (*cpy != SEPARATOR_CHAR && *cpy)
@@ -100,6 +104,6 @@ void		c_ld_lld(char *str, t_head *head, int mod, int *arr)
 		cpy++;
 	if (*cpy != 'r')
 		invalid_instruction(1, g_op[mod - 1]);
+	check_after_arg(g_op[mod - 1], cpy);
 	create_command(str, mod, byte_size, head);
 }
-

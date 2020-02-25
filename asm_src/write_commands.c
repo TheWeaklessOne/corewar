@@ -6,7 +6,7 @@
 /*   By: stross <stross@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/10 17:53:29 by stross            #+#    #+#             */
-/*   Updated: 2020/02/18 11:49:12 by stross           ###   ########.fr       */
+/*   Updated: 2020/02/25 13:28:36 by stross           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,59 +15,48 @@
 void		write_command_code(int fd, int name)
 {
 	unsigned char	octet;
-	static int	arr[16] = { 1, 16, 11, 4, 5, 6 ,7 ,8, 9, 10, 3, 12, 14, 13, 15, 2 };
+	static int		arr[16] = { 1, 16, 11, 4, 5, 6, 7, 8, 9, 10, 3,
+						12, 14, 13, 15, 2 };
 
 	octet = arr[name - 1];
 	write(fd, &octet, 1);
 }
 
-int			get_label_distance(t_command *command, t_command **commands, char *label, int *mod)
+static void	null_vars(t_label *l)
 {
-	int		lab;
-	int		comm;
-	int		dist;
-	int		i;
-	bool	equ;
+	l->equ = false;
+	l->i = 0;
+	l->lab = 0;
+	l->dist = 0;
+}
 
-	i = 0;
-	equ = false;
-	lab = 0; //was -1
-	dist = 0;
-	while (commands[i])
+int			get_label_distance(t_command *command,
+		t_command **commands, char *label, int *mod)
+{
+	t_label	l;
+
+	null_vars(&l);
+	while (commands[l.i])
 	{
-		if (command == commands[i])
-			comm = i;
-		if (ft_strequ(label, commands[i]->label))
+		if (command == commands[l.i])
+			l.comm = l.i;
+		if (ft_strequ(label, commands[l.i]->label))
 		{
-			lab = i;
-			equ = true;
+			l.lab = l.i;
+			l.equ = true;
 		}
-		i++;
+		l.i++;
 	}
-	if (!equ)
+	if (!l.equ)
 		no_label_error();
-	if (lab > comm)
-	{
-		while (comm < lab)
-		{
-			dist += commands[comm]->byte_size;
-			comm++;
-		}
-		*mod = 1; //POSITIVE
-	}
-	else if (lab < comm)
-	{
-		while (comm > lab)
-		{
-			dist += commands[lab]->byte_size;
-			lab++;
-		}
-		*mod = 2; // NEGATIVE
-	}
+	if (l.lab > l.comm)
+		norm_get_label(&l, mod, commands);
+	else if (l.lab < l.comm)
+		norm_get_label2(&l, mod, commands);
 	else
 		return (-1);
 	free(label);
-	return (dist);
+	return (l.dist);
 }
 
 static void	write_live(int fd, t_command *command, t_command **commands)
@@ -104,9 +93,12 @@ void		write_command(int fd, t_command *command, t_command **commands)
 	else
 	{
 		write_command_code(fd, command->name);
-		if (command->name != 9 && command->name != 12 && command->name != 15 && command->name != 0)
+		if (command->name != 9 && command->name != 12
+		&& command->name != 15 && command->name != 0)
 			write_arg_type(command->command, fd, command->name);
-		if (command->name == 9 || command->name == 10 || command->name == 3 || command->name == 12 || command->name == 13 || command->name == 15)
+		if (command->name == 9 || command->name == 10
+		|| command->name == 3 || command->name == 12
+		|| command->name == 13 || command->name == 15)
 			main_write(fd, command, commands, 2);
 		else
 			main_write(fd, command, commands, 4);
