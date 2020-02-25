@@ -6,7 +6,7 @@
 #    By: stross <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/19 15:50:24 by stross            #+#    #+#              #
-#    Updated: 2020/02/25 11:53:43 by stross           ###   ########.fr        #
+#    Updated: 2020/02/25 17:35:04 by sdoughnu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -96,6 +96,7 @@ clean:
 
 fclean:			clean
 	@rm -f $(NAME)
+	@rm -f ../asm
 	@printf "\r\033[38;5;196m❌ fclean $(NAME)\033[0m\033[K\n"
 
 re:				fclean all

@@ -6,7 +6,7 @@
 #    By: djoye <djoye@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/19 15:28:16 by wstygg            #+#    #+#              #
-#    Updated: 2020/02/20 13:33:40 by djoye            ###   ########.fr        #
+#    Updated: 2020/02/25 17:34:36 by sdoughnu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -60,11 +60,11 @@ all :
 	@make -j $(NAME)
 
 $(NAME):		$(LIBFT_LIB) $(OBJ_DIR) $(OBJS)
-	@$(CC) $(OBJS) -o $(NAME) \
-		-I $(INC_DIR) \
-		-I $(LIBFT_INC) \
-		$(LIBS) \
-		$(LIBFT_LIB) \
+	@$(CC) $(OBJS) -o $(NAME)	\
+		-I $(INC_DIR)			\
+		-I $(LIBFT_INC)			\
+		$(LIBS)					\
+		$(LIBFT_LIB)			\
 		$(FLAGS) $(D_FLAGS)
 	@strip -x $@
 	@printf "\r\033[48;5;15;38;5;25m✅ MAKE $(NAME)\033[0m\033[K\n"
