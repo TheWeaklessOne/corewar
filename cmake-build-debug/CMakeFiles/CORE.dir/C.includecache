@@ -52,6 +52,12 @@ ctype.h
 stdio.h
 -
 
+/Users/sdoughnu/Desktop/COR/vm/ld_other.c
+zconf.h
+-
+../includes/vm.h
+/Users/sdoughnu/Desktop/COR/includes/vm.h
+
 /Users/sdoughnu/Desktop/COR/vm/war.c
 ../includes/vm.h
 /Users/sdoughnu/Desktop/COR/includes/vm.h
