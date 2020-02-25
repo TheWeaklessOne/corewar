@@ -6,7 +6,7 @@
 /*   By: djoye <djoye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 15:45:41 by djoye             #+#    #+#             */
-/*   Updated: 2020/02/25 15:49:33 by djoye            ###   ########.fr       */
+/*   Updated: 2020/02/25 16:25:31 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,7 +88,10 @@ void			do_lldi(t_vm *vm, t_cur *cur)
 		cur->args[0] = cur->reg[cur->args[0] - 1];
 	if (cur->args_type[1] == T_REG)
 		cur->args[1] = cur->reg[cur->args[1] - 1];
-	addr = (cur->pos + (cur->args[0] + cur->args[1])) % MEM_SIZE;
+	if (-((cur->args[0] + cur->args[1]) % MEM_SIZE) > cur->pos)
+		addr = MEM_SIZE + (cur->pos + cur->args[0] + cur->args[1]) % MEM_SIZE;
+	else
+		addr = (cur->pos + (cur->args[0] + cur->args[1])) % MEM_SIZE;
 	cur->reg[cur->args[2] - 1] = read_t_dir(vm, addr, 4);
 	(vm->l == 1) ? ft_printf("lldi %d %d r%d\n", cur->args[0],
 			cur->args[1], cur->args[2]) : 0;

@@ -1,22 +1,21 @@
 Introducing contestants...
-* Player 1, weighing 8 bytes, "Celebration Funebre v0.99pl42" ("Jour J") !
+* Player 1, weighing 16 bytes, "Celebration Funebre v0.99pl42" ("Jour J") !
 It is now cycle 1
 It is now cycle 2
 It is now cycle 3
 It is now cycle 4
 It is now cycle 5
+P    1 | ld -468123647 r6
 It is now cycle 6
 It is now cycle 7
 It is now cycle 8
 It is now cycle 9
 It is now cycle 10
-P    1 | lld -12288 r16
 It is now cycle 11
 It is now cycle 12
 It is now cycle 13
 It is now cycle 14
 It is now cycle 15
-P    1 | st r16 0
 It is now cycle 16
 It is now cycle 17
 It is now cycle 18
@@ -57,11 +56,14 @@ It is now cycle 52
 It is now cycle 53
 It is now cycle 54
 It is now cycle 55
+P    1 | lldi 2 -468123647 r11
+       | -> load from 2 + -468123647 = -468123645 (with pc -468123638)
 It is now cycle 56
 It is now cycle 57
 It is now cycle 58
 It is now cycle 59
 It is now cycle 60
+P    1 | st r11 0
 It is now cycle 61
 It is now cycle 62
 It is now cycle 63
