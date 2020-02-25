@@ -6,7 +6,7 @@
 #    By: stross <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/19 15:50:24 by stross            #+#    #+#              #
-#    Updated: 2020/02/22 14:32:09 by wstygg           ###   ########.fr        #
+#    Updated: 2020/02/25 11:53:43 by stross           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,7 +49,9 @@ SRC_BASE    =   asm.c               \
                 write_arguments.c   \
                 write_commands.c    \
 				more_validation.c	\
-				validate_labels.c
+				validate_labels.c	\
+				norminette.c		\
+				norminette2.c
 
 SRCS		=	$(addprefix $(SRC_DIR), $(SRC_BASE))
 OBJS		=	$(addprefix $(OBJ_DIR), $(SRC_BASE:.c=.o))
@@ -94,7 +96,6 @@ clean:
 
 fclean:			clean
 	@rm -f $(NAME)
-	@rm -f ../asm
 	@printf "\r\033[38;5;196m❌ fclean $(NAME)\033[0m\033[K\n"
 
 re:				fclean all

@@ -6,7 +6,7 @@
 /*   By: stross <stross@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/19 17:22:02 by stross            #+#    #+#             */
-/*   Updated: 2020/02/19 18:15:38 by stross           ###   ########.fr       */
+/*   Updated: 2020/02/25 15:06:16 by stross           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,25 +70,30 @@ static void	label_validation(t_command **commands)
 	}
 }
 
-void		check_lb(char *str)
+int			check_lb(char **arr)
 {
 	int		i;
+	int		si;
 
+	si = 0;
 	i = 0;
-	while (*str)
-	{
+	while (arr[i])
 		i++;
-		str++;
-	}
+	i--;
 	if (i > 0)
 	{
-		if (*(--str) != '\n')
+		while (ft_isspace(arr[i][si]))
+			si++;
+		if (arr[i][0] == '\0' || arr[i][0] == '#')
+			return (0);
+		else
 		{
 			write(2, "Syntax error - unexpected end of input", 38);
 			write(2, " (Perhaps you forgot to end with a newline ?)\n", 46);
 			exit(1);
 		}
 	}
+	return (0);
 }
 
 void		validate_labels(t_asm_list *list)

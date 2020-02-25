@@ -6,7 +6,7 @@
 /*   By: stross <stross@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/16 13:38:54 by stross            #+#    #+#             */
-/*   Updated: 2020/02/18 11:49:12 by stross           ###   ########.fr       */
+/*   Updated: 2020/02/25 11:39:53 by stross           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ static void	write_commands(int fd, t_command **commands)
 	}
 }
 
-void	assembly(int fd, t_head *head)
+void		assembly(int fd, t_head *head)
 {
 	write_magic(fd);
 	write(fd, head->name, PROG_NAME_LENGTH);
@@ -52,8 +52,7 @@ void	assembly(int fd, t_head *head)
 	write(fd, "\0\0\0\0", 4);
 	write_commands(fd, head->commands);
 	free(head->main_str);
-	free(head->split_str); //FIXME for my shitty split
-//	free_split(head->split_str); //FIXME for ft_split
+	free(head->split_str);
 	if ((close(fd)) == -1)
 	{
 		write(2, "Failed to close file\n", 22);

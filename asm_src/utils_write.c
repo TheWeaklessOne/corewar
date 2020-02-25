@@ -6,7 +6,7 @@
 /*   By: stross <stross@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/10 18:19:51 by stross            #+#    #+#             */
-/*   Updated: 2020/02/13 16:58:45 by stross           ###   ########.fr       */
+/*   Updated: 2020/02/25 12:58:44 by stross           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,20 +34,22 @@ void		write_exec_code_2b(int size, int fd)
 	}
 }
 
-void		main_write(int fd, t_command *command, t_command **commands, int mod)
+void		main_write(int fd, t_command *command,
+		t_command **commands, int mod)
 {
 	char	*str;
 	int		i;
 
 	i = 0;
-	str = command->command + ft_strlen(g_op[command->name -1]);
+	str = command->command + ft_strlen(g_op[command->name - 1]);
 	while (i < 3)
 	{
 		while (ft_isspace(*str))
 			str++;
 		if (*str == 'r')
 			write_reg(fd, str);
-		else if ((*str == DIRECT_CHAR && mod == 2) || *str == LABEL_CHAR || (*str >= '0' && *str <= '9') || *str == '-')
+		else if ((*str == DIRECT_CHAR && mod == 2) || *str == LABEL_CHAR
+		|| (*str >= '0' && *str <= '9') || *str == '-')
 			handle_dir_2size(fd, str, command, commands);
 		else if (*str == DIRECT_CHAR && mod == 4)
 			handle_dir(fd, str, command, commands);
@@ -107,12 +109,14 @@ char		*get_comm_label(char *str)
 	i = 0;
 	if (*str == LABEL_CHAR)
 		str++;
-	while (str[i] && str[i] != ' ' && str[i] != SEPARATOR_CHAR && str[i] != '\t')
+	while (str[i] && str[i] != ' ' && str[i]
+	!= SEPARATOR_CHAR && str[i] != '\t')
 		i++;
 	ret = (char*)ft_memalloc(i + 1);
 	temp = ret;
 	i = 0;
-	while (str[i] && str[i] != ' ' && str[i] != SEPARATOR_CHAR && str[i] != '\t')
+	while (str[i] && str[i] != ' ' && str[i]
+	!= SEPARATOR_CHAR && str[i] != '\t')
 		*ret++ = *str++;
 	return (temp);
 }

@@ -6,7 +6,7 @@
 /*   By: stross <stross@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/19 12:33:59 by stross            #+#    #+#             */
-/*   Updated: 2020/02/19 15:16:09 by stross           ###   ########.fr       */
+/*   Updated: 2020/02/25 16:13:31 by stross           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,8 @@ static int	check_reg_num(char *str)
 	if (num < 0)
 		return (1);
 	i = 0;
-	while (*str && *str != SEPARATOR_CHAR && *str != ' ')
+	while (*str && *str != SEPARATOR_CHAR && *str
+	!= ' ' && *str != '\t')
 	{
 		if (*str >= '0' && *str <= '9')
 			i++;
@@ -104,7 +105,8 @@ static void	validate_numbers(t_command *command, int line)
 			if (check_reg_num(cpy))
 				error_reg_overflow(line);
 		}
-		else if (*cpy == LABEL_CHAR || (*cpy >= '0' && *cpy <= '9') || *cpy == DIRECT_CHAR || *cpy == '-')
+		else if (*cpy == LABEL_CHAR || (*cpy >= '0' && *cpy <= '9')
+		|| *cpy == DIRECT_CHAR || *cpy == '-')
 			if (check_other_arguments(cpy))
 				error_argument_overflow(line);
 		while (*cpy && *cpy != SEPARATOR_CHAR)
@@ -114,7 +116,7 @@ static void	validate_numbers(t_command *command, int line)
 	}
 }
 
-void	validate_overflow(t_asm_list *list)
+void		validate_overflow(t_asm_list *list)
 {
 	int			line;
 

@@ -6,7 +6,7 @@
 /*   By: stross <stross@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/11 17:40:19 by stross            #+#    #+#             */
-/*   Updated: 2020/02/18 11:49:12 by stross           ###   ########.fr       */
+/*   Updated: 2020/02/25 11:39:29 by stross           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,8 @@ void	handle_dir(int fd, char *str, t_command *command, t_command **commands)
 	}
 }
 
-void	handle_dir_2size(int fd, char *str, t_command *command, t_command **commands)
+void	handle_dir_2size(int fd, char *str, t_command *command,
+		t_command **commands)
 {
 	int		num;
 	int		mod;

@@ -6,7 +6,7 @@
 /*   By: djoye <djoye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 15:45:41 by djoye             #+#    #+#             */
-/*   Updated: 2020/02/25 16:25:31 by djoye            ###   ########.fr       */
+/*   Updated: 2020/02/25 16:29:01 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ void			do_lld(t_vm *vm, t_cur *cur)
 
 	if (cur->args_type[0] == T_DIR)
 		cur->args[0] = read_t_dir(vm,
-				(cur->pos + 2) % MEM_SIZE, cur->arg_size[0]);
+		(cur->pos + 2) % MEM_SIZE, cur->arg_size[0]);
 	else if (cur->args_type[0] == T_IND)
 	{
 		pos = (cur->pos + 2) % MEM_SIZE;
@@ -110,4 +110,3 @@ void			do_aff(t_vm *vm, t_cur *cur)
 	c = (char)cur->args[0];
 	(vm->a == 1) ? write(1, &c, 1) : 0;
 }
-

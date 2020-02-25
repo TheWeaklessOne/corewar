@@ -6,7 +6,7 @@
 /*   By: stross <stross@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/15 18:49:17 by stross            #+#    #+#             */
-/*   Updated: 2020/02/19 16:54:33 by stross           ###   ########.fr       */
+/*   Updated: 2020/02/25 16:17:15 by stross           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,52 +40,70 @@ static char	*get_new_ext(char *filename, int *mod)
 	if (ft_strequ(filename + i, ".s"))
 	{
 		*mod = ASM;
-		if(!(f_name = (char*)ft_memalloc(i + 5)))
+		if (!(f_name = (char*)ft_memalloc(i + 5)))
 			error_allocation();
 		ft_strncpy(f_name, filename, ++i);
 		ft_strncpy(f_name + i, "cor", 3);
 	}
 	else if (ft_strequ(filename + i, ".cor"))
-	{
-		*mod = DISASM;
-		if(!(f_name = (char*)ft_memalloc(i + 3)))
-			error_allocation();
-		ft_strncpy(f_name, filename, ++i);
-		ft_strncpy(f_name + i, "s", 1);
-	}
+		norm_get_ext(mod, &f_name, i, &filename);
 	else
 		error_usage();
 	free(filename);
 	return (f_name);
 }
 
+static char	*file_ext_with_dir(char *filename)
+{
+	char	*new;
+	char	*temp;
+	char	*temp2;
+
+	temp = ft_strdup(filename);
+	temp2 = ft_strrchr(temp, '.');
+	if (temp2 != NULL)
+	{
+		*temp2 = '\0';
+		new = ft_strjoin(temp, ".cor");
+	}
+	else
+		exit(1);
+	free(temp);
+	return (new);
+}
+
+static void	help_write_path(char *dir_path)
+{
+	write(1, "Writing output program to ", 26);
+	write(1, dir_path, ft_strlen(dir_path));
+	write(1, "\n", 1);
+}
+
 void		create_file(char **argv, t_head *head)
 {
 	char	*new_fn;
+	char	*dir_path;
 	char	*filename;
 	int		fd;
 	int		mod;
 
 	filename = argv[1];
 	new_fn = get_new_ext(filename, &mod);
+	dir_path = file_ext_with_dir(filename);
 	if (mod != ASM)
-	{
-		write(2, "Disassambly mode is not ready yet\n", 34);
-		exit(1);
-	}
+		diss_not_ready();
 	if (mod == ASM)
 		validator(argv, head);
-	if ((fd = open(new_fn, O_WRONLY | O_CREAT | O_EXCL, 0644)) == -1)
+	if ((fd = open(new_fn, O_WRONLY | O_CREAT, 0644)) == -1)
 	{
 		write(2, "Failed to create file\n", 22);
 		exit(1);
 	}
-	write(1, "Writing output program to ", 26);
-	write(1, new_fn, ft_strlen(new_fn));
-	write(1, "\n", 1);
+	help_write_path(dir_path);
 	free(new_fn);
+	free(dir_path);
 	if (mod == ASM)
 		assembly(fd, head);
 	else
-		exit(1); //TODO disassambly
+		exit(1);
 }

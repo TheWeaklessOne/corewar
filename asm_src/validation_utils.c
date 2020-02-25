@@ -6,15 +6,14 @@
 /*   By: stross <stross@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/31 18:50:49 by stross            #+#    #+#             */
-/*   Updated: 2020/02/18 11:49:12 by stross           ###   ########.fr       */
+/*   Updated: 2020/02/25 13:10:14 by stross           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "asm.h"
 
-char *g_op[17] = {"live", "aff", "sti", "add", "sub", "and", "or", "xor",
-				  "zjmp", "ldi", "st", "fork", "lldi", "lld", "lfork", "ld"};
-
+char	*g_op[17] = {"live", "aff", "sti", "add", "sub", "and", "or", "xor",\
+	"zjmp", "ldi", "st", "fork", "lldi", "lld", "lfork", "ld"};
 
 static int	check_is_it_comm(char *str)
 {
@@ -52,36 +51,23 @@ static int	check_label_chars(char *str)
 	return (0);
 }
 
-char	*label(char *str, int line, int row)
+char		*label(char *str, int line, int row)
 {
 	int		i;
-	int 	si;
+	int		si;
 	int		ti;
-	char 	*cpy;
+	char	*cpy;
 	bool	flag;
 
-	i = 0;
-	si = 0;
-	while (str[i])
-	{
-		if (str[i] == LABEL_CHAR)
-			break ;
-		i++;
-	}
-	if (check_is_it_comm(str))
-		return (NULL);
-	if (!str[i])
+	norm_get_name_bytes(&i, &si);
+	norm_label2(str, &i);
+	if (check_is_it_comm(str) || !str[i])
 		return (NULL);
 	while (si < i)
 	{
 		flag = false;
 		ti = 0;
-		while (LABEL_CHARS[ti])
-		{
-			if (str[si] == LABEL_CHARS[ti])
-				flag = true;
-			ti++;
-		}
+		norm_label(&ti, str, &si, &flag);
 		if (!flag)
 			if (!find_command(str + i, 'f') && !*str)
 				token_label(ft_strcdup(str, LABEL_CHAR), line, row);
@@ -93,7 +79,7 @@ char	*label(char *str, int line, int row)
 	return (cpy);
 }
 
-int		find_command(char *str, char mod)
+int			find_command(char *str, char mod)
 {
 	int i;
 
@@ -119,14 +105,13 @@ int		find_command(char *str, char mod)
 	return (0);
 }
 
-void	get_comm_bytes(char *str, t_head *head, int line, int row)
+void		get_comm_bytes(char *str, t_head *head, int line, int row)
 {
 	int		qm_count;
 	int		i;
 
 	head->comm_ex = true;
-	qm_count = 0;
-	i = 0;
+	norm_get_name_bytes(&qm_count, &i);
 	while (str[i])
 	{
 		if (str[i] == '"')
@@ -134,7 +119,7 @@ void	get_comm_bytes(char *str, t_head *head, int line, int row)
 		i++;
 	}
 	if (qm_count != 2)
-		name_syntax(str, line, row);
+		name_syntax(str, line, row, 2);
 	else
 	{
 		i = 0;
@@ -145,36 +130,6 @@ void	get_comm_bytes(char *str, t_head *head, int line, int row)
 			if (i > COMMENT_LENGTH)
 				length_error(2);
 			head->comment[i++] = *str++;
-		}
-	}
-}
-
-void	get_name_bytes(char *str, t_head *head, int line, int row)
-{
-	int		qm_count;
-	int		i;
-
-	head->name_ex = true;
-	qm_count = 0;
-	i = 0;
-	while (str[i])
-	{
-		if (str[i] == '"')
-			qm_count++;
-		i++;
-	}
-	if (qm_count != 2)
-		name_syntax(str, line, row);
-	else
-	{
-		i = 0;
-		str = ft_strchr(str, '"');
-		str++;
-		while (*str && *str != '"')
-		{
-			if (i > PROG_NAME_LENGTH)
-				length_error(1);
-			head->name[i++] = *str++;
 		}
 	}
 }

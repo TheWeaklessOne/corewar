@@ -6,7 +6,7 @@
 /*   By: stross <stross@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/31 14:34:41 by stross            #+#    #+#             */
-/*   Updated: 2020/02/18 11:48:42 by stross           ###   ########.fr       */
+/*   Updated: 2020/02/25 15:24:05 by stross           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ static char	**split_aux(char **arr, char *str, char sep)
 	return (arr);
 }
 
-char	**split(char *str, char sep)
+char		**split(char *str, char sep)
 {
 	char	**arr;
 	int		lb_count;
@@ -51,7 +51,7 @@ char	**split(char *str, char sep)
 	return (arr);
 }
 
-void	remove_comments(char **arr)
+void		remove_comments(char **arr)
 {
 	int		i;
 	int		si;
@@ -64,8 +64,6 @@ void	remove_comments(char **arr)
 		{
 			if (arr[i][si] == COMMENT_CHAR)
 			{
-//				arr[i][si] = '\0';
-//				break ;
 				while (arr[i][si])
 				{
 					arr[i][si] = '\0';
@@ -79,16 +77,16 @@ void	remove_comments(char **arr)
 	}
 }
 
-int		ft_isspace(char ch)
+int			ft_isspace(char ch)
 {
 	return (ch == ' ' || ch == '\t');
 }
 
-char 	*ft_strcdup(char *str, char c)
+char		*ft_strcdup(char *str, char c)
 {
-	int 	i;
-	char 	*ret;
-	char 	*mem;
+	int		i;
+	char	*ret;
+	char	*mem;
 
 	i = 0;
 	while (str[i] && str[i] != c)

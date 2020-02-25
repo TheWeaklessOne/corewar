@@ -6,7 +6,7 @@
 /*   By: stross <stross@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/01 14:56:13 by stross            #+#    #+#             */
-/*   Updated: 2020/02/18 11:48:42 by stross           ###   ########.fr       */
+/*   Updated: 2020/02/25 11:39:29 by stross           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,8 @@ static t_asm_list	*ft_create_elem(t_command *command)
 	return (list);
 }
 
-void				ft_list_push_back(t_asm_list **begin_list, t_command *command)
+void				ft_list_push_back(t_asm_list **begin_list,
+		t_command *command)
 {
 	t_asm_list	*list;
 
