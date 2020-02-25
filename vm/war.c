@@ -6,7 +6,7 @@
 /*   By: djoye <djoye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 10:48:04 by sdoughnu          #+#    #+#             */
-/*   Updated: 2020/02/20 16:00:35 by djoye            ###   ########.fr       */
+/*   Updated: 2020/02/25 17:08:45 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ void				do_cycle(t_vm *v)
 				else
 					v->zj = 0;
 			}
-			else c->pos = (c->pos + skip) % MEM_SIZE;
+				else c->pos = (c->pos + skip) % MEM_SIZE;
 		}
 		c = c->next;
 	}
@@ -113,8 +113,6 @@ int					war_coming(t_vm *v)
 	check_count = 0;
 	while (++v->global && v->curs_alive > 0)
 	{
-		if (v->global == 30)
-			printf ("");
 		check_count = war(v, check_count);
 		if (v->d == 1 && v->global == (unsigned long)v->d_count)
 			return (print_arena(v, 64) + 1);
@@ -124,7 +122,7 @@ int					war_coming(t_vm *v)
 			remote(vm_window, v);
 	}
 	(v->color == 1) ? end_visu(v, vm_window) : 0;
-	ft_printf("Contestant %u, \"%s\", has won !\n", v->last_champ->n,
+	ft_printf("Contestant %u, \"%s\", has won!\n", v->last_champ->n,
 			v->last_champ->name);
 	return (1);
 }
