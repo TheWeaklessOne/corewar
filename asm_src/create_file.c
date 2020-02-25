@@ -6,7 +6,7 @@
 /*   By: stross <stross@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/15 18:49:17 by stross            #+#    #+#             */
-/*   Updated: 2020/02/25 16:17:15 by stross           ###   ########.fr       */
+/*   Updated: 2020/02/25 16:17:32 by stross           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,7 +94,7 @@ void		create_file(char **argv, t_head *head)
 		diss_not_ready();
 	if (mod == ASM)
 		validator(argv, head);
-	if ((fd = open(new_fn, O_WRONLY | O_CREAT, 0644)) == -1)
+	if ((fd = open(dir_path, O_WRONLY | O_CREAT, 0644)) == -1)
 	{
 		write(2, "Failed to create file\n", 22);
 		exit(1);
