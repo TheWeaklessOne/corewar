@@ -40,7 +40,7 @@ void			do_fork(t_vm *vm, t_cur *cur)
 	cur->args[0] = read_t_dir(vm, ((cur->pos + 1) % MEM_SIZE),
 			cur->arg_size[0]);
 	new = create_cursor(cur);
-	if (-(cur->args[0]) > cur->pos)
+	if (-(cur->args[0] % IDX_MOD) > cur->pos)
 	{
 		(vm->l == 1) ? ft_printf("fork %d (%d)\n", cur->args[0],
 				((cur->pos + cur->args[0] % IDX_MOD))) : 0;
