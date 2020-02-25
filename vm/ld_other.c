@@ -34,8 +34,6 @@ void			do_ldi(t_vm *vm, t_cur *cur)
 
 void			do_lld(t_vm *vm, t_cur *cur)
 {
-//	t_4bytes		ret;
-//	t_4bytes		arg;
 	int				pos;
 	int				skip;
 	t_2bytes		arg;
@@ -67,6 +65,7 @@ void			do_lld(t_vm *vm, t_cur *cur)
 		cur->args[0] = ret.hex;
 		*/
 	}
+	cur->carry = (cur->args[0] == 0) ? 1 : 0;
 	cur->args[1] = vm->arena[(cur->pos + 2 + cur->arg_size[0]) % MEM_SIZE];
 	cur->reg[cur->args[1] - 1] = cur->args[0];
 	(vm->l == 1) ? ft_printf("lld %d r%d\n", cur->args[0], cur->args[1]) : 0;
@@ -89,6 +88,7 @@ void			do_lldi(t_vm *vm, t_cur *cur)
 	(vm->l == 1) ? ft_printf("%d + %d = %d (with pc %d)\n",
 			cur->args[0], cur->args[1], (cur->args[0] + cur->args[1]),
 			((cur->pos + (cur->args[0] + cur->args[1])))) : 0;
+	cur->carry = (cur->reg[cur->args[2] - 1] == 0) ? 1 : 0;
 }
 
 void			do_aff(t_vm *vm, t_cur *cur)

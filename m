@@ -1,16 +1,17 @@
 Introducing contestants...
-* Player 1, weighing 21 bytes, "Celebration Funebre v0.99pl42" ("Jour J") !
+* Player 1, weighing 20 bytes, "Celebration Funebre v0.99pl42" ("Jour J") !
 It is now cycle 1
 It is now cycle 2
 It is now cycle 3
 It is now cycle 4
 It is now cycle 5
+P    1 | ld 529559437 r15
 It is now cycle 6
 It is now cycle 7
 It is now cycle 8
 It is now cycle 9
 It is now cycle 10
-P    1 | lld 0 r16
+P    1 | st r15 -511
 It is now cycle 11
 It is now cycle 12
 It is now cycle 13
@@ -21,17 +22,18 @@ It is now cycle 17
 It is now cycle 18
 It is now cycle 19
 It is now cycle 20
+P    1 | lld -12288 r3
 It is now cycle 21
 It is now cycle 22
 It is now cycle 23
 It is now cycle 24
 It is now cycle 25
+P    1 | st r3 0
 It is now cycle 26
 It is now cycle 27
 It is now cycle 28
 It is now cycle 29
 It is now cycle 30
-P    1 | zjmp 5 OK
 It is now cycle 31
 It is now cycle 32
 It is now cycle 33
@@ -42,7 +44,6 @@ It is now cycle 37
 It is now cycle 38
 It is now cycle 39
 It is now cycle 40
-P    1 | lld 28673 r16
 It is now cycle 41
 It is now cycle 42
 It is now cycle 43
@@ -63,13 +64,11 @@ It is now cycle 57
 It is now cycle 58
 It is now cycle 59
 It is now cycle 60
-P    1 | zjmp 6 FAILED
 It is now cycle 61
 It is now cycle 62
 It is now cycle 63
 It is now cycle 64
 It is now cycle 65
-P    1 | st r1 0
 It is now cycle 66
 It is now cycle 67
 It is now cycle 68
