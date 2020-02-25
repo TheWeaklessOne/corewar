@@ -6,7 +6,7 @@
 /*   By: djoye <djoye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/20 13:29:34 by djoye             #+#    #+#             */
-/*   Updated: 2020/02/20 13:33:43 by djoye            ###   ########.fr       */
+/*   Updated: 2020/02/25 18:14:50 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,21 @@
 void			small_screen(WINDOW *vm_window, t_vm *vm)
 {
 	struct winsize	w;
+	int				max_x;
+	int				max_y;
 
 	ioctl(0, TIOCGWINSZ, &w);
 	if (w.ws_col < vm->width || w.ws_row < HEIGHT)
 	{
+		max_x = getmaxx(vm_window);
+		max_y = getmaxy(vm_window);
 		delwin(vm_window);
 		endwin();
-		printf("USAGE: small window for work with flag -v: ");
-		if (w.ws_col < getmaxx(vm_window))
-			printf("needs %d columns\n", vm->width - w.ws_col);
-		if (w.ws_row < getmaxy(vm_window))
-			printf("needs %d rows\n", HEIGHT - w.ws_row);
+		ft_printf("USAGE: small window for work with flag -v: ");
+		if (w.ws_col < max_x)
+			ft_printf("needs %d columns\n", vm->width - w.ws_col);
+		if (w.ws_row < max_y)
+			ft_printf("needs %d rows\n", HEIGHT - w.ws_row);
 		exit(0);
 	}
 }

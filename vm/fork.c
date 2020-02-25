@@ -6,7 +6,7 @@
 /*   By: djoye <djoye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/06 12:19:44 by sdoughnu          #+#    #+#             */
-/*   Updated: 2020/02/17 15:49:02 by djoye            ###   ########.fr       */
+/*   Updated: 2020/02/25 18:20:53 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,8 @@ t_cur			*create_cursor(t_cur *old)
 
 	if (!(new = (t_cur*)malloc(sizeof(t_cur))))
 	{
-		printf("Memory not allocated.\n");
+		write(2, "Memory not allocated.\n",
+			ft_strlen("Memory not allocated.\n"));
 		exit(-1);
 	}
 	ft_bzero(new, sizeof(t_cur));

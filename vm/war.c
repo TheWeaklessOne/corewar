@@ -6,7 +6,7 @@
 /*   By: djoye <djoye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 10:48:04 by sdoughnu          #+#    #+#             */
-/*   Updated: 2020/02/25 17:08:45 by djoye            ###   ########.fr       */
+/*   Updated: 2020/02/25 17:59:09 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,10 +87,10 @@ void				end_visu(t_vm *v, WINDOW *vm_window)
 	mvwprintw(vm_window, 30, SUB, "Contestant %u:",
 			v->last_champ->n);
 	wattron(vm_window, COLOR_PAIR(3));
-	mvwprintw(vm_window, 31, SUB, "\t\"%s\"",
+	mvwprintw(vm_window, 31, SUB, "\"%s\"",
 			v->last_champ->name);
 	wattron(vm_window, COLOR_PAIR(1));
-	mvwprintw(vm_window, 32, SUB, "\t\thas won!\n");
+	mvwprintw(vm_window, 32, SUB, "has won!\n");
 	wattron(vm_window, COLOR_PAIR(0));
 	wrefresh(vm_window);
 	while (key != KEY_ESC)

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   validation_utils.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: stross <stross@student.42.fr>              +#+  +:+       +#+        */
+/*   By: djoye <djoye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/31 18:50:49 by stross            #+#    #+#             */
-/*   Updated: 2020/02/25 13:10:14 by stross           ###   ########.fr       */
+/*   Updated: 2020/02/25 17:46:29 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -127,7 +127,7 @@ void		get_comm_bytes(char *str, t_head *head, int line, int row)
 		str++;
 		while (*str && *str != '"')
 		{
-			if (i > COMMENT_LENGTH)
+			if (i >= COMMENT_LENGTH)
 				length_error(2);
 			head->comment[i++] = *str++;
 		}

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils2.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: stross <stross@student.42.fr>              +#+  +:+       +#+        */
+/*   By: djoye <djoye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/07 15:05:38 by stross            #+#    #+#             */
-/*   Updated: 2020/02/25 11:39:29 by stross           ###   ########.fr       */
+/*   Updated: 2020/02/25 17:46:48 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ void	get_name_bytes(char *str, t_head *head, int line, int row)
 		str++;
 		while (*str && *str != '"')
 		{
-			if (i > PROG_NAME_LENGTH)
+			if (i >= PROG_NAME_LENGTH)
 				length_error(1);
 			head->name[i++] = *str++;
 		}

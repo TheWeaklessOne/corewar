@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check_commands.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: stross <stross@student.42.fr>              +#+  +:+       +#+        */
+/*   By: djoye <djoye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/07 15:38:18 by stross            #+#    #+#             */
-/*   Updated: 2020/02/25 13:45:19 by stross           ###   ########.fr       */
+/*   Updated: 2020/02/25 17:46:17 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,7 +92,7 @@ void		c_ld_lld(char *str, t_head *head, int mod, int *arr)
 	if (check_instructions(cpy))
 		invalid_ins_sim(arr, cpy, mod);
 	if (*cpy != DIRECT_CHAR && *cpy != ' ' &&
-	!(*cpy >= '0' && *cpy <= '9') && *cpy != LABEL_CHAR)
+	!(*cpy >= '0' && *cpy <= '9') && *cpy != LABEL_CHAR && *cpy != '-')
 		invalid_instruction(0, g_op[mod - 1]);
 	byte_size = 3 + (*cpy == DIRECT_CHAR ? 4 : 2);
 	while (*cpy != SEPARATOR_CHAR && *cpy)

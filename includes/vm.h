@@ -6,18 +6,15 @@
 /*   By: djoye <djoye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/11 10:21:55 by sdoughnu          #+#    #+#             */
-/*   Updated: 2020/02/25 17:01:11 by djoye            ###   ########.fr       */
+/*   Updated: 2020/02/25 18:08:01 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef VM_H
 # define VM_H
 
-# include <stdio.h>
 # include <unistd.h>
 # include <fcntl.h>
-# include <time.h>
-# include <stdbool.h>
 
 # include "./op.h"
 # include "../libft/libft.h"
@@ -111,7 +108,7 @@ typedef struct		s_vm
 {
 	int				dump;
 	int				d;
-	int 			a;
+	int				a;
 	int				l;
 	long			dump_count;
 	long			d_count;
