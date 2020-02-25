@@ -6,7 +6,7 @@
 /*   By: djoye <djoye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/06 12:18:35 by sdoughnu          #+#    #+#             */
-/*   Updated: 2020/02/20 17:56:27 by djoye            ###   ########.fr       */
+/*   Updated: 2020/02/25 14:24:07 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,16 +34,26 @@ void			do_ldi(t_vm *vm, t_cur *cur)
 
 void			do_lld(t_vm *vm, t_cur *cur)
 {
-	t_4bytes		ret;
-	t_4bytes		arg;
+//	t_4bytes		ret;
+//	t_4bytes		arg;
 	int				pos;
 	int				skip;
+	t_2bytes		arg;
+	t_2bytes		ret;
 
 	if (cur->args_type[0] == T_DIR)
 		cur->args[0] = read_t_dir(vm,
 				(cur->pos + 2) % MEM_SIZE, cur->arg_size[0]);
 	else if (cur->args_type[0] == T_IND)
 	{
+		pos = (cur->pos + 2) % MEM_SIZE;
+		arg.f.o2 = vm->arena[pos];
+		arg.f.o1 = vm->arena[(pos + 1) % MEM_SIZE];
+		skip = arg.hex;
+		ret.f.o2 = vm->arena[(cur->pos + skip) % MEM_SIZE];
+		ret.f.o1 = vm->arena[(cur->pos + (skip + 1)) % MEM_SIZE];
+		cur->args[0] = ret.hex;
+		/*
 		pos = (cur->pos + 2) % MEM_SIZE;
 		arg.f.o4 = vm->arena[pos];
 		arg.f.o3 = vm->arena[(pos + 1) % MEM_SIZE];
@@ -55,6 +65,7 @@ void			do_lld(t_vm *vm, t_cur *cur)
 		ret.f.o2 = vm->arena[(cur->pos + (skip + 2)) % MEM_SIZE];
 		ret.f.o1 = vm->arena[(cur->pos + (skip + 3)) % MEM_SIZE];
 		cur->args[0] = ret.hex;
+		*/
 	}
 	cur->args[1] = vm->arena[(cur->pos + 2 + cur->arg_size[0]) % MEM_SIZE];
 	cur->reg[cur->args[1] - 1] = cur->args[0];
